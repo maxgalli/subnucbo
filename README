@@ -2,7 +2,7 @@
 %%
 %%
 %% This file is part of the subnucbo distribution.
-%%
+%% a
 %%
 %% For distribution of the original source see the terms
 %% for copying and modification in the file subnucbo.cls.
@@ -21,24 +21,24 @@ sample-subnucbo.tex		- a simple template file to follow
 Recommended styles and packages
 --------------------------
 
-By implementing subnucbo as a native LaTeX2e document class, users can now 
+By implementing subnucbo as a native LaTeX2e document class, users can now
 take advantage of many of the well-supported LaTeX2e packages available.
 
 
 
 Installation
 ------------
-To install subnucbo package, put subnucbo.cls somewhere in your 
-TEXINPUTS path or wherever your TeX software looks for input files. 
-Run the appropriate update command (texhash, initexmf -u, etc.). 
-Please consult the documentaton for your local TeX package 
-for more information. 
+To install subnucbo package, put subnucbo.cls somewhere in your
+TEXINPUTS path or wherever your TeX software looks for input files.
+Run the appropriate update command (texhash, initexmf -u, etc.).
+Please consult the documentaton for your local TeX package
+for more information.
 MikTeX users should use version MikTeX 2.1.
 
 
 
 Credits
 --------
-The subnucbo package is created by M. Bellacosa on behalf of 
-the Italian Physical Society and is based on cimento.cls class: 
-the LaTeX  document class for Italian Physical Society journals.  
+The subnucbo package is created by M. Bellacosa on behalf of
+the Italian Physical Society and is based on cimento.cls class:
+the LaTeX  document class for Italian Physical Society journals.
