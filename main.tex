@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{subnucbo}
+
+%\usepackage{graphicx}
+% got figures? uncomment this
+
+
+\title{Sample paper}
+% Insert your title here
+
+
+
+\author{M. Rossi}
+% Insert your name(s) here.  Quick note: Authors must be separated
+% with \from{n} to mark their referring
+% institute, e.g.:
+% \author{A.U. Thor\from{1}, W.R. Iter\from{2} \atque A. Einstein\from{3}\thanks{Thanks here}}
+% TeX automagically determines the institute you are referring to.
+
+
+
+
+
+\instlist{\inst{} Dipartimento di Fisica Universit\`a di Bologna, Via Irnerio 46 - 40126 Bologna, Italy}
+% Insert your institute(s) here. Quick note: as above, e.g.
+%\instlist{\inst{1} Dipartimento di Fisica Universit\`a di Bologna, Via Irnerio 46 - 40126 Bologna, Italy
+%\inst{2} Dipartimento di Fisica dell'Universit\`{a} and INFN, Sezione di Milano - Milano, Italy
+%\inst{3} Societ\`a Italiana di Fisica}
+
+
+
+
+\acyear{2010--2011}
+% Insert the academic year
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This sample paper is intended to briefly expose \LaTeX\ package \texttt{subnucbo}.
+\end{abstract}
+
+\section{Description}
+This is a very short sample paper distributed with the class
+\texttt{subnucbo}.
+It is just a collection of examples about the syntax of commands
+which behave in a different way from the standard \LaTeX\
+and/or new commands not defined in \LaTeX.
+
+
+You can also use this file as a template for your own paper:
+copy it to another filename and then modify as needed.
+
+\section{Examples}
+
+
+\subsection{Mathematics}
+Here is a lettered array~(\ref{e.all}), with eqs.~(\ref{e.house})
+and~(\ref{e.phi}):
+\begin{eqnletter}
+ \label{e.all}
+ \drm x_\sy{F} & = & 1.2\cdot10^3\un{cm}, \qquad
+                     \tx{where\ } \sy{F} = \tx{Fermi}    \label{e.house}\\
+ \phi_i        & = & i\pi                                \label{e.phi}
+\end{eqnletter}
+
+\subsection{Tables}
+Tables~\ref{tab:pricesI}
+inserted at this point.
+
+\begin{table}
+  \caption{Prices of important items.}
+  \label{tab:pricesI}
+  \begin{tabular}{rcl}
+    \hline
+      Ice-cream      & 2.50  & euro    \\
+      More ice-cream & 2500 & euro    \\
+      Crocodile      & 1500  & dollars \\
+    \hline
+      Phone call     & .25   & dollars \\
+      X-Men          & 1.25  & dollars \\
+      Dollar         & 1     & dollars \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Citations}
+We're almost done, just some citations~\cite{ref:apo}
+and we will be over~\cite{ref:pul,ref:bra}.
+
+
+\appendix
+
+\section{}
+Let us go then, you and I\ldots
+
+\acknowledgments
+This work was produced, supported and perpetrated by M. Bellacosa under
+the auspices of the Italian Physical Society.
+
+\begin{thebibliography}{0}
+\bibitem{ref:apo} \BY{Boccaccio~G. \atque de~Cam\~oes~L.}
+  \IN{Phys. Rev. A}{13}{1999}{12};
+  \SAME{69}{999}{1666}.
+\bibitem{ref:pul} \BY{Pulci~L.}
+  preprint INFN 8181.
+\bibitem{ref:bra} \BY{Bragg~B.}
+  \TITLE{Tender comrade},
+  in \TITLE{Workers Playtime},
+                  edited by \NAME{Tizio A. \atque Caio B.}
+                  (Unexeditor, Bologna) 1997, pp.~1-10.
+\end{thebibliography}
+
+\end{document}
+
+%%
