@@ -52,7 +52,26 @@
 This sample paper is intended to briefly expose \LaTeX\ package \texttt{subnucbo}.
 \end{abstract}
 
+\section{Introduzione}
+In questa sezione si introducono nozioni alle quali si farà riferimento in seguito.\\
+Attraverso la teoria perturbativa è possibile ricavare la probabilità di transizione da uno stato iniziale \textit{i} ad uno stato finale \textit{f}:
+\begin{equation}
+        \Gamma = \frac{2 \pi} {\hbar} \cdot | M_{if}|^{2} \rho_{f}
+        \label{eq:decay_rate}
+\end{equation}
+dove $\rho_{f}$ è la densità degli stati per unità di intervallo di energia, mentre $M_{if}$ è l'elemento di matrice per la probabilità di transizione ed è dato da:
+\begin{equation}
+        M_{if} = \int \phi^{*}_{i} V \phi_{f} d\tau
+        \label{eq:matrix_element}
+\end{equation}
+con $V$ potenziale responsabile della transizione da uno stato all'altro.
+
 \section{La teoria di Fermi del decadimento $\beta$}
+Il decadimento beta dei nuclei rappresenta una trasmutazione di un elemento (\textit{Z}, \textit{N}), ove \textit{Z} è il numero di protoni ed \textit{N} quello di neutroni del nucleo verso un nucleo con $\textit{Z} + 1$ protoni (decadimento beta negativo) oppure con $\textit{Z} - 1$ protoni (decadimento beta positivo). Per descriverlo, Fermi sviluppò a partire dal 1934 una teoria basata sull'ipotesi di interazione puntiform,e tra quattro fermioni. Un valido prototipo per questo tipo di interazione è il decadimento del neutrone:
+\begin{equation}
+        n \rightarrow p e^{-} \overline{\nu_{e}}
+        \label{eq:neutro_decay}
+\end{equation}
 
 \appendix
 
