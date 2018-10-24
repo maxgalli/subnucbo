@@ -9,14 +9,13 @@
 
 % lingua italiana
 \usepackage[italian]{babel}
-
 \usepackage[utf8x]{inputenc}
 
+% feynman diagrams
+\usepackage{tikz-feynman}
 
 \title{Processi Deboli e Mixing dei Quark}
 % Insert your title here
-
-
 
 \author{Massimiliano Galli}
 % Insert your name(s) here.  Quick note: Authors must be separated
@@ -25,23 +24,14 @@
 % \author{A.U. Thor\from{1}, W.R. Iter\from{2} \atque A. Einstein\from{3}\thanks{Thanks here}}
 % TeX automagically determines the institute you are referring to.
 
-
-
-
-
 \instlist{\inst{} Dipartimento di Fisica Universit\`a di Bologna, Via Irnerio 46 - 40126 Bologna, Italy}
 % Insert your institute(s) here. Quick note: as above, e.g.
 %\instlist{\inst{1} Dipartimento di Fisica Universit\`a di Bologna, Via Irnerio 46 - 40126 Bologna, Italy
 %\inst{2} Dipartimento di Fisica dell'Universit\`{a} and INFN, Sezione di Milano - Milano, Italy
 %\inst{3} Societ\`a Italiana di Fisica}
 
-
-
-
 \acyear{2017--2018}
 % Insert the academic year
-
-
 
 
 \begin{document}
@@ -67,11 +57,33 @@ dove $\rho_{f}$ è la densità degli stati per unità di intervallo di energia, 
 con $V$ potenziale responsabile della transizione da uno stato all'altro.
 
 \section{La teoria di Fermi del decadimento $\beta$}
-Il decadimento beta dei nuclei rappresenta una trasmutazione di un elemento (\textit{Z}, \textit{N}), ove \textit{Z} è il numero di protoni ed \textit{N} quello di neutroni del nucleo verso un nucleo con $\textit{Z} + 1$ protoni (decadimento beta negativo) oppure con $\textit{Z} - 1$ protoni (decadimento beta positivo). Per descriverlo, Fermi sviluppò a partire dal 1934 una teoria basata sull'ipotesi di interazione puntiform,e tra quattro fermioni. Un valido prototipo per questo tipo di interazione è il decadimento del neutrone:
+Il decadimento beta dei nuclei rappresenta una trasmutazione di un elemento (\textit{z}, \textit{n}), ove \textit{z} è il numero di protoni ed \textit{n} quello di neutroni del nucleo verso un nucleo con $\textit{z} + 1$ protoni (decadimento beta negativo) oppure con $\textit{z} - 1$ protoni (decadimento beta positivo). Per descriverlo, Fermi sviluppò a partire dal 1934 una teoria basata sull'ipotesi di interazione puntiforme tra quattro fermioni. Due interazioni che possono essere descritte da questa teoria sono il decadimento del muone e quello del neutrone.
+
+\subsection{Decadimento del muone}
+
+\feynmandiagram [layered layout, horizontal=a to b] {
+  a [particle=\(\mu^{-}\)] -- [fermion] b -- [fermion] f1 [particle=\(\nu_{\mu}\)],
+  b -- [boson, edge label'=\(W^{-}\)] c,
+  c -- [anti fermion] f2 [particle=\(\overline \nu_{e}\)],
+  c -- [fermion] f3 [particle=\(e^{-}\)],
+};
+
+\subsection{Decadimento del neutrone}
 \begin{equation}
         n \rightarrow p e^{-} \overline{\nu_{e}}
         \label{eq:neutro_decay}
 \end{equation}
+L'assunzione di interazione puntiforme fa sì che il propagatore bosonico \ref{eq:matrix_element} sia semplicemente una costante; si pone dunque:
+\begin{equation}
+        |M_{if}|^{2} = G_{F}^{2}|\mathcal{M}|^{2}
+        \label{eq:mat_element_fermi_const}
+\end{equation}
+dove $G_{F}$ è la costante di Fermi, che occorre determinare, mentre $|\mathcal{M}|^{2}$ è una costante numerica adimensionale, dell'ordine dell'unità, caratteristica del processo considerato; in questo modo la (\ref{eq:decay_rate}) si può riscrivere:
+\begin{equation}
+        \Gamma = \frac{2 \pi} {\hbar} \cdot G_{F}^{2}|\mathcal{M}|^{2} \rho_{0}
+        \label{eq:decay_rate_neutron}
+\end{equation}
+
 
 \appendix
 
