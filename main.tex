@@ -1,7 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass{subnucbo}
 
 \usepackage{graphicx}
@@ -12,7 +11,7 @@
 \usepackage[utf8x]{inputenc}
 
 % feynman diagrams
-\usepackage{tikz-feynman}
+\usepackage[compat=1.1.0]{tikz-feynman}
 
 \title{Processi Deboli e Mixing dei Quark}
 % Insert your title here
@@ -39,7 +38,7 @@
 \maketitle
 
 \begin{abstract}
-This sample paper is intended to briefly expose \LaTeX\ package \texttt{subnucbo}.
+        This sample paper is intended to briefly expose \LaTeX\ package \texttt{subnucbo}.
 \end{abstract}
 
 \section{Introduzione}
@@ -54,25 +53,44 @@ dove $\rho_{f}$ è la densità degli stati per unità di intervallo di energia, 
         M_{if} = \int \phi^{*}_{i} V \phi_{f} d\tau
         \label{eq:matrix_element}
 \end{equation}
-con $V$ potenziale responsabile della transizione da uno stato all'altro.
+con $V$ potenziale responsabile della transizione da uno stato all'altro. \\
+Si introduce infine la regola di Sargent~\cite{ref:BGS}: se $\tau$ è la vita media di una particella e $\Gamma_{i}/\Gamma$ è il suo \textit{branching ratio} in un particolare decadimento debole a tre corpi nello stato finale. allora la probabilità di transizione corrisponde a:
+\begin{equation}
+        W = \frac{(\Gamma_{i}/\Gamma)}{\tau} \simeq G_{F}^{2}E_{0}^{5} \simeq G_{F}^{2}\Delta m^{5}
+        \label{eq:sargent_rule}
+\end{equation}
 
 \section{La teoria di Fermi del decadimento $\beta$}
 Il decadimento beta dei nuclei rappresenta una trasmutazione di un elemento (\textit{z}, \textit{n}), ove \textit{z} è il numero di protoni ed \textit{n} quello di neutroni del nucleo verso un nucleo con $\textit{z} + 1$ protoni (decadimento beta negativo) oppure con $\textit{z} - 1$ protoni (decadimento beta positivo). Per descriverlo, Fermi sviluppò a partire dal 1934 una teoria basata sull'ipotesi di interazione puntiforme tra quattro fermioni. Due interazioni che possono essere descritte da questa teoria sono il decadimento del muone e quello del neutrone.
 
 \subsection{Decadimento del muone}
+Il muone decade secondo:
+\begin{equation}
+        \mu^{-} \rightarrow e^{-} \overline{\nu_{e}} \nu_{\mu}
+        \label{eq:muon_decay}
+\end{equation}
+Il diagramma di Feynman del processo è mostrato in Fig. \ref{fig:muon_decay}.
+\begin{figure}[!h]
+        \centering
+        \feynmandiagram [layered layout, horizontal=a to b] {
+                a [particle=\(\mu^{-}\)] -- [fermion] b -- [fermion] f1 [particle=\(\nu_{\mu}\)],
+                b -- [boson, edge label'=\(W^{-}\)] c,
+                c -- [anti fermion] f2 [particle=\(\overline \nu_{e}\)],
+                c -- [fermion] f3 [particle=\(e^{-}\)],
+        };
+        \caption{Diagramma di Feynman per il decadimento del muone.}
+        \label{fig:muon_decay}
+\end{figure}
 
-\feynmandiagram [layered layout, horizontal=a to b] {
-  a [particle=\(\mu^{-}\)] -- [fermion] b -- [fermion] f1 [particle=\(\nu_{\mu}\)],
-  b -- [boson, edge label'=\(W^{-}\)] c,
-  c -- [anti fermion] f2 [particle=\(\overline \nu_{e}\)],
-  c -- [fermion] f3 [particle=\(e^{-}\)],
-};
+
 
 \subsection{Decadimento del neutrone}
+
 \begin{equation}
         n \rightarrow p e^{-} \overline{\nu_{e}}
-        \label{eq:neutro_decay}
+        \label{eq:neutron_decay}
 \end{equation}
+
 L'assunzione di interazione puntiforme fa sì che il propagatore bosonico \ref{eq:matrix_element} sia semplicemente una costante; si pone dunque:
 \begin{equation}
         |M_{if}|^{2} = G_{F}^{2}|\mathcal{M}|^{2}
@@ -85,6 +103,43 @@ dove $G_{F}$ è la costante di Fermi, che occorre determinare, mentre $|\mathcal
 \end{equation}
 
 
+\section{Decadimenti deboli di particelle strane}
+Poiché le interazioni deboli coinvolgono sia leptoni che adroni, occorre fare alcune classificazioni, basate sul fatto che nei processi dovuti alla WI siano coinvolti o meno dei leptoni. Nel caso di processi semi-leptonici o non-leptonici, si osservano decadimenti in cui non sono coinvolte particelle strane ($\Delta S=0$), oppure con decadimenti che violano la stranezza ($\Delta S=1$). Il decadimento debole delle particelle strane presenta alcune anomalie, indipendentemente che si considerino processi leptonici, semi-leptonici o non-leptonici.
+\subsection{Decadimenti leptonici}
+Si consideri il caso dei decadimenti puramente leptonici riportati in Tab.~\ref{tab:leptonic_decays}.
+\begin{table}[!h]
+        \begin{tabular}{llccc}
+                \hline
+                Decadimento & & $\Delta S$ & \tau\: (s)& $BR = \Gamma_{i}/\Gamma$    \\
+                \hline
+                $\pi^{-} \rightarrow \mu^{-} \overline{\nu_{\mu}}$ & $\overline{u}d \rightarrow W^{-} \rightarrow \mu^{-} \overline{\nu_{\mu}}$ & 0 & $2.6 \times 10^{-8}$ & $100\%$ \\
+                $K^{-} \rightarrow \mu^{-} \overline{\nu_{\mu}}$ & $\overline{u}s \rightarrow W^{-} \rightarrow \mu^{-} \overline{\nu_{\mu}}$ & 1 & $1.27 \times 10^{-8}$ & $63.5\%$ \\
+                \hline
+        \end{tabular}
+        \caption{Decadimenti leptonici di pione e kaone.}
+        \label{tab:leptonic_decays}
+\end{table}
+
+\subsection{Decadimenti semi-leptonici}
+In questo caso si ha che gli stati finali comprendono sia leptoni che adroni. Si considerino i decadimenti della $\Sigma^{-}$ mostrati in Tab.~\ref{tab:isemileptonic_decays}: la regola di Sargent (\ref{eq:sargent_rule}) fornisce una buona approssimazione per il calcolo della vita media. Tuttavia, anche in questo caso i risultati numerici sono corretti per i decadimenti con $\Delta S = 0$, ed errati di un fattore \sim 20 per i decadimenti con $\Delta S = 1$ . Di nuovo, si può immaginare che nel caso di decadimenti senza variazione di stranezza intervenga la costante $G_{d}$, mentre in quelli con $\Delta S = 1$ intervenga la costante $G_{s}$. Si può stimare il rapporto tra le due costanti usando i decadimenti della $\Sigma^{-}$:
+\begin{equation}
+        \frac{G_{s}^{2}}{G_{d}^{2}} = \frac{\Gamma(\Sigma^{-} \rightarrow n e^{-} \overline{\nu_{e}})/\Delta m^{5}_{\Delta S = 1}}{\Gamma(\Sigma^{-} \rightarrow \Lambda^{0} e^{-} \overline{\nu_{e}})/\Delta m^{5}_{\Delta S = 0}} = 0.057
+        \label{eq:ratio_semileptonic}
+\end{equation}
+
+\begin{table}[!h]
+        \begin{tabular}{llccc}
+                \hline
+                Decadimento & \Delta m\: (MeV) & $\Delta S$ & \tau\: (s)& $BR = \Gamma_{i}/\Gamma$    \\
+                \hline
+                $\Sigma^{-} \rightarrow \Lambda^{0} e^{-} \overline{\nu_{e}}$ & 81.7 & 0 & $1.48 \times 10^{-10}$ & $0.57 \times 10^{-4}$ \\
+                $\Sigma^{-} \rightarrow n e^{-} \overline{\nu_{e}}$ & 257.8 & 1 & $1.48 \times 10^{-10}$ & $1.02 \times 10^{-3}$ \\
+                \hline
+        \end{tabular}
+        \caption{Decadimenti semi-leptonici della $\Sigma^{-}$.}
+        \label{tab:isemileptonic_decays}
+\end{table}
+
 \appendix
 
 \section{}
@@ -95,16 +150,11 @@ This work was produced, supported and perpetrated by M. Bellacosa under
 the auspices of the Italian Physical Society.
 
 \begin{thebibliography}{0}
-\bibitem{ref:apo} \BY{Boccaccio~G. \atque de~Cam\~oes~L.}
-  \IN{Phys. Rev. A}{13}{1999}{12};
-  \SAME{69}{999}{1666}.
-\bibitem{ref:pul} \BY{Pulci~L.}
-  preprint INFN 8181.
-\bibitem{ref:bra} \BY{Bragg~B.}
-  \TITLE{Tender comrade},
-  in \TITLE{Workers Playtime},
-                  edited by \NAME{Tizio A. \atque Caio B.}
-                  (Unexeditor, Bologna) 1997, pp.~1-10.
+        \bibitem{ref:BGS}
+                \BY{Braibant S., Giacomelli G., Spurio M.}
+                \TITLE{Particelle e interazioni fondamentali},
+                \PUBLISHER{Springer},
+                \YEAR{2012}
 \end{thebibliography}
 
 \end{document}
