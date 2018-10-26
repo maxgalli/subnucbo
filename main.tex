@@ -45,24 +45,29 @@
 In questa sezione si introducono nozioni alle quali si farà riferimento in seguito.\\
 Attraverso la teoria perturbativa è possibile ricavare la probabilità di transizione da uno stato iniziale \textit{i} ad uno stato finale \textit{f}:
 \begin{equation}
-        \Gamma = \frac{2 \pi} {\hbar} \cdot | M_{if}|^{2} \rho_{f}
+        \Gamma = \frac{2 \pi} {\hbar} \cdot | \mathcal{M}|^{2} \rho_{f}
         \label{eq:decay_rate}
 \end{equation}
-dove $\rho_{f}$ è la densità degli stati per unità di intervallo di energia, mentre $M_{if}$ è l'elemento di matrice per la probabilità di transizione ed è dato da:
+dove $\rho_{f}$ è la densità degli stati per unità di intervallo di energia (spazio delle fasi), mentre $\mathcal{M}$ è l'elemento di matrice per la probabilità di transizione e si calcola valutando i diagrammi di Feynman più rilevanti e applicando le regole opportune. La \ref{eq:decay_rate} è anche detta "regola d'oro di Fermi". \\
+Inoltre è possibile dimostrare \cite{ref:griff} che per processi di decadimento è possibile scrivere la vita media della particella $\tau$ come:
 \begin{equation}
-        M_{if} = \int \phi^{*}_{i} V \phi_{f} d\tau
-        \label{eq:matrix_element}
+        \tau = \frac{1}{\Gamma}
+        \label{eq:tau}
 \end{equation}
-con $V$ potenziale responsabile della transizione da uno stato all'altro. \\
+dove $\Gamma$ corrisponde in realtà alla sommatoria su tutti gli $n$ modi di decadimento della particella:
+\begin{equation}
+        \Gamma = \sum _ { i = 1 } ^ { n } \Gamma _ { i }
+        \label{eq:gamma_sum}
+\end{equation}
 Si introduce infine la regola di Sargent~\cite{ref:BGS}: se $\tau$ è la vita media di una particella e $\Gamma_{i}/\Gamma$ è il suo \textit{branching ratio} in un particolare decadimento debole a tre corpi nello stato finale. allora la probabilità di transizione corrisponde a:
 \begin{equation}
         W = \frac{(\Gamma_{i}/\Gamma)}{\tau} \simeq G_{F}^{2}E_{0}^{5} \simeq G_{F}^{2}\Delta m^{5}
         \label{eq:sargent_rule}
 \end{equation}
 
-\section{La teoria di Fermi del decadimento $\beta$}
-Il decadimento beta dei nuclei rappresenta una trasmutazione di un elemento (\textit{z}, \textit{n}), ove \textit{z} è il numero di protoni ed \textit{n} quello di neutroni del nucleo verso un nucleo con $\textit{z} + 1$ protoni (decadimento beta negativo) oppure con $\textit{z} - 1$ protoni (decadimento beta positivo). Per descriverlo, Fermi sviluppò a partire dal 1934 una teoria basata sull'ipotesi di interazione puntiforme tra quattro fermioni. Due interazioni che possono essere descritte da questa teoria sono il decadimento del muone e quello del neutrone.
-
+\section{Verso l'universalità dell'interazione debole: la necessità del \textit{mixing} e l'intuizione di Cabibbo}
+La teoria di Fermi, sviluppata a partire dal 1934, è considerata il prototipo dell'interazione debole: essa è puntiforme (in quanto coinvolge l'interazione di quattro fermioni in un punto) e presenta una costante di accoppiamento $G_{F}$, detta \textit{costante di Fermi}. Applicando la teoria a diversi decadimenti, come ad esempio nei casi di neutrone e muone, risulta evidente che $G_{F}$ calcolata in funzione dei risultati sperimentali dà risultati leggermente diversi. \\
+Questo fatto, insieme ad alcune anomalie rilevate nei decadimenti deboli di particelle strane, portò alla necessità di aggiungere un nuovo tassello alla teoria.
 \subsection{Decadimento del muone}
 Il muone decade secondo:
 \begin{equation}
@@ -81,31 +86,74 @@ Il diagramma di Feynman del processo è mostrato in Fig. \ref{fig:muon_decay}.
         \caption{Diagramma di Feynman per il decadimento del muone.}
         \label{fig:muon_decay}
 \end{figure}
-
-
+Per l'interazione debole, le regole di Feynman~\cite{ref:griff} prevedono il fattore V-A
+\begin{equation}
+        \mathcal { K } ^ { \mu } \rightarrow - \frac { i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right)
+\end{equation}
+ad entrambi i vertici. A causa della grande massa del bosone $W^{-}$, il propagatore può essere approssimato da
+\begin{equation}
+        \mathcal { D } _ { \mu \nu } \rightarrow i \frac { g _ { \mu \nu } } { M _ { W } ^ { 2 } }
+        \label{eq:propagator}
+\end{equation}
+Inserendo questi valori nell'espressione per l'ampiezza di decadimento si trova:
+\begin{equation}
+        \mathcal { M } = \frac { g _ { w } ^ { 2 } } { 8 M _ { W } ^ { 2 } } \left[ \overline { u } \left( \nu _ { \mu } \right) \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right) u ( \mu ) \right] \cdot \left[ \overline { u } \left( e ^ { - } \right) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v \left( \nu _ { e } \right) \right]
+        \label{eq:amplitude_muon}
+\end{equation}
+dove $u$ e $v$ sono spinori di Dirac nello spazio dei momenti con $\overline { u } = u ^ { \dagger } \gamma ^ { 0 }$ e $\overline { v } = v ^ { \dagger } \gamma ^ { 0 }$. Sviluppando il calcolo e utilizzando la regola d'oro di Fermi si trova:
+\begin{equation}
+        \Gamma = \frac { m _ { \mu } ^ { 5 } c ^ { 4 } } { 192 \pi ^ { 3 } \hbar ^ { 7 } } G _ { F } ^ { 2 }
+        \label{eq:muon_decay_rate}
+\end{equation}
+dove la costante di Fermi $G_{F}$ è definita da
+\begin{equation}
+        G _ { F } \equiv \frac { \sqrt { 2 } } { 8 } \left[ \frac { g _ { w } } { M _ { W } } \right] ^ { 2 } \cdot ( \hbar c ) ^ { 3 }
+        \label{eq:fermi_constant}
+\end{equation}
+Ridefinendo poi
+\begin{equation}
+        G_{F} \leftrightarrow \frac{G_{F}}{\hbar^{3}c^{3}}
+        \label{eq:fermi_constant_ridef}
+\end{equation}
+e sostituendo i valori sperimentali per la vita media del muone si ottiene:
+\begin{equation}
+        G^{\mu} _ { F } = 1.16637 \times 10 ^ { - 5 } \mathrm { GeV } ^ { - 2 }
+        \label{eq:gf_muon_value}
+\end{equation}
 
 \subsection{Decadimento del neutrone}
-
+Il neutrone decade secondo:
 \begin{equation}
         n \rightarrow p e^{-} \overline{\nu_{e}}
         \label{eq:neutron_decay}
 \end{equation}
-
-L'assunzione di interazione puntiforme fa sì che il propagatore bosonico \ref{eq:matrix_element} sia semplicemente una costante; si pone dunque:
+Una prima approssimazione del decadimento beta del neutrone si ottiene assumendo neutrone e protone particelle puntiformi che si accoppiano direttamente con il bosone mediatore (Fig.~\ref{fig:neutron_decay_simple}).
+\begin{figure}[!h]
+        \centering
+        \feynmandiagram [layered layout, horizontal=a to b] {
+                a [particle=\(n\)] -- [fermion] b -- [fermion] f1 [particle=\(p\)],
+                b -- [boson, edge label'=\(W^{-}\)] c,
+                c -- [anti fermion] f2 [particle=\(\overline \nu_{e}\)],
+                c -- [fermion] f3 [particle=\(e^{-}\)],
+        };
+        \caption{Diagramma di Feynman per il decadimento del neutrone, assumendo protone e neutrone non costituiti da quark.}
+        \label{fig:neutron_decay_simple}
+\end{figure}
+L'elemento di matrice è determinato facilmente sostituendo $u(\nu_{\mu})$ e $u(\mu)$ in \ref{eq:amplitude_muon} con $u(n)$ e $u(p)$. Omettendo i dettagli del calcolo, che sono tuttavia descritti in \cite{ref:hayes}, si ricava:
 \begin{equation}
-        |M_{if}|^{2} = G_{F}^{2}|\mathcal{M}|^{2}
-        \label{eq:mat_element_fermi_const}
+        \Gamma = \frac { 2 \rho_{f} } { \pi ^ { 3 } \hbar ^ { 7 } } G _ { F } ^ { 2 } m _ { e } ^ { 5 } c ^ { 4 }
+        \label{eq:neutron_decay_rate}
 \end{equation}
-dove $G_{F}$ è la costante di Fermi, che occorre determinare, mentre $|\mathcal{M}|^{2}$ è una costante numerica adimensionale, dell'ordine dell'unità, caratteristica del processo considerato; in questo modo la (\ref{eq:decay_rate}) si può riscrivere:
+Calcolando il valore di $\rho_{f}$ \cite{ref:BGSex} e sostituendo a $\Gamma$ l'inverso della vita media del neutrone $\tau_{n}=885.7 s$ si trova un valore di $G_{F}$ pari a:
 \begin{equation}
-        \Gamma = \frac{2 \pi} {\hbar} \cdot G_{F}^{2}|\mathcal{M}|^{2} \rho_{0}
-        \label{eq:decay_rate_neutron}
+        G^{n} _ { F } = 1.140 \times 10 ^ { - 5 } \mathrm { GeV } ^ { - 2 }
+        \label{eq:gf_neutron_value}
 \end{equation}
+Questo valore discorda da quello ottenuto (Eq.~\ref{eq:gf_muon_value}) da un decadimento che coinvolge solo leptoni. Sembrò quindi inizialmente che interazioni coinvolgenti leptoni e quark fossero diverse, facendo così cadere l'ipotesi di universalità dell'interazione debole.
 
-
-\section{Decadimenti deboli di particelle strane}
+\subsection{Decadimenti deboli di particelle strane}
 Poiché le interazioni deboli coinvolgono sia leptoni che adroni, occorre fare alcune classificazioni, basate sul fatto che nei processi dovuti alla WI siano coinvolti o meno dei leptoni. Nel caso di processi semi-leptonici o non-leptonici, si osservano decadimenti in cui non sono coinvolte particelle strane ($\Delta S=0$), oppure con decadimenti che violano la stranezza ($\Delta S=1$). Il decadimento debole delle particelle strane presenta alcune anomalie, indipendentemente che si considerino processi leptonici, semi-leptonici o non-leptonici.
-\subsection{Decadimenti leptonici}
+\subsubsection{Decadimenti leptonici}
 Si consideri il caso dei decadimenti puramente leptonici riportati in Tab.~\ref{tab:leptonic_decays}.
 \begin{table}[!h]
         \begin{tabular}{llccc}
@@ -120,7 +168,7 @@ Si consideri il caso dei decadimenti puramente leptonici riportati in Tab.~\ref{
         \label{tab:leptonic_decays}
 \end{table}
 
-\subsection{Decadimenti semi-leptonici}
+\subsubsection{Decadimenti semi-leptonici}
 In questo caso si ha che gli stati finali comprendono sia leptoni che adroni. Si considerino i decadimenti della $\Sigma^{-}$ mostrati in Tab.~\ref{tab:isemileptonic_decays}: la regola di Sargent (\ref{eq:sargent_rule}) fornisce una buona approssimazione per il calcolo della vita media. Tuttavia, anche in questo caso i risultati numerici sono corretti per i decadimenti con $\Delta S = 0$, ed errati di un fattore \sim 20 per i decadimenti con $\Delta S = 1$ . Di nuovo, si può immaginare che nel caso di decadimenti senza variazione di stranezza intervenga la costante $G_{d}$, mentre in quelli con $\Delta S = 1$ intervenga la costante $G_{s}$. Si può stimare il rapporto tra le due costanti usando i decadimenti della $\Sigma^{-}$:
 \begin{equation}
         \frac{G_{s}^{2}}{G_{d}^{2}} = \frac{\Gamma(\Sigma^{-} \rightarrow n e^{-} \overline{\nu_{e}})/\Delta m^{5}_{\Delta S = 1}}{\Gamma(\Sigma^{-} \rightarrow \Lambda^{0} e^{-} \overline{\nu_{e}})/\Delta m^{5}_{\Delta S = 0}} = 0.057
@@ -140,6 +188,46 @@ In questo caso si ha che gli stati finali comprendono sia leptoni che adroni. Si
         \label{tab:isemileptonic_decays}
 \end{table}
 
+
+\subsection{L'angolo di Cabibbo}
+I fatti sperimentali sopracitati vennero interpretati da Nicola Cabibbo nel 1964. Egli mostrò che sia i leptoni che i quark sono autostati dell'interazione debole, con le seguenti assunzioni:
+\begin{itemize}
+        \item l'accoppiamento degli elettroni al campo debole è proporzionale ad una carica debole $g_{e\nu}$;
+        \item l'accoppiamento dei muoni è proporzionale a $g_{\mu\nu}$, con quest'ultima identica a $g_{e\nu}$;
+        \item l'accoppiamento dei quark $(u, d)$ genera le transizioni con $\Delta S = 0$ ed è proporzionale a $g_{ud}$;
+        \item l'accoppiamento dei quark $(u, s)$ genera le transizioni con $\Delta S = 1$ ed è proporzionale a $g_{us}$;
+\end{itemize}
+In ogni vertice di un diagramma di Feynman occorre inserire la costante corrispondente, con il calcolo degli elementi di matrice che viene di conseguenza:
+\begin{itemize}
+        \item per i processi puramente leptonici si ha
+                \begin{equation}
+                        \left\langle f \left| H _ { W } \right| i \right\rangle \propto g _ { e v } ^ { 2 } = G _ { F }
+                        \label{eq:genu}
+                \end{equation}
+        \item per i processi semi-leptonici con $\Delta S = 0$ si ha
+                \begin{equation}
+                        \left\langle f \left| H _ { W } \right| i \right) _ { \Delta S = 0 } \propto g _ { e v } g _ { u d } = G _ { d }
+                        \label{eq:gd}
+                \end{equation}
+        \item per i processi semi-leptonici con $\Delta S = 1$ si ha
+                \begin{equation}
+                        \left\langle f \left| H _ { W } \right| i \right\rangle _ { \Delta S = 1 } \propto g _ { e v } g _ { u s } = G _ { s }
+                        \label{eq:gs}
+                \end{equation}
+\end{itemize}
+L'ipotesi di Cabibbo è che l'interazione debole dipenda da un solo parametro, la costante di Fermi $G_{F}$. Questa descrive l'accoppiamento del campo debole sia verso i leptoni che verso i quark tramite la relazione:
+\begin{equation}
+        G _ { F } = g _ { e v } ^ { 2 } = g _ { u d } ^ { 2 } + g _ { u s } ^ { 2 } \longrightarrow g _ { u d } = g _ { e v } \cos \theta _ { C } ; \quad g _ { u s } = g _ { e v } \sin \theta _ { C }
+\end{equation}
+
+
+
+
+
+
+
+
+
 \appendix
 
 \section{}
@@ -153,6 +241,19 @@ the auspices of the Italian Physical Society.
         \bibitem{ref:BGS}
                 \BY{Braibant S., Giacomelli G., Spurio M.}
                 \TITLE{Particelle e interazioni fondamentali},
+                \PUBLISHER{Springer},
+                \YEAR{2012}
+        \bibitem{ref:griff}
+                \BY{Griffiths D.}
+                \TITLE{Introduction to elementary particles},
+                \YEAR{1987}
+        \bibitem{ref:hayes}
+                \BY{Hayes C.B.}
+                \TITLE{Neutron Beta-Decay},
+                \YEAR{2012}
+        \bibitem{ref:BGSex}
+                \BY{Braibant S., Giacomelli G., Spurio M.}
+                \TITLE{Particles and Fundamental Interactions: Supplements, Problems and Solutions},
                 \PUBLISHER{Springer},
                 \YEAR{2012}
 \end{thebibliography}
