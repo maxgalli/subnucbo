@@ -13,6 +13,9 @@
 % feynman diagrams
 \usepackage[compat=1.1.0]{tikz-feynman}
 
+% math
+\usepackage{amsmath}
+
 \title{Processi Deboli e Mixing dei Quark}
 % Insert your title here
 
@@ -59,37 +62,43 @@ i quali fanno sì che l'interazione debole abbia un cortissimo raggio d'azione. 
 \begin{figure}[!h]
         \centering
         \subfloat{
-                \feynmandiagram [layered layout, horizontal=b to d] {
-                        a [particle=\(l^{-}\)] -- [fermion] b -- [fermion] c [particle=\(\nu_{e}\)],
+                \feynmandiagram [layered layout, horizontal=a to b] {
+                        a [particle=\(l^{-}\)] -- [fermion] b -- [fermion] c [particle=\(\nu_{l}\)],
                         b -- [boson, edge label'=\(W^{-}\)] d,
                 };
         }
+        \qquad
+        \qquad
         \subfloat{
-                \feynmandiagram [layered layout, horizontal=b to d] {
+                \feynmandiagram [layered layout, horizontal=a to b] {
                         a [particle=\(l^{+}\)] -- [fermion] b -- [fermion] c [particle=\(\overline{\nu_{e}}\)],
                         b -- [boson, edge label'=\(W^{+}\)] d,
                 };
         } \\
         \subfloat{
-                \feynmandiagram [layered layout, horizontal=b to d] {
+                \feynmandiagram [layered layout, horizontal=a to b] {
                         a [particle=\(q^{-1/3}\)] -- [fermion] b -- [fermion] c [particle=\(q^{+2/3}\)],
                         b -- [boson, edge label'=\(W^{-}\)] d,
                 };
         }
+        \qquad
+        \qquad
         \subfloat{
-                \feynmandiagram [layered layout, horizontal=b to d] {
+                \feynmandiagram [layered layout, horizontal=a to b] {
                         a [particle=\(q^{+1/3}\)] -- [fermion] b -- [fermion] c [particle=\(q^{-2/3}\)],
                         b -- [boson, edge label'=\(W^{+}\)] d,
                 };
         } \\
         \subfloat{
-                \feynmandiagram [layered layout, horizontal=b to d] {
+                \feynmandiagram [layered layout, horizontal=a to b] {
                         a [particle=\(l\)] -- [fermion] b -- [fermion] c [particle=\(l\)],
                         b -- [boson, edge label'=\(Z^{0}\)] d,
                 };
         }
+        \qquad
+        \qquad
         \subfloat{
-                \feynmandiagram [layered layout, horizontal=b to d] {
+                \feynmandiagram [layered layout, horizontal=a to b] {
                         a [particle=\(q\)] -- [fermion] b -- [fermion] c [particle=\(q\)],
                         b -- [boson, edge label'=\(Z^{0}\)] d,
                 };
@@ -347,27 +356,89 @@ con
 
                 \subsection{Proprietà delle soluzioni}
                 L'equazione di Dirac è un insieme di quattro equazioni ognuna delle quali deve avere una soluzione.
-                \begin{thebibliography}{0}
-                        \bibitem{ref:BGS}
-                                \BY{Braibant S., Giacomelli G., Spurio M.}
-                                \TITLE{Particelle e interazioni fondamentali},
-                                \PUBLISHER{Springer},
-                                \YEAR{2012}
-                        \bibitem{ref:griff}
-                                \BY{Griffiths D.}
-                                \TITLE{Introduction to elementary particles},
-                                \YEAR{1987}
-                        \bibitem{ref:hayes}
-                                \BY{Hayes C.B.}
-                                \TITLE{Neutron Beta-Decay},
-                                \YEAR{2012}
-                        \bibitem{ref:BGSex}
-                                \BY{Braibant S., Giacomelli G., Spurio M.}
-                                \TITLE{Particles and Fundamental Interactions: Supplements, Problems and Solutions},
-                                \PUBLISHER{Springer},
-                                \YEAR{2012}
-                \end{thebibliography}
+                Tali soluzioni si scrivono nella seguente maniera (utilizzando le unità naturali):
+                \begin{equation}
+                        \psi = u e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) } = u e ^ { - i p _ { \mu } x ^ { \mu } }
+                        \label{eq:dirac_sol}
+                \end{equation}
+                dove $u$ è uno spinore a quattro componenti che dipende dal momento. Sostituendo queste soluzioni nella \ref{eq:dirac_equation} si ottiene:
+                \begin{equation}
+                        \left( \gamma ^ { \mu } p _ { \mu } - m \right) u = 0
+                        \label{eq:dirac_eq_momentum}
+                \end{equation}
+                detta anche equazione di Dirac nello spazio dei momenti. Sviluppando i conti e utilizzando la rappresentazione
+                \begin{equation}
+                        \psi = \left( \begin{array} { l } { \phi } \\ { \chi } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) }
+                        \label{eq:dirac_sol_spinors}
+                \end{equation}
+                dove $\chi$ e $\phi$ sono spinori a due componenti, si ottiene:
+                \begin{subequations}
+                        \begin{align}
+                                \phi & = \frac { \boldsymbol { \sigma } \cdot \mathbf { p } } { E - m } \chi \\
+                                \chi & = \frac { \boldsymbol { \sigma } \cdot \mathbf { p } } { E + m } \phi
+                        \end{align}
+                        \label{eq:phi_chi}
+                \end{subequations}
+                Sostituendo la prima nella seconda (o viceversa), si può vedere come questo sia un sistema omogeneo che ammette soluzione solo se $E^{2} - p ^ { 2 } - m ^ { 2 } = 0$. Si avranno quindi due possibili valori per $E$:
+                \begin{equation}
+                        E = \pm \sqrt { p ^ { 2 } + m ^ { 2 } }
+                \end{equation}
+                dove con il segno positivo si fa riferimento a particelle, mentre con il segno negativo ad antiparticelle. Tenendo conto di quanto sopra esposto, le soluzioni \ref{eq:phi_chi} si possono quindi scrivere:
+                \begin{subequations}
+                        \begin{align}
+                                E = | E | :  &
+                                \begin{cases}
+                                        \phi = \frac { \boldsymbol{\sigma} \cdot \boldsymbol{p}} { | E | - m } \chi \\
+                                        \chi = \frac { \boldsymbol{\sigma} \cdot \boldsymbol{p} } { | E | + m } \phi
+                                \end{cases} \\
+                                E = - | E | :  &
+                                \begin{cases}
+                                        \phi = - \frac { \boldsymbol{\sigma} \cdot \boldsymbol{p} } { | E | + m } \chi \\
+                                        \chi = \frac { \boldsymbol{\sigma} \cdot \boldsymbol{p} } { m - | E | } \phi
+                                \end{cases}
+                        \end{align}
+                        \label{eq:phi_chi_energy}
+                \end{subequations}
+                Dato che l'equazione di Dirac tratta particelle di spin 1/2, risulta conveniente scegliere per $\phi$ e $\chi$ gli autostati dell'operatore $\sigma_{3}$:
+                \begin{equation}
+                        \sigma _ { 3 } \phi = \pm \phi \quad ; \quad \sigma _ { 3 } \chi = \pm \chi
+                \end{equation}
+                Questi autostati possono essere scritti come:
+                \begin{equation}
+                        \phi _ { R } = \left( \begin{array} { l } { 1 } \\ { 0 } \end{array} \right) \quad ; \quad \phi _ { L } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right) \quad ; \quad \chi _ { R } = \left( \begin{array} { l } { 1 } \\ { 0 } \end{array} \right) \quad ; \quad \chi _ { L } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right)
+                \end{equation}
+                Con questa scelta, le soluzioni dell'equazione di Dirac sono le seguenti:
+                \begin{equation}
+                        \begin{align}
+                                E = | E | : \quad \psi _ { + } \equiv N u _ { + } e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) } = N \left( \begin{array} { c } { \phi } \\ { \frac { \boldsymbol{\sigma} \cdot \mathbf { p } } { | E | + m } \phi } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - | E | t ) } \\
+                                E = - | E | : \quad \psi _ { - } \equiv N u _ { - } e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) } = N \left( \begin{array} { c } { - \frac { \boldsymbol{\sigma} \cdot \mathbf { p } } { | E | + m } \chi } \\ { \chi } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } + | E | t ) }
+                        \end{align}
+                        \label{eq:dirac_sol}
+                \end{equation}
+                dove $N = \sqrt { \frac { m + | E | } { 2 | E | } }$ è una costante di normalizzazione determinata imponendo $\psi ^ { \dagger } \psi = 1$. Considerando poi che sia $\phi$ che $\chi$ possono assumere i pedici $R$ ed $L$, le quattro soluzioni si possono scrivere più esplicitamente:
 
-                \end{document}
+
+                                \begin{thebibliography}{0}
+                                        \bibitem{ref:BGS}
+                                                \BY{Braibant S., Giacomelli G., Spurio M.}
+                                                \TITLE{Particelle e interazioni fondamentali},
+                                                \PUBLISHER{Springer},
+                                                \YEAR{2012}
+                                        \bibitem{ref:griff}
+                                                \BY{Griffiths D.}
+                                                \TITLE{Introduction to elementary particles},
+                                                \YEAR{1987}
+                                        \bibitem{ref:hayes}
+                                                \BY{Hayes C.B.}
+                                                \TITLE{Neutron Beta-Decay},
+                                                \YEAR{2012}
+                                        \bibitem{ref:BGSex}
+                                                \BY{Braibant S., Giacomelli G., Spurio M.}
+                                                \TITLE{Particles and Fundamental Interactions: Supplements, Problems and Solutions},
+                                                \PUBLISHER{Springer},
+                                                \YEAR{2012}
+                                \end{thebibliography}
+
+                                \end{document}
 
 %%
