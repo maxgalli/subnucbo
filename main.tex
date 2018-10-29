@@ -42,7 +42,64 @@
 \end{abstract}
 
 \section{Introduzione}
-In questa sezione si introducono nozioni alle quali si farà riferimento in seguito.\\
+\subsection{Caratteristiche generali dell'interazione debole}
+L'interazione debole presenta una serie di proprietà che la rendono peculiare rispetto alle altre interazioni fondamentali:
+\begin{itemize}
+        \item è l'unica interazione capace di cambiare il \textit{flavor} dei quark;
+        \item non conserva alcune quantità che sono invece conservate nelle altre interazioni, quali ad esempio parità, coniugazione di carica e stranezza;
+        \item è la sola interazione che coinvolge i neutrini;
+        \item è responsabile del decadimento beta dei nuclei, processo che rappresenta la trasmutazione di un elemento (\textit{Z}, \textit{N}), ove \textit{Z} è il numero di protoni ed \textit{N} quello di neutroni del nucleo verso un nucleo con $\textit{Z} + 1$ protoni (decadimento beta negativo) oppure con $\textit{Z} - 1$ protoni (decadimento beta positivo).
+\end{itemize}
+Essa presenta inoltre dei bosoni mediatori ($W^{+}, W^{-}, Z^{0}$) molto massivi
+\begin{equation}
+        M _ { W } = 82 \pm 2 \text { GeV } / c ^ { 2 } , \quad M _ { Z } = 92 \pm 2 \text { GeV } / c ^ { 2 }
+        \label{eq:bosons_masses}
+\end{equation}
+i quali fanno sì che l'interazione debole abbia un cortissimo raggio d'azione. I bosoni $W^{+}$ e $W^{-}$ sono responsabili dell'interazione debole a corrente carica (CC) mentre $Z^{0}$ dell'interazione debole a corrente neutra (NC). I vertici dell'interazione debole sono rappresentati in Fig.~\ref{fig:weak_vertex}.
+\begin{figure}[!h]
+        \centering
+        \subfloat{
+                \feynmandiagram [layered layout, horizontal=b to d] {
+                        a [particle=\(l^{-}\)] -- [fermion] b -- [fermion] c [particle=\(\nu_{e}\)],
+                        b -- [boson, edge label'=\(W^{-}\)] d,
+                };
+        }
+        \subfloat{
+                \feynmandiagram [layered layout, horizontal=b to d] {
+                        a [particle=\(l^{+}\)] -- [fermion] b -- [fermion] c [particle=\(\overline{\nu_{e}}\)],
+                        b -- [boson, edge label'=\(W^{+}\)] d,
+                };
+        } \\
+        \subfloat{
+                \feynmandiagram [layered layout, horizontal=b to d] {
+                        a [particle=\(q^{-1/3}\)] -- [fermion] b -- [fermion] c [particle=\(q^{+2/3}\)],
+                        b -- [boson, edge label'=\(W^{-}\)] d,
+                };
+        }
+        \subfloat{
+                \feynmandiagram [layered layout, horizontal=b to d] {
+                        a [particle=\(q^{+1/3}\)] -- [fermion] b -- [fermion] c [particle=\(q^{-2/3}\)],
+                        b -- [boson, edge label'=\(W^{+}\)] d,
+                };
+        } \\
+        \subfloat{
+                \feynmandiagram [layered layout, horizontal=b to d] {
+                        a [particle=\(l\)] -- [fermion] b -- [fermion] c [particle=\(l\)],
+                        b -- [boson, edge label'=\(Z^{0}\)] d,
+                };
+        }
+        \subfloat{
+                \feynmandiagram [layered layout, horizontal=b to d] {
+                        a [particle=\(q\)] -- [fermion] b -- [fermion] c [particle=\(q\)],
+                        b -- [boson, edge label'=\(Z^{0}\)] d,
+                };
+        }
+        \caption{Vertici dell'interazione debole.}
+        \label{fig:weak_vertex}
+\end{figure}
+
+\subsection{Nozioni fondamentali}
+In questa parte si introducono nozioni alle quali si farà riferimento in seguito.\\
 Attraverso la teoria perturbativa è possibile ricavare la probabilità di transizione da uno stato iniziale \textit{i} ad uno stato finale \textit{f}:
 \begin{equation}
         \Gamma = \frac{2 \pi} {\hbar} \cdot | \mathcal{M}|^{2} \rho_{f}
@@ -66,8 +123,19 @@ Si introduce infine la regola di Sargent~\cite{ref:BGS}: se $\tau$ è la vita me
 \end{equation}
 
 \section{Verso l'universalità dell'interazione debole: la necessità del \textit{mixing} e l'intuizione di Cabibbo}
-La teoria di Fermi, sviluppata a partire dal 1934, è considerata il prototipo dell'interazione debole: essa è puntiforme (in quanto coinvolge l'interazione di quattro fermioni in un punto) e presenta una costante di accoppiamento $G_{F}$, detta \textit{costante di Fermi}. Applicando la teoria a diversi decadimenti, come ad esempio nei casi di neutrone e muone, risulta evidente che $G_{F}$ calcolata in funzione dei risultati sperimentali dà risultati leggermente diversi. \\
+La teoria di Fermi, sviluppata a partire dal 1934, è considerata il prototipo dell'interazione debole: essa è puntiforme (in quanto coinvolge l'interazione di quattro fermioni in un punto) e presenta una costante di accoppiamento $G_{F}$, detta \textit{costante di Fermi}.Una rappresentazione grafica della teoria è rappresentata in Fig. \ref{fig:fermi_decay}. Applicando la teoria a diversi decadimenti, come ad esempio nei casi di neutrone e muone, risulta evidente che $G_{F}$ calcolata in funzione dei risultati sperimentali dà risultati leggermente diversi. \\
 Questo fatto, insieme ad alcune anomalie rilevate nei decadimenti deboli di particelle strane, portò alla necessità di aggiungere un nuovo tassello alla teoria.
+\begin{figure}[!h]
+        \centering
+        \feynmandiagram [layered layout, horizontal= nuc1 to a ] {
+                nuc1 [particle =\(^{A}_{Z}X\)]-- [fermion] a,
+                a -- [anti fermion] neutrino [particle =\(\overline \nu_{e}\)],
+                a -- [fermion] nuc2 [particle =\(^{A}_{Z+1}Y\)],
+                a -- [fermion] el [particle=\(e^{-}\)],
+        };
+        \caption{Vertice a quattro fermioni della teoria di Fermi.}
+        \label{fig:fermi_decay}
+\end{figure}
 \subsection{Decadimento del muone}
 Il muone decade secondo:
 \begin{equation}
@@ -206,58 +274,100 @@ In ogni vertice di un diagramma di Feynman occorre inserire la costante corrispo
                 \end{equation}
         \item per i processi semi-leptonici con $\Delta S = 0$ si ha
                 \begin{equation}
-                        \left\langle f \left| H _ { W } \right| i \right) _ { \Delta S = 0 } \propto g _ { e v } g _ { u d } = G _ { d }
-                        \label{eq:gd}
-                \end{equation}
-        \item per i processi semi-leptonici con $\Delta S = 1$ si ha
-                \begin{equation}
-                        \left\langle f \left| H _ { W } \right| i \right\rangle _ { \Delta S = 1 } \propto g _ { e v } g _ { u s } = G _ { s }
-                        \label{eq:gs}
-                \end{equation}
+                \left\langle f \left| H _ { W } \right| i \right) _ { \Delta S = 0 } \propto g _ { e v } g _ { u d } = G _ { d }
+                \label{eq:gd}
+        \end{equation}
+\item per i processi semi-leptonici con $\Delta S = 1$ si ha
+        \begin{equation}
+                \left\langle f \left| H _ { W } \right| i \right\rangle _ { \Delta S = 1 } \propto g _ { e v } g _ { u s } = G _ { s }
+                \label{eq:gs}
+        \end{equation}
 \end{itemize}
 L'ipotesi di Cabibbo è che l'interazione debole dipenda da un solo parametro, la costante di Fermi $G_{F}$. Questa descrive l'accoppiamento del campo debole sia verso i leptoni che verso i quark tramite la relazione:
 \begin{equation}
         G _ { F } = g _ { e v } ^ { 2 } = g _ { u d } ^ { 2 } + g _ { u s } ^ { 2 } \longrightarrow g _ { u d } = g _ { e v } \cos \theta _ { C } ; \quad g _ { u s } = g _ { e v } \sin \theta _ { C }
 \end{equation}
+In questo modello, quanto sopra esposto corrisponde al fatto che i quark che partecipano all'interazione debole non sono gli autostati di sapore che caratterizzano l'interazione forte, ma una loro combinazione lineare, che può considerarsi ruotata di un angolo $\theta_{c}$ rispetto ai quark ordinari. Detti i nuovo autostati dell'interazione debole ($u_{c}, d_{c}, s_{c}$) si hanno così i seguenti doppietti deboli:
+\begin{equation}
+        \left( \begin{array} { c } { v _ { e } } \\ { e ^ { - } } \end{array} \right) , \left( \begin{array} { c } { v _ { \mu } } \\ { \mu ^ { - } } \end{array} \right) , \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right)
+        \label{eq:weak_doublets}
+\end{equation}
+dove $\theta_{c}$ è l'\textit{angolo di Cabibbo} e si trova sperimentalmente essere $\theta _ { c } = 0.235\: \mathrm { rad }$. La scelta di $u$ come autostato non mescolato è semplicemente una convenzione. Per ogni doppietto di leptoni l'accoppiamento debole è specificato da $G_{F}$. L'apparente differenza tra i valori della costante di accoppiamento è dovuta al processo di miscelamento dei quark. \\
+Si possono in questo modo interpretare i fatti sperimentali esposti in precedenza: dato che $\sin\theta_{c}=0.235$ e $\cos\theta_{c}=0.972$, transizioni con $\Delta S = 0$ hanno una costante di accoppiamento effettiva maggiore di transizioni con $\Delta S = 1$. Si spiega inoltre perché $G_{F}^{n}$ (Eq.~\ref{eq:gf_neutron_value}) è più piccola di $G_{F}^{\mu}$ (Eq.~\ref{eq:gf_muon_value}): in realtà, quello che si misura nel decadimento del neutrone è $G_{F}\cos \theta_{c}$.
 
 
-
-
-
-
-
+\section{L'estensione della teoria: correnti neutre, meccanismo GIM e matrice CKM}
 
 
 \appendix
+\section{Equazione e formalismo di Dirac}
+\subsection{Equazione e matrici $\gamma$}
+L'equazione di Dirac (1928) descrive il comportamento quanto-meccanico e relativistico di particelle puntiformi massive con spin semintero:
+\begin{equation}
+        \left( i \gamma ^ { \mu } \partial _ { \mu } - m \right) \psi = 0
+        \label{eq:dirac_equation}
+\end{equation}
+dove $\psi$ è un vettore colonna a quattro componenti (spinore)
+\begin{equation}
+        \psi = \left( \begin{array} { c } { \psi _ { 1 } } \\ { \psi _ { 2 } } \\ { \psi _ { 3 } } \\ { \psi _ { 4 } } \end{array} \right)
+        \label{eq:spinor}
+\end{equation}
+e $\gamma^{\mu} = \left\{ \gamma ^ { 0 } , \gamma ^ { 1 } , \gamma ^ { 2 } , \gamma ^ { 3 } \right\}$ è un set di quattro matrici $4\times 4$ che, seguendo la rappresentazione di Dirac, si scrivono:
+\begin{equation}
+        \gamma ^ { 0 } = \left( \begin{array} { c c } { 1 } & { 0 } \\ { 0 } & { - 1 } \end{array} \right) \quad \gamma ^ { i } = \left( \begin{array} { c c } { 0 } & { \sigma ^ { i } } \\ { - \sigma ^ { i } } & { 0 } \end{array} \right)
+        \label{eq:gamma_components}
+\end{equation}
+con le $\sigma^{i}$ matrici di Pauli:
+\begin{equation}
+        \sigma _ { x } = \left( \begin{array} { c c } { 0 } & { 1 } \\ { 1 } & { 0 } \end{array} \right) \quad \sigma _ { y } = \left( \begin{array} { c c } { o } & { - i } \\ { i } & { 0 } \end{array} \right) \quad \sigma _ { z } = \left( \begin{array} { c c } { 1 } & { 0 } \\ { 0 } & { - 1 } \end{array} \right)
+        \label{eq:pauli_matrices}
+\end{equation}
+Scritte per esteso, le matrici $\gamma$ saranno:
+\begin{equation}
+        \begin{array} {c} \gamma ^ { 0 } = \left( \begin{array} { c c c c } { 1 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { - 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { - 1 } \end{array} \right)  \quad \gamma ^ { 1 } = \left( \begin{array} { c c c c } { 0 } & { 0 } & { 0 } & { 1 } \\ { 0 } & { 0 } & { 1 } & { 0 } \\ { 0 } & { - 1 } & { 0 } & { 0 } \\ { - 1 } & { 0 } & { 0 } & { 0 } \end{array} \right) \\ \gamma ^ { 2 } = \left( \begin{array} { c c c c } { 0 } & { 0 } & { 0 } & { - i } \\ { 0 } & { 0 } & { i } & { 0 } \\ { 0 } & { i } & { 0 } & { 0 } \\ { - i } & { 0 } & { 0 } & { 0 } \end{array} \right)  \quad \gamma ^ { 3 } = \left( \begin{array} { c c c c } { 0 } & { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { - 1 } \\ { - 1 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 0 } \end{array} \right) \end{array}
+        \label{eq:gamma_extended}
+\end{equation}
+Le matrici $\gamma$ presentano le seguenti proprietà:
+\begin{equation}
+        \begin{array} { c } { \left( \gamma ^ { 0 } \right) ^ { 2 } = 1 , \quad \left( \gamma ^ { 1 } \right) ^ { 2 } = \left( \gamma ^ { 2 } \right) ^ { 2 } = \left( \gamma ^ { 3 } \right) ^ { 2 } = - 1 } \\ { \gamma ^ { \mu } \gamma ^ { \nu } + \gamma ^ { \nu } \gamma ^ { \mu } = 0 , \quad \text { per } \mu \neq \nu } \end{array}
+        \label{eq:gamma_properties}
+\end{equation}
+Inoltre è utile definire la matrice
+\begin{equation}
+        \gamma ^ { 5 } : = i \gamma ^ { 0 } \gamma ^ { 1 } \gamma ^ { 2 } \gamma ^ { 3 } = \left( \begin{array} { l l l l } { 0 } & { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { 1 } \\ { 1 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 0 } \end{array} \right)
+        \label{eq:gamma5}
+\end{equation}
+con
+\begin{equation}
+        \begin{array} { c } { \left( \gamma ^ { 5 } \right) ^ { 2 } = 1 , \quad { \gamma ^ { 5 } \gamma ^ { \mu } + \gamma ^ { \mu } \gamma ^ { 5 } = 0 \end{array}
+                        \label{eq:gamma5_properties}
+                \end{equation}
 
-\section{}
-Let us go then, you and I\ldots
 
-\acknowledgments
-This work was produced, supported and perpetrated by M. Bellacosa under
-the auspices of the Italian Physical Society.
 
-\begin{thebibliography}{0}
-        \bibitem{ref:BGS}
-                \BY{Braibant S., Giacomelli G., Spurio M.}
-                \TITLE{Particelle e interazioni fondamentali},
-                \PUBLISHER{Springer},
-                \YEAR{2012}
-        \bibitem{ref:griff}
-                \BY{Griffiths D.}
-                \TITLE{Introduction to elementary particles},
-                \YEAR{1987}
-        \bibitem{ref:hayes}
-                \BY{Hayes C.B.}
-                \TITLE{Neutron Beta-Decay},
-                \YEAR{2012}
-        \bibitem{ref:BGSex}
-                \BY{Braibant S., Giacomelli G., Spurio M.}
-                \TITLE{Particles and Fundamental Interactions: Supplements, Problems and Solutions},
-                \PUBLISHER{Springer},
-                \YEAR{2012}
-\end{thebibliography}
+                \subsection{Proprietà delle soluzioni}
+                L'equazione di Dirac è un insieme di quattro equazioni ognuna delle quali deve avere una soluzione.
+                \begin{thebibliography}{0}
+                        \bibitem{ref:BGS}
+                                \BY{Braibant S., Giacomelli G., Spurio M.}
+                                \TITLE{Particelle e interazioni fondamentali},
+                                \PUBLISHER{Springer},
+                                \YEAR{2012}
+                        \bibitem{ref:griff}
+                                \BY{Griffiths D.}
+                                \TITLE{Introduction to elementary particles},
+                                \YEAR{1987}
+                        \bibitem{ref:hayes}
+                                \BY{Hayes C.B.}
+                                \TITLE{Neutron Beta-Decay},
+                                \YEAR{2012}
+                        \bibitem{ref:BGSex}
+                                \BY{Braibant S., Giacomelli G., Spurio M.}
+                                \TITLE{Particles and Fundamental Interactions: Supplements, Problems and Solutions},
+                                \PUBLISHER{Springer},
+                                \YEAR{2012}
+                \end{thebibliography}
 
-\end{document}
+                \end{document}
 
 %%
