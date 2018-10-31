@@ -132,7 +132,7 @@ Si introduce infine la regola di Sargent~\cite{ref:BGS}: se $\tau$ è la vita me
 \end{equation}
 
 \section{Verso l'universalità dell'interazione debole: la necessità del \textit{mixing} e l'intuizione di Cabibbo}
-La teoria di Fermi, sviluppata a partire dal 1934, è considerata il prototipo dell'interazione debole: essa è puntiforme (in quanto coinvolge l'interazione di quattro fermioni in un punto) e presenta una costante di accoppiamento $G_{F}$, detta \textit{costante di Fermi}.Una rappresentazione grafica della teoria è rappresentata in Fig. \ref{fig:fermi_decay}. Applicando la teoria a diversi decadimenti, come ad esempio nei casi di neutrone e muone, risulta evidente che $G_{F}$ calcolata in funzione dei risultati sperimentali dà risultati leggermente diversi. \\
+La teoria di Fermi, sviluppata a partire dal 1934, è considerata il prototipo dell'interazione debole: essa è puntiforme (in quanto coinvolge l'interazione di quattro fermioni in un punto) e presenta una costante di accoppiamento $G_{F}$, detta \textit{costante di Fermi}. Una rappresentazione grafica della teoria è mostrata in Fig. \ref{fig:fermi_decay}. Applicando la teoria a diversi decadimenti, come ad esempio nei casi di neutrone e muone, risulta evidente che $G_{F}$ calcolata in funzione dei risultati sperimentali dà risultati leggermente diversi. \\
 Questo fatto, insieme ad alcune anomalie rilevate nei decadimenti deboli di particelle strane, portò alla necessità di aggiungere un nuovo tassello alla teoria.
 \begin{figure}[!h]
         \centering
@@ -145,6 +145,39 @@ Questo fatto, insieme ad alcune anomalie rilevate nei decadimenti deboli di part
         \caption{Vertice a quattro fermioni della teoria di Fermi.}
         \label{fig:fermi_decay}
 \end{figure}
+\subsection{Teoria V-A delle interazioni deboli}
+La teoria $V-A$ dell'interazione debole venne sviluppata a partire dal 1957 da Feynmann e Gell-Mann come estensione della teoria di Fermi: ciò che rese necessario un aggiornamento della teoria fu la scoperta, avvenuta alcuni anni prima, della violazione della parità da parte dell'interazione debole. \\
+Formalizzata in analogia con l'interazione elettromagnetica, essa si basa sui seguenti fatti:
+\begin{itemize}
+        \item per particelle con spin 1/2, le funzioni d'onda appropriate sono spinori a quattro componenti soddisfacenti l'equazione di Dirac (Appendice \ref{app:dirac});
+        \item l'ampiezza del processo è proporzionale al quadrivettore densità di corrente attraverso una costante da determinarsi.
+\end{itemize}
+In generale, una corrente può essere scritta nella seguente forma:
+\begin{equation}
+        J ^ { \mu } = \overline { \psi } O _ { i } \psi
+        \label{eq:current}
+\end{equation}
+dove $J ^ { \mu } = \left( J ^ { 0 } , \vec { J } \right)$, $\psi$ e $\overline{\psi}$ sono spinori a quattro componenti e $O_{i}$ è l'operatore che definisce il tipo di interazione, combinazione lineare delle matrici di Dirac $\gamma^{\mu}$.
+Le \ref{eq:current} sono forme bilineari che si trasformano sotto trasformazioni di Lorentz in modo analogo ad una quantità scalare (S), pseudo-scalare (P), vettoriale (V), assiale (A) e tensoriale (T); a seconda dell'operatore scelto, l'indice in $O_{i}$ può assumere i valori $i = S, P, V, T, A$.
+\begin{table}
+        \centering
+        \begin{tabular}{l  c  c}
+                \hline
+                 & Corrente & Numero di Componenti \\
+                 \hline
+                 Scalare & $\overline { \psi } \psi$ & 1 \\
+                 Vettore & $\overline { \psi } \gamma ^ { \mu } \psi$ & 4 \\
+                 Tensore & $\overline { \psi } \sigma ^ { \mu \nu } \psi$ & 6 \\
+                 Vettore assiale & $\overline { \psi } \gamma ^ { \mu } \gamma ^ { 5 } \psi$ & 4 \\
+                 Pseudo-scalare & \overline { \psi } \gamma ^ { 5 } \psi & 1 \\
+                 \hline
+        \end{tabular}
+        \caption{Forme bilineari.}
+        \label{tab:bilinear}
+\end{table}
+
+
+
 \subsection{Decadimento del muone}
 Il muone decade secondo:
 \begin{equation}
@@ -310,6 +343,7 @@ Si possono in questo modo interpretare i fatti sperimentali esposti in precedenz
 
 \appendix
 \section{Equazione e formalismo di Dirac}
+\label{app:dirac}
 \subsection{Equazione e matrici $\gamma$}
 L'equazione di Dirac (1928) descrive il comportamento quanto-meccanico e relativistico di particelle puntiformi massive con spin semintero:
 \begin{equation}
@@ -406,39 +440,54 @@ con
                 Questi autostati possono essere scritti come:
                 \begin{equation}
                         \phi _ { R } = \left( \begin{array} { l } { 1 } \\ { 0 } \end{array} \right) \quad ; \quad \phi _ { L } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right) \quad ; \quad \chi _ { R } = \left( \begin{array} { l } { 1 } \\ { 0 } \end{array} \right) \quad ; \quad \chi _ { L } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right)
+                        \label{eq:left_right}
                 \end{equation}
                 Con questa scelta, le soluzioni dell'equazione di Dirac sono le seguenti:
-                \begin{equation}
+                \begin{subequations}
                         \begin{align}
                                 E = | E | : \quad \psi _ { + } \equiv N u _ { + } e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) } = N \left( \begin{array} { c } { \phi } \\ { \frac { \boldsymbol{\sigma} \cdot \mathbf { p } } { | E | + m } \phi } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - | E | t ) } \\
                                 E = - | E | : \quad \psi _ { - } \equiv N u _ { - } e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) } = N \left( \begin{array} { c } { - \frac { \boldsymbol{\sigma} \cdot \mathbf { p } } { | E | + m } \chi } \\ { \chi } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } + | E | t ) }
                         \end{align}
                         \label{eq:dirac_sol}
+                \end{subequations}
+                dove $N = \sqrt { \frac { m + | E | } { 2 | E | } }$ è una costante di normalizzazione determinata imponendo $\psi ^ { \dagger } \psi = 1$. Considerando poi che $\phi$ e $\chi$ possono assumere i valori in \ref{eq:left_right} e sviluppando il prodotto scalare:
+                \begin{equation}
+                        \begin{aligned} \mathbf { p } \cdot \boldsymbol{\sigma} & = p _ { x } \left( \begin{array} { c c } { 0 } & { 1 } \\ { 1 } & { 0 } \end{array} \right) + p _ { y } \left( \begin{array} { c c } { 0 } & { - i } \\ { i } & { 0 } \end{array} \right) + p _ { z } \left( \begin{array} { c c } { 1 } & { 0 } \\ { 0 } & { - 1 } \end{array} \right) \\ & = \left( \begin{array} { c c } { p _ { z } } & { \left( p _ { x } - i p _ { y } \right) } \\ { \left( p _ { x } + i p _ { y } \right) } & { - p _ { z } } \end{array} \right) \end{aligned}
+                        \label{eq:p_sigma}
                 \end{equation}
-                dove $N = \sqrt { \frac { m + | E | } { 2 | E | } }$ è una costante di normalizzazione determinata imponendo $\psi ^ { \dagger } \psi = 1$. Considerando poi che sia $\phi$ che $\chi$ possono assumere i pedici $R$ ed $L$, le quattro soluzioni si possono scrivere più esplicitamente:
+                le quattro soluzioni si possono scrivere in maniera più completa:
+                \begin{subequations}
+                        \begin{align}
+                                \psi_{+R} \equiv N \left( \begin{array} { c } { 1 } \\ { 0 } \\ { \frac {  p _ { z } } { |E| + m  } } \\ { \frac { p _ { x } + i p _ { y } } { |E| + m } } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - | E | t ) } \\
+                                \psi_{+L} \equiv N \left( \begin{array} { c } { 0 } \\ { 1 } \\ { \frac {  p _ { x } - i p _ { y }  } { |E| + m  } } \\ { \frac { - p _ { z } } { |E| + m } } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - | E | t ) } \\
+                                \psi_{-R} \equiv -N \left( \begin{array} { c } { \frac {  p _ { z }  } { |E| + m  } } \\ { \frac { p _ { x } + i p _ { y } } { |E| + m  } } \\ {1} \\ {0} \end{array} \right)  e ^ { i ( \mathbf { p } \cdot \mathbf { r } + | E | t ) } \\
+                                \psi_{-L} \equiv -N \left( \begin{array} { c } { \frac {  p _ { x } - i p _ { y }  } { |E| + m  } } \\ { \frac {   - p _ { z }  } { |E| + m  } } \\ {0} \\ {1} \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } + | E | t ) }
+                        \end{align}
+                        \label{eq:dirac_sol_four}
+                \end{subequations}
 
 
-                                \begin{thebibliography}{0}
-                                        \bibitem{ref:BGS}
-                                                \BY{Braibant S., Giacomelli G., Spurio M.}
-                                                \TITLE{Particelle e interazioni fondamentali},
-                                                \PUBLISHER{Springer},
-                                                \YEAR{2012}
-                                        \bibitem{ref:griff}
-                                                \BY{Griffiths D.}
-                                                \TITLE{Introduction to elementary particles},
-                                                \YEAR{1987}
-                                        \bibitem{ref:hayes}
-                                                \BY{Hayes C.B.}
-                                                \TITLE{Neutron Beta-Decay},
-                                                \YEAR{2012}
-                                        \bibitem{ref:BGSex}
-                                                \BY{Braibant S., Giacomelli G., Spurio M.}
-                                                \TITLE{Particles and Fundamental Interactions: Supplements, Problems and Solutions},
-                                                \PUBLISHER{Springer},
-                                                \YEAR{2012}
-                                \end{thebibliography}
+                \begin{thebibliography}{0}
+                        \bibitem{ref:BGS}
+                                \BY{Braibant S., Giacomelli G., Spurio M.}
+                                \TITLE{Particelle e interazioni fondamentali},
+                                \PUBLISHER{Springer},
+                                \YEAR{2012}
+                        \bibitem{ref:griff}
+                                \BY{Griffiths D.}
+                                \TITLE{Introduction to elementary particles},
+                                \YEAR{1987}
+                        \bibitem{ref:hayes}
+                                \BY{Hayes C.B.}
+                                \TITLE{Neutron Beta-Decay},
+                                \YEAR{2012}
+                        \bibitem{ref:BGSex}
+                                \BY{Braibant S., Giacomelli G., Spurio M.}
+                                \TITLE{Particles and Fundamental Interactions: Supplements, Problems and Solutions},
+                                \PUBLISHER{Springer},
+                                \YEAR{2012}
+                \end{thebibliography}
 
-                                \end{document}
+                \end{document}
 
 %%
