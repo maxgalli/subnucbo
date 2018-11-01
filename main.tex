@@ -158,24 +158,24 @@ In generale, una corrente può essere scritta nella seguente forma:
         \label{eq:current}
 \end{equation}
 dove $J ^ { \mu } = \left( J ^ { 0 } , \vec { J } \right)$, $\psi$ e $\overline{\psi}$ sono spinori a quattro componenti e $O_{i}$ è l'operatore che definisce il tipo di interazione, combinazione lineare delle matrici di Dirac $\gamma^{\mu}$.
-Le \ref{eq:current} sono forme bilineari che si trasformano sotto trasformazioni di Lorentz in modo analogo ad una quantità scalare (S), pseudo-scalare (P), vettoriale (V), assiale (A) e tensoriale (T); a seconda dell'operatore scelto, l'indice in $O_{i}$ può assumere i valori $i = S, P, V, T, A$.
+Le (\ref{eq:current}) sono forme bilineari che si trasformano sotto trasformazioni di Lorentz in modo analogo ad una quantità scalare (S), pseudo-scalare (P), vettoriale (V), assiale (A) e tensoriale (T); a seconda dell'operatore scelto, l'indice in $O_{i}$ può assumere i valori $i = S, P, V, T, A$. Le possibili correnti sono riportate in Tab~\ref{tab:bilinear}.
 \begin{table}
         \centering
         \begin{tabular}{l  c  c}
                 \hline
-                 & Corrente & Numero di Componenti \\
-                 \hline
-                 Scalare & $\overline { \psi } \psi$ & 1 \\
-                 Vettore & $\overline { \psi } \gamma ^ { \mu } \psi$ & 4 \\
-                 Tensore & $\overline { \psi } \sigma ^ { \mu \nu } \psi$ & 6 \\
-                 Vettore assiale & $\overline { \psi } \gamma ^ { \mu } \gamma ^ { 5 } \psi$ & 4 \\
-                 Pseudo-scalare & \overline { \psi } \gamma ^ { 5 } \psi & 1 \\
-                 \hline
+                & Corrente & Numero di Componenti \\
+                \hline
+                Scalare & $\overline { \psi } \psi$ & 1 \\
+                Vettore & $\overline { \psi } \gamma ^ { \mu } \psi$ & 4 \\
+                Tensore & $\overline { \psi } \sigma ^ { \mu \nu } \psi$ & 6 \\
+                Vettore assiale & $\overline { \psi } \gamma ^ { \mu } \gamma ^ { 5 } \psi$ & 4 \\
+                Pseudo-scalare & \overline { \psi } \gamma ^ { 5 } \psi & 1 \\
+                \hline
         \end{tabular}
         \caption{Forme bilineari.}
         \label{tab:bilinear}
 \end{table}
-
+L'operatore di un'interazione descritta dallo scambio di una particella di spin unitario può avere solo natura vettoriale o assiale. Tuttavia è possibile mostrare che per avere violazione di parità (come accade nell'interazione debole) è necessaria una teoria che misceli correnti vettoriali e assiali, in quanto queste due, prese singolarmente, conservano la parità. Si noti che "conservare la parità" significa che i bosoni mediatori possono accoppiarsi in ugual modo con particelle sinistrorse o destrorse.
 
 
 \subsection{Decadimento del muone}
@@ -370,23 +370,50 @@ Scritte per esteso, le matrici $\gamma$ saranno:
         \begin{array} {c} \gamma ^ { 0 } = \left( \begin{array} { c c c c } { 1 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { - 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { - 1 } \end{array} \right)  \quad \gamma ^ { 1 } = \left( \begin{array} { c c c c } { 0 } & { 0 } & { 0 } & { 1 } \\ { 0 } & { 0 } & { 1 } & { 0 } \\ { 0 } & { - 1 } & { 0 } & { 0 } \\ { - 1 } & { 0 } & { 0 } & { 0 } \end{array} \right) \\ \gamma ^ { 2 } = \left( \begin{array} { c c c c } { 0 } & { 0 } & { 0 } & { - i } \\ { 0 } & { 0 } & { i } & { 0 } \\ { 0 } & { i } & { 0 } & { 0 } \\ { - i } & { 0 } & { 0 } & { 0 } \end{array} \right)  \quad \gamma ^ { 3 } = \left( \begin{array} { c c c c } { 0 } & { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { - 1 } \\ { - 1 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 0 } \end{array} \right) \end{array}
         \label{eq:gamma_extended}
 \end{equation}
-Le matrici $\gamma$ presentano le seguenti proprietà:
+con
 \begin{equation}
         \begin{array} { c } { \left( \gamma ^ { 0 } \right) ^ { 2 } = 1 , \quad \left( \gamma ^ { 1 } \right) ^ { 2 } = \left( \gamma ^ { 2 } \right) ^ { 2 } = \left( \gamma ^ { 3 } \right) ^ { 2 } = - 1 } \\ { \gamma ^ { \mu } \gamma ^ { \nu } + \gamma ^ { \nu } \gamma ^ { \mu } = 0 , \quad \text { per } \mu \neq \nu } \end{array}
         \label{eq:gamma_properties}
 \end{equation}
-Inoltre è utile definire la matrice
-\begin{equation}
-        \gamma ^ { 5 } : = i \gamma ^ { 0 } \gamma ^ { 1 } \gamma ^ { 2 } \gamma ^ { 3 } = \left( \begin{array} { l l l l } { 0 } & { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { 1 } \\ { 1 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 0 } \end{array} \right)
-        \label{eq:gamma5}
-\end{equation}
-con
-\begin{equation}
-        \begin{array} { c } { \left( \gamma ^ { 5 } \right) ^ { 2 } = 1 , \quad { \gamma ^ { 5 } \gamma ^ { \mu } + \gamma ^ { \mu } \gamma ^ { 5 } = 0 \end{array}
+Si evidenziano inoltre i seguenti fatti e proprietà:
+\begin{itemize}
+        \item in molti casi è utile definire la matrice:
+                \begin{equation}
+                        \gamma ^ { 5 } : = i \gamma ^ { 0 } \gamma ^ { 1 } \gamma ^ { 2 } \gamma ^ { 3 } = \left( \begin{array} { l l l l } { 0 } & { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { 1 } \\ { 1 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 0 } \end{array} \right)
+                        \label{eq:gamma5}
+                \end{equation}
+                con
+                \begin{equation}
+                        \begin{array}
+                                { c } { \left( \gamma ^ { 5 } \right) ^ { 2 } = 1 , \quad { \gamma ^ { 5 } \gamma ^ { \mu } + \gamma ^ { \mu } \gamma ^ { 5 } = 0
+                        \end{array}
                         \label{eq:gamma5_properties}
                 \end{equation}
-
-
+        \item definendo lo spinore aggiunto:
+                \begin{equation}
+                        \overline { \psi } \equiv \psi ^ { \dagger } \gamma ^ { 0 } = \psi ^ { T ^ { * } } \gamma ^ { 0 }
+                        \label{eq:spinor_adj}
+                \end{equation}
+                è possibile costruire le grandezze relativisticamente invarianti elencate in Tab.~\ref{tab:bilinear};
+        \item esiste una funzione $\psi^{\prime}$ rappresentabile nella forma:
+                \begin{equation}
+                        \psi ^ { \prime } = S \psi \quad ; \quad \operatorname { con } S ^ { - 1 } \gamma ^ { \mu } S = \sum _ { \nu } a _ { \mu \nu } \gamma ^ { \nu }
+                        \label{eq:s_operator}
+                \end{equation}
+                per la quale si ha Lorentz-invarianza dell'equazione di Dirac; questa funzione viene utilizzata per dimostrare \cite{ref:BGSex} la Lorentz-invarianza delle grandezze citate nel punto precedente ;
+        \item $\gamma^{0}$ rappresenta l'operatore Parità, per il quale si ha:
+                \begin{equation}
+                        \gamma ^ { 0 } \psi ( - \mathbf { r } , t ) \equiv \psi ( \mathbf { r } , t ) \quad ; \quad \gamma ^ { 0 } \psi ( \mathbf { r } , t ) \equiv \psi ( - \mathbf { r } , t )
+                \end{equation}
+        \item dato $\mathcal$ operatore di coniugazione complessa, si ha che $\gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K }$ rappresenta l'operatore di inversione temporale, per il quale si ha:
+                \begin{equation}
+                        \gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K } \psi ( \mathbf { r } , t ) = \psi ( \mathbf { r } , - t )
+                \end{equation}
+        \item $i \gamma ^ { 2 } \mathcal { K }$ rappresenta l'operatore di coniugazione di carica e parità CP, per il quale si ha:
+                \begin{equation}
+                        \left( i \gamma ^ { 2 } \mathcal { K } \right) \psi _ { + } = \psi _ { - } ( - \mathbf { p } )
+                \end{equation}
+                \end{itemize}
 
                 \subsection{Proprietà delle soluzioni}
                 L'equazione di Dirac è un insieme di quattro equazioni ognuna delle quali deve avere una soluzione.
@@ -450,21 +477,9 @@ con
                         \end{align}
                         \label{eq:dirac_sol}
                 \end{subequations}
-                dove $N = \sqrt { \frac { m + | E | } { 2 | E | } }$ è una costante di normalizzazione determinata imponendo $\psi ^ { \dagger } \psi = 1$. Considerando poi che $\phi$ e $\chi$ possono assumere i valori in \ref{eq:left_right} e sviluppando il prodotto scalare:
-                \begin{equation}
-                        \begin{aligned} \mathbf { p } \cdot \boldsymbol{\sigma} & = p _ { x } \left( \begin{array} { c c } { 0 } & { 1 } \\ { 1 } & { 0 } \end{array} \right) + p _ { y } \left( \begin{array} { c c } { 0 } & { - i } \\ { i } & { 0 } \end{array} \right) + p _ { z } \left( \begin{array} { c c } { 1 } & { 0 } \\ { 0 } & { - 1 } \end{array} \right) \\ & = \left( \begin{array} { c c } { p _ { z } } & { \left( p _ { x } - i p _ { y } \right) } \\ { \left( p _ { x } + i p _ { y } \right) } & { - p _ { z } } \end{array} \right) \end{aligned}
-                        \label{eq:p_sigma}
-                \end{equation}
-                le quattro soluzioni si possono scrivere in maniera più completa:
-                \begin{subequations}
-                        \begin{align}
-                                \psi_{+R} \equiv N \left( \begin{array} { c } { 1 } \\ { 0 } \\ { \frac {  p _ { z } } { |E| + m  } } \\ { \frac { p _ { x } + i p _ { y } } { |E| + m } } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - | E | t ) } \\
-                                \psi_{+L} \equiv N \left( \begin{array} { c } { 0 } \\ { 1 } \\ { \frac {  p _ { x } - i p _ { y }  } { |E| + m  } } \\ { \frac { - p _ { z } } { |E| + m } } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - | E | t ) } \\
-                                \psi_{-R} \equiv -N \left( \begin{array} { c } { \frac {  p _ { z }  } { |E| + m  } } \\ { \frac { p _ { x } + i p _ { y } } { |E| + m  } } \\ {1} \\ {0} \end{array} \right)  e ^ { i ( \mathbf { p } \cdot \mathbf { r } + | E | t ) } \\
-                                \psi_{-L} \equiv -N \left( \begin{array} { c } { \frac {  p _ { x } - i p _ { y }  } { |E| + m  } } \\ { \frac {   - p _ { z }  } { |E| + m  } } \\ {0} \\ {1} \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } + | E | t ) }
-                        \end{align}
-                        \label{eq:dirac_sol_four}
-                \end{subequations}
+                dove $N = \sqrt { \frac { m + | E | } { 2 | E | } }$ è una costante di normalizzazione determinata imponendo $\psi ^ { \dagger } \psi = 1$.
+
+                \subsection{Operatore e stati di elicità}
 
 
                 \begin{thebibliography}{0}
