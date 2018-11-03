@@ -114,7 +114,7 @@ Attraverso la teoria perturbativa è possibile ricavare la probabilità di trans
         \Gamma = \frac{2 \pi} {\hbar} \cdot | \mathcal{M}|^{2} \rho_{f}
         \label{eq:decay_rate}
 \end{equation}
-dove $\rho_{f}$ è la densità degli stati per unità di intervallo di energia (spazio delle fasi), mentre $\mathcal{M}$ è l'elemento di matrice per la probabilità di transizione e si calcola valutando i diagrammi di Feynman più rilevanti e applicando le regole opportune. La \ref{eq:decay_rate} è anche detta "regola d'oro di Fermi". \\
+dove $\rho_{f}$ è la densità degli stati per unità di intervallo di energia (spazio delle fasi), mentre $\mathcal{M}$ è l'elemento di matrice per la probabilità di transizione e si calcola valutando i diagrammi di Feynman più rilevanti e applicando le regole opportune. La (\ref{eq:decay_rate}) è anche detta "regola d'oro di Fermi". \\
 Inoltre è possibile dimostrare \cite{ref:griff} che per processi di decadimento è possibile scrivere la vita media della particella $\tau$ come:
 \begin{equation}
         \tau = \frac{1}{\Gamma}
@@ -175,8 +175,24 @@ Le (\ref{eq:current}) sono forme bilineari che si trasformano sotto trasformazio
         \caption{Forme bilineari.}
         \label{tab:bilinear}
 \end{table}
-L'operatore di un'interazione descritta dallo scambio di una particella di spin unitario può avere solo natura vettoriale o assiale. Tuttavia è possibile mostrare che per avere violazione di parità (come accade nell'interazione debole) è necessaria una teoria che misceli correnti vettoriali e assiali, in quanto queste due, prese singolarmente, conservano la parità. Si noti che "conservare la parità" significa che i bosoni mediatori possono accoppiarsi in ugual modo con particelle sinistrorse o destrorse.
-
+L'operatore di un'interazione descritta dallo scambio di una particella di spin unitario può avere solo natura vettoriale o assiale. Tuttavia è possibile mostrare che per avere violazione di parità (come accade nell'interazione debole) è necessaria una teoria che misceli correnti vettoriali e assiali, in quanto queste due, prese singolarmente, conservano la parità. Si noti che "conservare la parità" significa che i bosoni mediatori possono accoppiarsi in ugual modo con particelle sinistrorse o destrorse. \\
+Potendo scrivere in maniera del tutto generale l'elemento di matrice per l'interazione debole nella seguente maniera:
+\begin{equation}
+        \mathcal{M} = G _ { F } \eta _ { \mu \nu } J ^ { \mu } J ^ { \nu }
+        \label{eq:weak_matrix_element}
+\end{equation}
+si può verificare come un operatore composto da una miscela di $V$ e $A$ non sia invariante sotto l'operazione di parità. L'elemento di matrice è:
+\begin{equation}
+        \begin{aligned}
+                M _ { i f } & \propto \eta _ { \mu \nu } \left( V _ { 1 } ^ { \mu } - A _ { 1 } ^ { \mu } \right) \left( V _ { 2 } ^ { \mu } - A _ { 2 } ^ { \mu } \right) \\ & = \left( V _ { 1 } ^ { 0 } - A _ { 1 } ^ { 0 } \right) \left( V _ { 2 } ^ { 0 } - A _ { 2 } ^ { 0 } \right) - \left( \vec { V } _ { 1 } - \vec { A } _ { 1 } \right) \left( \vec { V } _ { 2 } - \vec { A } _ { 2 } \right)
+        \end{aligned}
+\end{equation}
+che sotto parità si trasforma come:
+\begin{equation}
+        \begin{aligned}
+                M _ { i f } & = \left( V _ { 1 } ^ { 0 } - A _ { 1 } ^ { 0 } \right) \left( V _ { 2 } ^ { 0 } - A _ { 2 } ^ { 0 } \right) - \left( \vec { V } _ { 1 } - \vec { A } _ { 1 } \right) \left( \vec { V } _ { 2 } - \vec { A } _ { 2 } \right) \\ \stackrel { P } { \longrightarrow } M _ { i f } & = \left( V _ { 1 } ^ { 0 } + A _ { 1 } ^ { 0 } \right) \left( V _ { 2 } ^ { 0 } + A _ { 2 } ^ { 0 } \right) - \left( - \vec { V } _ { 1 } - \vec { A } _ { 1 } \right) \left( - \vec { V } _ { 2 } - \vec { A } _ { 2 } \right) \\ & = \left( V _ { 1 } ^ { 0 } + A _ { 1 } ^ { 0 } \right) \left( V _ { 2 } ^ { 0 } + A _ { 2 } ^ { 0 } \right) - \left( \vec { V } _ { 1 } + \vec { A } _ { 1 } \right) \left( \vec { V } _ { 2 } + \vec { A } _ { 2 } \right)
+        \end{aligned}
+\end{equation}
 
 \subsection{Decadimento del muone}
 Il muone decade secondo:
@@ -338,10 +354,13 @@ dove $\theta_{c}$ è l'\textit{angolo di Cabibbo} e si trova sperimentalmente es
 Si possono in questo modo interpretare i fatti sperimentali esposti in precedenza: dato che $\sin\theta_{c}=0.235$ e $\cos\theta_{c}=0.972$, transizioni con $\Delta S = 0$ hanno una costante di accoppiamento effettiva maggiore di transizioni con $\Delta S = 1$. Si spiega inoltre perché $G_{F}^{n}$ (Eq.~\ref{eq:gf_neutron_value}) è più piccola di $G_{F}^{\mu}$ (Eq.~\ref{eq:gf_muon_value}): in realtà, quello che si misura nel decadimento del neutrone è $G_{F}\cos \theta_{c}$.
 
 
+\subsection{Tipi di transizione nel decadimento $\beta$}
+Al fine di introdurre concetti che saranno ripresi nel seguito, si vuole ora trattare dei molteplici tipi di decadimento $\beta$ esistenti. La classificazione viene operata sulla base della variazione di momento angolare tra nucleo iniziale e nucleo finale. Tale variazione è connessa con lo spin dei due leptoni $e ^ { - } , \overline { \nu } _ { e }$ (oppure $e^{+}, \nu_{e}$): entrambi hanno spin 1/2, quindi la variazione dello spin nucleare può essere nulla (spin di neutrino ed elettrone antiparalleli), oppure $\pm1$ (spin paralleli).
+
 \section{L'estensione della teoria: correnti neutre, meccanismo GIM e matrice CKM}
 
-
 \appendix
+
 \section{Equazione e formalismo di Dirac}
 \label{app:dirac}
 \subsection{Equazione e matrici $\gamma$}
@@ -384,35 +403,33 @@ Si evidenziano inoltre i seguenti fatti e proprietà:
                 \end{equation}
                 con
                 \begin{equation}
-                        \begin{array}
-                                { c } { \left( \gamma ^ { 5 } \right) ^ { 2 } = 1 , \quad { \gamma ^ { 5 } \gamma ^ { \mu } + \gamma ^ { \mu } \gamma ^ { 5 } = 0
-                        \end{array}
-                        \label{eq:gamma5_properties}
-                \end{equation}
-        \item definendo lo spinore aggiunto:
-                \begin{equation}
-                        \overline { \psi } \equiv \psi ^ { \dagger } \gamma ^ { 0 } = \psi ^ { T ^ { * } } \gamma ^ { 0 }
-                        \label{eq:spinor_adj}
-                \end{equation}
-                è possibile costruire le grandezze relativisticamente invarianti elencate in Tab.~\ref{tab:bilinear};
-        \item esiste una funzione $\psi^{\prime}$ rappresentabile nella forma:
-                \begin{equation}
-                        \psi ^ { \prime } = S \psi \quad ; \quad \operatorname { con } S ^ { - 1 } \gamma ^ { \mu } S = \sum _ { \nu } a _ { \mu \nu } \gamma ^ { \nu }
-                        \label{eq:s_operator}
-                \end{equation}
-                per la quale si ha Lorentz-invarianza dell'equazione di Dirac; questa funzione viene utilizzata per dimostrare \cite{ref:BGSex} la Lorentz-invarianza delle grandezze citate nel punto precedente ;
-        \item $\gamma^{0}$ rappresenta l'operatore Parità, per il quale si ha:
-                \begin{equation}
-                        \gamma ^ { 0 } \psi ( - \mathbf { r } , t ) \equiv \psi ( \mathbf { r } , t ) \quad ; \quad \gamma ^ { 0 } \psi ( \mathbf { r } , t ) \equiv \psi ( - \mathbf { r } , t )
-                \end{equation}
-        \item dato $\mathcal$ operatore di coniugazione complessa, si ha che $\gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K }$ rappresenta l'operatore di inversione temporale, per il quale si ha:
-                \begin{equation}
-                        \gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K } \psi ( \mathbf { r } , t ) = \psi ( \mathbf { r } , - t )
-                \end{equation}
-        \item $i \gamma ^ { 2 } \mathcal { K }$ rappresenta l'operatore di coniugazione di carica e parità CP, per il quale si ha:
-                \begin{equation}
-                        \left( i \gamma ^ { 2 } \mathcal { K } \right) \psi _ { + } = \psi _ { - } ( - \mathbf { p } )
-                \end{equation}
+                        \begin{array} { c } { \left( \gamma ^ { 5 } \right) ^ { 2 } = 1 , \quad { \gamma ^ { 5 } \gamma ^ { \mu } + \gamma ^ { \mu } \gamma ^ { 5 } = 0 \end{array}
+                                        \label{eq:gamma5_properties}
+                                \end{equation}
+                        \item definendo lo spinore aggiunto:
+                                \begin{equation}
+                                        \overline { \psi } \equiv \psi ^ { \dagger } \gamma ^ { 0 } = \psi ^ { T ^ { * } } \gamma ^ { 0 }
+                                        \label{eq:spinor_adj}
+                                \end{equation}
+                                è possibile costruire le grandezze relativisticamente invarianti elencate in Tab.~\ref{tab:bilinear};
+                        \item esiste una funzione $\psi^{\prime}$ rappresentabile nella forma:
+                                \begin{equation}
+                                        \psi ^ { \prime } = S \psi \quad ; \quad \operatorname { con } S ^ { - 1 } \gamma ^ { \mu } S = \sum _ { \nu } a _ { \mu \nu } \gamma ^ { \nu }
+                                        \label{eq:s_operator}
+                                \end{equation}
+                                per la quale si ha Lorentz-invarianza dell'equazione di Dirac; questa funzione viene utilizzata per dimostrare \cite{ref:BGSex} la Lorentz-invarianza delle grandezze citate nel punto precedente ;
+                        \item $\gamma^{0}$ rappresenta l'operatore Parità, per il quale si ha:
+                                \begin{equation}
+                                        \gamma ^ { 0 } \psi ( - \mathbf { r } , t ) \equiv \psi ( \mathbf { r } , t ) \quad ; \quad \gamma ^ { 0 } \psi ( \mathbf { r } , t ) \equiv \psi ( - \mathbf { r } , t )
+                                \end{equation}
+                        \item dato $\mathcal$ operatore di coniugazione complessa, si ha che $\gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K }$ rappresenta l'operatore di inversione temporale, per il quale si ha:
+                                \begin{equation}
+                                        \gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K } \psi ( \mathbf { r } , t ) = \psi ( \mathbf { r } , - t )
+                                \end{equation}
+                        \item $i \gamma ^ { 2 } \mathcal { K }$ rappresenta l'operatore di coniugazione di carica e parità CP, per il quale si ha:
+                                \begin{equation}
+                                        \left( i \gamma ^ { 2 } \mathcal { K } \right) \psi _ { + } = \psi _ { - } ( - \mathbf { p } )
+                                \end{equation}
                 \end{itemize}
 
                 \subsection{Proprietà delle soluzioni}
@@ -429,58 +446,63 @@ Si evidenziano inoltre i seguenti fatti e proprietà:
                 \end{equation}
                 detta anche equazione di Dirac nello spazio dei momenti. Sviluppando i conti e utilizzando la rappresentazione
                 \begin{equation}
-                        \psi = \left( \begin{array} { l } { \phi } \\ { \chi } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) }
+                        \psi = \left( \begin{array} { l } { u_{A} } \\ { u_{B} } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) }
                         \label{eq:dirac_sol_spinors}
                 \end{equation}
-                dove $\chi$ e $\phi$ sono spinori a due componenti, si ottiene:
-                \begin{subequations}
-                        \begin{align}
-                                \phi & = \frac { \boldsymbol { \sigma } \cdot \mathbf { p } } { E - m } \chi \\
-                                \chi & = \frac { \boldsymbol { \sigma } \cdot \mathbf { p } } { E + m } \phi
-                        \end{align}
-                        \label{eq:phi_chi}
-                \end{subequations}
-                Sostituendo la prima nella seconda (o viceversa), si può vedere come questo sia un sistema omogeneo che ammette soluzione solo se $E^{2} - p ^ { 2 } - m ^ { 2 } = 0$. Si avranno quindi due possibili valori per $E$:
+                dove $u_{A}$ e $u_{B}$ sono spinori a due componenti, si ottiene:
+                \begin{equation}
+                        u _ { A } = \frac { \vec { \sigma } \cdot \vec { p } } { E - m } u _ { B } \quad u _ { B } = \frac { \vec { \sigma } \cdot \vec { p } } { E + m } u _ { A }
+                \end{equation}
+                Sostituendo la prima nella seconda (o viceversa), si può vedere come questo sia un sistema omogeneo che ammette soluzione solo se
                 \begin{equation}
                         E = \pm \sqrt { p ^ { 2 } + m ^ { 2 } }
+                        \label{eq:energy}
                 \end{equation}
-                dove con il segno positivo si fa riferimento a particelle, mentre con il segno negativo ad antiparticelle. Tenendo conto di quanto sopra esposto, le soluzioni \ref{eq:phi_chi} si possono quindi scrivere:
-                \begin{subequations}
-                        \begin{align}
-                                E = | E | :  &
-                                \begin{cases}
-                                        \phi = \frac { \boldsymbol{\sigma} \cdot \boldsymbol{p}} { | E | - m } \chi \\
-                                        \chi = \frac { \boldsymbol{\sigma} \cdot \boldsymbol{p} } { | E | + m } \phi
-                                \end{cases} \\
-                                E = - | E | :  &
-                                \begin{cases}
-                                        \phi = - \frac { \boldsymbol{\sigma} \cdot \boldsymbol{p} } { | E | + m } \chi \\
-                                        \chi = \frac { \boldsymbol{\sigma} \cdot \boldsymbol{p} } { m - | E | } \phi
-                                \end{cases}
-                        \end{align}
-                        \label{eq:phi_chi_energy}
-                \end{subequations}
-                Dato che l'equazione di Dirac tratta particelle di spin 1/2, risulta conveniente scegliere per $\phi$ e $\chi$ gli autostati dell'operatore $\sigma_{3}$:
+                Scegliendo per $u_{A}$ e $u_{B}$ gli autostati dell'operatore $\sigma_{3}$, $u _ { A } = \left( \begin{array} { c } { 1 } \\ { 0 } \end{array} \right) , u _ { A } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right), u _ { B } = \left( \begin{array} { c } { 1 } \\ { 0 } \end{array} \right) , u _ { B } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right)$, si ottengono:
                 \begin{equation}
-                        \sigma _ { 3 } \phi = \pm \phi \quad ; \quad \sigma _ { 3 } \chi = \pm \chi
+                        \begin{align} u ^ { 1 } = \left( \begin{array} { c } { 1 } \\ { 0 } \\ { p _ { z } / ( E + m ) } \\ { \left( p _ { x } + i p _ { y } \right) / ( E + m ) } \end{array} \right) \quad u ^ { 2 } = \left( \begin{array} { c } { 0 } \\ { 1 } \\ { \left( p _ { x } - i p _ { y } \right) / ( E + m ) } \\ { - p _ { z } / ( E + m ) } \end{array} \right) \\ u ^ { 3 } = \left( \begin{array} { c } { - p _ { z } / ( - E + m ) } \\ { \left( - p _ { x } - i p _ { y } \right) / ( - E + m ) } \\ { 1 } \\ { 0 } \end{array} \right) \quad u ^ { 4 } = \left( \begin{array} { c } { \left( - p _ { x } + i p _ { y } \right) / ( - E + m ) } \\ { p _ { z } / ( - E + m ) } \\ { 0 } \\ { 1 } \end{array} \right) \end{align}
+                        \label{eq:u1u2u3u4}
                 \end{equation}
-                Questi autostati possono essere scritti come:
+                Le soluzioni $u_{1}$ e $u_{2}$ descrivono particelle di energia (\ref{eq:energy}) positiva e momento $\boldsymbol{p}$. Per le due rimanenti, che descrivono particelle ad energia negativa, si applica:
                 \begin{equation}
-                        \phi _ { R } = \left( \begin{array} { l } { 1 } \\ { 0 } \end{array} \right) \quad ; \quad \phi _ { L } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right) \quad ; \quad \chi _ { R } = \left( \begin{array} { l } { 1 } \\ { 0 } \end{array} \right) \quad ; \quad \chi _ { L } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right)
-                        \label{eq:left_right}
+                        \begin{align} v ^ { 2 } \left( p ^ { \mu } \right) \equiv u ^ { 3 } \left( - p ^ { \mu } \right) = \left( \begin{array} { c } { p _ { z } / ( E + m ) } \\ { \left( p _ { x } + i p _ { y } \right) / ( E + m ) } \\ { 1 } \\ { 0 } \end{array} \right) \\ v ^ { 1 } \left( p ^ { \mu } \right) \equiv u ^ { 4 } \left( - p ^ { \mu } \right) = \left( \begin{array} { c } { \left( p _ { x } - i p _ { y } \right) / ( E + m ) } \\ { - p _ { z } / ( E + m ) } \\ { 0 } \\ { 1 } \end{array} \right) \end{align}
+                        \label{eq:v1v2}
                 \end{equation}
-                Con questa scelta, le soluzioni dell'equazione di Dirac sono le seguenti:
-                \begin{subequations}
-                        \begin{align}
-                                E = | E | : \quad \psi _ { + } \equiv N u _ { + } e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) } = N \left( \begin{array} { c } { \phi } \\ { \frac { \boldsymbol{\sigma} \cdot \mathbf { p } } { | E | + m } \phi } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - | E | t ) } \\
-                                E = - | E | : \quad \psi _ { - } \equiv N u _ { - } e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) } = N \left( \begin{array} { c } { - \frac { \boldsymbol{\sigma} \cdot \mathbf { p } } { | E | + m } \chi } \\ { \chi } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } + | E | t ) }
-                        \end{align}
-                        \label{eq:dirac_sol}
-                \end{subequations}
-                dove $N = \sqrt { \frac { m + | E | } { 2 | E | } }$ è una costante di normalizzazione determinata imponendo $\psi ^ { \dagger } \psi = 1$.
-
-                \subsection{Operatore e stati di elicità}
-
+                così da introdurre l'interpretazione di antiparticelle ad energia positiva. Utilizzando quanto appena riportato, le soluzioni della (\ref{eq:dirac_equation}) si scrivono:
+                \begin{equation}
+                        \begin{align} \psi = u ^ { 1 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} x^{\mu} } \quad \psi = u ^ { 2 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} x^{\mu} } \\ \psi = v ^ { 1 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu}  x^{\mu} } \quad \psi = v ^ { 2 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} \cdot x^{\mu} } \end{align}
+                        \label{eq:u1u2v1v2}
+                \end{equation}
+                \subsection{Spin, elicità e chiralità}
+                Ricordando che
+                \begin{equation}
+                        \mathbf { S } = \frac { \hbar } { 2 } \mathbf { \Sigma } , \quad \text { con } \mathbf { \Sigma } = \left( \begin{array} { l l } { \sigma } & { 0 } \\ { 0 } & { \sigma } \end{array} \right)
+                \end{equation}
+                si può facilmente verificare che $u^{1}, u^{2}, v^{1}, v^{2}$ sono autostati di $\hat { S _ { z } }$ solo se il momento è lungo l'asse $z$. \\
+                In maniera più generale, è conveniente definire l'operatore elicità, che estrae la componente dello spin lungo la direzione del moto di una particella:
+                \begin{equation}
+                        \hat { h } = \frac { \vec { S } \cdot \vec { p } } { | \vec { S } | | \vec { p } | } = \frac { 2 \vec { S } \cdot \vec { p } } { | \vec { p } | }
+                        \label{eq:helicity}
+                \end{equation}
+                Per fermioni di spin semintero, gli autovalori di $\hat{h}$ possono essere $h=1$ ("particella destrorsa") e $h=-1$ ("particella sinistrorsa"). Si noti che:
+                \begin{itemize}
+                        \item fermioni non massivi sono puramente sinistrorsi ($u^{2}$), mentre fermioni massivi necessitano di una sovrapposizione degli stati $u^{1}$ e $u^{2}$;
+                        \item antifermioni non massivi sono puramente destrorsi ($v^{1}$), mentre antifermioni non massivi necessitano di una sovrapposizione degli stati $v^{1}$ e $v^{2}$.
+                \end{itemize}
+                Non essendo l'elicità una quantità Lorentz-invariante, risulta conveniente introdurre una quantità che lo sia: la chiralità. Essa può essere definita attraverso i seguenti operatori di proiezione:
+                \begin{equation}
+                        P _ { L } = \frac { 1 } { 2 } \left( 1 - \gamma _ { 5 } \right) \quad P _ { R } = \frac { 1 } { 2 } \left( 1 + \gamma _ { 5 } \right)
+                        \label{eq:plpr}
+                \end{equation}
+                $P_{L}$ e $P_{R}$ agiscono rispettivamente estraendo le componenti sinistrorse e destrorse di un fermione
+                \begin{equation}
+                        u _ { L } = P _ { L } u \quad u _ { R } = P _ { R } u
+                \end{equation}
+                e le componenti destrorse e sinistrorse di un antifermione
+                \begin{equation}
+                        v _ { R } = P _ { L } v \quad v _ { L } = P _ { R } v
+                \end{equation}
+                Si noti infine che nel caso relativistico elicità e chiralità coincidono.
 
                 \begin{thebibliography}{0}
                         \bibitem{ref:BGS}
