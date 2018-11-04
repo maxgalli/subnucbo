@@ -146,6 +146,7 @@ Questo fatto, insieme ad alcune anomalie rilevate nei decadimenti deboli di part
         \label{fig:fermi_decay}
 \end{figure}
 \subsection{Teoria V-A delle interazioni deboli}
+\label{subsec:v-a}
 La teoria $V-A$ dell'interazione debole venne sviluppata a partire dal 1957 da Feynmann e Gell-Mann come estensione della teoria di Fermi: ciò che rese necessario un aggiornamento della teoria fu la scoperta, avvenuta alcuni anni prima, della violazione della parità da parte dell'interazione debole. \\
 Formalizzata in analogia con l'interazione elettromagnetica, essa si basa sui seguenti fatti:
 \begin{itemize}
@@ -355,8 +356,62 @@ Si possono in questo modo interpretare i fatti sperimentali esposti in precedenz
 
 
 \subsection{Tipi di transizione nel decadimento $\beta$}
-Al fine di introdurre concetti che saranno ripresi nel seguito, si vuole ora trattare dei molteplici tipi di decadimento $\beta$ esistenti. La classificazione viene operata sulla base della variazione di momento angolare tra nucleo iniziale e nucleo finale. Tale variazione è connessa con lo spin dei due leptoni $e ^ { - } , \overline { \nu } _ { e }$ (oppure $e^{+}, \nu_{e}$): entrambi hanno spin 1/2, quindi la variazione dello spin nucleare può essere nulla (spin di neutrino ed elettrone antiparalleli), oppure $\pm1$ (spin paralleli).
+Al fine di introdurre concetti che saranno ripresi nel seguito, si vuole ora trattare dei molteplici tipi di decadimento $\beta$ esistenti. La classificazione viene operata sulla base della variazione di momento angolare tra nucleo iniziale e nucleo finale. Tale variazione è connessa con lo spin dei due leptoni $e ^ { - } , \overline { \nu } _ { e }$ (oppure $e^{+}, \nu_{e}$): entrambi hanno spin 1/2, quindi la variazione dello spin nucleare può essere nulla (spin di neutrino ed elettrone antiparalleli), oppure $\pm1$ (spin paralleli). Si tiene conto del numero di stati permessi dal momento angolare della transizione tramite la grandezza $|\matchal{M}|^{2}$. Questo valore dipende in parte dalla variazione di spin nella transizione del nucleo. Assumendo che l'elettrone e il neutrino siano emessi in uno stato di momento angolare $\matchal{l}=0$, la variazione dello spin del nucleo è pari alla somma degli spin dei due leptoni. Per l'orientazione degli spin di elettrone e neutrino:
+\begin{enumerate}
+        \item nelle transizioni $0 \rightarrow 0$, gli spin sono antiparalleli (stato di singoletto);
+        \item nelle transizioni $0 \rightarrow 1$ gli spin sono paralleli (stato di tripletto);
+        \item nelle transizioni $\frac{1}{2} \rightarrow \frac{1}{2}$ gli spin possono essere antiparalleli (lo spin del nucleo non cambia) o paralleli (lo spin del nucleo cambia direzione).
+\end{enumerate}
+Le transizioni del primo tipo sono dette transizioni di Fermi, quelle del secondo di Gamow-Teller, mentre le terze sono dette di tipo misto.
+\paragraph{Transizioni di Fermi} $\Delta J=0$, stato leptonico di singoletto di spin ($\uparrow\downarrow$). Un esempio di transizione di Fermi è:
+\begin{equation}
+        0 ^ { + } \rightarrow 0 ^ { + } , \Delta J = 0 : ^ { 14 } \mathrm { O } \rightarrow ^ { 14 } \mathrm { N } ^ { * } + e ^ { + } + \nu _ { e }
+        \label{eq:fermi_ex}
+\end{equation}
+Facendo riferimento alle quantità introdotte in Sec. \ref{subsec:v-a}, si ha che queste transizioni possono essere solo di tipo $S$ e $V$. Per la probabilità si transizione si ha:
+\begin{equation}
+        | \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { F } \right| ^ { 2 } = m _ { i , s } g _ { V } ^ { 2 }
+        \label{eq:m_fermi}
+\end{equation}
+dove $g_{V}$ è la costante di accoppiamento vettoriale.
+\paragraph{Transizioni di Gamow-Teller} $\Delta J=1$, stato leptonico di tripletto di spin ($\uparrow\uparrow$). Un esempio di transizione di Gamow-Teller è:
+\begin{equation}
+        1 ^ { + } \rightarrow 0 ^ { + } , \quad \Delta J = 1 : ^{6}H e \rightarrow^ { 6 } L i + e ^ { - } + \overline { \nu }
+        \label{eq:gt_ex}
+\end{equation}
+Facendo riferimento alle quantità introdotte in Sec. \ref{subsec:v-a}, si ha che queste transizioni possono essere solo di tipo $T$ e $A$. Per la probabilità si transizione si ha:
+\begin{equation}
+        | \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { G T } \right| ^ { 2 } = m _ { i , s } g _ { A } ^ { 2 }
+        \label{eq:m_gt}
+\end{equation}
+dove $g_{A}$ è la costante di accoppiamento assiale. \\
+Sfruttando i processi introdotti in (\ref{eq:fermi_ex}) e (\ref{eq:gt_ex}) è possibile stimare \cite{ref:BGSex} il rapporto tra le costanti $g_{V}$ e $g_{A}$, che tornerà utile nel seguito:
+\begin{equation}
+        \lambda = g _ { A } / g _ { v } = - 1.2695 \pm 0.0029
+        \label{eq:ga_gv}
+\end{equation}
 
+\subsection{Decadimento del neutrone con effetti di \textit{quark mixing}}
+Grazie all'introduzione del \textit{mixing} è possibile descrivere il decadimento del neutrone in termini di quark costituenti, elaborando così una teoria più sofisticata. Il diagramma di Feynman del decadimento è rappresentato in Fig. \ref{fig:neutron_decay_quarks}.
+\begin{figure}[!h]
+        \centering
+        \feynmandiagram [layered layout, horizontal=a to b] {
+                a [particle=\(d\)] -- [fermion] b -- [fermion] f1 [particle=\(u\)],
+                b -- [boson, edge label'=\(W^{-}\)] c,
+                c -- [anti fermion] f2 [particle=\(\overline \nu_{e}\)],
+                c -- [fermion] f3 [particle=\(e^{-}\)],
+        };
+        \caption{Diagramma di Feynman per il decadimento del neutrone, assumendo protone e neutrone costituiti da quark.}
+        \label{fig:neutron_decay_quarks}
+\end{figure}
+Il fattore al vertice quark-quark si può scrivere
+\begin{equation}
+        \mathcal { K } ^ { \mu } \rightarrow - \frac { i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( g _ { v } - g _ { A } \gamma ^ { 5 } \right)
+\end{equation}
+Se la parte vettoriale è conservata, allora $g_{V} = 1$; altrimenti il rapporto tra le due costanti assume il valore (\ref{eq:ga_gv}). Nello scrivere l'elemento di matrice, è inoltre necessario moltiplicare per un fattore $\cos\theta_{c}$, così che si possa scrivere:
+\begin{equation}
+        \mathcal { M } = \frac { g _ { w } ^ { 2 } } { 8 M _ { W } ^ { 2 } } V _ { u d } \cdot \left[ \overline { u } ( p ) \gamma ^ { \mu } \left( g _ { v } - g _ { A } \gamma ^ { 5 } \right) u ( n ) \right] \cdot \left[ \overline { u } ( e ) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v \left( \nu _ { e } \right) \right]
+\end{equation}
 \section{L'estensione della teoria: correnti neutre, meccanismo GIM e matrice CKM}
 
 \appendix
