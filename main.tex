@@ -413,6 +413,108 @@ Se la parte vettoriale è conservata, allora $g_{V} = 1$; altrimenti il rapporto
         \mathcal { M } = \frac { g _ { w } ^ { 2 } } { 8 M _ { W } ^ { 2 } } V _ { u d } \cdot \left[ \overline { u } ( p ) \gamma ^ { \mu } \left( g _ { v } - g _ { A } \gamma ^ { 5 } \right) u ( n ) \right] \cdot \left[ \overline { u } ( e ) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v \left( \nu _ { e } \right) \right]
 \end{equation}
 \section{L'estensione della teoria: correnti neutre, meccanismo GIM e matrice CKM}
+\subsection{Interazione debole a corrente neutra}
+Come anticipato nell'introduzione, i processi deboli a corrente carica (CC) non sono gli unici esistenti. Ci sono infatti reazioni, come ad esempio
+\begin{equation}
+        \begin{array} { c } { \nu _ { \mu } e ^ { - } \rightarrow \nu _ { \mu } e ^ { - } } \\ { \overline { \nu } _ { \mu } e ^ { - } \rightarrow \overline { \nu } _ { \mu } e ^ { - } } \end{array}
+        \label{eq:neutral_current}
+\end{equation}
+che possono avvenire solo attraverso lo scambio di un bosone $Z^{0}$. Questi processi vengono chiamati interazioni deboli a corrente neutra (NC). \\
+Come il fotone, anche lo $Z^{0}$ può essere scambiato sia nel canale $t$ che nel canale $s$: nel primo caso si ha lo scambio del bosone tra un neutrino e un fermione, con questi due che rimangono gli stessi durante tutto il processo, mentre nel secondo caso ha un processo di annichilazione $f \overline { f } \rightarrow Z ^ { 0 }$ seguito dalla creazione di una coppia $f ^ { \prime } \overline { f ^ { \prime } }$. \\
+L'interazione a corrente neutra fu scoperta nel 1977 utilizzando una camera a bolle a liquido pesante (Gargamelle, CERN) esposta ad un fascio di neutrini muonici ad alta energia; furono osservate le reazioni sugli elettroni atomici $\nu _ { \mu } e ^ { - } \rightarrow \nu _ { \mu } e ^ { - }$ e su nucleoni $\nu _ { \mu } N \rightarrow \nu _ { \mu } + \text {adroni}$, in cui sono visibili nello stato finale le sole tracce delle particelle cariche. In entrambi i casi, visto che mancava la segnatura caratteristica della presenza di un muone, si concluse che le reazioni possono procedere solo via NC. \\
+Storicamente, le NC sono state introdotte per rimuovere divergenze: nel caso, per esempio, della reazione $\nu \overline { \nu } \rightarrow W ^ { + } W ^ { - }$, il diagramma all'ordine più basso contiene lo scambio di un elettrone e dà luogo ad una divergenza, cancellata dal diagramma contenente lo scambio di una $Z^{0}$. \\
+Si noti che le interazioni a corrente neutra non erano previste dalla teoria di Fermi e rappresentano uno dei motivi che ne richiesero l'estensione.
+
+
+\subsection{Quark \textit{charm} e meccanismo GIM}
+Nel 1955 Gell-Mann e Pais osservarono che è possibile formare due combinazioni lineari dei mesoni $K$ neutri che sono autostati della simmetria CP, e quindi dell'interazione debole, e che questi corrispondono alle particelle che decadono nei due diversi stati di CP. Scegliendo le seguenti combinazioni lineari:
+\begin{equation}
+        | K _ { 1 } ^ { 0 } \rangle = 1 / \sqrt { 2 } ( | K ^ { 0 } \rangle + | \overline { K } ^ { 0 } \rangle ) \quad ; \quad | K _ { 2 } ^ { 0 } \rangle = 1 / \sqrt { 2 } ( | K ^ { 0 } \rangle - | \overline { K } ^ { 0 } \rangle )
+\end{equation}
+si può vedere come questi siano due stati distinti, combinazioni degli autostati delle interazioni forti, che hanno masse diverse e decadono in modi diversi:
+\begin{equation}
+        \begin{array} { c c } { | K _ { 1 } ^ { 0 } \rangle } & { \frac { 1 } { \sqrt { 2 } } ( | d \overline { s } \rangle + | s \overline { d } \rangle ) \quad C P = + 1 \longrightarrow \pi \pi } \\ { | K _ { 2 } ^ { 0 } \rangle } & { \frac { 1 } { \sqrt { 2 } } ( | d \overline { s } \rangle - | s \overline { d } \rangle ) \quad C P = - 1 \longrightarrow \pi \pi \pi } \end{array}
+\end{equation}
+Il valore della differenza di massa tra $K^{0}_{1}$ e $K^{0}_{2}$ si può calcolare nel modello a quark ed è in particolare proporzionale all'elemento di matrice che descrive la probabilità di transizione $K ^ { 0 } \leftrightarrow \overline { K } ^ { 0 }$, che ha $\Delta S = 2$. Il calcolo di questa quantità, considerando il contributo dei soli quark $u, d, s$ fornisce tuttavia un valore molto più grande del risultato sperimentale. Per questo motivo si ipotizzò l'esistenza di qualche fenomeno che impedisce le transizioni in cui cambia il sapore dei quark ma non la carica elettrica. \\
+Questo fatto fu messo in luce nel 1970 da Glashow, Iliopulos e Maiani, i quali proposero l'esistenza di un quarto quark (denominato \textit{c, charm}) con le seguenti proprietà:
+\begin{enumerate}
+        \item carica elettrica +2/3, isospin $I=0$, stranezza $S=0$ e numero barionico $B=1/3$;
+        \item un nuovo numero quantico $C$ che, analogamente alla stranezza, si conserva nell'interazione forte ma non in quella debole;
+        \item è autostato dell'interazione debole e forma un secondo doppietto di quark con il secondo stato ruotato della teoria di Cabibbo $s ^ { \prime } = s \operatorname { c o s } \theta _ { c } - d \operatorname { s i n } \theta _ { c }$.
+\end{enumerate}
+Con questa nuova ipotesi, si ha un nuovo doppietto per l'interazione debole:
+\begin{equation}
+        \left( \begin{array} { l } { c } \\ { s _ { c } } \end{array} \right) = \left( \begin{array} { c } { c } \\ { s \cos \theta _ { c } - d \sin \theta _ { c } } \end{array} \right)
+        \label{eq:c_sc_doublet}
+\end{equation}
+Utilizzando le stessi notazioni usate in (\ref{eq:genu}), (\ref{eq:gd}) e (\ref{eq:gs}) è possibile descrivere i processi semi-leptonici in cui interviene il quark $c$ usando l'ipotesi del meccanismo GIM:
+\begin{equation}
+        \langle ( \nu _ { e } e ^ { + } ) s | H _ { W } | c \rangle \propto g _ { e \nu } g _ { c s } = G _ { F } \operatorname { c o s } \theta _ { c }
+        \label{eq:gcs}
+\end{equation}
+\begin{equation}
+        \left\langle \left( \nu _ { e } e ^ { + } \right) d \left| H _ { W } \right| c \right\rangle \propto g _ { e \nu } g _ { c d } = G _ { F } \sin \theta _ { c }
+        \label{eq:gcd}
+\end{equation}
+da cui segue che nei decadimenti di mesoni charmati con $\Delta C = 1$ in mesoni non charmati, le transizioni $c \rightarrow s$ (che hanno accoppiamento $\cos^{2}\theta_{c}$) dominano sulle transizioni $c \rightarrow d$ (accoppiamento $\sin^{2}\theta_{c}$). \\
+Riassumendo, gli stati ruotati autostati dell'interazione debole che compaiono nelle due famiglie di quark
+\begin{equation}
+        \left( \begin{array} { l } { u } \\ { d_{c} } \end{array} \right)  \quad \left( \begin{array} { l } { c } \\ { s_{c} } \end{array} \right)
+\end{equation}
+si possono scrivere in forma matriciale
+\begin{equation}
+        \left( \begin{array} { l } { d_{c} } \\ { s_{c} \end{array} \right) = \left( \begin{array} { c c } { \cos \theta _ {c} } & { \sin \theta _ { c } } \\ { - \sin  \theta _ { c } } & { \cos \theta _ { c } } \end{array} \right) \left( \begin{array} { l } { d } \\ { s } \end{array} \right)
+\end{equation}
+Grazie a questa scrittura, il termine dell'hamiltoniana $H_{W}$ che dipende dal tipo di quark coinvolto può essere formalmente scritto nel modo seguente (considerando come esempio transizioni da un quark iniziale $d_{c}$ o $s_{c}$ ad uno stato finale $\overline{u}$ o $\overline{c}$):
+\begin{equation}
+        ( \overline { u } , \overline { c } ) \left( \begin{array} { c } { d _ { c } } \\ { s _ { c } } \end{array} \right) = ( \overline { u } , \overline { c } ) \left( \begin{array} { c } { \operatorname { c o s } \theta _ { c } \operatorname { s i n } \theta _ { c } } \\ { - \operatorname { s i n } \theta _ { c } \operatorname { c o s } \theta _ { c } } \end{array} \right) \left( \begin{array} { l } { d } \\ { s } \end{array} \right) = ( \overline { u } , \overline { c } ) V _ { c } \left( \begin{array} { l } { d } \\ { s } \end{array} \right)
+\end{equation}
+
+\begin{figure}[!h]
+        \centering
+        \feynmandiagram [layered layout, horizontal=a to b] {
+                a [particle=\(c\)] -- [fermion] b [label=0:\(g_{cd} (g_{cs})\)]-- [fermion] f1 [particle=\(d (s)\)],
+                b -- [boson, edge label'=\(W^{+}\)] c,
+                c -- [anti fermion] f2 [particle=\(\nu_{e}\)],
+                c -- [fermion] f3 [particle=\(e^{+}\)],
+        };
+        \caption{Interazione debole con un quark $c$ che si trasforma in $d$ o $s$.}
+        \label{fig:gim_decay}
+\end{figure}
+
+\subsection{Indizi sul quarto quark dalle correnti neutre}
+
+\subsection{I sei quark e la matrice CKM}
+Nel 1973 Kobayashi e Maskawa estesero l'idea di Cabibbo a tre generazioni di quark. Si hanno così i seguenti autostati dell'interazione debole:
+\begin{equation}
+        \left( \begin{array} { l } { u } \\ { d_{c}  } \end{array} \right)  \quad \left( \begin{array} { l } { c } \\ { s_{c} \end{array} \right) , \quad \left( \begin{array} { l } { t } \\ { b_{c} } \end{array} \right)
+\end{equation}
+che sono legati agli stati fisici dalla matrice di Cabibbo-Kobayashi-Maskawa:
+\begin{equation}
+        \left( \begin{array} { l } { d _ { c } } \\ { s _ { c } } \\ { b _ { c } } \end{array} \right) = V _ { C K M } \left( \begin{array} { l } { d } \\ { s } \\ { b } \end{array} \right)
+\end{equation}
+dove
+\begin{equation}
+        V_{CKM} = \left( \begin{array} { c } { V _ { u d } V _ { u s } V _ { u b } } \\ { V _ { c d } V _ { c s } V _ { c b } } \\ { V _ { t d } V _ { t s } V _ { t b } } \end{array} \right)
+        \label{eq:ckm}
+\end{equation}
+dove ogni elemento specifica l'accoppiamento tra i due quark scritti a pedice. La parametrizzazione proposta originariamente è la seguente ($c_{i}=\cos\theta_{i}, s_{i}=\sin\theta_{i}$):
+\begin{equation}
+V _ { C K M } = \left( \begin{array} { c c c } { c _ { 1 } } & { c _ { 3 } s _ { 1 } } & { s _ { 1 } s _ { 3 } } \\ { - c _ { 2 } s _ { 1 } } & { c _ { 1 } c _ { 2 } c _ { 3 } - s _ { 2 } s _ { 3 } e ^ { i \delta } } & { c _ { 1 } c _ { 2 } s _ { 3 } + c _ { 3 } s _ { 2 } e ^ { i \delta } } \\ { s _ { 1 } s _ { 2 } } & { - c _ { 1 } c _ { 3 } s _ { 2 } - c _ { 2 } s _ { 3 } e ^ { i \delta }} & {- c _ { 1 } s _ { 2 } s _ { 3 } + c _ { 2 } c _ { 3 } e ^ { i \delta } } \end{array} \right)
+        \label{eq:ckm_param}
+\end{equation}
+dove $\theta _ { 1 } , \theta _ { 2 } , \theta _ { 3 }$ sono tre angoli di mixing e $\delta$ è un angolo di fase che, se diverso da zero, porta alla violazione di $CP$ nell'interazione debole. Gli elementi della matrice CKM, determinati sperimentalmente, sono i seguenti:
+\begin{equation}
+        V _ { C K M } = \left( \begin{array} { c c c } { 0.97428 \pm 0.00015 } & { 0.2253 \pm 0.0007 } & { 0.00347 \pm 0.00016 } \\ { 0.2252 \pm 0.0007 } & { 0.97333 \pm 0.00015 } & { 0.041 \pm 0.001 } \\ { 0.0086 \pm 0.0003 } & { 0.040 \pm 0.001 } & { 0.99915 \pm 0.00005 } \end{array} \right)
+        \label{eq:ckm_values}
+\end{equation}
+Il fatto che gli elementi non diagonali siano molto piccoli mentre quelli sulla diagonale siano vicini all'unità ha un significato fisico importante, cioè che il modello predice una specifica sequenza di decadimenti:
+\begin{equation}
+        t \rightarrow \mathrm { b } \rightarrow \mathrm { c } \rightarrow \mathrm { s } \rightarrow \mathrm { u }
+\end{equation}
+Con lo schema di mixing, quark e leptoni hanno lo stesso accoppiamento e si può così parlare di universalità quark-leptoni.
+
+
 
 \appendix
 
