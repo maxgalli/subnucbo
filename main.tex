@@ -41,7 +41,6 @@
 \maketitle
 
 \begin{abstract}
-        This sample paper is intended to briefly expose \LaTeX\ package \texttt{subnucbo}.
 \end{abstract}
 
 \section{Introduzione}
@@ -111,10 +110,10 @@ i quali fanno sì che l'interazione debole abbia un cortissimo raggio d'azione. 
 In questa parte si introducono nozioni alle quali si farà riferimento in seguito.\\
 Attraverso la teoria perturbativa è possibile ricavare la probabilità di transizione da uno stato iniziale \textit{i} ad uno stato finale \textit{f}:
 \begin{equation}
-        \Gamma = \frac{2 \pi} {\hbar} \cdot | \mathcal{M}|^{2} \rho_{f}
+        \Gamma = \frac{2 \pi} {\hbar} \cdot | \mathcal{M}|^{2} \frac{dN}{dE_{f}}
         \label{eq:decay_rate}
 \end{equation}
-dove $\rho_{f}$ è la densità degli stati per unità di intervallo di energia (spazio delle fasi), mentre $\mathcal{M}$ è l'elemento di matrice per la probabilità di transizione e si calcola valutando i diagrammi di Feynman più rilevanti e applicando le regole opportune. La (\ref{eq:decay_rate}) è anche detta "regola d'oro di Fermi". \\
+dove $dN/dE_{f}$ è la densità degli stati per unità di intervallo di energia (spazio delle fasi), mentre $\mathcal{M}$ è l'elemento di matrice per la probabilità di transizione e si calcola valutando i diagrammi di Feynman più rilevanti e applicando le regole opportune. Il fattore spazio delle fasi contiene solo informazioni di natura cinematica; dipende da masse, energie e momenti dei partecipanti e riflette il fatto che un dato processo è tanto più probabile che avvenga quanto più "margine di manovra" possiede nello stato finale. La (\ref{eq:decay_rate}) è anche detta \textit{regola d'oro di Fermi}. \\
 Inoltre è possibile dimostrare \cite{ref:griff} che per processi di decadimento è possibile scrivere la vita media della particella $\tau$ come:
 \begin{equation}
         \tau = \frac{1}{\Gamma}
@@ -125,15 +124,11 @@ dove $\Gamma$ corrisponde in realtà alla sommatoria su tutti gli $n$ modi di de
         \Gamma = \sum _ { i = 1 } ^ { n } \Gamma _ { i }
         \label{eq:gamma_sum}
 \end{equation}
-Si introduce infine la regola di Sargent~\cite{ref:BGS}: se $\tau$ è la vita media di una particella e $\Gamma_{i}/\Gamma$ è il suo \textit{branching ratio} in un particolare decadimento debole a tre corpi nello stato finale. allora la probabilità di transizione corrisponde a:
-\begin{equation}
-        W = \frac{(\Gamma_{i}/\Gamma)}{\tau} \simeq G_{F}^{2}E_{0}^{5} \simeq G_{F}^{2}\Delta m^{5}
-        \label{eq:sargent_rule}
-\end{equation}
 
 \section{Verso l'universalità dell'interazione debole: la necessità del \textit{mixing} e l'intuizione di Cabibbo}
-La teoria di Fermi, sviluppata a partire dal 1934, è considerata il prototipo dell'interazione debole: essa è puntiforme (in quanto coinvolge l'interazione di quattro fermioni in un punto) e presenta una costante di accoppiamento $G_{F}$, detta \textit{costante di Fermi}. Una rappresentazione grafica della teoria è mostrata in Fig. \ref{fig:fermi_decay}. Applicando la teoria a diversi decadimenti, come ad esempio nei casi di neutrone e muone, risulta evidente che $G_{F}$ calcolata in funzione dei risultati sperimentali dà risultati leggermente diversi. \\
-Questo fatto, insieme ad alcune anomalie rilevate nei decadimenti deboli di particelle strane, portò alla necessità di aggiungere un nuovo tassello alla teoria.
+\subsection{Teoria di Fermi del decadimento $\beta$}
+La teoria di Fermi (1934) fu sviluppata in analogia con quella elettromagnetica per spiegare il decadimento $\beta$ dei nuclei. Essa è considerata il prototipo dell'interazione debole: è puntiforme (in quanto coinvolge l'interazione di quattro fermioni in un punto) e presenta una costante di accoppiamento $G_{F}$, detta \textit{costante di Fermi}. Interessante è inoltre notare come essa sia la prima teoria a fare uso del neutrino, la cui esistenza era stata ipotizzata solo quattro anni prima da Pauli, nel disperato tentativo di spiegare lo spettro continuo di energia osservato dell'elettrone emesso nei decadimenti $\beta$. Una rappresentazione grafica della teoria è mostrata in Fig. \ref{fig:fermi_decay}.\\
+Applicando la teoria a diversi decadimenti, come ad esempio nei casi di neutrone e muone, risulta evidente che $G_{F}$ calcolata in funzione dei risultati sperimentali dà risultati leggermente diversi. Questo fatto, insieme ad alcune anomalie rilevate nei decadimenti deboli di particelle strane, portò alla necessità di aggiungere un nuovo tassello alla teoria.
 \begin{figure}[!h]
         \centering
         \feynmandiagram [layered layout, horizontal= nuc1 to a ] {
@@ -147,10 +142,9 @@ Questo fatto, insieme ad alcune anomalie rilevate nei decadimenti deboli di part
 \end{figure}
 \subsection{Teoria V-A delle interazioni deboli}
 \label{subsec:v-a}
-La teoria $V-A$ dell'interazione debole venne sviluppata a partire dal 1957 da Feynmann e Gell-Mann come estensione della teoria di Fermi: ciò che rese necessario un aggiornamento della teoria fu la scoperta, avvenuta alcuni anni prima, della violazione della parità da parte dell'interazione debole. \\
-Formalizzata in analogia con l'interazione elettromagnetica, essa si basa sui seguenti fatti:
+La teoria $V-A$ dell'interazione debole venne sviluppata a partire dal 1957 da Feynmann e Gell-Mann come estensione della teoria di Fermi: ciò che rese necessario un aggiornamento della teoria fu la scoperta, avvenuta alcuni anni prima, della violazione della parità da parte dell'interazione debole. Essa si basa sui seguenti fatti:
 \begin{itemize}
-        \item per particelle con spin 1/2, le funzioni d'onda appropriate sono spinori a quattro componenti soddisfacenti l'equazione di Dirac (Appendice \ref{app:dirac});
+        \item per particelle con spin 1/2, le funzioni d'onda appropriate sono spinori a quattro componenti che soddisfano l'equazione di Dirac (Appendice \ref{app:dirac});
         \item l'ampiezza del processo è proporzionale al quadrivettore densità di corrente attraverso una costante da determinarsi.
 \end{itemize}
 In generale, una corrente può essere scritta nella seguente forma:
@@ -176,16 +170,46 @@ Le (\ref{eq:current}) sono forme bilineari che si trasformano sotto trasformazio
         \caption{Forme bilineari.}
         \label{tab:bilinear}
 \end{table}
-L'operatore di un'interazione descritta dallo scambio di una particella di spin unitario può avere solo natura vettoriale o assiale. Tuttavia è possibile mostrare che per avere violazione di parità (come accade nell'interazione debole) è necessaria una teoria che misceli correnti vettoriali e assiali, in quanto queste due, prese singolarmente, conservano la parità. Si noti che "conservare la parità" significa che i bosoni mediatori possono accoppiarsi in ugual modo con particelle sinistrorse o destrorse. \\
-Potendo scrivere in maniera del tutto generale l'elemento di matrice per l'interazione debole nella seguente maniera:
+L'operatore di un'interazione descritta dallo scambio di una particella di spin unitario può avere solo natura vettoriale o assiale. Tuttavia è possibile mostrare che per avere violazione di parità (come accade nell'interazione debole) è necessaria una teoria che misceli correnti vettoriali e assiali, in quanto queste due, prese singolarmente, conservano la parità. \\
+La dimostrazione si imposta tenendo presente che l'elemento di matrice per l'interazione debole si può scrivere in generale nella seguente maniera:
 \begin{equation}
-        \mathcal{M} = G _ { F } \eta _ { \mu \nu } J ^ { \mu } J ^ { \nu }
+        \mathcal{M} \propto \eta_{\mu\nu}J^{\mu}J^{\nu}
         \label{eq:weak_matrix_element}
 \end{equation}
-si può verificare come un operatore composto da una miscela di $V$ e $A$ non sia invariante sotto l'operazione di parità. L'elemento di matrice è:
+e ricordando, come descritto in Appendice \ref{app:dirac}, che gli spinori $\psi$ e $\overline{\psi} = \psi ^ { + } \gamma ^ { 0 }$ si trasformano sotto l'operazione di parità come
+\begin{equation}
+        \psi \stackrel { P } { \rightarrow } \gamma ^ { 0 } \psi \quad \overline { \psi } \stackrel { P } { \rightarrow } \left( \gamma ^ { 0 } \psi \right) ^ { + } \gamma ^ { 0 } = \psi ^ { + } \gamma ^ { 0 } \gamma ^ { 0 } = \overline { \psi } \gamma ^ { 0 }
+\end{equation}
+\paragraph{Corrente vettoriale} La corrente vettoriale $V ^ { \mu } = \overline { \psi } \gamma ^ { \mu } \psi$ si trasforma sotto parità come:
+\begin{equation}
+        \overline { \psi } \gamma ^ { \mu } \psi \stackrel { P } { \rightarrow } \left( \overline { \psi } \gamma ^ { 0 } \right) \gamma ^ { \mu } \left( \gamma ^ { 0 } \psi \right)
+\end{equation}
+Per le coordinate tempo e spazio si ha separatamente:
+\begin{equation}
+        \begin{aligned} \overline { \psi } \gamma ^ { 0 } \psi \stackrel { P } { \rightarrow } \left( \overline { \psi } \gamma ^ { 0 } \right) \gamma ^ { 0 } \left( \gamma ^ { 0 } \psi \right) & = \overline { \psi } \gamma ^ { 0 } \psi \\ \overline { \psi } \gamma ^ { k } \psi \stackrel { P } { \rightarrow } \left( \overline { \psi } \gamma ^ { 0 } \right) \gamma ^ { k } \left( \gamma ^ { 0 } \psi \right) & = - \overline { \psi } \gamma ^ { k } \psi \end{aligned}
+\end{equation}
+con $k=1,2,3$, dalle quali si vede che le componenti spaziali cambiano segno mentre quella temporale no. L'elemento di matrice \ref{eq:weak_matrix_element} si trasforma quindi sotto parità come:
+\begin{equation}
+        \mathcal{M} \propto V _ { 1 } ^ { 0 } V _ { 2 } ^ { 0 } - \vec { V } _ { 1 } \vec { V } _ { 2 } \stackrel { P } { \rightarrow } V _ { 1 } ^ { 0 } V _ { 2 } ^ { 0 } - \left( - \vec { V } _ { 1 } \right) \left( - \vec { V } _ { 2 } \right) = V _ { 1 } ^ { 0 } V _ { 2 } ^ { 0 } - \vec { V } _ { 1 } \vec { V } _ { 2 }
+\end{equation}
+conservando la parità.
+\paragraph{Corrente assiale} La corrente assiale $A ^ { \mu } = \overline { \psi } \gamma ^ { \mu } \gamma ^ { 5 } \psi$ si trasforma sotto parità come:
+\begin{equation}
+        \overline { \psi } \gamma ^ { \mu } \gamma ^ { 5 } \psi \stackrel { P } { \rightarrow } \left( \overline { \psi } \gamma ^ { 0 } \right) \gamma ^ { \mu } \gamma ^ { 5 } \left( \gamma ^ { 0 } \psi \right)
+\end{equation}
+Per le coordinate tempo e spazio si ha separatamente:
+\begin{equation}
+        \begin{array} { l } { \overline { \psi } \gamma ^ { 0 } \gamma ^ { 5 } \psi \stackrel { P } { \rightarrow } \left( \overline { \psi } \gamma ^ { 0 } \right) \gamma ^ { 0 } \gamma ^ { 5 } \left( \gamma ^ { 0 } \psi \right) = - \overline { \psi } \gamma ^ { 0 } \gamma ^ { 5 } \psi } \\ { \overline { \psi } \gamma ^ { k } \gamma ^ { 5 } \psi \stackrel { P } { \rightarrow } \left( \overline { \psi } \gamma ^ { 0 } \right) \gamma ^ { k } \gamma ^ { 5 } \left( \gamma ^ { 0 } \psi \right) = \overline { \psi } \gamma ^ { k } \gamma ^ { 5 } \psi } \end{array}
+\end{equation}
+con $k=1,2,3$, dalle quali si vede che la componente temporale cambia segno mentre quelle spaziali no. L'elemento di matrice \ref{eq:weak_matrix_element} si trasforma quindi sotto parità come:
+\begin{equation}
+        \begin{aligned} \mathcal{M} & = A _ { 1 } ^ { 0 } A _ { 2 } ^ { 0 } - \vec { A } _ { 1 } \vec { A } _ { 2 } \\ \stackrel { P } { \rightarrow } M _ { i f } & = \left( - A _ { 1 } ^ { 0 } \right) \left( - A _ { 2 } ^ { 0 } \right) - \vec { A } _ { 1 } \vec { A } _ { 2 } = A _ { 1 } ^ { 0 } A _ { 2 } ^ { 0 } - \vec { A } _ { 1 } \vec { A } _ { 2 } \end{aligned}
+\end{equation}
+conservando anche in questo caso la parità.
+\paragraph{Corrente vettoriale - assiale} L'elemento di matrice di una teoria $V-A$ è:
 \begin{equation}
         \begin{aligned}
-                M _ { i f } & \propto \eta _ { \mu \nu } \left( V _ { 1 } ^ { \mu } - A _ { 1 } ^ { \mu } \right) \left( V _ { 2 } ^ { \mu } - A _ { 2 } ^ { \mu } \right) \\ & = \left( V _ { 1 } ^ { 0 } - A _ { 1 } ^ { 0 } \right) \left( V _ { 2 } ^ { 0 } - A _ { 2 } ^ { 0 } \right) - \left( \vec { V } _ { 1 } - \vec { A } _ { 1 } \right) \left( \vec { V } _ { 2 } - \vec { A } _ { 2 } \right)
+                \mathcal{M} & \propto \eta _ { \mu \nu } \left( V _ { 1 } ^ { \mu } - A _ { 1 } ^ { \mu } \right) \left( V _ { 2 } ^ { \mu } - A _ { 2 } ^ { \mu } \right) \\ & = \left( V _ { 1 } ^ { 0 } - A _ { 1 } ^ { 0 } \right) \left( V _ { 2 } ^ { 0 } - A _ { 2 } ^ { 0 } \right) - \left( \vec { V } _ { 1 } - \vec { A } _ { 1 } \right) \left( \vec { V } _ { 2 } - \vec { A } _ { 2 } \right)
         \end{aligned}
 \end{equation}
 che sotto parità si trasforma come:
@@ -280,7 +304,7 @@ Questo valore discorda da quello ottenuto (Eq.~\ref{eq:gf_muon_value}) da un dec
 
 \subsection{Decadimenti deboli di particelle strane}
 Poiché le interazioni deboli coinvolgono sia leptoni che adroni, occorre fare alcune classificazioni, basate sul fatto che nei processi dovuti alla WI siano coinvolti o meno dei leptoni. Nel caso di processi semi-leptonici o non-leptonici, si osservano decadimenti in cui non sono coinvolte particelle strane ($\Delta S=0$), oppure con decadimenti che violano la stranezza ($\Delta S=1$). Il decadimento debole delle particelle strane presenta alcune anomalie, indipendentemente che si considerino processi leptonici, semi-leptonici o non-leptonici.
-\subsubsection{Decadimenti leptonici}
+\paragraph{Decadimenti leptonici}
 Si consideri il caso dei decadimenti puramente leptonici riportati in Tab.~\ref{tab:leptonic_decays}.
 \begin{table}[!h]
         \begin{tabular}{llccc}
@@ -294,9 +318,14 @@ Si consideri il caso dei decadimenti puramente leptonici riportati in Tab.~\ref{
         \caption{Decadimenti leptonici di pione e kaone.}
         \label{tab:leptonic_decays}
 \end{table}
+Utilizzando la regola d'oro di Fermi e la costante $G_{F}$ per il calcolo della vita media del kaone, si ottiene una vita media circa venti volte più piccola di quella misurata sperimentalmente. Per spiegare questa anomalia si può immaginare che, nel caso dei quark, la costante di accoppiamento dipenda dal sapore: nel caso del $\pi$ il decadimento coinvolge il quark $d$, e si può immaginare di utilizzare una costante di accoppiamento $G _ { d } \simeq G _ { F }$, in quanto la vita media calcolata con $G_{F}$ fornisce risultati adeguati; nel caso del $K$ il decadimento coinvolge il quark $s$, e si può immaginare di utilizzare una costante di accoppiamento $G _ { s } < G _ { d }$ in maniera da ottenere il risultato della vita media corretto. Così facendo, si ottiene:
+\begin{equation}
+        \frac { G _ { s } ^ { 2 } } { G _ { d } ^ { 2 } } \simeq 0.05
+        \label{eq:frac_lepton_decay}
+\end{equation}
 
-\subsubsection{Decadimenti semi-leptonici}
-In questo caso si ha che gli stati finali comprendono sia leptoni che adroni. Si considerino i decadimenti della $\Sigma^{-}$ mostrati in Tab.~\ref{tab:isemileptonic_decays}: la regola di Sargent (\ref{eq:sargent_rule}) fornisce una buona approssimazione per il calcolo della vita media. Tuttavia, anche in questo caso i risultati numerici sono corretti per i decadimenti con $\Delta S = 0$, ed errati di un fattore \sim 20 per i decadimenti con $\Delta S = 1$ . Di nuovo, si può immaginare che nel caso di decadimenti senza variazione di stranezza intervenga la costante $G_{d}$, mentre in quelli con $\Delta S = 1$ intervenga la costante $G_{s}$. Si può stimare il rapporto tra le due costanti usando i decadimenti della $\Sigma^{-}$:
+\paragraph{Decadimenti semi-leptonici}
+In questo caso si ha che gli stati finali comprendono sia leptoni che adroni. Si considerino i decadimenti della $\Sigma^{-}$ mostrati in Tab.~\ref{tab:isemileptonic_decays}: anche in questo caso i risultati numerici sono corretti per i decadimenti con $\Delta S = 0$, ed errati di un fattore \sim 20 per i decadimenti con $\Delta S = 1$ . Di nuovo, si può immaginare che nel caso di decadimenti senza variazione di stranezza intervenga la costante $G_{d}$, mentre in quelli con $\Delta S = 1$ intervenga la costante $G_{s}$. Si può stimare il rapporto tra le due costanti usando i decadimenti della $\Sigma^{-}$:
 \begin{equation}
         \frac{G_{s}^{2}}{G_{d}^{2}} = \frac{\Gamma(\Sigma^{-} \rightarrow n e^{-} \overline{\nu_{e}})/\Delta m^{5}_{\Delta S = 1}}{\Gamma(\Sigma^{-} \rightarrow \Lambda^{0} e^{-} \overline{\nu_{e}})/\Delta m^{5}_{\Delta S = 0}} = 0.057
         \label{eq:ratio_semileptonic}
@@ -314,6 +343,15 @@ In questo caso si ha che gli stati finali comprendono sia leptoni che adroni. Si
         \caption{Decadimenti semi-leptonici della $\Sigma^{-}$.}
         \label{tab:isemileptonic_decays}
 \end{table}
+
+Un'altra peculiarità è che per i decadimenti semi-leptonici vale la regola di selezione $\Delta Q = \Delta S$, dove $\Delta Q$ e $\Delta S$ sono rispettivamente le variazioni di carica e distranezza fra lo stato finale e quello iniziale. Questa relazione implica che in termini di quark il processo è:
+\begin{equation}
+        s \rightarrow W ^ { - } u \rightarrow \left( e ^ { - } \overline { \nu } _ { e } \right) u
+\end{equation}
+I decadimenti che non soddisfano la relazione $\Delta Q = \Delta S$ sono largamente soppressi.
+
+\paragraph{Decadimenti non leptonici}
+Questi decadimenti presentano solo quark nello stato finale e sono caratterizzati dalle regole di selezione $\Delta S = 1$ e $\Delta I = 1/2$ (i quali sono rispettivamente variazione di stranezza e di isospin forte tra gli stati finale ed iniziale), che corrispondono ad una transizione tra quark $s \rightarrow u$. La costante di accoppiamento da usare è quindi $G_{s}$.
 
 
 \subsection{L'angolo di Cabibbo}
@@ -517,7 +555,6 @@ Con lo schema di mixing, quark e leptoni hanno lo stesso accoppiamento e si può
 
 
 \appendix
-
 \section{Equazione e formalismo di Dirac}
 \label{app:dirac}
 \subsection{Equazione e matrici $\gamma$}
@@ -554,134 +591,184 @@ con
 Si evidenziano inoltre i seguenti fatti e proprietà:
 \begin{itemize}
         \item in molti casi è utile definire la matrice:
-                \begin{equation}
-                        \gamma ^ { 5 } : = i \gamma ^ { 0 } \gamma ^ { 1 } \gamma ^ { 2 } \gamma ^ { 3 } = \left( \begin{array} { l l l l } { 0 } & { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { 1 } \\ { 1 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 0 } \end{array} \right)
-                        \label{eq:gamma5}
-                \end{equation}
+        \begin{equation}
+                \gamma ^ { 5 } : = i \gamma ^ { 0 } \gamma ^ { 1 } \gamma ^ { 2 } \gamma ^ { 3 } = \left( \begin{array} { l l l l } { 0 } & { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { 1 } \\ { 1 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 0 } \end{array} \right)
+                \label{eq:gamma5}
+        \end{equation}
                 con
-                \begin{equation}
-                        \begin{array} { c } { \left( \gamma ^ { 5 } \right) ^ { 2 } = 1 , \quad { \gamma ^ { 5 } \gamma ^ { \mu } + \gamma ^ { \mu } \gamma ^ { 5 } = 0 \end{array}
-                                        \label{eq:gamma5_properties}
-                                \end{equation}
-                        \item definendo lo spinore aggiunto:
-                                \begin{equation}
-                                        \overline { \psi } \equiv \psi ^ { \dagger } \gamma ^ { 0 } = \psi ^ { T ^ { * } } \gamma ^ { 0 }
-                                        \label{eq:spinor_adj}
-                                \end{equation}
-                                è possibile costruire le grandezze relativisticamente invarianti elencate in Tab.~\ref{tab:bilinear};
-                        \item esiste una funzione $\psi^{\prime}$ rappresentabile nella forma:
-                                \begin{equation}
-                                        \psi ^ { \prime } = S \psi \quad ; \quad \operatorname { con } S ^ { - 1 } \gamma ^ { \mu } S = \sum _ { \nu } a _ { \mu \nu } \gamma ^ { \nu }
-                                        \label{eq:s_operator}
-                                \end{equation}
-                                per la quale si ha Lorentz-invarianza dell'equazione di Dirac; questa funzione viene utilizzata per dimostrare \cite{ref:BGSex} la Lorentz-invarianza delle grandezze citate nel punto precedente ;
-                        \item $\gamma^{0}$ rappresenta l'operatore Parità, per il quale si ha:
-                                \begin{equation}
-                                        \gamma ^ { 0 } \psi ( - \mathbf { r } , t ) \equiv \psi ( \mathbf { r } , t ) \quad ; \quad \gamma ^ { 0 } \psi ( \mathbf { r } , t ) \equiv \psi ( - \mathbf { r } , t )
-                                \end{equation}
-                        \item dato $\mathcal$ operatore di coniugazione complessa, si ha che $\gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K }$ rappresenta l'operatore di inversione temporale, per il quale si ha:
-                                \begin{equation}
-                                        \gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K } \psi ( \mathbf { r } , t ) = \psi ( \mathbf { r } , - t )
-                                \end{equation}
-                        \item $i \gamma ^ { 2 } \mathcal { K }$ rappresenta l'operatore di coniugazione di carica e parità CP, per il quale si ha:
-                                \begin{equation}
-                                        \left( i \gamma ^ { 2 } \mathcal { K } \right) \psi _ { + } = \psi _ { - } ( - \mathbf { p } )
-                                \end{equation}
-                \end{itemize}
+        \begin{equation}
+                \begin{array} { c } { \left( \gamma ^ { 5 } \right) ^ { 2 } = 1 , \quad { \gamma ^ { 5 } \gamma ^ { \mu } + \gamma ^ { \mu } \gamma ^ { 5 } = 0 \end{array}
+                \label{eq:gamma5_properties}
+        \end{equation}
+        \item definendo lo spinore aggiunto:
+        \begin{equation}
+                \overline { \psi } \equiv \psi ^ { \dagger } \gamma ^ { 0 } = \psi ^ { T ^ { * } } \gamma ^ { 0 }
+                \label{eq:spinor_adj}
+        \end{equation}
+        è possibile costruire le grandezze relativisticamente invarianti elencate in Tab.~\ref{tab:bilinear};
+        \item esiste una funzione $\psi^{\prime}$ rappresentabile nella forma:
+        \begin{equation}
+                \psi ^ { \prime } = S \psi \quad ; \quad \operatorname { con } S ^ { - 1 } \gamma ^ { \mu } S = \sum _ { \nu } a _ { \mu \nu } \gamma ^ { \nu }
+                \label{eq:s_operator}
+        \end{equation}
+        per la quale si ha Lorentz-invarianza dell'equazione di Dirac; questa funzione viene utilizzata per dimostrare \cite{ref:BGSex} la Lorentz-invarianza delle grandezze citate nel punto precedente ;
+        \item $\gamma^{0}$ rappresenta l'operatore Parità, per il quale si ha:
+        \begin{equation}
+                \gamma ^ { 0 } \psi ( - \mathbf { r } , t ) \equiv \psi ( \mathbf { r } , t ) \quad ; \quad \gamma ^ { 0 } \psi ( \mathbf { r } , t ) \equiv \psi ( - \mathbf { r } , t )
+        \end{equation}
+        \item dato $\mathcal$ operatore di coniugazione complessa, si ha che $\gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K }$ rappresenta l'operatore di inversione temporale, per il quale si ha:
+        \begin{equation}
+                \gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K } \psi ( \mathbf { r } , t ) = \psi ( \mathbf { r } , - t )
+        \end{equation}
+        \item $i \gamma ^ { 2 } \mathcal { K }$ rappresenta l'operatore di coniugazione di carica e parità CP, per il quale si ha:
+        \begin{equation}
+                \left( i \gamma ^ { 2 } \mathcal { K } \right) \psi _ { + } = \psi _ { - } ( - \mathbf { p } )
+        \end{equation}
+\end{itemize}
 
-                \subsection{Proprietà delle soluzioni}
-                L'equazione di Dirac è un insieme di quattro equazioni ognuna delle quali deve avere una soluzione.
-                Tali soluzioni si scrivono nella seguente maniera (utilizzando le unità naturali):
-                \begin{equation}
-                        \psi = u e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) } = u e ^ { - i p _ { \mu } x ^ { \mu } }
-                        \label{eq:dirac_sol}
-                \end{equation}
-                dove $u$ è uno spinore a quattro componenti che dipende dal momento. Sostituendo queste soluzioni nella \ref{eq:dirac_equation} si ottiene:
-                \begin{equation}
-                        \left( \gamma ^ { \mu } p _ { \mu } - m \right) u = 0
-                        \label{eq:dirac_eq_momentum}
-                \end{equation}
-                detta anche equazione di Dirac nello spazio dei momenti. Sviluppando i conti e utilizzando la rappresentazione
-                \begin{equation}
-                        \psi = \left( \begin{array} { l } { u_{A} } \\ { u_{B} } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) }
-                        \label{eq:dirac_sol_spinors}
-                \end{equation}
-                dove $u_{A}$ e $u_{B}$ sono spinori a due componenti, si ottiene:
-                \begin{equation}
-                        u _ { A } = \frac { \vec { \sigma } \cdot \vec { p } } { E - m } u _ { B } \quad u _ { B } = \frac { \vec { \sigma } \cdot \vec { p } } { E + m } u _ { A }
-                \end{equation}
-                Sostituendo la prima nella seconda (o viceversa), si può vedere come questo sia un sistema omogeneo che ammette soluzione solo se
-                \begin{equation}
-                        E = \pm \sqrt { p ^ { 2 } + m ^ { 2 } }
-                        \label{eq:energy}
-                \end{equation}
-                Scegliendo per $u_{A}$ e $u_{B}$ gli autostati dell'operatore $\sigma_{3}$, $u _ { A } = \left( \begin{array} { c } { 1 } \\ { 0 } \end{array} \right) , u _ { A } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right), u _ { B } = \left( \begin{array} { c } { 1 } \\ { 0 } \end{array} \right) , u _ { B } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right)$, si ottengono:
-                \begin{equation}
-                        \begin{align} u ^ { 1 } = \left( \begin{array} { c } { 1 } \\ { 0 } \\ { p _ { z } / ( E + m ) } \\ { \left( p _ { x } + i p _ { y } \right) / ( E + m ) } \end{array} \right) \quad u ^ { 2 } = \left( \begin{array} { c } { 0 } \\ { 1 } \\ { \left( p _ { x } - i p _ { y } \right) / ( E + m ) } \\ { - p _ { z } / ( E + m ) } \end{array} \right) \\ u ^ { 3 } = \left( \begin{array} { c } { - p _ { z } / ( - E + m ) } \\ { \left( - p _ { x } - i p _ { y } \right) / ( - E + m ) } \\ { 1 } \\ { 0 } \end{array} \right) \quad u ^ { 4 } = \left( \begin{array} { c } { \left( - p _ { x } + i p _ { y } \right) / ( - E + m ) } \\ { p _ { z } / ( - E + m ) } \\ { 0 } \\ { 1 } \end{array} \right) \end{align}
-                        \label{eq:u1u2u3u4}
-                \end{equation}
-                Le soluzioni $u_{1}$ e $u_{2}$ descrivono particelle di energia (\ref{eq:energy}) positiva e momento $\boldsymbol{p}$. Per le due rimanenti, che descrivono particelle ad energia negativa, si applica:
-                \begin{equation}
-                        \begin{align} v ^ { 2 } \left( p ^ { \mu } \right) \equiv u ^ { 3 } \left( - p ^ { \mu } \right) = \left( \begin{array} { c } { p _ { z } / ( E + m ) } \\ { \left( p _ { x } + i p _ { y } \right) / ( E + m ) } \\ { 1 } \\ { 0 } \end{array} \right) \\ v ^ { 1 } \left( p ^ { \mu } \right) \equiv u ^ { 4 } \left( - p ^ { \mu } \right) = \left( \begin{array} { c } { \left( p _ { x } - i p _ { y } \right) / ( E + m ) } \\ { - p _ { z } / ( E + m ) } \\ { 0 } \\ { 1 } \end{array} \right) \end{align}
-                        \label{eq:v1v2}
-                \end{equation}
-                così da introdurre l'interpretazione di antiparticelle ad energia positiva. Utilizzando quanto appena riportato, le soluzioni della (\ref{eq:dirac_equation}) si scrivono:
-                \begin{equation}
-                        \begin{align} \psi = u ^ { 1 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} x^{\mu} } \quad \psi = u ^ { 2 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} x^{\mu} } \\ \psi = v ^ { 1 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu}  x^{\mu} } \quad \psi = v ^ { 2 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} \cdot x^{\mu} } \end{align}
-                        \label{eq:u1u2v1v2}
-                \end{equation}
-                \subsection{Spin, elicità e chiralità}
-                Ricordando che
-                \begin{equation}
-                        \mathbf { S } = \frac { \hbar } { 2 } \mathbf { \Sigma } , \quad \text { con } \mathbf { \Sigma } = \left( \begin{array} { l l } { \sigma } & { 0 } \\ { 0 } & { \sigma } \end{array} \right)
-                \end{equation}
-                si può facilmente verificare che $u^{1}, u^{2}, v^{1}, v^{2}$ sono autostati di $\hat { S _ { z } }$ solo se il momento è lungo l'asse $z$. \\
-                In maniera più generale, è conveniente definire l'operatore elicità, che estrae la componente dello spin lungo la direzione del moto di una particella:
-                \begin{equation}
-                        \hat { h } = \frac { \vec { S } \cdot \vec { p } } { | \vec { S } | | \vec { p } | } = \frac { 2 \vec { S } \cdot \vec { p } } { | \vec { p } | }
-                        \label{eq:helicity}
-                \end{equation}
-                Per fermioni di spin semintero, gli autovalori di $\hat{h}$ possono essere $h=1$ ("particella destrorsa") e $h=-1$ ("particella sinistrorsa"). Si noti che:
-                \begin{itemize}
-                        \item fermioni non massivi sono puramente sinistrorsi ($u^{2}$), mentre fermioni massivi necessitano di una sovrapposizione degli stati $u^{1}$ e $u^{2}$;
-                        \item antifermioni non massivi sono puramente destrorsi ($v^{1}$), mentre antifermioni non massivi necessitano di una sovrapposizione degli stati $v^{1}$ e $v^{2}$.
-                \end{itemize}
-                Non essendo l'elicità una quantità Lorentz-invariante, risulta conveniente introdurre una quantità che lo sia: la chiralità. Essa può essere definita attraverso i seguenti operatori di proiezione:
-                \begin{equation}
-                        P _ { L } = \frac { 1 } { 2 } \left( 1 - \gamma _ { 5 } \right) \quad P _ { R } = \frac { 1 } { 2 } \left( 1 + \gamma _ { 5 } \right)
-                        \label{eq:plpr}
-                \end{equation}
-                $P_{L}$ e $P_{R}$ agiscono rispettivamente estraendo le componenti sinistrorse e destrorse di un fermione
-                \begin{equation}
-                        u _ { L } = P _ { L } u \quad u _ { R } = P _ { R } u
-                \end{equation}
-                e le componenti destrorse e sinistrorse di un antifermione
-                \begin{equation}
-                        v _ { R } = P _ { L } v \quad v _ { L } = P _ { R } v
-                \end{equation}
-                Si noti infine che nel caso relativistico elicità e chiralità coincidono.
+\subsection{Proprietà delle soluzioni}
+L'equazione di Dirac è un insieme di quattro equazioni ognuna delle quali deve avere una soluzione.
+Tali soluzioni si scrivono nella seguente maniera (utilizzando le unità naturali):
+\begin{equation}
+        \psi = u e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) } = u e ^ { - i p _ { \mu } x ^ { \mu } }
+        \label{eq:dirac_sol}
+\end{equation}
+dove $u$ è uno spinore a quattro componenti che dipende dal momento. Sostituendo queste soluzioni nella \ref{eq:dirac_equation} si ottiene:
+\begin{equation}
+        \left( \gamma ^ { \mu } p _ { \mu } - m \right) u = 0
+        \label{eq:dirac_eq_momentum}
+\end{equation}
+detta anche equazione di Dirac nello spazio dei momenti. Sviluppando i conti e utilizzando la rappresentazione
+\begin{equation}
+        \psi = \left( \begin{array} { l } { u_{A} } \\ { u_{B} } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) }
+        \label{eq:dirac_sol_spinors}
+\end{equation}
+dove $u_{A}$ e $u_{B}$ sono spinori a due componenti, si ottiene:
+\begin{equation}
+        u _ { A } = \frac { \vec { \sigma } \cdot \vec { p } } { E - m } u _ { B } \quad u _ { B } = \frac { \vec { \sigma } \cdot \vec { p } } { E + m } u _ { A }
+\end{equation}
+Sostituendo la prima nella seconda (o viceversa), si può vedere come questo sia un sistema omogeneo che ammette soluzione solo se
+\begin{equation}
+        E = \pm \sqrt { p ^ { 2 } + m ^ { 2 } }
+        \label{eq:energy}
+\end{equation}
+Scegliendo per $u_{A}$ e $u_{B}$ gli autostati dell'operatore $\sigma_{3}$, $u _ { A } = \left( \begin{array} { c } { 1 } \\ { 0 } \end{array} \right) , u _ { A } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right), u _ { B } = \left( \begin{array} { c } { 1 } \\ { 0 } \end{array} \right) , u _ { B } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right)$, si ottengono:
+\begin{equation}
+        \begin{align}
+                u ^ { 1 } = \left( \begin{array} { c } { 1 } \\ { 0 } \\ { p _ { z } / ( E + m ) } \\ { \left( p _ { x } + i p _ { y } \right) / ( E + m ) } \end{array} \right) \quad u ^ { 2 } = \left( \begin{array} { c } { 0 } \\ { 1 } \\ { \left( p _ { x } - i p _ { y } \right) / ( E + m ) } \\ { - p _ { z } / ( E + m ) } \end{array} \right) \\ u ^ { 3 } = \left( \begin{array} { c } { - p _ { z } / ( - E + m ) } \\ { \left( - p _ { x } - i p _ { y } \right) / ( - E + m ) } \\ { 1 } \\ { 0 } \end{array} \right) \quad u ^ { 4 } = \left( \begin{array} { c } { \left( - p _ { x } + i p _ { y } \right) / ( - E + m ) } \\ { p _ { z } / ( - E + m ) } \\ { 0 } \\ { 1 } \end{array} \right)
+        \end{align}
+        \label{eq:u1u2u3u4}
+\end{equation}
+Le soluzioni $u_{1}$ e $u_{2}$ descrivono particelle di energia (\ref{eq:energy}) positiva e momento $\boldsymbol{p}$. Per le due rimanenti, che descrivono particelle ad energia negativa, si applica:
+\begin{equation}
+        \begin{align}
+                v ^ { 2 } \left( p ^ { \mu } \right) \equiv u ^ { 3 } \left( - p ^ { \mu } \right) = \left( \begin{array} { c } { p _ { z } / ( E + m ) } \\ { \left( p _ { x } + i p _ { y } \right) / ( E + m ) } \\ { 1 } \\ { 0 } \end{array} \right) \\ v ^ { 1 } \left( p ^ { \mu } \right) \equiv u ^ { 4 } \left( - p ^ { \mu } \right) = \left( \begin{array} { c } { \left( p _ { x } - i p _ { y } \right) / ( E + m ) } \\ { - p _ { z } / ( E + m ) } \\ { 0 } \\ { 1 } \end{array} \right)
+        \end{align}
+        \label{eq:v1v2}
+\end{equation}
+così da introdurre l'interpretazione di antiparticelle ad energia positiva. Utilizzando quanto appena riportato, le soluzioni della (\ref{eq:dirac_equation}) si scrivono:
+\begin{equation}
+        \begin{align}
+                \psi = u ^ { 1 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} x^{\mu} } \quad \psi = u ^ { 2 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} x^{\mu} } \\ \psi = v ^ { 1 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu}  x^{\mu} } \quad \psi = v ^ { 2 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} \cdot x^{\mu} }
+        \end{align}
+        \label{eq:u1u2v1v2}
+\end{equation}
 
-                \begin{thebibliography}{0}
-                        \bibitem{ref:BGS}
-                                \BY{Braibant S., Giacomelli G., Spurio M.}
-                                \TITLE{Particelle e interazioni fondamentali},
-                                \PUBLISHER{Springer},
-                                \YEAR{2012}
-                        \bibitem{ref:griff}
-                                \BY{Griffiths D.}
-                                \TITLE{Introduction to elementary particles},
-                                \YEAR{1987}
-                        \bibitem{ref:hayes}
-                                \BY{Hayes C.B.}
-                                \TITLE{Neutron Beta-Decay},
-                                \YEAR{2012}
-                        \bibitem{ref:BGSex}
-                                \BY{Braibant S., Giacomelli G., Spurio M.}
-                                \TITLE{Particles and Fundamental Interactions: Supplements, Problems and Solutions},
-                                \PUBLISHER{Springer},
-                                \YEAR{2012}
-                \end{thebibliography}
+\subsection{Spin, elicità e chiralità}
+Ricordando che
+\begin{equation}
+        \mathbf { S } = \frac { \hbar } { 2 } \mathbf { \Sigma } , \quad \text { con } \mathbf { \Sigma } = \left( \begin{array} { l l } { \sigma } & { 0 } \\ { 0 } & { \sigma } \end{array} \right)
+\end{equation}
+si può facilmente verificare che $u^{1}, u^{2}, v^{1}, v^{2}$ sono autostati di $\hat { S _ { z } }$ solo se il momento è lungo l'asse $z$. \\
+In maniera più generale, è conveniente definire l'operatore elicità, che estrae la componente dello spin lungo la direzione del moto di una particella:
+\begin{equation}
+        \hat { h } = \frac { \vec { S } \cdot \vec { p } } { | \vec { S } | | \vec { p } | } = \frac { 2 \vec { S } \cdot \vec { p } } { | \vec { p } | }
+        \label{eq:helicity}
+\end{equation}
+Per fermioni di spin semintero, gli autovalori di $\hat{h}$ possono essere $h=1$ ("particella destrorsa") e $h=-1$ ("particella sinistrorsa"). Si noti che:
+\begin{itemize}
+        \item fermioni non massivi sono puramente sinistrorsi ($u^{2}$), mentre fermioni massivi necessitano di una sovrapposizione degli stati $u^{1}$ e $u^{2}$;
+        \item antifermioni non massivi sono puramente destrorsi ($v^{1}$), mentre antifermioni non massivi necessitano di una sovrapposizione degli stati $v^{1}$ e $v^{2}$.
+\end{itemize}
+Non essendo l'elicità una quantità Lorentz-invariante, risulta conveniente introdurre una quantità che lo sia: la chiralità. Essa può essere definita attraverso i seguenti operatori di proiezione:
+\begin{equation}
+        P _ { L } = \frac { 1 } { 2 } \left( 1 - \gamma _ { 5 } \right) \quad P _ { R } = \frac { 1 } { 2 } \left( 1 + \gamma _ { 5 } \right)
+        \label{eq:plpr}
+\end{equation}
+$P_{L}$ e $P_{R}$ agiscono rispettivamente estraendo le componenti sinistrorse e destrorse di un fermione
+\begin{equation}
+        u _ { L } = P _ { L } u \quad u _ { R } = P _ { R } u
+\end{equation}
+e le componenti destrorse e sinistrorse di un antifermione
+\begin{equation}
+        v _ { R } = P _ { L } v \quad v _ { L } = P _ { R } v
+\end{equation}
+Si noti infine che nel caso relativistico elicità e chiralità coincidono.
 
-                \end{document}
+
+\section{Regole di Feynman}
+\label{app:feynman_rules}
+Le regole di Feynman consistono in un insieme di passaggi che consentono di ricavare l'ampiezza $\matcal{M}$ di un dato processo a partire dal diagramma di Feynman. La forma più elementare è quella in cui tutte le particelle che hanno spin zero; essa si scrive come segue:
+\begin{enumerate}
+        \item si etichettano i quadri-momenti entranti e uscenti $p_{1}, p_{2}, \ldots, p_{n}$, definendo una direzione positiva assegnata arbitrariamente, e i quzdri-momenti interni $q_{1}, q_{2}, \ldots, q_{m}$;
+        \item per ogni vertice si scrive un fattore
+                \begin{equation}
+                        \text { -ig }
+                \end{equation}
+                dove g è la costante di accoppiamento;
+        \item per ogni linea interna si scrive un fattore
+                \begin{equation}
+                        \frac { i } { q _ { j } ^ { 2 } - m _ { j } ^ { 2 } c ^ { 2 } }
+                \end{equation}
+                dove $q_{j}$ è il quadri-momento della linea ($q _ { j } ^ { 2 } \equiv q _ { j } ^ { \mu } q _ { j _ { k } }$) e $m_{j}$ è la massa della particella che la linea descrive (si noti che $q _ { j } ^ { 2 } \neq m _ { j } ^ { 2 } c ^ { 2 }$, perché la particella è virtuale);
+        \item per ogni vertice si scrive un fattore
+                \begin{equation}
+                        ( 2 \pi ) ^ { 4 } \delta ^ { 4 } \left( p _ { 1 } + p _ { 2 } + \ldots - p _ { n } \right)
+                \end{equation}
+                dove si hanno segni positivi per le particelle entranti e negativi per quelle uscenti; questo fattore impone la conservazione di energia e momento ad ogni vertice, dal momento che la delta è nulla a meno che la somma dei momenti entranti uguagli quella dei momenti uscenti;
+        \item per ogni linea interna si scrive un fattore \begin{equation}
+                        \frac { 1 } { ( 2 \pi ) ^ { 4 } } d ^ { 4 } q _ { j }
+                \end{equation}
+                e si integra su tutti i $q_{j}$;
+        \item si semplificano i fattori e si uguaglia quanto rimasto a $-i\mathcal{M}$.
+\end{enumerate}
+Nel caso dell'interazione debole, in cui compaiono fermioni di spin 1/2 e bosoni di spin unitario, si hanno i seguenti passaggi:
+\begin{enumerate}
+        \item si etichettano i quadri-momenti entranti e uscenti $p_{1}, p_{2}, \ldots, p_{n}$, con i corrispondenti spin $s_{1}, s_{2}, \ldots, s_{n}$ e i quadri-momenti interni $q_{1}, q_{2}, \ldots, q_{m}$; per le linee esterne le direzioni delle frecce vengono assegnate distinguendo fermioni da antifermioni, mentre per quelle interne si assegnano preservando la "direzione del flusso" del diagramma;
+        \item fermioni e antifermioni esterni contribuiscono con i fattori introdotti in \ref{eq:u1u2v1v2};
+        \item per ogni vertice si scrive un fattore
+                \begin{equation}
+                        \frac { - i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right)
+                \end{equation}
+        \item per ogni linea interna si scrivono i seguenti fattori:
+                \begin{equation}
+                        \begin{array} { l l } { \text { fermioni e antifermioni: } } & { \frac { i \left( \gamma ^ { \mu } q _ { \mu } + m c \right) } { q ^ { 2 } - m ^ { 2 } c ^ { 2 } } } \\ { \text { bosoni: } } & { \frac{- i \left( g _ { \mu \nu } - q _ { \mu } q _ { v } / M ^ { 2 } c ^ { 2 } \right)}{ q ^ { 2 } - M ^ { 2 } c ^ { 2 }  }   }\\ \end{array}
+                \end{equation}
+        \item i punti successivi sono i 4, 5 e 6 del modello precedente.
+\end{enumerate}
+
+
+\begin{thebibliography}{0}
+        \bibitem{ref:BGS}
+                \BY{Braibant S., Giacomelli G., Spurio M.}
+                \TITLE{Particelle e interazioni fondamentali},
+                \PUBLISHER{Springer},
+                \YEAR{2012}
+        \bibitem{ref:griff}
+                \BY{Griffiths D.}
+                \TITLE{Introduction to elementary particles},
+                \YEAR{1987}
+        \bibitem{ref:hayes}
+                \BY{Hayes C.B.}
+                \TITLE{Neutron Beta-Decay},
+                \YEAR{2012}
+        \bibitem{ref:BGSex}
+                \BY{Braibant S., Giacomelli G., Spurio M.}
+                \TITLE{Particles and Fundamental Interactions: Supplements, Problems and Solutions},
+                \PUBLISHER{Springer},
+                \YEAR{2012}
+\end{thebibliography}
+
+\end{document}
 
 %%
