@@ -186,13 +186,16 @@ e ricordando, come descritto in Appendice \ref{app:dirac}, che gli spinori $\psi
 \end{equation}
 Per le coordinate tempo e spazio si ha separatamente:
 \begin{equation}
-        \begin{aligned} \overline { \psi } \gamma ^ { 0 } \psi \stackrel { P } { \rightarrow } \left( \overline { \psi } \gamma ^ { 0 } \right) \gamma ^ { 0 } \left( \gamma ^ { 0 } \psi \right) & = \overline { \psi } \gamma ^ { 0 } \psi \\ \overline { \psi } \gamma ^ { k } \psi \stackrel { P } { \rightarrow } \left( \overline { \psi } \gamma ^ { 0 } \right) \gamma ^ { k } \left( \gamma ^ { 0 } \psi \right) & = - \overline { \psi } \gamma ^ { k } \psi \end{aligned}
+        \begin{aligned}
+                \overline { \psi } \gamma ^ { 0 } \psi \stackrel { P } { \rightarrow } \left( \overline { \psi } \gamma ^ { 0 } \right) \gamma ^ { 0 } \left( \gamma ^ { 0 } \psi \right) & = \overline { \psi } \gamma ^ { 0 } \psi \\ \overline { \psi } \gamma ^ { k } \psi \stackrel { P } { \rightarrow } \left( \overline { \psi } \gamma ^ { 0 } \right) \gamma ^ { k } \left( \gamma ^ { 0 } \psi \right) & = - \overline { \psi } \gamma ^ { k } \psi
+        \end{aligned}
 \end{equation}
 con $k=1,2,3$, dalle quali si vede che le componenti spaziali cambiano segno mentre quella temporale no. L'elemento di matrice \ref{eq:weak_matrix_element} si trasforma quindi sotto parità come:
 \begin{equation}
         \mathcal{M} \propto V _ { 1 } ^ { 0 } V _ { 2 } ^ { 0 } - \vec { V } _ { 1 } \vec { V } _ { 2 } \stackrel { P } { \rightarrow } V _ { 1 } ^ { 0 } V _ { 2 } ^ { 0 } - \left( - \vec { V } _ { 1 } \right) \left( - \vec { V } _ { 2 } \right) = V _ { 1 } ^ { 0 } V _ { 2 } ^ { 0 } - \vec { V } _ { 1 } \vec { V } _ { 2 }
 \end{equation}
 conservando la parità.
+
 \paragraph{Corrente assiale} La corrente assiale $A ^ { \mu } = \overline { \psi } \gamma ^ { \mu } \gamma ^ { 5 } \psi$ si trasforma sotto parità come:
 \begin{equation}
         \overline { \psi } \gamma ^ { \mu } \gamma ^ { 5 } \psi \stackrel { P } { \rightarrow } \left( \overline { \psi } \gamma ^ { 0 } \right) \gamma ^ { \mu } \gamma ^ { 5 } \left( \gamma ^ { 0 } \psi \right)
@@ -203,9 +206,12 @@ Per le coordinate tempo e spazio si ha separatamente:
 \end{equation}
 con $k=1,2,3$, dalle quali si vede che la componente temporale cambia segno mentre quelle spaziali no. L'elemento di matrice \ref{eq:weak_matrix_element} si trasforma quindi sotto parità come:
 \begin{equation}
-        \begin{aligned} \mathcal{M} & = A _ { 1 } ^ { 0 } A _ { 2 } ^ { 0 } - \vec { A } _ { 1 } \vec { A } _ { 2 } \\ \stackrel { P } { \rightarrow } M _ { i f } & = \left( - A _ { 1 } ^ { 0 } \right) \left( - A _ { 2 } ^ { 0 } \right) - \vec { A } _ { 1 } \vec { A } _ { 2 } = A _ { 1 } ^ { 0 } A _ { 2 } ^ { 0 } - \vec { A } _ { 1 } \vec { A } _ { 2 } \end{aligned}
+        \begin{aligned}
+                \mathcal{M} & = A _ { 1 } ^ { 0 } A _ { 2 } ^ { 0 } - \vec { A } _ { 1 } \vec { A } _ { 2 } \\ \stackrel { P } { \rightarrow } M _ { i f } & = \left( - A _ { 1 } ^ { 0 } \right) \left( - A _ { 2 } ^ { 0 } \right) - \vec { A } _ { 1 } \vec { A } _ { 2 } = A _ { 1 } ^ { 0 } A _ { 2 } ^ { 0 } - \vec { A } _ { 1 } \vec { A } _ { 2 }
+        \end{aligned}
 \end{equation}
 conservando anche in questo caso la parità.
+
 \paragraph{Corrente vettoriale - assiale} L'elemento di matrice di una teoria $V-A$ è:
 \begin{equation}
         \begin{aligned}
@@ -218,6 +224,13 @@ che sotto parità si trasforma come:
                 M _ { i f } & = \left( V _ { 1 } ^ { 0 } - A _ { 1 } ^ { 0 } \right) \left( V _ { 2 } ^ { 0 } - A _ { 2 } ^ { 0 } \right) - \left( \vec { V } _ { 1 } - \vec { A } _ { 1 } \right) \left( \vec { V } _ { 2 } - \vec { A } _ { 2 } \right) \\ \stackrel { P } { \longrightarrow } M _ { i f } & = \left( V _ { 1 } ^ { 0 } + A _ { 1 } ^ { 0 } \right) \left( V _ { 2 } ^ { 0 } + A _ { 2 } ^ { 0 } \right) - \left( - \vec { V } _ { 1 } - \vec { A } _ { 1 } \right) \left( - \vec { V } _ { 2 } - \vec { A } _ { 2 } \right) \\ & = \left( V _ { 1 } ^ { 0 } + A _ { 1 } ^ { 0 } \right) \left( V _ { 2 } ^ { 0 } + A _ { 2 } ^ { 0 } \right) - \left( \vec { V } _ { 1 } + \vec { A } _ { 1 } \right) \left( \vec { V } _ { 2 } + \vec { A } _ { 2 } \right)
         \end{aligned}
 \end{equation}
+
+\paragraph{Corrente leptonica} Grazie a quanto appena sopra riportato, è possibile scrivere in maniera generale una corrente che miscela componenti vettoriali e assiali:
+\begin{equation}
+        J^{\mu} = \overline { \psi } \gamma ^ { \mu } \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right) \phi
+        \label{eq:general_weak_current}
+\end{equation}
+
 
 \subsection{Decadimento del muone}
 Il muone decade secondo:
@@ -616,7 +629,7 @@ Si evidenziano inoltre i seguenti fatti e proprietà:
         \begin{equation}
                 \gamma ^ { 0 } \psi ( - \mathbf { r } , t ) \equiv \psi ( \mathbf { r } , t ) \quad ; \quad \gamma ^ { 0 } \psi ( \mathbf { r } , t ) \equiv \psi ( - \mathbf { r } , t )
         \end{equation}
-        \item dato $\mathcal$ operatore di coniugazione complessa, si ha che $\gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K }$ rappresenta l'operatore di inversione temporale, per il quale si ha:
+        \item dato $\mathcal{K}$ operatore di coniugazione complessa, si ha che $\gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K }$ rappresenta l'operatore di inversione temporale, per il quale si ha:
         \begin{equation}
                 \gamma ^ { 1 } \gamma ^ { 3 } \mathcal { K } \psi ( \mathbf { r } , t ) = \psi ( \mathbf { r } , - t )
         \end{equation}
@@ -638,7 +651,7 @@ dove $u$ è uno spinore a quattro componenti che dipende dal momento. Sostituend
         \left( \gamma ^ { \mu } p _ { \mu } - m \right) u = 0
         \label{eq:dirac_eq_momentum}
 \end{equation}
-detta anche equazione di Dirac nello spazio dei momenti. Sviluppando i conti e utilizzando la rappresentazione
+detta anche \textit{equazione di Dirac nello spazio dei momenti}. Sviluppando i conti e utilizzando la rappresentazione
 \begin{equation}
         \psi = \left( \begin{array} { l } { u_{A} } \\ { u_{B} } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) }
         \label{eq:dirac_sol_spinors}
@@ -652,7 +665,7 @@ Sostituendo la prima nella seconda (o viceversa), si può vedere come questo sia
         E = \pm \sqrt { p ^ { 2 } + m ^ { 2 } }
         \label{eq:energy}
 \end{equation}
-Scegliendo per $u_{A}$ e $u_{B}$ gli autostati dell'operatore $\sigma_{3}$, $u _ { A } = \left( \begin{array} { c } { 1 } \\ { 0 } \end{array} \right) , u _ { A } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right), u _ { B } = \left( \begin{array} { c } { 1 } \\ { 0 } \end{array} \right) , u _ { B } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right)$, si ottengono:
+Scegliendo per $u_{A}$ e $u_{B}$ gli autostati dell'operatore $\sigma_{z}$, $u _ { A } = \left( \begin{array} { c } { 1 } \\ { 0 } \end{array} \right) , u _ { A } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right), u _ { B } = \left( \begin{array} { c } { 1 } \\ { 0 } \end{array} \right) , u _ { B } = \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right)$, si ottengono:
 \begin{equation}
         \begin{align}
                 u ^ { 1 } = \left( \begin{array} { c } { 1 } \\ { 0 } \\ { p _ { z } / ( E + m ) } \\ { \left( p _ { x } + i p _ { y } \right) / ( E + m ) } \end{array} \right) \quad u ^ { 2 } = \left( \begin{array} { c } { 0 } \\ { 1 } \\ { \left( p _ { x } - i p _ { y } \right) / ( E + m ) } \\ { - p _ { z } / ( E + m ) } \end{array} \right) \\ u ^ { 3 } = \left( \begin{array} { c } { - p _ { z } / ( - E + m ) } \\ { \left( - p _ { x } - i p _ { y } \right) / ( - E + m ) } \\ { 1 } \\ { 0 } \end{array} \right) \quad u ^ { 4 } = \left( \begin{array} { c } { \left( - p _ { x } + i p _ { y } \right) / ( - E + m ) } \\ { p _ { z } / ( - E + m ) } \\ { 0 } \\ { 1 } \end{array} \right)
@@ -669,7 +682,7 @@ Le soluzioni $u_{1}$ e $u_{2}$ descrivono particelle di energia (\ref{eq:energy}
 così da introdurre l'interpretazione di antiparticelle ad energia positiva. Utilizzando quanto appena riportato, le soluzioni della (\ref{eq:dirac_equation}) si scrivono:
 \begin{equation}
         \begin{align}
-                \psi = u ^ { 1 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} x^{\mu} } \quad \psi = u ^ { 2 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} x^{\mu} } \\ \psi = v ^ { 1 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu}  x^{\mu} } \quad \psi = v ^ { 2 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} \cdot x^{\mu} }
+                \psi = u ^ { 1 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} x^{\mu} } \quad \psi = u ^ { 2 } \left( p ^ { \mu } \right) e ^ { - i p_{\mu} x^{\mu} } \\ \psi = v ^ { 1 } \left( p ^ { \mu } \right) e ^ {  i p_{\mu}  x^{\mu} } \quad \psi = v ^ { 2 } \left( p ^ { \mu } \right) e ^ {  i p_{\mu} \cdot x^{\mu} }
         \end{align}
         \label{eq:u1u2v1v2}
 \end{equation}
@@ -682,14 +695,40 @@ Ricordando che
 si può facilmente verificare che $u^{1}, u^{2}, v^{1}, v^{2}$ sono autostati di $\hat { S _ { z } }$ solo se il momento è lungo l'asse $z$. \\
 In maniera più generale, è conveniente definire l'operatore elicità, che estrae la componente dello spin lungo la direzione del moto di una particella:
 \begin{equation}
-        \hat { h } = \frac { \vec { S } \cdot \vec { p } } { | \vec { S } | | \vec { p } | } = \frac { 2 \vec { S } \cdot \vec { p } } { | \vec { p } | }
+        \hat { \Lambda }  = \frac { \hat { \mathbf { \Sigma } } \cdot p } { p }
         \label{eq:helicity}
 \end{equation}
-Per fermioni di spin semintero, gli autovalori di $\hat{h}$ possono essere $h=1$ ("particella destrorsa") e $h=-1$ ("particella sinistrorsa"). Si noti che:
+Per fermioni di spin semintero, gli autovalori di $\hat{\Lambda}$ possono essere $\lambda=1$ (particella \textit{destrorsa} o ad elicità positiva) e $\lambda=-1$ (particella \textit{sinistrorsa} o ad elicità negativa). Si noti che:
 \begin{itemize}
         \item fermioni non massivi sono puramente sinistrorsi ($u^{2}$), mentre fermioni massivi necessitano di una sovrapposizione degli stati $u^{1}$ e $u^{2}$;
         \item antifermioni non massivi sono puramente destrorsi ($v^{1}$), mentre antifermioni non massivi necessitano di una sovrapposizione degli stati $v^{1}$ e $v^{2}$.
 \end{itemize}
+Per poter inserire nelle espressioni delle hamiltoniane funzioni d'onda che abbiano uno specifico stato di elicità, si introducono gli operatori di proiezione:
+\begin{equation}
+        \hat { P } _ { \pm } = \frac { 1 \pm \hat { \Lambda } } { 2 }
+        \label{eq:projection_operators}
+\end{equation}
+che estraggono le componenti di elicità rispettivamente positiva e negativa da uno spinore arbirario. Se infatti si ha:
+\begin{equation}
+        u = u ^ { ( + ) } + u ^ { ( - ) } , \quad \hat { \Lambda } u ^ { ( \pm ) } = \pm u ^ { ( \pm ) }
+\end{equation}
+allora
+\begin{equation}
+        \hat { P } _ { + } u = u ^ { ( + ) } , \hat { P } _ { - } u = u ^ { ( - ) }
+\end{equation}
+Se invece si considera lo spinore di un antifermione si avranno:
+\begin{equation}
+        \hat { P } _ { + } v = v ^ { ( - ) } , \hat { P } _ { - } v = v ^ { ( + ) }
+        \label{<+label+>}
+\end{equation}<++>
+Non essendo tuttavia $\hat{\Lambda}$ Lorentz-invariante, nemmeno $\hat{P}_{\pm}$ lo sono. Per ottenere un'espressione che lo sia, si considera l'approssimazione relativistica per la quale $E \approx p \gg m _ { 0 }$ e si introducono \cite{ref:greiner}:
+\begin{equation}
+        \hat { P } _ { \pm } ^ { \prime } = \frac { 1 } { 2 } \left( 1 \pm \gamma _ { 5 } \right)
+        \label{eq:chirality}
+\end{equation}
+che sono detti operatori di proiezione di \textit{chiralità} positiva e negativa. Per particelle non massive (neutrini) la relazione \ref{eq:chirality} è esatta, cioè non c'è differenza tra $\hat{P_{\pm}}$ e $\hat { P } _ { \pm } ^ { \prime }$. Per particelle massive, $\hat{P_{\pm}}$ e $\hat { P } _ { \pm } ^ { \prime }$ differiscono considerevolmente se il momento è basso.
+
+
 Non essendo l'elicità una quantità Lorentz-invariante, risulta conveniente introdurre una quantità che lo sia: la chiralità. Essa può essere definita attraverso i seguenti operatori di proiezione:
 \begin{equation}
         P _ { L } = \frac { 1 } { 2 } \left( 1 - \gamma _ { 5 } \right) \quad P _ { R } = \frac { 1 } { 2 } \left( 1 + \gamma _ { 5 } \right)
@@ -767,6 +806,11 @@ Nel caso dell'interazione debole, in cui compaiono fermioni di spin 1/2 e bosoni
                 \TITLE{Particles and Fundamental Interactions: Supplements, Problems and Solutions},
                 \PUBLISHER{Springer},
                 \YEAR{2012}
+        \bibitem{ref:greiner}
+                \BY{Greiner W., Muller B.}
+                \TITLE{Gauge theory of weak interactions},
+                \PUBLISHER{Springer},
+                \YEAR{2000}
 \end{thebibliography}
 
 \end{document}
