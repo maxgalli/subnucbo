@@ -170,7 +170,15 @@ Le (\ref{eq:current}) sono forme bilineari che si trasformano sotto trasformazio
         \caption{Forme bilineari.}
         \label{tab:bilinear}
 \end{table}
-L'operatore di un'interazione descritta dallo scambio di una particella di spin unitario può avere solo natura vettoriale o assiale. Tuttavia è possibile mostrare che per avere violazione di parità (come accade nell'interazione debole) è necessaria una teoria che misceli correnti vettoriali e assiali, in quanto queste due, prese singolarmente, conservano la parità. \\
+\\
+La scelta di utilizzare come operatore una combinazione di quantità vettoriali e assiali è dovuta ai seguenti motivi:
+\begin{itemize}
+        \item correnti vettoriali e assiali, prese singolarmente, conservano la parità, mentre una loro combinazione la viola;
+        \item l'integrazione nella teoria di fenomeni osservati sperimentalmente quali l'elicità di neutrini ed elettroni consente di escludere quantità scalari, pseudo-scalari e tensoriali.
+\end{itemize}
+Si approfondiscono nel seguito i fatti appena citati.
+
+\subsubsection{Violazione della parità da parte di corrente $V-A$}
 La dimostrazione si imposta tenendo presente che l'elemento di matrice per l'interazione debole si può scrivere in generale nella seguente maniera:
 \begin{equation}
         \mathcal{M} \propto \eta_{\mu\nu}J^{\mu}J^{\nu}
@@ -225,15 +233,78 @@ che sotto parità si trasforma come:
         \end{aligned}
 \end{equation}
 
-\paragraph{Corrente leptonica} Grazie a quanto appena sopra riportato, è possibile scrivere in maniera generale una corrente che miscela componenti vettoriali e assiali:
+\subsubsection{Esclusione di S, T, P}
+Per mostrare questo fatto si fa riferimento alla notazione introdotta in Appendice \ref{app:dirac}. Si utilizza come esempio una corrente che trasforma elettrone in neutrino, come quella che compare nel decadimento $\beta$ del neutrone:
 \begin{equation}
-        J^{\mu} = \overline { \psi } \gamma ^ { \mu } \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right) \phi
-        \label{eq:general_weak_current}
+        \overline { u } _ { \mathrm { e } } \hat { O } _ { i } u _ { \nu }
+        \label{eq:e_nu_current}
+\end{equation}
+Per inglobare nella teoria i risultati sperimentali, si sostituiscono gli spinori con le loro componenti di chiralità negativa:
+\begin{equation}
+        \overline { u } _ { \mathrm { e } } \hat { O } _ { i } u _ { \nu } \rightarrow \overline { \left( \hat { P } _ { - } ^ { \prime } u _ { \mathrm { e } } \right) } \hat { O } _ { i } \left( \hat { P } _ { - } ^ { \prime } u _ { \nu } \right)
+\end{equation}
+Dato che $\gamma _ { 5 } ^ { \dagger } = \gamma _ { 5 }$ e $\gamma _ { 5 } \gamma ^ { 0 } = - \gamma ^ { 0 } \gamma _ { 5 }$, si trova:
+\begin{equation}
+        \begin{aligned}
+                \left( \hat { P } _ { - } ^ { \prime } u \right) & = \left( \hat { P } _ { - } ^ { \prime } u \right) ^ { \dagger } \gamma ^ { 0 } = u ^ { \dagger } \hat { P } _ { - } ^ { \dagger \dagger } \gamma ^ { 0 } \\ & = u ^ { \dagger } \left( \frac { 1 - \gamma _ { 5 } } { 2 } \right) ^ { \dagger } \gamma ^ { 0 } = u ^ { \dagger } \frac { 1 - \gamma _ { 5 } } { 2 } \gamma ^ { 0 } \\ & = u ^ { \dagger } \gamma ^ { 0 } \frac { 1 + \gamma _ { 5 } } { 2 } = \overline { u } \hat { P } _ { + } ^ { \prime }
+        \end{aligned}
+\end{equation}
+La forma modificata della corrente sarà dunque:
+\begin{equation}
+        \overline { u } _ { \mathrm { e } } \hat { O } _ { i } ^ { \prime } u _ { \nu }
+\end{equation}
+con
+\begin{equation}
+        \hat { O } _ { i } ^ { \prime } = \hat { P } _ { + } ^ { \prime } \hat { O } _ { i } \hat { P } _ { - } ^ { \prime }
+\end{equation}
+Calcolando $\hat { O } _ { i } ^ { \prime }$ per i cinque operatori di Tab. \ref{tab:bilinear} si trova:
+\begin{subequations}
+        \begin{equation}
+                \hat { P } _ { + } ^ { \prime } 1  \hat { P } _ { - } ^ { \prime } = 0
+                \label{subeq:psp}
+        \end{equation}
+        \begin{equation}
+                \hat { P } _ { + } ^ { \prime } \gamma ^ { \mu } \hat { P } _ { - } ^ { \prime } = \gamma ^ { \mu } \left( \hat { P } _ { - } ^ { \prime } \right) ^ { 2 } = \gamma ^ { \mu } \hat { P } _ { - } ^ { \prime }
+                \label{subeq:pvp}
+        \end{equation}
+        \begin{equation}
+                \begin{aligned}
+                        \hat { P } _ { + } ^ { \prime } \sigma ^ { \mu \nu } \hat { P } _ { - } ^ { \prime } & = \frac { \mathrm { i } } { 2 } \hat { P } _ { + } ^ { \prime } \left( \gamma ^ { \mu } \gamma ^ { \nu } - \gamma ^ { \nu } \gamma ^ { \mu } \right) \hat { P } _ { - } ^ { \prime } \\ & = \frac { \mathrm { i } } { 2 } \left( \gamma ^ { \mu } \hat { P } _ { - } ^ { \prime } \hat { P } _ { + } ^ { \prime } \gamma ^ { \nu } - \gamma ^ { \nu } \hat { P } _ { - } ^ { \prime } \hat { P } _ { + } ^ { \prime } \gamma ^ { \mu } \right) \\ & = 0
+                \end{aligned}
+                \label{subeq:ptp}
+        \end{equation}
+        \begin{equation}
+                \begin{aligned}
+                        \hat { P } _ { + } ^ { \prime } \gamma ^ { \mu } \gamma _ { 5 } \hat { P } _ { - } ^ { \prime } & = \gamma ^ { \mu } \hat { P } _ { - } ^ { \prime } \gamma _ { 5 } \hat { P } _ { - } ^ { \prime } = - \gamma ^ { \mu } \left( \hat { P } _ { - } ^ { \prime } \right) ^ { 2 } \\ & = - \gamma ^ { \mu } \hat { P } _ { - } ^ { \prime }
+                \end{aligned}
+                \label{subeq:pap}
+        \end{equation}
+        \begin{equation}
+                \hat { P } _ { + } ^ { \prime } \gamma _ { 5 } \hat { P } _ { - } ^ { \prime } = - \hat { P } _ { + } ^ { \prime } \hat { P } _ { - } ^ { \prime } = 0
+                \label{subeq:ppp}
+        \end{equation}
+\end{subequations}
+con l'evidente risultato che solo quantità vettoriali e scalari sono rilevanti nella descrizione dell'interazione debole. Proseguendo i calcoli per (\ref{subeq:pvp}) e (\ref{subeq:pap}) si vede che esse forniscono lo stesso risultato a meno di un segno:
+\begin{subequations}
+        \begin{equation}
+                \gamma ^ { \mu } \hat { P } _ { - } ^ { \prime } = \frac { 1 } { 2 } \gamma ^ { \mu } \left( 1 - \gamma _ { 5 } \right)
+                \label{subeq:pvp_exp}
+        \end{equation}
+        \begin{equation}
+                - \gamma ^ { \mu } \hat { P } _ { - } ^ { \prime } = - \frac { 1 } { 2 } \gamma ^ { \mu } \left( 1 - \gamma _ { 5 } \right)
+                \label{subeq:pap_exp}
+        \end{equation}
+\end{subequations}
+Trascurando il fattore $1/2$ si può quindi scrivere l'operatore $V-A$ come:
+\begin{equation}
+        \hat { O } _ { i } ^ { \prime } = \gamma ^ { \mu } \left( 1 - \gamma _ { 5 } \right) = \gamma ^ { \mu } - \gamma ^ { \mu } \gamma _ { 5 }
+        \label{eq:va_operator}
 \end{equation}
 
 
-\subsection{Decadimento del muone}
-Il muone decade secondo:
+\subsection{Esempi di decadimento: muone e neutrone}
+Si applica ora la teoria $V-A$ presentata nella parte precedente a due importanti esempi di decadimento: quello del muone e quello del neutrone.
+\paragraph{Decadimento del muone} Il muone decade secondo:
 \begin{equation}
         \mu^{-} \rightarrow e^{-} \overline{\nu_{e}} \nu_{\mu}
         \label{eq:muon_decay}
@@ -250,21 +321,29 @@ Il diagramma di Feynman del processo è mostrato in Fig. \ref{fig:muon_decay}.
         \caption{Diagramma di Feynman per il decadimento del muone.}
         \label{fig:muon_decay}
 \end{figure}
-Per l'interazione debole, le regole di Feynman~\cite{ref:griff} prevedono il fattore V-A
+Per l'interazione debole, le regole di Feynman (Appendice \ref{app:feynman_rules}) prevedono il fattore V-A
 \begin{equation}
         \mathcal { K } ^ { \mu } \rightarrow - \frac { i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right)
 \end{equation}
 ad entrambi i vertici. A causa della grande massa del bosone $W^{-}$, il propagatore può essere approssimato da
 \begin{equation}
-        \mathcal { D } _ { \mu \nu } \rightarrow i \frac { g _ { \mu \nu } } { M _ { W } ^ { 2 } }
+         \mathcal { D } _ { \mu \nu } \rightarrow i \frac { g _ { \mu \nu } } { M _ { W } ^ { 2 } }
         \label{eq:propagator}
 \end{equation}
-Inserendo questi valori nell'espressione per l'ampiezza di decadimento si trova:
+Proseguendo nell'applicazione delle regole di Feynman si ottiene l'uguaglianza:
+\begin{equation}
+        - i \mathcal { M } = \left[ \overline { u } \left( \nu _ { \mu } \right) \mathcal { K } ^ { \mu } u ( \mu ) \right] \cdot \mathcal { D } _ { \mu \nu } \cdot \left[ \overline { u } ( e ) \mathcal { K } ^ { \nu } v \left( \nu _ { e } \right) \right]
+\end{equation}
+dove $u$ e $v$ sono spinori di Dirac nello spazio dei momenti con $\overline { u } = u ^ { \dagger } \gamma ^ { 0 }$ e $\overline { v } = v ^ { \dagger } \gamma ^ { 0 }$. Inserendo la forma esplicita di fattori di vertice e propagatore si ha:
 \begin{equation}
         \mathcal { M } = \frac { g _ { w } ^ { 2 } } { 8 M _ { W } ^ { 2 } } \left[ \overline { u } \left( \nu _ { \mu } \right) \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right) u ( \mu ) \right] \cdot \left[ \overline { u } \left( e ^ { - } \right) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v \left( \nu _ { e } \right) \right]
         \label{eq:amplitude_muon}
 \end{equation}
-dove $u$ e $v$ sono spinori di Dirac nello spazio dei momenti con $\overline { u } = u ^ { \dagger } \gamma ^ { 0 }$ e $\overline { v } = v ^ { \dagger } \gamma ^ { 0 }$. Sviluppando il calcolo e utilizzando la regola d'oro di Fermi si trova:
+Il calcolo di $| \mathcal { M } | ^ { 2 }$ è illustrato dettagliatamente in \cite{ref:hayes}. Qui si riporta il risultato finale:
+\begin{equation}
+         | \mathcal { M } | ^ { 2 }  = 2 \left[ \frac { g _ { w } } { M _ { W } } \right] ^ { 4 } \left( p _ { \mu } \cdot p _ { \nu _ { \mu } } \right) \left( p _ { \nu _ { e } } \cdot p _ { e } \right)
+\end{equation}
+Sostituendo questo valore nella regola d'oro di Fermi (\ref{eq:decay_rate}) si trova:
 \begin{equation}
         \Gamma = \frac { m _ { \mu } ^ { 5 } c ^ { 4 } } { 192 \pi ^ { 3 } \hbar ^ { 7 } } G _ { F } ^ { 2 }
         \label{eq:muon_decay_rate}
@@ -284,8 +363,7 @@ e sostituendo i valori sperimentali per la vita media del muone si ottiene:
         G^{\mu} _ { F } = 1.16637 \times 10 ^ { - 5 } \mathrm { GeV } ^ { - 2 }
         \label{eq:gf_muon_value}
 \end{equation}
-
-\subsection{Decadimento del neutrone}
+\paragraph{Decadimento del neutrone}
 Il neutrone decade secondo:
 \begin{equation}
         n \rightarrow p e^{-} \overline{\nu_{e}}
@@ -303,17 +381,21 @@ Una prima approssimazione del decadimento beta del neutrone si ottiene assumendo
         \caption{Diagramma di Feynman per il decadimento del neutrone, assumendo protone e neutrone non costituiti da quark.}
         \label{fig:neutron_decay_simple}
 \end{figure}
-L'elemento di matrice è determinato facilmente sostituendo $u(\nu_{\mu})$ e $u(\mu)$ in \ref{eq:amplitude_muon} con $u(n)$ e $u(p)$. Omettendo i dettagli del calcolo, che sono tuttavia descritti in \cite{ref:hayes}, si ricava:
+L'elemento di matrice è determinato facilmente sostituendo $u(\nu_{\mu})$ e $u(\mu)$ nella (\ref{eq:amplitude_muon}) con $u(n)$ e $u(p)$. Il termine $|\mathcal{M}|^{2}$ si può scrivere, considerando il neutrone inizialmente a riposo:
+\begin{equation}
+        < | \mathcal { M } | ^ { 2 } > = \left[ \frac { g _ { w } } { M _ { W } } \right] ^ { 4 } M _ { n } E _ { \nu } \left[ \left( M _ { n } ^ { 2 } - M _ { p } ^ { 2 } - m _ { e } ^ { 2 } \right) - 2 M _ { n } E _ { \nu } \right]
+\end{equation}
+Tralasciando i dettagli del calcolo del tasso di decadimento, che sono tuttavia descritti in \cite{ref:hayes}, si ricava:
 \begin{equation}
         \Gamma = \frac { 2 \rho_{f} } { \pi ^ { 3 } \hbar ^ { 7 } } G _ { F } ^ { 2 } m _ { e } ^ { 5 } c ^ { 4 }
         \label{eq:neutron_decay_rate}
 \end{equation}
-Calcolando il valore di $\rho_{f}$ \cite{ref:BGSex} e sostituendo a $\Gamma$ l'inverso della vita media del neutrone $\tau_{n}=885.7 s$ si trova un valore di $G_{F}$ pari a:
+Calcolando il valore dello spazio delle fasi $\rho_{f}$ (anche in questo caso si rimanda a \cite{ref:hayes}) e sostituendo a $\Gamma$ l'inverso della vita media del neutrone $\tau_{n}=885.7 s$ si trova un valore di $G_{F}$ pari a:
 \begin{equation}
         G^{n} _ { F } = 1.140 \times 10 ^ { - 5 } \mathrm { GeV } ^ { - 2 }
         \label{eq:gf_neutron_value}
 \end{equation}
-Questo valore discorda da quello ottenuto (Eq.~\ref{eq:gf_muon_value}) da un decadimento che coinvolge solo leptoni. Sembrò quindi inizialmente che interazioni coinvolgenti leptoni e quark fossero diverse, facendo così cadere l'ipotesi di universalità dell'interazione debole.
+Questo valore discorda da quello ottenuto in Eq.~(\ref{eq:gf_muon_value}) da un decadimento che coinvolge solo leptoni. Sembrò quindi inizialmente che interazioni coinvolgenti leptoni e quark fossero diverse, facendo così cadere l'ipotesi di universalità dell'interazione debole.
 
 \subsection{Decadimenti deboli di particelle strane}
 Poiché le interazioni deboli coinvolgono sia leptoni che adroni, occorre fare alcune classificazioni, basate sul fatto che nei processi dovuti alla WI siano coinvolti o meno dei leptoni. Nel caso di processi semi-leptonici o non-leptonici, si osservano decadimenti in cui non sono coinvolte particelle strane ($\Delta S=0$), oppure con decadimenti che violano la stranezza ($\Delta S=1$). Il decadimento debole delle particelle strane presenta alcune anomalie, indipendentemente che si considerino processi leptonici, semi-leptonici o non-leptonici.
@@ -526,7 +608,7 @@ Grazie a questa scrittura, il termine dell'hamiltoniana $H_{W}$ che dipende dal 
         \feynmandiagram [layered layout, horizontal=a to b] {
                 a [particle=\(c\)] -- [fermion] b [label=0:\(g_{cd} (g_{cs})\)]-- [fermion] f1 [particle=\(d (s)\)],
                 b -- [boson, edge label'=\(W^{+}\)] c,
-                c -- [anti fermion] f2 [particle=\(\nu_{e}\)],
+                c [label=0:\(g_{e\nu}\)] -- [anti fermion] f2 [particle=\(\nu_{e}\)],
                 c -- [fermion] f3 [particle=\(e^{+}\)],
         };
         \caption{Interazione debole con un quark $c$ che si trasforma in $d$ o $s$.}
@@ -534,7 +616,15 @@ Grazie a questa scrittura, il termine dell'hamiltoniana $H_{W}$ che dipende dal 
 \end{figure}
 
 \subsection{Indizi sul quarto quark dalle correnti neutre}
-
+Un quarto quark era necessario anche per spiegare alcune anomalie connesse con le correnti neutre: i processi a corrente neutra sperimentalmente osservati sono caratterizzati dalla regola di selezione $\Delta S = 0$, mentre quelli con $\Delta S = 1$ non sono osservati. Tuttavia, il meccanismo che ruota lo stato dei quark ($d, s$), postulando l'esistenza dei soli tre quark $u, d, s$, produce un termine con $\Delta S = 1$ quando considera NC:
+\begin{equation}
+        \begin{array} { c } { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \overline { u } , \overline { d } \cos \theta _ { c } + \overline { s } \sin \theta _ { c } \right) \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + \left( d \overline { d } \cos ^ { 2 } \theta _ { c } + s \overline { s } \sin ^ { 2 } \theta _ { c } \right) } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
+\end{equation}
+Ciascun termine $u \overline { u } , d \overline { d } , s \overline { s }$ rappresenta la densità di probabilità per la transizione di uno stesso sapore di quark da uno stato iniziale a quello finale, con emissione di una $Z^{0}$. Sono inoltre previste le transizioni mai osservate $s\overline{d}$ e $d\overline{s}$. Con il nuovo doppietto \ref{eq:c_sc_doublet}, la corrente neutra può riscriversi nella forma:
+\begin{equation}
+        \begin{array} { l } { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) + \left( \overline { c } , \overline { s } _ { c } \right) \left( \begin{array} { c } { c } \\ { s _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + c \overline { c } + ( d \overline { d } + s \overline { s } ) \cos ^ { 2 } \theta _ { c } + ( s \overline { s } + d \overline { d } ) \sin ^ { 2 } \theta _ { c } } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d - \overline { s } d - s \overline { d } ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
+\end{equation}
+e i termini che prevedono transizioni con $\Delta S = 1$ sono automaticamente cancellati.
 \subsection{I sei quark e la matrice CKM}
 Nel 1973 Kobayashi e Maskawa estesero l'idea di Cabibbo a tre generazioni di quark. Si hanno così i seguenti autostati dell'interazione debole:
 \begin{equation}
