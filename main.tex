@@ -486,37 +486,46 @@ In questo modello, quanto sopra esposto corrisponde al fatto che i quark che par
 dove $\theta_{c}$ è l'\textit{angolo di Cabibbo} e si trova sperimentalmente essere $\theta _ { c } = 0.235\: \mathrm { rad }$. La scelta di $u$ come autostato non mescolato è semplicemente una convenzione. Per ogni doppietto di leptoni l'accoppiamento debole è specificato da $G_{F}$. L'apparente differenza tra i valori della costante di accoppiamento è dovuta al processo di miscelamento dei quark. Una rappresentazione grafica dell'autostato debole $d_{c}$ che costituisce un doppietto con $u$ è visibile in Fig. \ref{fig:sdmixing}.\\
 Si possono in questo modo interpretare i fatti sperimentali esposti in precedenza: dato che $\sin\theta_{c}=0.235$ e $\cos\theta_{c}=0.972$, transizioni con $\Delta S = 0$ hanno una costante di accoppiamento effettiva maggiore di transizioni con $\Delta S = 1$. Si spiega inoltre perché $G_{F}^{n}$ (Eq.~(\ref{eq:gf_neutron_value})) è più piccola di $G_{F}^{\mu}$ (Eq.~(\ref{eq:gf_muon_value})): in realtà, quello che si misura nel decadimento del neutrone è $G_{F}\cos \theta_{c}$.
 
-\subsection{Tipi di transizione nel decadimento $\beta$}
-Al fine di introdurre concetti che saranno ripresi nel seguito, si vuole ora trattare dei molteplici tipi di decadimento $\beta$ esistenti. La classificazione viene operata sulla base della variazione di momento angolare tra nucleo iniziale e nucleo finale. Tale variazione è connessa con lo spin dei due leptoni $e ^ { - } , \overline { \nu } _ { e }$ (oppure $e^{+}, \nu_{e}$): entrambi hanno spin 1/2, quindi la variazione dello spin nucleare può essere nulla (spin di neutrino ed elettrone antiparalleli), oppure $\pm1$ (spin paralleli). Si tiene conto del numero di stati permessi dal momento angolare della transizione tramite la grandezza $|\matchal{M}|^{2}$. Questo valore dipende in parte dalla variazione di spin nella transizione del nucleo. Assumendo che l'elettrone e il neutrino siano emessi in uno stato di momento angolare $\matchal{l}=0$, la variazione dello spin del nucleo è pari alla somma degli spin dei due leptoni. Per l'orientazione degli spin di elettrone e neutrino:
-\begin{enumerate}
-        \item nelle transizioni $0 \rightarrow 0$, gli spin sono antiparalleli (stato di singoletto);
-        \item nelle transizioni $0 \rightarrow 1$ gli spin sono paralleli (stato di tripletto);
-        \item nelle transizioni $\frac{1}{2} \rightarrow \frac{1}{2}$ gli spin possono essere antiparalleli (lo spin del nucleo non cambia) o paralleli (lo spin del nucleo cambia direzione).
-\end{enumerate}
-Le transizioni del primo tipo sono dette transizioni di Fermi, quelle del secondo di Gamow-Teller, mentre le terze sono dette di tipo misto.
-\paragraph{Transizioni di Fermi} $\Delta J=0$, stato leptonico di singoletto di spin ($\uparrow\downarrow$). Un esempio di transizione di Fermi è:
+\subsection{Tipi di transizione nel decadimento $\beta$ e forma della corrente barionica}
+Per poter affrontare con gli adeguati strumenti lo studio, nella prossima sezione, del decadimento $\beta$ del neutrone con il contributo del \textit{quark mixing}, risulta necessario introdurre alcuni importanti concetti che ne stanno alla base. \\
+Dato che nel decadimento $\beta$ nucleare si hanno neutrone e protone che si muovono non relativisticamente è facile convincersi (si veda \cite{ref:greiner}) che le quantità introdotte in Tab. \ref{tab:bilinear} si comportano nella seguente maniera:
 \begin{equation}
-        0 ^ { + } \rightarrow 0 ^ { + } , \Delta J = 0 : ^ { 14 } \mathrm { O } \rightarrow ^ { 14 } \mathrm { N } ^ { * } + e ^ { + } + \nu _ { e }
-        \label{eq:fermi_ex}
+        S , V \rightarrow \phi _ { \mathrm { p } } ^ { \dagger } \phi _ { \mathrm { n } } \quad , \quad T , A \rightarrow \phi _ { \mathrm { p } } ^ { \dagger } \sigma \phi _ { \mathrm { n } } \quad , \quad P \rightarrow 0
 \end{equation}
-Facendo riferimento alle quantità introdotte in Sec. \ref{subsec:v-a}, si ha che queste transizioni possono essere solo di tipo $S$ e $V$. Per la probabilità si transizione si ha:
+dove $\phi_{p}$ e $\phi_{n}$ sono gli spinori a due componenti che dominano in limite non-relativistico. I casi rilevanti prendono il nome di transizioni di Fermi:
 \begin{equation}
-        | \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { F } \right| ^ { 2 } = m _ { i , s } g _ { V } ^ { 2 }
-        \label{eq:m_fermi}
+        S , V \rightarrow \phi _ { \mathrm { p } } ^ { \dagger } \phi _ { \mathrm { n } }
 \end{equation}
-dove $g_{V}$ è la costante di accoppiamento vettoriale.
-\paragraph{Transizioni di Gamow-Teller} $\Delta J=1$, stato leptonico di tripletto di spin ($\uparrow\uparrow$). Un esempio di transizione di Gamow-Teller è:
+e di Gamow-Teller:
 \begin{equation}
-        1 ^ { + } \rightarrow 0 ^ { + } , \quad \Delta J = 1 : ^{6}H e \rightarrow^ { 6 } L i + e ^ { - } + \overline { \nu }
-        \label{eq:gt_ex}
+        T , A \rightarrow \phi _ { \mathrm { p } } ^ { \dagger } \sigma \phi _ { \mathrm { n } }
 \end{equation}
-Facendo riferimento alle quantità introdotte in Sec. \ref{subsec:v-a}, si ha che queste transizioni possono essere solo di tipo $T$ e $A$. Per la probabilità si transizione si ha:
+La differenza principale tra le due sta nella variazione di momento angolare totale tra nucleo iniziale e nucleo finale. Tale variazione è connessa con lo spin dei due leptoni $e ^ { - } , \overline { \nu } _ { e }$ (oppure $e^{+}, \nu_{e}$): entrambi hanno spin 1/2, quindi la variazione dello spin nucleare può essere nulla (spin di neutrino ed elettrone antiparalleli), oppure $\pm1$ (spin paralleli). Si tiene conto del numero di stati permessi dal momento angolare della transizione tramite la grandezza $|\mathcal{M}|^{2}$: per le transizioni di Fermi si scrive $| \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { F } \right| ^ { 2 } = m _ { i , s } g _ { V } ^ { 2 }$ mentre per quelle di Gamow-Teller si ha $| \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { G T } \right| ^ { 2 } = m _ { i , s } g _ { A } ^ { 2 }$.
+Analizzando Tab. \ref{tab:beta_decays} si può vedere come il prodotto $G_{F}^{2}|\mathcal{M}|^{2}$ sia approssimativamente lo stesso in tutti i decadimenti, ma con una dipendenza dalla variazione dello spin nella transizione del nucleo. Assumendo che l'elettrone e il neutrino siano emessi in uno stato di momento angolare $l=0$, la variazione dello spin del nucleo è pari alla somma degli spin dei due leptoni. Per l'orientazione degli spin di elettrone e neutrino si ha quindi che nelle transizioni di Fermi $0 \rightarrow 0$ e gli spin sono antiparalleli (stato di singoletto), mentre in quelle di Gamow-Teller $0 \rightarrow 1$ e gli spin sono paralleli (stato di tripletto); si ha inoltre il caso delle transizioni cosiddette miste, in cui $\frac{1}{2} \rightarrow \frac{1}{2}$ e gli spin possono essere antiparalleli (lo spin del nucleo non cambia) o paralleli (lo spin del nucleo cambia direzione).
+\begin{table}
+        \centering
+        \begin{tabular}{c  c  c}
+                \hline
+                decadimento & transizione $J^{P}$ & $G _ { F } ^ { 2 } | \mathcal { M } | ^ { 2 }$ ($MeV^{2}fm^{6}$) \\
+                \hline
+                $^ { 14 } \mathrm { O } \rightarrow ^ { 14 } \mathrm { N } ^ { * } + e ^ { + } + \nu _ { e }$ & $0 ^ { + } \rightarrow 0 ^ { + }$ & $1.52 \times 10 ^ { - 8 }$ \\
+                $^{6}H e \rightarrow^ { 6 } L i + e ^ { - } + \overline { \nu }$ & $0^{+} \rightarrow 1^{+}$ & $7.45 \times 10 ^ { - 8 }$ \\
+                $n \rightarrow p e ^ { - } \overline { \nu }$ & $\frac { 1 } { 2 }^{+} \rightarrow \frac { 1 } { 2 } ^ { + }$ & $4.25 \times 10 ^ { - 8 }$ \\
+                \hline
+        \end{tabular}
+        \caption{Decadimenti $\beta$ suddivisi nelle diverse transizioni}
+        \label{tab:beta_decays}
+\end{table}
+Le transizioni di Fermi e Gamow-Teller, essendo osservate in natura, devono comparire nella scrittura delle correnti deboli che descrivono quark, le quali conterranno una loro combinazione. Prendendo come esempio la parte nucleonica del decadimento $\beta$ del neutrone
 \begin{equation}
-        | \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { G T } \right| ^ { 2 } = m _ { i , s } g _ { A } ^ { 2 }
-        \label{eq:m_gt}
+        \overline { u } _ { \mathrm { p } } \hat { O } _ { i } u _ { \mathrm { n } }
 \end{equation}
-dove $g_{A}$ è la costante di accoppiamento assiale. \\
-Sfruttando i processi introdotti in (\ref{eq:fermi_ex}) e (\ref{eq:gt_ex}) è possibile stimare \cite{ref:BGSex} il rapporto tra le costanti $g_{V}$ e $g_{A}$, che tornerà utile nel seguito:
+e ricordando, come dimostrato in, che la corrente deve avere una forma $V-A$, si avrà:
+\begin{equation}
+        \overline { u } _ { \mathrm { p } } \gamma ^ { \mu } \left( g _ { V } + g _ { A } \gamma _ { 5 } \right) u _ { \mathrm { n } }
+        \label{eq:barionic_current}
+\end{equation}
+Sfruttando i primi due processi riportati in Tab. \ref{tab:beta_decays} è possibile inoltre stimare \cite{ref:BGSex} il rapporto tra le costanti $g_{V}$ e $g_{A}$:
 \begin{equation}
         \lambda = g _ { A } / g _ { v } = - 1.2695 \pm 0.0029
         \label{eq:ga_gv}
@@ -539,10 +548,43 @@ Il fattore al vertice quark-quark si può scrivere
 \begin{equation}
         \mathcal { K } ^ { \mu } \rightarrow - \frac { i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( g _ { v } - g _ { A } \gamma ^ { 5 } \right)
 \end{equation}
-Se la parte vettoriale è conservata, allora $g_{V} = 1$; altrimenti il rapporto tra le due costanti assume il valore (\ref{eq:ga_gv}). Nello scrivere l'elemento di matrice, è inoltre necessario moltiplicare per un fattore $\cos\theta_{c}$, così che si possa scrivere:
+dove le costanti $g_{V}$ e $g_{A}$ sono le stesse introdotte nella sezione precedente. Se la parte vettoriale è conservata, allora $g_{V} = 1$; altrimenti il rapporto tra le due costanti assume il valore (\ref{eq:ga_gv}). Nello scrivere l'elemento di matrice, è inoltre necessario moltiplicare per un fattore $\cos\theta_{c}$, così da includere il \textit{mixing} generazionale presente nel vertice quark-quark. Si può quindi scrivere:
 \begin{equation}
-        \mathcal { M } = \frac { g _ { w } ^ { 2 } } { 8 M _ { W } ^ { 2 } } V _ { u d } \cdot \left[ \overline { u } ( p ) \gamma ^ { \mu } \left( g _ { v } - g _ { A } \gamma ^ { 5 } \right) u ( n ) \right] \cdot \left[ \overline { u } ( e ) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v \left( \nu _ { e } \right) \right]
+        \mathcal { M } = \frac { g _ { w } ^ { 2 } } { 8 M _ { W } ^ { 2 } } \cos\theta_{c} \cdot \left[ \overline { u } ( p ) \gamma ^ { \mu } \left( g _ { v } - g _ { A } \gamma ^ { 5 } \right) u ( n ) \right] \cdot \left[ \overline { u } ( e ) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v \left( \nu _ { e } \right) \right]
+        \label{eq:neutron_complex_matrix_element}
 \end{equation}
+Si noti che in questa espressione si possono chiaramente distinguere la corrente leptonica
+\begin{equation}
+        \overline { u } ( e ) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v \left( \nu _ { e } \right)
+        \label{eq:leptonic_current}
+\end{equation}
+e quella barionica, introdotta in Eq. \ref{eq:barionic_current}. Questo risultato è perfettamente in linea col fatto che l'elemento di matrice è proporzionale ad un prodotto di correnti, come riportato in Eq. (\ref{eq:weak_matrix_element}).
+Il calcolo di (\ref{eq:neutron_complex_matrix_element}), i cui dettagli sono riportati in \cite{ref:hayes}, consente di ottenere un tasso di decadimento pari a:
+\begin{equation}
+        \Gamma = \frac { \rho_{f} m _ { e } ^ { 5 } c ^ { 4 } } { 64 \pi ^ { 3 } \hbar } \left[ \frac { g _ { w } } { M _ { W } } \right] ^ { 4 } \cos^{2}\theta_{c} g _ { V } ^ { 2 } \left( 1 + 3 \lambda ^ { 2 } \right)
+\end{equation}
+che, una volta confrontato con (\ref{eq:neutron_decay_rate}), mostra chiaramente che l'effetto del \textit{mixing} è quello di introdurre un fattore
+\begin{equation}
+        \frac { 1 } { 4 } \cos^{2}\theta_{c} g _ { V } ^ { 2 } \left( 1 + 3 \lambda ^ { 2 } \right)
+\end{equation}
+nel valore del tasso di decadimento. Di nuovo, è possibile riscrivere questo valore in termini di $G_{F}$:
+\begin{equation}
+        \Gamma = \frac { \rho_{f} m _ { e } ^ { 5 } } { 2 \pi ^ { 3 } \hbar ^ { 7 } } \cos^{2}\theta_{c} G _ { F } ^ { 2 }g_{V}^{2} \left( 1 + 3 \lambda ^ { 2 } \right)
+\end{equation}
+Definendo infine:
+\begin{equation}
+        G _ { V } = G _ { F }\cdot g_{V} \cdot \cos\theta_{c} \quad,\quad G _ { A } = \lambda \cdot G _ { F } \cdot g_{V} \cdot \cos\theta_{c}
+\end{equation}
+si ottiene il risultato finale:
+\begin{equation}
+        \Gamma = \frac { \rho_{f} m _ { e } ^ { 5 } c ^ { 4 } } { 2 \pi ^ { 3 } \hbar ^ { 7 } } \left( G _ { V } ^ { 2 } + 3 G _ { A } ^ { 2 } \right)
+\end{equation}
+Inserendo i risultati sperimentali si trova questa volta una vita media per il neutrone pari a:
+\begin{equation}
+        \tau = 907.637 s
+\end{equation}
+che si discosta dal valore trovato sperimentalmente di meno del $2.5\%$.
+
 \section{L'estensione della teoria: correnti neutre, meccanismo GIM e matrice CKM}
 \subsection{Interazione debole a corrente neutra}
 Come anticipato nell'introduzione, i processi deboli a corrente carica (CC) non sono gli unici esistenti. Ci sono infatti reazioni, come ad esempio
@@ -551,11 +593,10 @@ Come anticipato nell'introduzione, i processi deboli a corrente carica (CC) non 
         \label{eq:neutral_current}
 \end{equation}
 che possono avvenire solo attraverso lo scambio di un bosone $Z^{0}$. Questi processi vengono chiamati interazioni deboli a corrente neutra (NC). \\
-Come il fotone, anche lo $Z^{0}$ può essere scambiato sia nel canale $t$ che nel canale $s$: nel primo caso si ha lo scambio del bosone tra un neutrino e un fermione, con questi due che rimangono gli stessi durante tutto il processo, mentre nel secondo caso ha un processo di annichilazione $f \overline { f } \rightarrow Z ^ { 0 }$ seguito dalla creazione di una coppia $f ^ { \prime } \overline { f ^ { \prime } }$. \\
+Come il fotone, anche lo $Z^{0}$ può essere scambiato sia nel canale $t$ che nel canale $s$: nel primo caso si ha lo scambio del bosone tra un neutrino e un fermione, con questi due che rimangono gli stessi durante tutto il processo, mentre nel secondo caso si ha un processo di annichilazione $f \overline { f } \rightarrow Z ^ { 0 }$ seguito dalla creazione di una coppia $f ^ { \prime } \overline { f ^ { \prime } }$. \\
 L'interazione a corrente neutra fu scoperta nel 1977 utilizzando una camera a bolle a liquido pesante (Gargamelle, CERN) esposta ad un fascio di neutrini muonici ad alta energia; furono osservate le reazioni sugli elettroni atomici $\nu _ { \mu } e ^ { - } \rightarrow \nu _ { \mu } e ^ { - }$ e su nucleoni $\nu _ { \mu } N \rightarrow \nu _ { \mu } + \text {adroni}$, in cui sono visibili nello stato finale le sole tracce delle particelle cariche. In entrambi i casi, visto che mancava la segnatura caratteristica della presenza di un muone, si concluse che le reazioni possono procedere solo via NC. \\
 Storicamente, le NC sono state introdotte per rimuovere divergenze: nel caso, per esempio, della reazione $\nu \overline { \nu } \rightarrow W ^ { + } W ^ { - }$, il diagramma all'ordine più basso contiene lo scambio di un elettrone e dà luogo ad una divergenza, cancellata dal diagramma contenente lo scambio di una $Z^{0}$. \\
 Si noti che le interazioni a corrente neutra non erano previste dalla teoria di Fermi e rappresentano uno dei motivi che ne richiesero l'estensione.
-
 
 \subsection{Quark \textit{charm} e meccanismo GIM}
 Nel 1955 Gell-Mann e Pais osservarono che è possibile formare due combinazioni lineari dei mesoni $K$ neutri che sono autostati della simmetria CP, e quindi dell'interazione debole, e che questi corrispondono alle particelle che decadono nei due diversi stati di CP. Scegliendo le seguenti combinazioni lineari:
@@ -615,7 +656,7 @@ si possono scrivere in forma matriciale
         \caption{Mixing di Cabibbo}
         \label{fig:sdmixing}
 \end{figure}
-Grazie a questa scrittura, il termine dell'hamiltoniana $H_{W}$ che dipende dal tipo di quark coinvolto può essere formalmente scritto nel modo seguente (considerando come esempio transizioni da un quark iniziale $d_{c}$ o $s_{c}$ ad uno stato finale $\overline{u}$ o $\overline{c}$):
+Una rappresentazione grafica dei due autostati dell'interazione debole $d_{c}$ ed $s_{c}$ è riportata in Fig. \ref{fig:sdmixing}. Grazie a questa scrittura, il termine dell'hamiltoniana $H_{W}$ che dipende dal tipo di quark coinvolto può essere formalmente scritto nel modo seguente (considerando come esempio transizioni da un quark iniziale $d_{c}$ o $s_{c}$ ad uno stato finale $\overline{u}$ o $\overline{c}$):
 \begin{equation}
         ( \overline { u } , \overline { c } ) \left( \begin{array} { c } { d _ { c } } \\ { s _ { c } } \end{array} \right) = ( \overline { u } , \overline { c } ) \left( \begin{array} { c } { \operatorname { c o s } \theta _ { c } \operatorname { s i n } \theta _ { c } } \\ { - \operatorname { s i n } \theta _ { c } \operatorname { c o s } \theta _ { c } } \end{array} \right) \left( \begin{array} { l } { d } \\ { s } \end{array} \right) = ( \overline { u } , \overline { c } ) V _ { c } \left( \begin{array} { l } { d } \\ { s } \end{array} \right)
 \end{equation}
@@ -637,7 +678,7 @@ Un quarto quark era necessario anche per spiegare alcune anomalie connesse con l
 \begin{equation}
         \begin{array} { c } { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \overline { u } , \overline { d } \cos \theta _ { c } + \overline { s } \sin \theta _ { c } \right) \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + \left( d \overline { d } \cos ^ { 2 } \theta _ { c } + s \overline { s } \sin ^ { 2 } \theta _ { c } \right) } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
 \end{equation}
-Ciascun termine $u \overline { u } , d \overline { d } , s \overline { s }$ rappresenta la densità di probabilità per la transizione di uno stesso sapore di quark da uno stato iniziale a quello finale, con emissione di una $Z^{0}$. Sono inoltre previste le transizioni mai osservate $s\overline{d}$ e $d\overline{s}$. Con il nuovo doppietto \ref{eq:c_sc_doublet}, la corrente neutra può riscriversi nella forma:
+Ciascun termine $u \overline { u } , d \overline { d } , s \overline { s }$ rappresenta la densità di probabilità per la transizione di uno stesso sapore di quark da uno stato iniziale a quello finale, con emissione di una $Z^{0}$. Sono inoltre previste le transizioni mai osservate $s\overline{d}$ e $d\overline{s}$. Con il nuovo doppietto (\ref{eq:c_sc_doublet}), la corrente neutra può riscriversi nella forma:
 \begin{equation}
         \begin{array} { l } { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) + \left( \overline { c } , \overline { s } _ { c } \right) \left( \begin{array} { c } { c } \\ { s _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + c \overline { c } + ( d \overline { d } + s \overline { s } ) \cos ^ { 2 } \theta _ { c } + ( s \overline { s } + d \overline { d } ) \sin ^ { 2 } \theta _ { c } } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d - \overline { s } d - s \overline { d } ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
 \end{equation}
@@ -656,12 +697,88 @@ dove
         V_{CKM} = \left( \begin{array} { c } { V _ { u d } V _ { u s } V _ { u b } } \\ { V _ { c d } V _ { c s } V _ { c b } } \\ { V _ { t d } V _ { t s } V _ { t b } } \end{array} \right)
         \label{eq:ckm}
 \end{equation}
-dove ogni elemento specifica l'accoppiamento tra i due quark scritti a pedice. La parametrizzazione proposta originariamente è la seguente ($c_{i}=\cos\theta_{i}, s_{i}=\sin\theta_{i}$):
+$V_{CKM}$ è una matrice unitaria, tale cioè che $V ^ { \dagger } V = 1 = V V ^ { \dagger }$, in cui ogni elemento specifica l'accoppiamento tra i due quark scritti a pedice. La parametrizzazione proposta originariamente è la seguente ($c_{i}=\cos\theta_{i}, s_{i}=\sin\theta_{i}$):
 \begin{equation}
 V _ { C K M } = \left( \begin{array} { c c c } { c _ { 1 } } & { c _ { 3 } s _ { 1 } } & { s _ { 1 } s _ { 3 } } \\ { - c _ { 2 } s _ { 1 } } & { c _ { 1 } c _ { 2 } c _ { 3 } - s _ { 2 } s _ { 3 } e ^ { i \delta } } & { c _ { 1 } c _ { 2 } s _ { 3 } + c _ { 3 } s _ { 2 } e ^ { i \delta } } \\ { s _ { 1 } s _ { 2 } } & { - c _ { 1 } c _ { 3 } s _ { 2 } - c _ { 2 } s _ { 3 } e ^ { i \delta }} & {- c _ { 1 } s _ { 2 } s _ { 3 } + c _ { 2 } c _ { 3 } e ^ { i \delta } } \end{array} \right)
         \label{eq:ckm_param}
 \end{equation}
-dove $\theta _ { 1 } , \theta _ { 2 } , \theta _ { 3 }$ sono tre angoli di mixing e $\delta$ è un angolo di fase che, se diverso da zero, porta alla violazione di $CP$ nell'interazione debole. Gli elementi della matrice CKM, determinati sperimentalmente, sono i seguenti:
+dove $\theta _ { 1 } , \theta _ { 2 } , \theta _ { 3 }$ sono tre angoli di mixing e $\delta$ è un angolo di fase che, se diverso da zero, porta alla violazione di $CP$ nell'interazione debole. Un'altra parametrizzazione molto usata si trova rinominando gli assi cartesiani con il nome dei quark \textit{down-type}, come mostrato in Fig. \ref{fig:mixing3D}, e compiendo una serie di rotazioni attorno ad essi. Operando delle rotazioni nel seguente ordine: la prima di un angolo $\theta_{12}$ attorno all'asse \textit{b}, la seconda di un angolo $\theta_{13}$ attorno all'asse \textit{s} e la terza di un angolo $\theta_{23}$ attorno all'asse delle \textit{d}, si ottiene:
+\begin{equation}
+        V_{reale}=
+        \begin{pmatrix}1 & 0 & 0\\0 & c_{23} & s_{23}\\0 & -s_{23} & c_{23}\end{pmatrix}
+        \begin{pmatrix}c_{13} & 0 & s_{13}\\0 & 1 & 0\\-s_{13} & 0 & c_{13}\end{pmatrix}
+        \begin{pmatrix}c_{12} & -s_{12} & 0\\s_{12} & c_{12} & 0\\0 & 0 & 1\end{pmatrix}
+        \label{eq:CKMsencos}
+\end{equation}
+L'attuale miglior stima del valore degli angoli è:
+\begin{equation}
+        \theta_{12}=(13.04\pm0.08)^{\circ}\,\,\,\,\,\,\,\,\,\,\,\theta_{23}=(2.38\pm0.06)^{\circ}\,\,\,\,\,\,\,\,\,\,\,\theta_{13}=(0.201\pm0.011)^{\circ}
+\end{equation}
+I valori degli angoli di rotazione sono molto piccoli, ma in Fig.~\ref{fig:mixing3D} sono stati esagerati per renderli visibili.
+Ora risulta necessario introdurre la fase:
+\begin{equation}
+        \begin{aligned}
+                V= &
+                \begin{pmatrix}1 & 0 & 0\\0 & c_{23} & s_{23}\\0 & -s_{23} & c_{23}\end{pmatrix}
+                \begin{pmatrix}c_{13} & 0 & s_{13}e^{-i\delta_{13}}\\0 & 1 & s0\\-s_{13}e^{+i\delta_{13}} & 0 & c_{13}\end{pmatrix}
+                \begin{pmatrix}c_{12} & -s_{12} & 0\\s_{12} & c_{12} & 0\\0 & 0 & 1\end{pmatrix}\\
+                \\
+                = &
+                \begin{pmatrix}
+                c_{12}c_{13} & s_{12}c_{13} & s_{13}e^{-i\delta_{13}}\\
+                -s_{12}c_{23}-c_{12}s_{23}s_{13}e^{+i\delta_{13}} & c_{12}c_{23}-s_{12}s_{23}s_{13}e^{+i\delta_{13}} & s_{23}c_{13}\\
+                s_{12}s_{23}-c_{12}c_{23}s_{13}e^{+i\delta_{13}} & -c_{12}s_{23}-s_{12}c_{23}s_{13}e^{+i\delta_{13}} & c_{23}c_{13}
+                \end{pmatrix}
+        \end{aligned}
+\end{equation}
+L'introduzione della fase in questo modo è possibile solamente se la matrice CKM è unitaria. Il suo valore è stimato essere
+\begin{equation}
+        \delta_{13}=(1.20\pm0.08)^{\circ}
+\end{equation}
+
+\begin{figure}[t]
+        \centering
+        \begin{tikzpicture}[>=latex, font=\scriptsize]
+                \draw[->] (0,0,0) -- (4.5,0,0);
+                \draw[->] (0,0,0) -- (0,4.5,0);
+                \draw[->] (0,0,0) -- (0,0,5.8);
+                \draw[->,line width=1.3pt] (0,0,0) -- (4.4,0.8,-0.5);
+                \draw[->,line width=1.3pt] (0,0,0) -- (-0.8,4.3,0.5);
+                \draw[->,line width=1.3pt] (0,0,0) -- (1.2,0.5,7.3);
+                \draw[dashed] (0,0,0) -- (4.8,0.65,0.5);
+                \draw[dashed] (0,0,0) -- (-0.1,4.5,0.5);
+                \draw[dashed] (0,0,0) -- (1,0.5,7.3);
+                %sintassi: (0,0)center; (startangle=0:radius=3.5) arc (startangle=0:endangle=7,radius=3.5)
+                \draw [-latex, black, thick, line width=0.5] (0,0) ++ (0.1:3.5) arc (0.1:5.5:3.5);
+                %\fill [top color=white, bottom color=yellow] (0,0) -- (0:3.5) arc (0.2:5.4:3.5);
+                \draw [-latex, black, thick,line width=0.5] (0,0) ++ (5.5:3.8) arc (5.5:12:3.8);
+                %\fill [top color=white, bottom color=lime] (0,0) -- (5.5:3.8) arc (5.5:11.8:3.8);
+                \draw [-latex, black, thick,line width=0.5] (0,0) ++ (90.1:40mm) arc (90.1:94:40mm);
+                %\fill [top color=white, bottom color=lightgray] (0,0) -- (90.3:40mm) arc (90.3:93.8:40mm);
+                \draw [-latex, black, thick,line width=0.5] (0,0) ++ (94:35mm) arc (94:103.3:35mm);
+                %\fill [top color=white, bottom color=lime] (0,0) -- (94.2:35mm) arc (94.2:103.1:35mm);
+                \draw [-latex, black, thick,line width=0.5] (0,0) ++ (225:25mm) arc (225:232:25mm);
+                %\fill [top color=yellow, bottom color=white] (0,0) -- (225.2:25mm) arc (225.2:231.8:25mm);
+                \draw [-latex, black, thick,line width=0.5] (0,0) ++ (232:25.5mm) arc (232:234.5:25.5mm);
+                %\fill [top color=lightgray, bottom color=white] (0,0) -- (232.2:25.5mm) arc (232.2:234.3:25.5mm);
+                \node at (4.7,0,0) {s};
+                \node at (0,4.8,0) {b};
+                \node at (0,0,6.3) {d};
+                \node at (4.6,0.8,-0.5) {$s'$};
+                \node at (-0.8,4.5,0.5) {$b'$};
+                \node at (1.2,0.3,7.5) {$d'$};
+                \node at (4.1,0.23) {$\theta_{12}$};
+                \node at (4.1,1.3) {$\theta_{23}$};
+                \node at (-0.3,4.6,0) {$\theta_{13}$};
+                \node at (-0.63,3.8,0) {$\theta_{23}$};
+                \node at (-0.5,0,4.4) {$\theta_{12}$};
+                \node at (1.1,0,5.5) {$\theta_{13}$};
+                \end{tikzpicture}
+        \caption{Rotazione dei quark}
+        \label{fig:mixing3D}
+\end{figure}
+
+Gli elementi della matrice CKM, determinati sperimentalmente, sono i seguenti:
 \begin{equation}
         V _ { C K M } = \left( \begin{array} { c c c } { 0.97428 \pm 0.00015 } & { 0.2253 \pm 0.0007 } & { 0.00347 \pm 0.00016 } \\ { 0.2252 \pm 0.0007 } & { 0.97333 \pm 0.00015 } & { 0.041 \pm 0.001 } \\ { 0.0086 \pm 0.0003 } & { 0.040 \pm 0.001 } & { 0.99915 \pm 0.00005 } \end{array} \right)
         \label{eq:ckm_values}
