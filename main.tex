@@ -159,7 +159,7 @@ che, in termini di transizioni nucleari, possono riscriversi:
         \end{equation}
 \end{subequations}
 Il primo processo, detto decadimento beta negativo, determina l'instabilità del neutrone mentre il secondo è detto decadimento beta positivo e non avviene in maniera spontanea perché energicamente proibito; il terzo consiste nella cattura di un elettrone atomico da parte del nucleo. \\
-Il primo modello che abbia descritto con successo diverse caratteristiche del decadimento beta fu sviluppata da Fermi nel 1934. Questa teoria è considerata il prototipo dell'interazione debole: è puntiforme (in quanto coinvolge l'interazione di quattro fermioni in un punto) e presenta una costante di accoppiamento $G_{F}$, detta \textit{costante di Fermi}. La forza della teoria di Fermi sta nel fatto che la costante $G_{F}$ è universale, valida cioè per tutti i decadimenti di questo tipo. Un possibile vertice d'interazione postulato dalla teoria di Fermi è mostrato in Fig. \ref{fig:fermi_decay}.\\
+Il primo modello che abbia descritto con successo diverse caratteristiche del decadimento beta fu sviluppato da Fermi nel 1934. Questa teoria è considerata il prototipo dell'interazione debole: è puntiforme (in quanto coinvolge l'interazione di quattro fermioni in un punto) e presenta una costante di accoppiamento $G_{F}$, detta \textit{costante di Fermi}. La forza della teoria di Fermi sta nel fatto che la costante $G_{F}$ è universale, valida cioè per tutti i decadimenti di questo tipo. Un possibile vertice d'interazione postulato dalla teoria di Fermi è mostrato in Fig. \ref{fig:fermi_decay}.\\
 \begin{figure}[!h]
         \centering
         \feynmandiagram [layered layout, horizontal= nuc1 to a ] {
@@ -207,7 +207,7 @@ La teoria $V-A$ dell'interazione debole venne sviluppata a partire dal 1957 da F
         \item per particelle con spin 1/2, le funzioni d'onda appropriate sono spinori a quattro componenti che soddisfano l'equazione di Dirac;
         \item l'ampiezza del processo è proporzionale al quadrivettore densità di corrente attraverso una costante da determinarsi.
 \end{itemize}
-Come si può intuire dal nome, la teoria $V-A$ asserisce che le correnti che compaiono nelle interazioni debolil sono combinazioni di soli termini vettoriali e assiali. Questa scelta è dovuta ai seguenti motivi:
+Come si può intuire dal nome, la teoria $V-A$ asserisce che le correnti che compaiono nelle interazioni deboli sono combinazioni di soli termini vettoriali e assiali. Questa scelta è dovuta ai seguenti motivi:
 \begin{itemize}
         \item correnti vettoriali e assiali, prese singolarmente, conservano la parità, mentre una loro combinazione la viola;
         \item l'integrazione nella teoria di fenomeni osservati sperimentalmente, quali l'elicità di neutrini ed elettroni consente di escludere quantità scalari, pseudo-scalari e tensoriali.
@@ -272,18 +272,14 @@ Si vuole ora mostrare come l'inclusione di osservazioni sperimentali quali le el
         \overline { \psi } _ { \mathrm { e } } \hat { O } _ { i } \psi _ { \nu }
         \label{eq:e_nu_current}
 \end{equation}
-Per inglobare nella teoria i risultati sperimentali, si sostituiscono gli spinori con le loro componenti di chiralità negativa. Ricordando che (Appendice \ref{app:dirac}) la funzione d'onda spinoriale può scriversi come il prodotto di una parte dipendente dallo spazio-tempo con una dipendente dallo spin:
+Facendo riferimento ai risultati esposti in Appendice \ref{app:dirac} si ha:
 \begin{equation}
-        \psi = u e ^ { - i p _ { \mu } x ^ { \mu } } = u \phi
+        \overline { \psi} _ {e} \hat { O } _ { i } \psi _ { \nu } \overline{\phi}_{\nu} \rightarrow \overline { \left( \hat { P } _ { L }  psi_ {e} \right) } \hat { O } _ { i } \left( \hat { P } _ { L } \psi _ { \nu } \right)
 \end{equation}
-si ha:
-\begin{equation}
-        \overline { u } _ {e} \overline{\phi}_{e} \hat { O } _ { i } u _ { \nu } \overline{\phi}_{\nu} \rightarrow \overline { \left( \hat { P } _ { - } ^ { \prime } u _ {e} \right) \phi_{e} } \hat { O } _ { i } \left( \hat { P } _ { - } ^ { \prime } u _ { \nu } \right) \phi_{\nu}
-\end{equation}
-dove le parentesi sono state inserite per evidenziare il fatto che gli operatori di chiralità non agiscono sulla parte dipendente dallo spazio-tempo. Dato che $\gamma _ { 5 } ^ { \dagger } = \gamma _ { 5 }$ e $\gamma _ { 5 } \gamma ^ { 0 } = - \gamma ^ { 0 } \gamma _ { 5 }$, si trova:
+Dato che $\gamma _ { 5 } ^ { \dagger } = \gamma _ { 5 }$ e $\gamma _ { 5 } \gamma ^ { 0 } = - \gamma ^ { 0 } \gamma _ { 5 }$, si trova:
 \begin{equation}
         \begin{aligned}
-                \left( \hat { P } _ { - } ^ { \prime } u \right) & = \left( \hat { P } _ { - } ^ { \prime } u \right) ^ { \dagger } \gamma ^ { 0 } = u ^ { \dagger } \hat { P } _ { - } ^ { \prime \dagger } \gamma ^ { 0 } \\ & = u ^ { \dagger } \left( \frac { 1 - \gamma _ { 5 } } { 2 } \right) ^ { \dagger } \gamma ^ { 0 } = u ^ { \dagger } \frac { 1 - \gamma _ { 5 } } { 2 } \gamma ^ { 0 } \\ & = u ^ { \dagger } \gamma ^ { 0 } \frac { 1 + \gamma _ { 5 } } { 2 } = \overline { u } \hat { P } _ { + } ^ { \prime }
+                \left( \hat { P } _ { L } \psi \right) & = \left( \hat { P } _ { L }  \psi \right) ^ { \dagger } \gamma ^ { 0 } = \psi ^ { \dagger } \hat { P } _ { L } ^ { \dagger } \gamma ^ { 0 } \\ & = \psi ^ { \dagger } \left( \frac { 1 - \gamma _ { 5 } } { 2 } \right) ^ { \dagger } \gamma ^ { 0 } = \psi ^ { \dagger } \frac { 1 - \gamma _ { 5 } } { 2 } \gamma ^ { 0 } \\ & = \psi ^ { \dagger } \gamma ^ { 0 } \frac { 1 + \gamma _ { 5 } } { 2 } = \overline { \psi } \hat { P } _ { R }
         \end{aligned}
 \end{equation}
 La forma modificata della corrente sarà dunque:
@@ -337,6 +333,15 @@ Trascurando il fattore $1/2$ si può quindi scrivere l'operatore $V-A$ come:
         \hat { O } _ { i } ^ { \prime } = \gamma ^ { \mu } \left( 1 - \gamma _ { 5 } \right) = \gamma ^ { \mu } - \gamma ^ { \mu } \gamma _ { 5 }
         \label{eq:va_operator}
 \end{equation}
+
+\subsection{diostronzo}
+Come già sottolineato, la (\ref{eq:va_operator}) è valida nel caso in cui siano considerate correnti leptoniche. Più in generale, essa si scrive:
+\begin{equation}
+        \left( 1 - \gamma ^ { 5 } \right) \rightarrow \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right)
+\end{equation}
+dove $c_{V}$ e $c_{A}$ sono costanti che vanno determinate sperimentalmente e dipendono dal processo considerato. Esse vengono introdotte per tenere in considerazione l'effetto che l'attività interna degli adroni può avere sulla conservazione delle correnti vettoriale e assiale.
+
+
 
 
 \subsection{Esempi di decadimento: muone, neutrone e pione}
@@ -477,9 +482,8 @@ Calcolando questa grandezza sia per entrambi i leptoni, si ha il seguente \texti
 \end{equation}
 in ottimo accordo con i dati sperimentali.
 \subsection{Decadimenti deboli di particelle strane}
-Poiché le interazioni deboli coinvolgono sia leptoni che adroni, occorre fare alcune classificazioni, basate sul fatto che nei processi dovuti alla \textit{weak interaction} siano coinvolti o meno dei leptoni. Nel caso di processi semi-leptonici o non-leptonici, si osservano decadimenti in cui non sono coinvolte particelle strane ($\Delta S=0$), oppure decadimenti che violano la stranezza ($\Delta S=1$). In questa parte si riportano le principali caratteristiche dei decadimenti deboli di particelle strane e si evidenziano alcune anomalie che troveranno spiegazione nel seguito.
-\paragraph{Decadimenti leptonici}
-Si consideri il caso dei decadimenti puramente leptonici riportati in Tab.~\ref{tab:leptonic_decays}.
+Un altro fatto che richiese un ampliamento della teoria formulata da Fermi fu l'osservazione di anomalie nei decadimenti che coinvolgono particelle strane, in particolare nella differenza di comportamento tra processi con e senza variazione stranezza ($\Delta S = 1$ e $\Delta S = 1$ rispettivamente).
+Si consideri il caso dei decadimenti riportati in Tab.~\ref{tab:leptonic_decays}.
 \begin{table}[!h]
         \begin{tabular}{llccc}
                 \hline
@@ -498,13 +502,16 @@ Utilizzando la regola d'oro di Fermi e la costante $G_{F}$ per il calcolo della 
         \label{eq:frac_lepton_decay}
 \end{equation}
 
-\paragraph{Decadimenti semi-leptonici}
-In questo caso si ha che gli stati finali comprendono sia leptoni che adroni. Si considerino i decadimenti della $\Sigma^{-}$ mostrati in Tab.~\ref{tab:isemileptonic_decays}: anche in questo caso i risultati numerici sono corretti per i decadimenti con $\Delta S = 0$, ed errati di un fattore \sim 20 per i decadimenti con $\Delta S = 1$ . Di nuovo, si può immaginare che nel caso di decadimenti senza variazione di stranezza intervenga la costante $G_{d}$, mentre in quelli con $\Delta S = 1$ intervenga la costante $G_{s}$. Si può stimare il rapporto tra le due costanti usando i decadimenti della $\Sigma^{-}$:
+La stessa anomalia si può notare considerando i decadimenti in Tab.~\ref{tab:isemileptonic_decays}. Utilizzando la regola di Sargent
+\begin{equation}
+        \frac { \left( \Gamma _ { i } / \Gamma \right) } { \tau } \simeq G _ { F } ^ { 2 } E _ { 0 } ^ { 5 } \simeq G _ { F } ^ { 2 } \Delta m ^ { 5 }
+        \label{eq:sargent}
+\end{equation}
+per il calcolo della vita media, si può vedere come anche in questo caso i risultati numerici siano corretti per i decadimenti con $\Delta S = 0$, ed errati di un fattore \sim 20 per i decadimenti con $\Delta S = 1$ . Di nuovo, si può immaginare che nel caso di decadimenti senza variazione di stranezza intervenga la costante $G_{d}$, mentre in quelli con $\Delta S = 1$ intervenga la costante $G_{s}$. Si può stimare il rapporto tra le due costanti usando i decadimenti della $\Sigma^{-}$:
 \begin{equation}
         \frac{G_{s}^{2}}{G_{d}^{2}} = \frac{\Gamma(\Sigma^{-} \rightarrow n e^{-} \overline{\nu_{e}})/\Delta m^{5}_{\Delta S = 1}}{\Gamma(\Sigma^{-} \rightarrow \Lambda^{0} e^{-} \overline{\nu_{e}})/\Delta m^{5}_{\Delta S = 0}} = 0.057
         \label{eq:ratio_semileptonic}
 \end{equation}
-
 \begin{table}[!h]
         \begin{tabular}{llccc}
                 \hline
@@ -517,15 +524,7 @@ In questo caso si ha che gli stati finali comprendono sia leptoni che adroni. Si
         \caption{Decadimenti semi-leptonici della $\Sigma^{-}$.}
         \label{tab:isemileptonic_decays}
 \end{table}
-
-Un'altra peculiarità è che per i decadimenti semi-leptonici vale la regola di selezione $\Delta Q = \Delta S$, dove $\Delta Q$ e $\Delta S$ sono rispettivamente le variazioni di carica e distranezza fra lo stato finale e quello iniziale. Questa relazione implica che in termini di quark il processo è:
-\begin{equation}
-        s \rightarrow W ^ { - } u \rightarrow \left( e ^ { - } \overline { \nu } _ { e } \right) u
-\end{equation}
-I decadimenti che non soddisfano la relazione $\Delta Q = \Delta S$ sono largamente soppressi.
-
-\paragraph{Decadimenti non leptonici}
-Questi decadimenti presentano solo quark nello stato finale e sono caratterizzati dalle regole di selezione $\Delta S = 1$ e $\Delta I = 1/2$ (i quali sono rispettivamente variazione di stranezza e di isospin forte tra gli stati finale ed iniziale), che corrispondono ad una transizione tra quark $s \rightarrow u$. La costante di accoppiamento da usare è quindi $G_{s}$. Come esempio si riportano i decadimenti $\Lambda ^ { 0 } \rightarrow p \pi ^ { - }$ e $\Lambda ^ { 0 } \rightarrow n \pi ^ { 0 }$, per i quali è possibile giustificare le regole di selezione $\Delta S = 1$ e $\Delta I = 1/2$ assumendo che si abbia la seguente sequenza di avvenimenti in termini di quark:
+Si conferma quindi che il rapporto tra $G _ { s } ^ { 2 } / G _ { d } ^ { 2 } \simeq 0.05$, indipendentemente dal tipo di transizioni tra adroni: ciò deve quindi riflettere una proprietà dei quark costituenti.
 
 \subsection{L'angolo di Cabibbo}
 I fatti sperimentali sopracitati vennero interpretati da Nicola Cabibbo nel 1964. Egli mostrò che sia i leptoni che i quark sono autostati dell'interazione debole, con le seguenti assunzioni:
@@ -563,7 +562,12 @@ In questo modello, quanto sopra esposto corrisponde al fatto che i quark che par
         \label{eq:weak_doublets}
 \end{equation}
 dove $\theta_{c}$ è l'\textit{angolo di Cabibbo} e si trova sperimentalmente essere $\theta _ { c } = 0.235\: \mathrm { rad }$. La scelta di $u$ come autostato non mescolato è semplicemente una convenzione. Per ogni doppietto di leptoni l'accoppiamento debole è specificato da $G_{F}$. L'apparente differenza tra i valori della costante di accoppiamento è dovuta al processo di miscelamento dei quark. Una rappresentazione grafica dell'autostato debole $d_{c}$ che costituisce un doppietto con $u$ è visibile in Fig. \ref{fig:sdmixing}.\\
-Si possono in questo modo interpretare i fatti sperimentali esposti in precedenza: dato che $\sin\theta_{c}=0.235$ e $\cos\theta_{c}=0.972$, transizioni con $\Delta S = 0$ hanno una costante di accoppiamento effettiva maggiore di transizioni con $\Delta S = 1$. Si spiega inoltre perché $G_{F}^{n}$ (Eq.~(\ref{eq:gf_neutron_value})) è più piccola di $G_{F}^{\mu}$ (Eq.~(\ref{eq:gf_muon_value})): in realtà, quello che si misura nel decadimento del neutrone è $G_{F}\cos \theta_{c}$.
+Si possono in questo modo interpretare i fatti sperimentali esposti in precedenza: dato che $\sin\theta_{c}=0.235$ e $\cos\theta_{c}=0.972$, transizioni con $\Delta S = 0$ hanno una costante di accoppiamento effettiva maggiore di transizioni con $\Delta S = 1$. Si spiega inoltre perché $G_{F}^{n}$ (Eq.~(\ref{eq:gf_neutron_value})) è più piccola di $G_{F}^{\mu}$ (Eq.~(\ref{eq:gf_muon_value})): in realtà, quello che si misura nel decadimento del neutrone è $G_{F}\cos \theta_{c}$. \\
+Il valore dell'angolo di Cabibbo può essere ricavato confrontando decadimenti semi-leptonici analoghi con $\Delta S = 1$ e $\Delta S = 0$. Utilizzando, ad esempio, i decadimenti visti in Tab. \ref{tab:leptonic_decays} si ottiene il seguente rapporto tra le frazioni di decadimento:
+\begin{equation}
+        \frac { \Gamma \left( K ^ { - } \rightarrow \mu ^ { - } \overline\nu _ { \mu } \right) } { \Gamma \left( \pi ^ { - } \rightarrow \mu ^ { - } \overline \nu _ { \mu } \right) } = \frac { m _ { K } ^ { 2 } \left[ 1 - \left( m _ { \mu } ^ { 2 } / m _ { K } ^ { 2 } \right) \right] ^ { 2 } } { m _ { \pi } ^ { 2 } \left[ 1 - \left( m _ { \mu } ^ { 2 } / m _ { \pi } ^ { 2 } \right) \right] ^ { 2 } } \tan ^ { 2 } \theta _ { c }
+\end{equation}
+Inserendo il valore misurato delle masse delle particelle coinvolte si determina $\theta_{c} = (0.235 \pm 0.006)$.
 
 \subsection{Tipi di transizione nel decadimento $\beta$ e forma della corrente barionica}
 Per poter affrontare con gli adeguati strumenti lo studio, nella prossima sezione, del decadimento $\beta$ del neutrone con il contributo del \textit{quark mixing}, risulta necessario introdurre alcuni importanti concetti che ne stanno alla base. \\
