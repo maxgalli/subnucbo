@@ -607,12 +607,30 @@ Sfruttando i primi due processi riportati in Tab. \ref{tab:beta_decays} è possi
 Grazie all'introduzione del \textit{mixing} è possibile descrivere il decadimento del neutrone in termini di quark costituenti, elaborando così una teoria più sofisticata. Il diagramma di Feynman del decadimento è rappresentato in Fig. \ref{fig:neutron_decay_quarks}.
 \begin{figure}[!h]
         \centering
-        \feynmandiagram [layered layout, horizontal=a to b] {
-                a [particle=\(d\)] -- [fermion] b -- [fermion] f1 [particle=\(u\)],
-                b -- [boson, edge label'=\(W^{-}\)] c,
-                c -- [anti fermion] f2 [particle=\(\overline \nu_{e}\)],
-                c -- [fermion] f3 [particle=\(e^{-}\)],
-        };
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a) {\(d\)};
+                        \vertex [right=of a] (b);
+                        \vertex [above right=of b] (f1) {\(u\)};
+                        \vertex [above= 0.4 cm of a](d) {\(d\)};
+                        \vertex [right=of d] (e);
+                        \vertex [above right=of e] (g1) {\(d\)};
+                        \vertex [above= 0.4 cm of d](m) {\(u\)};
+                        \vertex [right=of m] (n);
+                        \vertex [above right=of n] (h1) {\(u\)};
+                        \vertex [below right=of b] (c);
+                        \vertex [above right=of c] (f2) {\(\overline \nu_{e}\)};
+                        \vertex [below right=of c] (f3) {\(e^{-}\)};
+                        \diagram* {
+                                (a) -- [fermion] (b) -- [fermion] (f1),
+                                (d) -- [fermion] (e) -- [fermion] (g1),
+                                (m) -- [fermion] (n) -- [fermion] (h1),
+                                (b) -- [boson, edge label'=\(W^{-}\)] (c),
+                                (c) -- [anti fermion] (f2),
+                                (c) -- [fermion] (f3),
+                        };
+                \end{feynman}
+        \end{tikzpicture}
         \caption{Diagramma di Feynman per il decadimento del neutrone, assumendo protone e neutrone costituiti da quark.}
         \label{fig:neutron_decay_quarks}
 \end{figure}
@@ -662,11 +680,31 @@ Come anticipato nell'introduzione, i processi deboli a corrente carica (CC) non 
         \label{eq:neutral_current}
 \end{equation}
 che possono avvenire solo attraverso lo scambio di un bosone $Z^{0}$. Questi processi vengono chiamati interazioni deboli a corrente neutra (NC). \\
-Come il fotone, anche lo $Z^{0}$ può essere scambiato sia nel canale $t$ che nel canale $s$: nel primo caso si ha lo scambio del bosone tra un neutrino e un fermione, con questi due che rimangono gli stessi durante tutto il processo, mentre nel secondo caso si ha un processo di annichilazione $f \overline { f } \rightarrow Z ^ { 0 }$ seguito dalla creazione di una coppia $f ^ { \prime } \overline { f ^ { \prime } }$. \\
+Come il fotone, anche lo $Z^{0}$ può essere scambiato sia nel canale $t$ che nel canale $s$ (Fig. \ref{fig:neutral_currents}): nel primo caso si ha lo scambio del bosone tra un neutrino e un fermione, con questi due che rimangono gli stessi durante tutto il processo, mentre nel secondo caso si ha un processo di annichilazione $f \overline { f } \rightarrow Z ^ { 0 }$ seguito dalla creazione di una coppia $f ^ { \prime } \overline { f ^ { \prime } }$. \\
 L'interazione a corrente neutra fu scoperta nel 1977 utilizzando una camera a bolle a liquido pesante (Gargamelle, CERN) esposta ad un fascio di neutrini muonici ad alta energia; furono osservate le reazioni sugli elettroni atomici $\nu _ { \mu } e ^ { - } \rightarrow \nu _ { \mu } e ^ { - }$ e su nucleoni $\nu _ { \mu } N \rightarrow \nu _ { \mu } + \text {adroni}$, in cui sono visibili nello stato finale le sole tracce delle particelle cariche. In entrambi i casi, visto che mancava la segnatura caratteristica della presenza di un muone, si concluse che le reazioni possono procedere solo via NC. \\
 Storicamente, le NC sono state introdotte per rimuovere divergenze: nel caso, per esempio, della reazione $\nu \overline { \nu } \rightarrow W ^ { + } W ^ { - }$, il diagramma all'ordine più basso contiene lo scambio di un elettrone e dà luogo ad una divergenza, cancellata dal diagramma contenente lo scambio di una $Z^{0}$. \\
 Si noti che le interazioni a corrente neutra non erano previste dalla teoria di Fermi e rappresentano uno dei motivi che ne richiesero l'estensione.
-
+\begin{figure}[!h]
+        \centering
+        \subfloat{
+                \feynmandiagram [vertical=a to b] {
+                        i1 [particle=\(e^{-}\)] -- [fermion] a -- [fermion] i2 [particle=\(e^{-}\)],
+                        a -- [boson, edge label=\(Z^{0}\)] b,
+                        f1 [particle=\(\nu_{e}\)] -- [fermion] b -- [fermion] f2 [particle=\(\nu_{e}\)],
+                };
+        }
+        \qquad
+        \qquad
+        \subfloat{
+                \feynmandiagram [horizontal=a to b] {
+                        i1 [particle=\(e^{-}\)] -- [fermion] a -- [fermion] i2 [particle=\(e^{+}\)],
+                        a -- [boson, edge label=\(Z^{0}\)] b,
+                        f1 [particle=\(\overline{q}\)] -- [fermion] b -- [fermion] f2 [particle=\(q\)],
+                };
+        }
+        \caption{Esempi di processi a corrente neutra (NC): a sinistra il bosone è scambiato nel canale $t$, mentre a destra nel canale $s$.}
+        \label{fig:neutral_currents}
+\end{figure}
 \subsection{Quark \textit{charm} e meccanismo GIM}
 Nel 1955 Gell-Mann e Pais osservarono che è possibile formare due combinazioni lineari dei mesoni $K$ neutri che sono autostati della simmetria CP, e quindi dell'interazione debole, e che questi corrispondono alle particelle che decadono nei due diversi stati di CP. Scegliendo le seguenti combinazioni lineari:
 \begin{equation}
