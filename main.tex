@@ -430,11 +430,23 @@ Questo valore discorda da quello ottenuto in Eq.~(\ref{eq:gf_muon_value}) da un 
 \paragraph{Decadimento del pione carico}
 \begin{figure}[!h]
         \centering
-        \feynmandiagram [horizontal=a to b] {
-                i1 [particle=\(d\)] -- [fermion] a -- [fermion] i2 [particle=\(\overline u\)],
-                a -- [boson, edge label=\(W^{-}\)] b,
-                f1 [particle=\(l^{-}\)] -- [fermion] b -- [fermion] f2 [particle=\(\overline \nu_{l}\)],
-        };
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a);
+                        \vertex [above left=of a](i2) {\(\overline u\)};
+                        \vertex [below left=of a] (i1) {\(d\)};
+                        \vertex [right= 4.0 cm of a] (b);
+                        \vertex [above right=of b] (f1) {\(l^{-}\)};
+                        \vertex [below right=of b] (f2) {\(\overline \nu_{l}\)};
+                        \diagram* {
+                                (i1) -- [fermion] (a) -- [fermion] (i2),
+                                (a) -- [boson, edge label=\(W^{-}\)] (b),
+                                (f1) -- [fermion] (b) -- [fermion] (f2),
+                        };
+                        \draw [decoration={brace}, decorate] (i1.south west) -- (i2.north west)
+                        node [pos=0.5, left] {\(\pi^{-}\)};
+                \end{feynman}
+        \end{tikzpicture}
         \caption{Diagramma di Feynman per il decadimento del pione negativo, costituito dai quark $\overline{u}$ e $d$.}
         \label{fig:pion_decay}
 \end{figure}
