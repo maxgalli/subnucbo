@@ -41,9 +41,13 @@
 \maketitle
 
 \begin{abstract}
+        Uno degli aspetti caratteristici dell'interazione debole è il cosiddetto \textit{quark mixing}: questa teoria giustifica i risultati sperimentali postulando che i quark che compaiono nei processi deboli non siano gli autostati di \textit{flavor} che caratterizzano l'interazione forte, ma una loro combinazione lineare. \\
+        Questo lavoro è diviso in due parti principali (che seguono una breve introduzione in \ref{sec:intro}): nella prima (\ref{sec:part_one}), dopo una descrizione dei primi modelli teorici ideati per l'interazione debole (\ref{subsec:fermi_theory} e \ref{subsec:v-a}), si analizzano le evidenze sperimentali che richiesero un'estensione della teoria (\ref{subsec:decays} e \ref{subsec:strange}) e si espone l'idea di Nicola Cabibbo di implementare un angolo di \textit{mixing} (\ref{subsec:cabibbo_angle}); in \ref{subsec:fermi_gt} e \ref{subsec:neutron_decay} si mostra poi l'applicazione della teoria così migliorata al caso semplice del decadimento beta del neutrone. \\
+        Nella seconda parte (\ref{sec:part_two}) si descrive invece come la teoria del \textit{mixing}, opportunamente estesa anche alle correnti neutre (\ref{subsec:nc} e \ref{subsec:nc_charm}), portò alla predizione dei quark \textit{charm} (\ref{subsec:gim}), \textit{bottom} e \textit{top} (\ref{subsec:ckm}), con la definitiva condensazione della teoria nella matrice CKM.
 \end{abstract}
 
 \section{Introduzione}
+\label{sec:intro}
 \subsection{Caratteristiche generali dell'interazione debole}
 L'interazione debole presenta una serie di proprietà che la rendono peculiare rispetto alle altre interazioni fondamentali:
 \begin{itemize}
@@ -71,7 +75,7 @@ La comprensione della struttura dell'interazione debole si è sviluppata ed evol
         \qquad
         \subfloat{
                 \feynmandiagram [layered layout, horizontal=a to b] {
-                        a [particle=\(l^{+}\)] -- [fermion] b -- [fermion] c [particle=\(\overline{\nu_{e}}\)],
+                        a [particle=\(l^{+}\)] -- [fermion] b -- [fermion] c [particle=\(\overline{\nu_{l}}\)],
                         b -- [boson, edge label'=\(W^{+}\)] d,
                 };
         } \\
@@ -111,11 +115,11 @@ La comprensione della struttura dell'interazione debole si è sviluppata ed evol
 In questa parte si introducono nozioni alle quali si farà riferimento in seguito.\\
 Attraverso la teoria perturbativa è possibile ricavare la probabilità di transizione da uno stato iniziale \textit{i} ad uno stato finale \textit{f}:
 \begin{equation}
-        \Gamma = \frac{2 \pi} {\hbar} \cdot | \mathcal{M}|^{2} \frac{dN}{dE_{f}}
+        \Gamma = \frac{2 \pi} {\hbar} | \mathcal{M}|^{2} \frac{dN}{dE_{f}}
         \label{eq:decay_rate}
 \end{equation}
-dove $dN/dE_{f}$ è la densità degli stati per unità di intervallo di energia (spazio delle fasi), mentre $\mathcal{M}$ è l'elemento di matrice per la probabilità di transizione e si calcola valutando i diagrammi di Feynman più rilevanti e applicando le regole opportune. Nel caso in cui il processo descritto sia il decadimento di una particella, la grandezza (\ref{eq:decay_rate}) coincide con il tasso di decadimento. Il fattore spazio delle fasi contiene solo informazioni di natura cinematica; dipende da masse, energie e momenti dei partecipanti e riflette il fatto che un dato processo è tanto più probabile che avvenga quanto più "margine di manovra" possiede nello stato finale. La (\ref{eq:decay_rate}) è anche detta \textit{regola d'oro di Fermi}. \\
-Inoltre è possibile dimostrare \cite{ref:griff} che per processi di decadimento è possibile scrivere la vita media della particella $\tau$ come:
+dove $dN/dE_{f}$ è la densità degli stati per unità di intervallo di energia (spazio delle fasi), mentre $\mathcal{M}$ è l'elemento di matrice per la probabilità di transizione e si calcola valutando i diagrammi di Feynman più rilevanti e applicando le regole opportune. Nel caso in cui il processo descritto sia il decadimento di una particella, la grandezza (\ref{eq:decay_rate}) coincide con il tasso di decadimento. Il fattore spazio delle fasi contiene solo informazioni di natura cinematica; dipende da masse, energie e momenti dei partecipanti e riflette il fatto che un dato processo è tanto più probabile che avvenga quanto più "margine di manovra" possiede nello stato finale. La (\ref{eq:decay_rate}) è anche detta regola d'oro di Fermi. \\
+Si può inoltre dimostrare \cite{ref:griff} che per processi di decadimento è possibile scrivere la vita media della particella $\tau$ come:
 \begin{equation}
         \tau = \frac{1}{\Gamma}
         \label{eq:tau}
@@ -127,39 +131,41 @@ dove $\Gamma$ corrisponde in realtà alla sommatoria su tutti gli $n$ modi di de
 \end{equation}
 
 \section{Verso l'universalità dell'interazione debole: la necessità del \textit{mixing} e l'intuizione di Cabibbo}
+\label{sec:part_one}
 \subsection{Teoria di Fermi del decadimento $\beta$}
+\label{subsec:fermi_theory}
 Il decadimento beta è la forma più comune di processo debole osservato nella materia ordinaria, ed ha costituito per molto tempo l'unico banco di prova utilizzabile per confrontare teoria ed esperimenti. Le transizioni beta che coinvolgono i nucleoni sono essenzialmente tre:
 \begin{subequations}
         \begin{equation}
-                n \rightarrow p + e ^ { - } + \overline { \nu } _ { e }
+                n \rightarrow p  e ^ { - }  \overline { \nu } _ { e }
                 \label{eq:beta_neg}
         \end{equation}
         \begin{equation}
-                p \rightarrow n + e ^ { + } + \nu _ { e }
+                p \rightarrow n  e ^ { + }  \nu _ { e }
                 \label{eq:beta_pos}
         \end{equation}
         \begin{equation}
-                e ^ { - } + p \rightarrow n + \nu _ { e }
+                e ^ { - }  p \rightarrow n  \nu _ { e }
                 \label{eq:el_capture}
         \end{equation}
 \end{subequations}
 che, in termini di transizioni nucleari, possono riscriversi:
 \begin{subequations}
         \begin{equation}
-                ( A , Z ) \rightarrow ( A , Z + 1 ) + e ^ { - } + \overline { \nu } _ { e }
+                ( A , Z ) \rightarrow ( A , Z + 1 )  e ^ { - }  \overline { \nu } _ { e }
                 \label{eq:beta_neg_trans}
         \end{equation}
         \begin{equation}
-                ( A , Z ) \rightarrow ( A , Z - 1 ) + e ^ { + } + \nu _ { e }
+                ( A , Z ) \rightarrow ( A , Z - 1 )  e ^ { + }  \nu _ { e }
                 \label{eq:beta_pos_trans}
         \end{equation}
         \begin{equation}
-                e ^ { - } + ( A , Z ) \rightarrow ( A , Z - 1 ) + \nu _ { e }
+                e ^ { - }  ( A , Z ) \rightarrow ( A , Z - 1 )  \nu _ { e }
                 \label{eq:el_capture_trans}
         \end{equation}
 \end{subequations}
 Il primo processo, detto decadimento beta negativo, determina l'instabilità del neutrone mentre il secondo è detto decadimento beta positivo e non avviene in maniera spontanea perché energicamente proibito; il terzo consiste nella cattura di un elettrone atomico da parte del nucleo. \\
-Il primo modello che abbia descritto con successo diverse caratteristiche del decadimento beta fu sviluppato da Fermi nel 1934. Questa teoria è considerata il prototipo dell'interazione debole: è puntiforme (in quanto coinvolge l'interazione di quattro fermioni in un punto) e presenta una costante di accoppiamento $G_{F}$, detta \textit{costante di Fermi}. La forza della teoria di Fermi sta nel fatto che la costante $G_{F}$ è universale, valida cioè per tutti i decadimenti di questo tipo. Un possibile vertice d'interazione postulato dalla teoria di Fermi è mostrato in Fig. \ref{fig:fermi_decay}.\\
+Il primo modello che abbia descritto con successo diverse caratteristiche del decadimento beta fu sviluppato da Fermi nel 1934. Questa teoria è considerata il prototipo dell'interazione debole: è puntiforme (in quanto coinvolge l'interazione di quattro fermioni in un punto) e presenta una costante di accoppiamento $G_{F}$, detta costante di Fermi. La forza della teoria di Fermi sta nel fatto che la costante $G_{F}$ è universale, valida cioè per tutti i decadimenti di questo tipo. Un possibile vertice d'interazione postulato dalla teoria di Fermi è mostrato in Fig. \ref{fig:fermi_decay}.\\
 \begin{figure}[!h]
         \centering
         \feynmandiagram [layered layout, horizontal= nuc1 to a ] {
@@ -317,7 +323,7 @@ Calcolando $\hat { O } _ { i } ^ { \prime }$ per i cinque operatori di Tab. \ref
                 \label{subeq:ppp}
         \end{equation}
 \end{subequations}
-con l'evidente risultato che solo quantità vettoriali e scalari sono rilevanti nella descrizione dell'interazione debole. Proseguendo i calcoli per (\ref{subeq:pvp}) e (\ref{subeq:pap}) si vede che esse forniscono lo stesso risultato a meno di un segno:
+con l'evidente risultato che solo quantità vettoriali e assiali sono rilevanti nella descrizione dell'interazione debole. Proseguendo i calcoli per (\ref{subeq:pvp}) e (\ref{subeq:pap}) si vede che esse forniscono lo stesso risultato a meno di un segno:
 \begin{subequations}
         \begin{equation}
                 \gamma ^ { \mu } \hat { P } _ { L }  = \frac { 1 } { 2 } \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right)
@@ -358,7 +364,7 @@ Per l'interazione debole, le regole di Feynman (Appendice \ref{app:feynman_rules
 \begin{equation}
         \mathcal { K } ^ { \mu } \rightarrow - \frac { i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right)
 \end{equation}
-ad entrambi i vertici. A causa della grande massa del bosone $W^{-}$, il propagatore può essere approssimato da
+dove $g_{w}$ è la costante di accoppiamento debole, ad entrambi i vertici. A causa della grande massa del bosone $W^{-}$, il propagatore può essere approssimato da
 \begin{equation}
          \mathcal { D } _ { \mu \nu } \rightarrow i \frac { g _ { \mu \nu } } { M _ { W } ^ { 2 } }
         \label{eq:propagator}
@@ -420,7 +426,7 @@ Tralasciando i dettagli del calcolo del tasso di decadimento, che sono tuttavia 
         \Gamma = \frac { 2 \rho_{f} } { \pi ^ { 3 } \hbar ^ { 7 } } G _ { F } ^ { 2 } m _ { e } ^ { 5 } c ^ { 4 }
         \label{eq:neutron_decay_rate}
 \end{equation}
-Calcolando il valore dello spazio delle fasi $\rho_{f}$ (anche in questo caso si rimanda a \cite{ref:hayes}) e sostituendo a $\Gamma$ l'inverso della vita media del neutrone $\tau_{n}=885.7$ s, si trova un valore di $G_{F}$ pari a:
+Calcolando il valore dello spazio delle fasi $\rho_{f}$ (anche in questo caso si rimanda a \cite{ref:hayes}) e sostituendo a $\Gamma$ l'inverso della vita media del neutrone $\tau_{n}=885.7\; \mathrm{s}$ , si trova un valore di $G_{F}$ pari a:
 \begin{equation}
         G^{n} _ { F } = 1.140 \times 10 ^ { - 5 } \mathrm { GeV } ^ { - 2 }
         \label{eq:gf_neutron_value}
@@ -463,7 +469,7 @@ Un altro decadimento cruciale per provare la bontà della teoria è quello del p
 \end{subequations}
 L'elemento di matrice si può scrivere in maniera generale come:
 \begin{equation}
-        \mathcal { M } = \frac { g _ { w } ^ { 2 } } { 8 \left( M _ { W C } c \right) ^ { 2 } } \left[ \overline { u } ( \nu_{l} ) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v ( l ) \right] F ^ { \mu }
+        \mathcal { M } = \frac { g _ { w } ^ { 2 } } { 8 \left( M _ { W C } c \right) ^ { 2 } } \left[ \overline { u } ( \nu_{l} ) \gamma^{ \mu } \left( 1 - \gamma ^ { 5 } \right) v ( l ) \right] F ^ { \mu }
         \label{eq:matrix_element_pion_decay}
 \end{equation}
 dove $F^{\mu}$ è dato da una una quantità scalare che moltiplica il momento del pione $p^{\mu}$:
@@ -486,7 +492,8 @@ Calcolando questa grandezza per entrambi i leptoni, si ha il seguente \textit{br
 \end{equation}
 in ottimo accordo con i dati sperimentali.
 \subsection{Decadimenti deboli di particelle strane}
-Un altro fatto che richiese un ampliamento della teoria formulata da Fermi fu l'osservazione di anomalie nei decadimenti che coinvolgono particelle strane, in particolare nella differenza di comportamento tra processi con e senza variazione stranezza ($\Delta S = 1$ e $\Delta S = 0$ rispettivamente).
+\label{subsec:strange}
+Un altro fatto che richiese un ampliamento della teoria formulata da Fermi fu l'osservazione di anomalie nei decadimenti che coinvolgono particelle strane, in particolare nella differenza di comportamento tra processi con e senza variazione di stranezza ($\Delta S = 1$ e $\Delta S = 0$ rispettivamente).
 Si consideri il caso dei decadimenti riportati in Tab.~\ref{tab:leptonic_decays}.
 \begin{table}[!h]
         \begin{tabular}{llccc}
@@ -531,6 +538,7 @@ per il calcolo della vita media, si può vedere come anche in questo caso i risu
 Si conferma quindi che il rapporto tra $G _ { s } ^ { 2 }$ e $G _ { d } ^ { 2 }$ vale come indicato in (\ref{eq:frac_lepton_decay}), indipendentemente dal tipo di transizioni tra adroni: ciò deve quindi riflettere una proprietà dei quark costituenti.
 
 \subsection{L'angolo di Cabibbo}
+\label{subsec:cabibbo_angle}
 I fatti sperimentali sopracitati vennero interpretati da Nicola Cabibbo nel 1964. Egli mostrò che sia i leptoni che i quark sono autostati dell'interazione debole, con le seguenti assunzioni:
 \begin{itemize}
         \item l'accoppiamento degli elettroni al campo debole è proporzionale ad una carica debole $g_{e\nu}$;
@@ -556,7 +564,7 @@ In ogni vertice di un diagramma di Feynman occorre inserire la costante corrispo
                 \label{eq:gs}
         \end{equation}
 \end{itemize}
-L'ipotesi di Cabibbo è che l'interazione debole dipenda da un solo parametro, la costante di Fermi $G_{F}$. Questa descrive l'accoppiamento del campo debole sia verso i leptoni che verso i quark tramite la relazione:
+L'ipotesi di Cabibbo è che l'interazione debole dipenda da un solo parametro, la costante di Fermi $G_{F}$ (come già immaginato da Fermi precedentemente). Questa descrive l'accoppiamento del campo debole sia verso i leptoni che verso i quark tramite la relazione:
 \begin{equation}
         G _ { F } = g _ { e v } ^ { 2 } = g _ { u d } ^ { 2 } + g _ { u s } ^ { 2 } \longrightarrow g _ { u d } = g _ { e v } \cos \theta _ { C } ; \quad g _ { u s } = g _ { e v } \sin \theta _ { C }
 \end{equation}
@@ -565,7 +573,7 @@ In questo modello, quanto sopra esposto corrisponde al fatto che i quark che par
         \left( \begin{array} { c } { v _ { e } } \\ { e ^ { - } } \end{array} \right) , \left( \begin{array} { c } { v _ { \mu } } \\ { \mu ^ { - } } \end{array} \right) , \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right)
         \label{eq:weak_doublets}
 \end{equation}
-dove $\theta_{c}$ è l'\textit{angolo di Cabibbo} e si trova sperimentalmente essere $\theta _ { c } = 0.235\: \mathrm { rad }$. La scelta di $u$ come autostato non mescolato è semplicemente una convenzione. Per ogni doppietto di leptoni l'accoppiamento debole è specificato da $G_{F}$. L'apparente differenza tra i valori della costante di accoppiamento è dovuta al processo di miscelamento dei quark. Una rappresentazione grafica dell'autostato debole $d_{c}$ che costituisce un doppietto con $u$ è visibile in Fig. \ref{fig:sdmixing}.\\
+dove $\theta_{c}$ è l'angolo di Cabibbo e si trova sperimentalmente essere $\theta _ { c } = 0.235\: \mathrm { rad }$. La scelta di $u$ come autostato non mescolato è semplicemente una convenzione. Per ogni doppietto di leptoni l'accoppiamento debole è specificato da $G_{F}$. L'apparente differenza tra i valori della costante di accoppiamento è dovuta al processo di miscelamento dei quark. Una rappresentazione grafica dell'autostato debole $d_{c}$ che costituisce un doppietto con $u$ è visibile in Fig. \ref{fig:sdmixing}.\\
 Si possono in questo modo interpretare i fatti sperimentali esposti in precedenza: dato che $\sin\theta_{c}=0.235$ e $\cos\theta_{c}=0.972$, transizioni con $\Delta S = 0$ hanno una costante di accoppiamento effettiva maggiore di transizioni con $\Delta S = 1$. Si spiega inoltre perché $G_{F}^{n}$ (Eq.~(\ref{eq:gf_neutron_value})) è più piccola di $G_{F}^{\mu}$ (Eq.~(\ref{eq:gf_muon_value})): in realtà, quello che si misura nel decadimento del neutrone è $G_{F}\cos \theta_{c}$. \\
 Il valore dell'angolo di Cabibbo può essere ricavato confrontando decadimenti semi-leptonici analoghi con $\Delta S = 1$ e $\Delta S = 0$. Utilizzando, ad esempio, i decadimenti visti in Tab. \ref{tab:leptonic_decays} si ottiene il seguente rapporto tra le frazioni di decadimento:
 \begin{equation}
@@ -574,24 +582,25 @@ Il valore dell'angolo di Cabibbo può essere ricavato confrontando decadimenti s
 Inserendo il valore misurato delle masse delle particelle coinvolte si determina $\theta_{c} = (0.235 \pm 0.006)$.
 
 \subsection{Tipi di transizione nel decadimento $\beta$ e forma della corrente adronica}
+\label{subsec:fermi_gt}
 L'operatore (\ref{eq:va_operator}), utilizzato nella costruzione di tutte le correnti utilizzate in \ref{subsec:decays}, è in realtà in certi casi un'approssimazione; la sua forma più generale è infatti:
 \begin{equation}
         \left( 1 - \gamma ^ { 5 } \right) \rightarrow \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right)
 \end{equation}
 dove $c_{V}$ e $c_{A}$ sono costanti introdotte per tenere in considerazione l'effetto che l'attività interna degli adroni può avere sulla conservazione delle correnti vettoriale e assiale. Esse vanno determinate sperimentalmente: mentre nel caso di una corrente leptonica si ha $c_{V}=-c_{A}=1$ ed entrambe le componenti si conservano, per le correnti in cui sono coinvolti adroni la situazione richiede uno studio più approfondito. Per il decadimento beta, in particolare, i contributi vettoriale e assiale sono dati da tipi diversi di transizione.
-\paragraph{Transizioni di Fermi e Gamow-Teller} Dato che nel decadimento $\beta$ nucleare si hanno neutrone e protone che si muovono non relativisticamente è facile convincersi (si veda \cite{ref:greiner}) che in questo limite le quantità introdotte in Tab. \ref{tab:bilinear} si comportano nella seguente maniera:
+\paragraph{Transizioni di Fermi e Gamow-Teller} Dato che nel decadimento beta nucleare si hanno neutrone e protone che si muovono non relativisticamente è facile convincersi (si veda \cite{ref:greiner}) che in questo limite le quantità introdotte in Tab. \ref{tab:bilinear} si comportano nella seguente maniera:
 \begin{equation}
         S , V \rightarrow u_{A}^{p} ^ { \dagger } u_{A}^ { n  } \quad , \quad T , A \rightarrow u_{A} ^ { p } ^ { \dagger } \sigma^{\mu\nu} u_{A} ^ {n } \quad , \quad P \rightarrow 0
-        \label{eq:sv_app}
 \end{equation}
 dove $u_{A}^{p}$ e $u_{A}^{n}$ sono gli spinori a due componenti che dominano in limite non-relativistico. I casi rilevanti prendono il nome di transizioni di Fermi:
 \begin{equation}
         S , V \rightarrow u_{A} ^ {p } ^ { \dagger } u_{A} ^ { n  }
-        \label{eq:ta_app}
+        \label{eq:sv_app}
 \end{equation}
 e di Gamow-Teller:
 \begin{equation}
         T , A \rightarrow u _{A}^ { p } ^ { \dagger } \sigma^{\mu\nu} u _{A} ^{ n  }
+        \label{eq:ta_app}
 \end{equation}
 La differenza principale tra le due sta nella variazione di momento angolare totale tra nucleo iniziale e nucleo finale. Tale variazione è connessa con lo spin dei due leptoni $e ^ { - } , \overline { \nu } _ { e }$ (oppure $e^{+}, \nu_{e}$): entrambi hanno spin 1/2, quindi la variazione dello spin nucleare può essere nulla (spin di neutrino ed elettrone antiparalleli), oppure $\pm1$ (spin paralleli). Assumendo che l'elettrone e il neutrino siano emessi in uno stato di momento angolare $l=0$, la variazione dello spin del nucleo è pari alla somma degli spin dei due leptoni. Per l'orientazione degli spin di elettrone e neutrino si ha quindi che nelle transizioni di Fermi ($0 \rightarrow 0$) gli spin sono antiparalleli (stato di singoletto), mentre in quelle di Gamow-Teller ($0 \rightarrow 1$) gli spin sono paralleli (stato di tripletto); esiste inoltre il caso delle transizioni cosiddette miste, in cui si ha $\frac{1}{2} \rightarrow \frac{1}{2}$ e gli spin possono essere antiparalleli (lo spin del nucleo non cambia) o paralleli (lo spin del nucleo cambia direzione).\\
 \begin{table}
@@ -616,6 +625,7 @@ Sfruttando i primi due processi riportati in Tab. \ref{tab:beta_decays} è possi
 \end{equation}
 
 \subsection{Decadimento del neutrone con effetti di \textit{quark mixing}}
+\label{subsec:neutron_decay}
 Grazie all'introduzione del \textit{mixing} è possibile descrivere il decadimento del neutrone in termini di quark costituenti, elaborando così una teoria più sofisticata. Il diagramma di Feynman del decadimento è rappresentato in Fig. \ref{fig:neutron_decay_quarks}.
 \begin{figure}[!h]
         \centering
@@ -685,7 +695,9 @@ Inserendo i risultati sperimentali si trova questa volta una vita media per il n
 che si discosta dal valore trovato sperimentalmente di meno del $2.5\%$.
 
 \section{L'estensione della teoria: correnti neutre, meccanismo GIM e matrice CKM}
+\label{sec:part_two}
 \subsection{Interazione debole a corrente neutra}
+\label{subsec:nc}
 Come anticipato nell'introduzione, i processi deboli a corrente carica (CC) non sono gli unici esistenti. Ci sono infatti reazioni, come ad esempio
 \begin{equation}
         \begin{array} { c } { \nu _ { \mu } e ^ { - } \rightarrow \nu _ { \mu } e ^ { - } } \\ { \overline { \nu } _ { \mu } e ^ { - } \rightarrow \overline { \nu } _ { \mu } e ^ { - } } \end{array}
@@ -718,6 +730,7 @@ Si noti che le interazioni a corrente neutra non erano previste dalla teoria di 
         \label{fig:neutral_currents}
 \end{figure}
 \subsection{Quark \textit{charm} e meccanismo GIM}
+\label{subsec:gim}
 Nel 1955 Gell-Mann e Pais osservarono che è possibile formare due combinazioni lineari dei mesoni $K$ neutri che sono autostati della simmetria CP, e quindi dell'interazione debole, e che questi corrispondono alle particelle che decadono nei due diversi stati di CP. Scegliendo le seguenti combinazioni lineari:
 \begin{equation}
         | K _ { 1 } ^ { 0 } \rangle = 1 / \sqrt { 2 } ( | K ^ { 0 } \rangle + | \overline { K } ^ { 0 } \rangle ) \quad ; \quad | K _ { 2 } ^ { 0 } \rangle = 1 / \sqrt { 2 } ( | K ^ { 0 } \rangle - | \overline { K } ^ { 0 } \rangle )
@@ -731,7 +744,7 @@ Questo fatto fu messo in luce nel 1970 da Glashow, Iliopulos e Maiani, i quali p
 \begin{enumerate}
         \item carica elettrica +2/3, isospin $I=0$, stranezza $S=0$ e numero barionico $B=1/3$;
         \item un nuovo numero quantico $C$ che, analogamente alla stranezza, si conserva nell'interazione forte ma non in quella debole;
-        \item è autostato dell'interazione debole e forma un secondo doppietto di quark con il secondo stato ruotato della teoria di Cabibbo $s ^ { \prime } = s \operatorname { c o s } \theta _ { c } - d \operatorname { s i n } \theta _ { c }$.
+        \item è autostato dell'interazione debole e forma un secondo doppietto di quark con il secondo stato ruotato della teoria di Cabibbo $s_{ c } = s \operatorname { c o s } \theta _ { c } - d \operatorname { s i n } \theta _ { c }$.
 \end{enumerate}
 Con questa nuova ipotesi, si ha un nuovo doppietto per l'interazione debole:
 \begin{equation}
@@ -772,7 +785,7 @@ si possono scrivere in forma matriciale
                 \node at (3.5,0.3) {$\theta_{c}$};
                 \node at (-0.3,3.5) {$\theta_{c}$};
         \end{tikzpicture}
-        \caption{Mixing di Cabibbo}
+        \caption{Autostati dell'interazione debole $d_{c}$ e $s_{c}$.}
         \label{fig:sdmixing}
 \end{figure}
 Una rappresentazione grafica dei due autostati dell'interazione debole $d_{c}$ ed $s_{c}$ è riportata in Fig. \ref{fig:sdmixing}. Grazie a questa scrittura, il termine dell'hamiltoniana $H_{W}$ che dipende dal tipo di quark coinvolto può essere formalmente scritto nel modo seguente (considerando come esempio transizioni da un quark iniziale $d_{c}$ o $s_{c}$ ad uno stato finale $\overline{u}$ o $\overline{c}$):
@@ -791,8 +804,8 @@ Una rappresentazione grafica dei due autostati dell'interazione debole $d_{c}$ e
         \caption{Interazione debole con un quark $c$ che si trasforma in $d$ o $s$.}
         \label{fig:gim_decay}
 \end{figure}
-
 \subsection{Indizi sul quarto quark dalle correnti neutre}
+\label{subsec:nc_charm}
 Un quarto quark era necessario anche per spiegare alcune anomalie connesse con le correnti neutre: i processi a corrente neutra sperimentalmente osservati sono caratterizzati dalla regola di selezione $\Delta S = 0$, mentre quelli con $\Delta S = 1$ non sono osservati. Tuttavia, il meccanismo che ruota lo stato dei quark ($d, s$), postulando l'esistenza dei soli tre quark $u, d, s$, produce un termine con $\Delta S = 1$ quando considera NC:
 \begin{equation}
         \begin{array} { c } { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \overline { u } , \overline { d } \cos \theta _ { c } + \overline { s } \sin \theta _ { c } \right) \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + \left( d \overline { d } \cos ^ { 2 } \theta _ { c } + s \overline { s } \sin ^ { 2 } \theta _ { c } \right) } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
@@ -803,6 +816,7 @@ Ciascun termine $u \overline { u } , d \overline { d } , s \overline { s }$ rapp
 \end{equation}
 e i termini che prevedono transizioni con $\Delta S = 1$ sono automaticamente cancellati.
 \subsection{I sei quark e la matrice CKM}
+\label{subsec:ckm}
 Nel 1973 Kobayashi e Maskawa estesero l'idea di Cabibbo a tre generazioni di quark. Si hanno così i seguenti autostati dell'interazione debole:
 \begin{equation}
         \left( \begin{array} { l } { u } \\ { d_{c}  } \end{array} \right)  \quad \left( \begin{array} { l } { c } \\ { s_{c} \end{array} \right) , \quad \left( \begin{array} { l } { t } \\ { b_{c} } \end{array} \right)
@@ -883,9 +897,9 @@ L'introduzione della fase in questo modo è possibile solamente se la matrice CK
                 \node at (4.7,0,0) {s};
                 \node at (0,4.8,0) {b};
                 \node at (0,0,6.3) {d};
-                \node at (4.6,0.8,-0.5) {$s'$};
-                \node at (-0.8,4.5,0.5) {$b'$};
-                \node at (1.2,0.3,7.5) {$d'$};
+                \node at (4.6,0.8,-0.5) {$s_{c}$};
+                \node at (-0.8,4.5,0.5) {$b_{c}$};
+                \node at (1.2,0.3,7.5) {$d_{c}$};
                 \node at (4.1,0.23) {$\theta_{12}$};
                 \node at (4.1,1.3) {$\theta_{23}$};
                 \node at (-0.3,4.6,0) {$\theta_{13}$};
@@ -893,7 +907,7 @@ L'introduzione della fase in questo modo è possibile solamente se la matrice CK
                 \node at (-0.5,0,4.4) {$\theta_{12}$};
                 \node at (1.1,0,5.5) {$\theta_{13}$};
                 \end{tikzpicture}
-        \caption{Rotazione dei quark}
+        \caption{Rotazione dei quark.}
         \label{fig:mixing3D}
 \end{figure}
 
@@ -904,11 +918,9 @@ Gli elementi della matrice CKM, determinati sperimentalmente, sono i seguenti:
 \end{equation}
 Il fatto che gli elementi non diagonali siano molto piccoli mentre quelli sulla diagonale siano vicini all'unità ha un significato fisico importante, cioè che il modello predice una specifica sequenza di decadimenti:
 \begin{equation}
-        t \rightarrow \mathrm { b } \rightarrow \mathrm { c } \rightarrow \mathrm { s } \rightarrow \mathrm { u }
+        t \rightarrow b \rightarrow c \rightarrow s \rightarrow u
 \end{equation}
 Con lo schema di mixing, quark e leptoni hanno lo stesso accoppiamento e si può così parlare di universalità quark-leptoni.
-
-
 
 \appendix
 \section{Equazione e formalismo di Dirac}
@@ -931,7 +943,7 @@ e $\gamma^{\mu} = \left\{ \gamma ^ { 0 } , \gamma ^ { 1 } , \gamma ^ { 2 } , \ga
 \end{equation}
 con le $\sigma_{i}$ matrici di Pauli:
 \begin{equation}
-        \sigma_{1} = \sigma _ { x } = \left( \begin{array} { c c } { 0 } & { 1 } \\ { 1 } & { 0 } \end{array} \right) \quad \sigma_{2} = \sigma _ { y } = \left( \begin{array} { c c } { o } & { - i } \\ { i } & { 0 } \end{array} \right) \quad \sigma_{3} = \sigma _ { z } = \left( \begin{array} { c c } { 1 } & { 0 } \\ { 0 } & { - 1 } \end{array} \right)
+        \sigma_{1} = \sigma _ { x } = \left( \begin{array} { c c } { 0 } & { 1 } \\ { 1 } & { 0 } \end{array} \right) \quad \sigma_{2} = \sigma _ { y } = \left( \begin{array} { c c } { 0 } & { - i } \\ { i } & { 0 } \end{array} \right) \quad \sigma_{3} = \sigma _ { z } = \left( \begin{array} { c c } { 1 } & { 0 } \\ { 0 } & { - 1 } \end{array} \right)
         \label{eq:pauli_matrices}
 \end{equation}
 Scritte per esteso, le matrici $\gamma$ saranno:
@@ -994,7 +1006,7 @@ dove $u$ è uno spinore a quattro componenti che dipende dal momento. Sostituend
         \left( \gamma ^ { \mu } p _ { \mu } - m \right) u = 0
         \label{eq:dirac_eq_momentum}
 \end{equation}
-detta anche \textit{equazione di Dirac nello spazio dei momenti}. Sviluppando i conti e utilizzando la rappresentazione
+detta anche equazione di Dirac nello spazio dei momenti. Sviluppando i conti e utilizzando la rappresentazione
 \begin{equation}
         \psi = \left( \begin{array} { l } { u_{A} } \\ { u_{B} } \end{array} \right) e ^ { i ( \mathbf { p } \cdot \mathbf { r } - E t ) }
         \label{eq:dirac_sol_spinors}
@@ -1041,7 +1053,7 @@ In maniera più generale, è conveniente definire l'operatore elicità, che estr
         \hat { \Lambda }  = \frac { \hat { \mathbf { \Sigma } } \cdot \mathbf{p} } { |\mathbf{p}| }
         \label{eq:helicity}
 \end{equation}
-Per fermioni di spin semintero, gli autovalori di $\hat{\Lambda}$ possono essere $\lambda=1$ (particella \textit{destrorsa} o ad elicità positiva) e $\lambda=-1$ (particella \textit{sinistrorsa} o ad elicità negativa). Per poter inserire nelle espressioni delle hamiltoniane funzioni d'onda che abbiano uno specifico stato di elicità, si introducono gli operatori di proiezione:
+Per fermioni di spin semintero, gli autovalori di $\hat{\Lambda}$ possono essere $\lambda=1$ (particella destrorsa o ad elicità positiva) e $\lambda=-1$ (particella sinistrorsa o ad elicità negativa). Per poter inserire nelle espressioni delle hamiltoniane funzioni d'onda che abbiano uno specifico stato di elicità, si introducono gli operatori di proiezione:
 \begin{equation}
         \hat { P } _ { + } = \frac { 1 + \hat { \Lambda } } { 2 } \quad , \quad \hat { P }_{-} = \frac { 1 - \hat { \Lambda } } { 2 }
         \label{eq:projection_operators}
@@ -1056,7 +1068,7 @@ si conclude infatti che uno stato qualsiasi $u$ si può sempre scomporre:
 \end{equation}
 con
 \begin{equation}
-        \hat { P } _ { + } u = u_{+}\quad ,\quad \hat { P } _ { - } u = u ^ { ( + ) }
+        \hat { P } _ { + } u = u_{+}\quad ,\quad \hat { P } _ { - } u = u_{-}
 \end{equation}
 Se invece si considera lo spinore di un antifermione si avranno:
 \begin{equation}
