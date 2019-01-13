@@ -806,15 +806,78 @@ Una rappresentazione grafica dei due autostati dell'interazione debole $d_{c}$ e
 \end{figure}
 \subsection{Indizi sul quarto quark dalle correnti neutre}
 \label{subsec:nc_charm}
-Un quarto quark era necessario anche per spiegare alcune anomalie connesse con le correnti neutre: i processi a corrente neutra sperimentalmente osservati sono caratterizzati dalla regola di selezione $\Delta S = 0$, mentre quelli con $\Delta S = 1$ non sono osservati. Tuttavia, il meccanismo che ruota lo stato dei quark ($d, s$), postulando l'esistenza dei soli tre quark $u, d, s$, produce un termine con $\Delta S = 1$ quando considera NC:
+Un quarto quark era necessario anche per spiegare alcune anomalie connesse con le correnti neutre: i processi a corrente neutra sperimentalmente osservati sono caratterizzati dalla regola di selezione $\Delta S = 0$, mentre quelli con $\Delta S = 1$ non sono osservati. Più in generale, si dice che sono sfavorite le correnti neutre con violazione di \textit{flavour} (FCNC). Tuttavia, il meccanismo che ruota lo stato dei quark ($d, s$), postulando l'esistenza dei soli tre quark $u, d, s$, produce un termine con $\Delta S = 1$ quando considera NC:
 \begin{equation}
         \begin{array} { c } { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \overline { u } , \overline { d } \cos \theta _ { c } + \overline { s } \sin \theta _ { c } \right) \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + \left( d \overline { d } \cos ^ { 2 } \theta _ { c } + s \overline { s } \sin ^ { 2 } \theta _ { c } \right) } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
+        \label{eq:gim_before}
 \end{equation}
-Ciascun termine $u \overline { u } , d \overline { d } , s \overline { s }$ rappresenta la densità di probabilità per la transizione di uno stesso sapore di quark da uno stato iniziale a quello finale, con emissione di una $Z^{0}$. Sono inoltre previste le transizioni mai osservate $s\overline{d}$ e $d\overline{s}$. Con il nuovo doppietto (\ref{eq:c_sc_doublet}), la corrente neutra può riscriversi nella forma:
+\begin{figure}[!h]
+        \centering
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a);
+                        \vertex [above left=of a](i2) {\(\overline u\)};
+                        \vertex [below left=of a] (i1) {\(u\)};
+                        \vertex [right= 2.0 cm of a] (b);
+                        \vertex [right= 6.0 cm of a](c);
+                        \vertex [above left=of c](j2) {\(\overline { d } _{ c }\)};
+                        \vertex [below left=of c] (j1) {\(d_{c}\)};
+                        \vertex [right= 2.0 cm of c] (d);
+                        \diagram* {
+                                (i1) -- [fermion] (a) -- [fermion] (i2),
+                                (a) -- [boson, edge label=\(Z^{0}\)] (b),
+                                (j1) -- [fermion] (c) -- [fermion] (j2),
+                                (c) -- [boson, edge label=\(Z^{0}\)] (d),
+                        };
+                \end{feynman}
+        \end{tikzpicture}
+        \caption{Diagrammi di Feynman degli elementi che costituiscono la corrente calcolata in Eq. (\ref{eq:gim_before}).}
+        \label{fig:gim_before}
+\end{figure}
+Ciascun termine $u \overline { u } , d \overline { d } , s \overline { s }$ rappresenta la densità di probabilità per la transizione di uno stesso sapore di quark da uno stato iniziale a quello finale, con emissione di una $Z^{0}$. Sono inoltre previste le transizioni mai osservate $s\overline{d}$ e $d\overline{s}$. I diagrammi di Feynman delle correnti che compaiono in (\ref{eq:gim_before}) sono rappresentati in Fig. \ref{fig:gim_before}.
+Con il nuovo doppietto (\ref{eq:c_sc_doublet}), la corrente neutra può riscriversi nella forma:
 \begin{equation}
         \begin{array} { l } { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) + \left( \overline { c } , \overline { s } _ { c } \right) \left( \begin{array} { c } { c } \\ { s _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + c \overline { c } + ( d \overline { d } + s \overline { s } ) \cos ^ { 2 } \theta _ { c } + ( s \overline { s } + d \overline { d } ) \sin ^ { 2 } \theta _ { c } } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d - \overline { s } d - s \overline { d } ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
+        \label{eq:gim_after}
 \end{equation}
 e i termini che prevedono transizioni con $\Delta S = 1$ sono automaticamente cancellati.
+I diagrammi di Feynman delle correnti che compaiono in (\ref{eq:gim_after}) sono rappresentati in Fig. \ref{fig:gim_after}.
+\begin{figure}[!h]
+        \centering
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a);
+                        \vertex [above left=of a](i2) {\(\overline u\)};
+                        \vertex [below left=of a] (i1) {\(u\)};
+                        \vertex [right= 2.0 cm of a] (b);
+                        \vertex [right= 6.0 cm of a](c);
+                        \vertex [above left=of c](j2) {\(\overline { d } _{ c }\)};
+                        \vertex [below left=of c] (j1) {\(d_{c}\)};
+                        \vertex [right= 2.0 cm of c] (d);
+                        \vertex [below= 4.0 cm of a](e);
+                        \vertex [above left=of e](k2) {\(\overline c\)};
+                        \vertex [below left=of e] (k1) {\(c\)};
+                        \vertex [right= 2.0 cm of e] (f);
+                        \vertex [right= 6.0 cm of e](g);
+                        \vertex [above left=of g](l2) {\(\overline { s } _{ c }\)};
+                        \vertex [below left=of g] (l1) {\(s_{c}\)};
+                        \vertex [right= 2.0 cm of g] (h);
+                        \diagram* {
+                                (i1) -- [fermion] (a) -- [fermion] (i2),
+                                (a) -- [boson, edge label=\(Z^{0}\)] (b),
+                                (j1) -- [fermion] (c) -- [fermion] (j2),
+                                (c) -- [boson, edge label=\(Z^{0}\)] (d),
+                                (k1) -- [fermion] (e) -- [fermion] (k2),
+                                (e) -- [boson, edge label=\(Z^{0}\)] (f),
+                                (l1) -- [fermion] (g) -- [fermion] (l2),
+                                (g) -- [boson, edge label=\(Z^{0}\)] (h),
+                        };
+                \end{feynman}
+        \end{tikzpicture}
+        \caption{Diagrammi di Feynman degli elementi che costituiscono la corrente calcolata in Eq. (\ref{eq:gim_after}).}
+        \label{fig:gim_after}
+\end{figure}
+
 \subsection{I sei quark e la matrice CKM}
 \label{subsec:ckm}
 Nel 1973 Kobayashi e Maskawa estesero l'idea di Cabibbo a tre generazioni di quark. Si hanno così i seguenti autostati dell'interazione debole:
