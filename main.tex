@@ -441,7 +441,7 @@ Questo valore discorda da quello ottenuto in Eq.~(\ref{eq:gf_muon_value}) da un 
                         \vertex (a);
                         \vertex [above left=of a](i2) {\(\overline u\)};
                         \vertex [below left=of a] (i1) {\(d\)};
-                        \vertex [right= 4.0 cm of a] (b);
+                        \vertex [right= 3.0 cm of a] (b);
                         \vertex [above right=of b] (f1) {\(l^{-}\)};
                         \vertex [below right=of b] (f2) {\(\overline \nu_{l}\)};
                         \diagram* {
@@ -808,7 +808,7 @@ Una rappresentazione grafica dei due autostati dell'interazione debole $d_{c}$ e
 \label{subsec:nc_charm}
 Un quarto quark era necessario anche per spiegare alcune anomalie connesse con le correnti neutre: i processi a corrente neutra sperimentalmente osservati sono caratterizzati dalla regola di selezione $\Delta S = 0$, mentre quelli con $\Delta S = 1$ non sono osservati. Più in generale, si dice che sono sfavorite le correnti neutre con violazione di \textit{flavour} (FCNC). Tuttavia, il meccanismo che ruota lo stato dei quark ($d, s$), postulando l'esistenza dei soli tre quark $u, d, s$, produce un termine con $\Delta S = 1$ quando considera NC:
 \begin{equation}
-        \begin{array} { c } { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \overline { u } , \overline { d } \cos \theta _ { c } + \overline { s } \sin \theta _ { c } \right) \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + \left( d \overline { d } \cos ^ { 2 } \theta _ { c } + s \overline { s } \sin ^ { 2 } \theta _ { c } \right) } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
+        \begin{array} { c } J _ { \mu } = \overline { u }  \gamma _ { \mu } \left( 1 + \gamma _ { 5 } \right) d_{c} \approx { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \overline { u } , \overline { d } \cos \theta _ { c } + \overline { s } \sin \theta _ { c } \right) \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + \left( d \overline { d } \cos ^ { 2 } \theta _ { c } + s \overline { s } \sin ^ { 2 } \theta _ { c } \right) } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
         \label{eq:gim_before}
 \end{equation}
 \begin{figure}[!h]
@@ -837,11 +837,11 @@ Un quarto quark era necessario anche per spiegare alcune anomalie connesse con l
 Ciascun termine $u \overline { u } , d \overline { d } , s \overline { s }$ rappresenta la densità di probabilità per la transizione di uno stesso sapore di quark da uno stato iniziale a quello finale, con emissione di una $Z^{0}$. Sono inoltre previste le transizioni mai osservate $s\overline{d}$ e $d\overline{s}$. I diagrammi di Feynman delle correnti che compaiono in (\ref{eq:gim_before}) sono rappresentati in Fig. \ref{fig:gim_before}.
 Con il nuovo doppietto (\ref{eq:c_sc_doublet}), la corrente neutra può riscriversi nella forma:
 \begin{equation}
-        \begin{array} { l } { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) + \left( \overline { c } , \overline { s } _ { c } \right) \left( \begin{array} { c } { c } \\ { s _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + c \overline { c } + ( d \overline { d } + s \overline { s } ) \cos ^ { 2 } \theta _ { c } + ( s \overline { s } + d \overline { d } ) \sin ^ { 2 } \theta _ { c } } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d - \overline { s } d - s \overline { d } ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
+        \begin{array} { l } J _ { \mu } = \overline { u }  \gamma _ { \mu } \left( 1 + \gamma _ { 5 } \right) d _ { c } + \overline { c } \gamma _ { \mu } \left( 1 + \gamma _ { 5 } \right) s _ { c } \approx { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) + \left( \overline { c } , \overline { s } _ { c } \right) \left( \begin{array} { c } { c } \\ { s _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + c \overline { c } + ( d \overline { d } + s \overline { s } ) \cos ^ { 2 } \theta _ { c } + ( s \overline { s } + d \overline { d } ) \sin ^ { 2 } \theta _ { c } } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d - \overline { s } d - s \overline { d } ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
         \label{eq:gim_after}
 \end{equation}
 e i termini che prevedono transizioni con $\Delta S = 1$ sono automaticamente cancellati.
-I diagrammi di Feynman delle correnti che compaiono in (\ref{eq:gim_after}) sono rappresentati in Fig. \ref{fig:gim_after}.
+I diagrammi di Feynman delle correnti che compaiono in (\ref{eq:gim_after}) sono rappresentati in Fig. \ref{fig:gim_after}.\\
 \begin{figure}[!h]
         \centering
         \begin{tikzpicture}
@@ -876,6 +876,76 @@ I diagrammi di Feynman delle correnti che compaiono in (\ref{eq:gim_after}) sono
         \end{tikzpicture}
         \caption{Diagrammi di Feynman degli elementi che costituiscono la corrente calcolata in Eq. (\ref{eq:gim_after}).}
         \label{fig:gim_after}
+\end{figure}
+Una conferma di quanto appena scritto si può trovare nel basso valore misurato per il \textit{branching ratio} del decadimento $K ^ { 0 } \rightarrow \mu ^ { + }  \mu ^ { - }$, che risulta essere \cite{ref:PDG}:
+\begin{equation}
+        B _ { \mu ^ { + } \mu ^ { - } } = \Gamma \left( K ^ { 0 } \rightarrow \mu ^ { + } \mu ^ { - } \right) / \Gamma \left( K ^{ 0 } \rightarrow a l l \right) = ( 6.84 \pm 0.11 ) \times 10 ^ { - 9 }
+        \label{eq:k0_br}
+\end{equation}
+Il diagramma di Feynman del processo è visibile in Fig. \ref{fig:k0_z_decay}.
+\begin{figure}[!h]
+        \centering
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a);
+                        \vertex [below left=of a](i2) {\(\overline s\)};
+                        \vertex [above left=of a] (i1) {\(d\)};
+                        \vertex [right= 3.0 cm of a] (b);
+                        \vertex [below right=of b] (f1) {\(\mu^{+}\)};
+                        \vertex [above right=of b] (f2) {\(\mu^{-}\)};
+                        \diagram* {
+                                (i1) -- [fermion] (a) -- [fermion] (i2),
+                                (a) -- [boson, edge label=\(Z^{0}\)] (b),
+                                (f1) -- [fermion] (b) -- [fermion] (f2),
+                        };
+                        \draw [decoration={brace}, decorate] (i2.south west) -- (i1.north west)
+                        node [pos=0.5, left] {\(K^{0}\)};
+                \end{feynman}
+        \end{tikzpicture}
+        \caption{Diagramma di Feynman per il decadimento del kaone neutro mediato da uno $Z^{0}$.}
+        \label{fig:k0_z_decay}
+\end{figure}
+Il decadimento potrebbe tuttavia procedere anche secondo il diagramma mostrato a sinistra in Fig. \ref{fig:k0_boxes}, il quale porterebbe ad una stima di (\ref{eq:k0_br}) molto maggiore del risultato osservato; adottando il meccanismo GIM si ha che anche il secondo diagramma di Fig. \ref{fig:k0_boxes} contribuisce al calcolo, fornendo un contributo che si cancella quasi esattamente con l'altro e giustificando così il valore molto piccolo di (\ref{eq:k0_br}).
+
+\begin{figure}[!h]
+        \centering
+        \subfloat{
+                \feynmandiagram [layered layout, horizontal=a to b] {
+                % Draw the top and bottom lines
+                i1 [particle=\(d\)]
+                        -- [fermion] a
+                        -- [photon, edge label=\(W^{-}\)] b
+                        -- [fermion] f1 [particle=\(\mu^{-}\)],
+                i2 [particle=\(\overline s\)]
+                        -- [anti fermion] c
+                        -- [photon, edge label'=\(W^{+}\)] d
+                        -- [anti fermion] f2 [particle=\(\mu^{+}\)],
+                % Draw the two internal fermion lines
+                { [same layer] a -- [fermion, edge label'=\(u\)] c },
+                { [same layer] b -- [anti fermion, edge label=\(\nu_{\mu}\)] d},
+                };
+        }
+        \qquad
+        \qquad
+        \subfloat{
+                \feynmandiagram [layered layout, horizontal=a to b] {
+                % Draw the top and bottom lines
+                i1 [particle=\(d\)]
+                        -- [fermion] a
+                        -- [photon, edge label=\(W^{-}\)] b
+                        -- [fermion] f1 [particle=\(\mu^{-}\)],
+                i2 [particle=\(\overline s\)]
+                        -- [anti fermion] c
+                        -- [photon, edge label'=\(W^{+}\)] d
+                        -- [anti fermion] f2 [particle=\(\mu^{+}\)],
+                % Draw the two internal fermion lines
+                { [same layer] a -- [fermion, edge label'=\(c\)] c },
+                { [same layer] b -- [anti fermion, edge label=\(\nu_{\mu}\)] d},
+                };
+
+        } \\
+        \caption{Diagrammi di Feynman al secondo ordine del decadimento $K ^ { 0 } \rightarrow \mu ^ { + }  \mu ^ { - }$; i due contributi si annullano in manera quasi esatta, essendo il primo proporzionale a $\sin\theta_{c}\cos\theta_{c}$ e il secondo a $-\sin\theta_{c}\cos\theta_{c}$.}
+        \label{fig:k0_boxes}
 \end{figure}
 
 \subsection{I sei quark e la matrice CKM}
