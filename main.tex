@@ -42,7 +42,7 @@
 
 \begin{abstract}
         Uno degli aspetti caratteristici dell'interazione debole è il cosiddetto \textit{quark mixing}: questa teoria giustifica i risultati sperimentali postulando che i quark che compaiono nei processi deboli non siano gli autostati di \textit{flavor} che caratterizzano l'interazione forte, ma una loro combinazione lineare. \\
-        Questo lavoro è diviso in due parti principali (che seguono una breve introduzione in \ref{sec:intro}): nella prima (\ref{sec:part_one}), dopo una descrizione dei primi modelli teorici ideati per l'interazione debole (\ref{subsec:fermi_theory} e \ref{subsec:v-a}), si analizzano le evidenze sperimentali che richiesero un'estensione della teoria (\ref{subsec:decays} e \ref{subsec:strange}) e si espone l'idea di Nicola Cabibbo di implementare un angolo di \textit{mixing} (\ref{subsec:cabibbo_angle}); in \ref{subsec:fermi_gt} e \ref{subsec:neutron_decay} si mostra poi l'applicazione della teoria così migliorata al caso semplice del decadimento beta del neutrone. \\
+        Questo lavoro è diviso in due parti principali (che seguono una breve introduzione in \ref{sec:intro}): nella prima (\ref{sec:part_one}), dopo una descrizione dei primi modelli teorici ideati per l'interazione debole (\ref{subsec:fermi_theory}, \ref{subsec:v-a} e \ref{subsec:fermi_gt}), si analizzano le evidenze sperimentali che richiesero un'estensione della teoria (\ref{subsec:decays} e \ref{subsec:strange}) e si espone l'idea di Nicola Cabibbo di implementare un angolo di \textit{mixing} (\ref{subsec:cabibbo_angle}).
         Nella seconda parte (\ref{sec:part_two}) si descrive invece come la teoria del \textit{mixing}, opportunamente estesa anche alle correnti neutre (\ref{subsec:nc} e \ref{subsec:nc_charm}), portò alla predizione dei quark \textit{charm} (\ref{subsec:gim}), \textit{bottom} e \textit{top} (\ref{subsec:ckm}), con la definitiva condensazione della teoria nella matrice CKM.
 \end{abstract}
 
@@ -340,6 +340,48 @@ Trascurando il fattore $1/2$ si può quindi scrivere l'operatore $V-A$ come:
         \label{eq:va_operator}
 \end{equation}
 
+\subsection{Tipi di transizione nel decadimento $\beta$ e forma della corrente adronica}
+\label{subsec:fermi_gt}
+L'operatore (\ref{eq:va_operator}) introdotto precedentemente, è in realtà in certi casi un'approssimazione; la sua forma più generale è infatti:
+\begin{equation}
+        \left( 1 - \gamma ^ { 5 } \right) \rightarrow \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right)
+\end{equation}
+dove $c_{V}$ e $c_{A}$ sono costanti introdotte per tenere in considerazione l'effetto che l'attività interna degli adroni può avere sulla conservazione delle correnti vettoriale e assiale. Esse vanno determinate sperimentalmente: mentre nel caso di una corrente leptonica si ha $c_{V}=-c_{A}=1$ ed entrambe le componenti si conservano, per le correnti in cui sono coinvolti adroni la situazione richiede uno studio più approfondito. Per il decadimento beta, in particolare, i contributi vettoriale e assiale sono dati da tipi diversi di transizione.
+\paragraph{Transizioni di Fermi e Gamow-Teller} Dato che nel decadimento beta nucleare si hanno neutrone e protone che si muovono non relativisticamente è facile convincersi (si veda \cite{ref:greiner}) che in questo limite le quantità introdotte in Tab. \ref{tab:bilinear} si comportano nella seguente maniera:
+\begin{equation}
+        S , V \rightarrow u_{A}^{p} ^ { \dagger } u_{A}^ { n  } \quad , \quad T , A \rightarrow u_{A} ^ { p } ^ { \dagger } \sigma^{\mu\nu} u_{A} ^ {n } \quad , \quad P \rightarrow 0
+\end{equation}
+dove $u_{A}^{p}$ e $u_{A}^{n}$ sono gli spinori a due componenti che dominano in limite non-relativistico. I casi rilevanti prendono il nome di transizioni di Fermi:
+\begin{equation}
+        S , V \rightarrow u_{A} ^ {p } ^ { \dagger } u_{A} ^ { n  }
+        \label{eq:sv_app}
+\end{equation}
+e di Gamow-Teller:
+\begin{equation}
+        T , A \rightarrow u _{A}^ { p } ^ { \dagger } \sigma^{\mu\nu} u _{A} ^{ n  }
+        \label{eq:ta_app}
+\end{equation}
+La differenza principale tra le due sta nella variazione di momento angolare totale tra nucleo iniziale e nucleo finale. Tale variazione è connessa con lo spin dei due leptoni $e ^ { - } , \overline { \nu } _ { e }$ (oppure $e^{+}, \nu_{e}$): entrambi hanno spin 1/2, quindi la variazione dello spin nucleare può essere nulla (spin di neutrino ed elettrone antiparalleli), oppure $\pm1$ (spin paralleli). Assumendo che l'elettrone e il neutrino siano emessi in uno stato di momento angolare $l=0$, la variazione dello spin del nucleo è pari alla somma degli spin dei due leptoni. Per l'orientazione degli spin di elettrone e neutrino si ha quindi che nelle transizioni di Fermi ($0 \rightarrow 0$) gli spin sono antiparalleli (stato di singoletto), mentre in quelle di Gamow-Teller ($0 \rightarrow 1$) gli spin sono paralleli (stato di tripletto); esiste inoltre il caso delle transizioni cosiddette miste, in cui si ha $\frac{1}{2} \rightarrow \frac{1}{2}$ e gli spin possono essere antiparalleli (lo spin del nucleo non cambia) o paralleli (lo spin del nucleo cambia direzione).\\
+\begin{table}
+        \centering
+        \begin{tabular}{c  c  c}
+                \hline
+                decadimento & transizione $J^{P}$ & $G _ { F } ^ { 2 } | \mathcal { M } | ^ { 2 }$ ($MeV^{2}fm^{6}$) \\
+                \hline
+                $^ { 14 } \mathrm { O } \rightarrow ^ { 14 } \mathrm { N } ^ { * } + e ^ { + } + \nu _ { e }$ & $0 ^ { + } \rightarrow 0 ^ { + }$ & $1.52 \times 10 ^ { - 8 }$ \\
+                $^{6}H e \rightarrow^ { 6 } L i + e ^ { - } + \overline { \nu }$ & $0^{+} \rightarrow 1^{+}$ & $7.45 \times 10 ^ { - 8 }$ \\
+                $n \rightarrow p e ^ { - } \overline { \nu }$ & $\frac { 1 } { 2 }^{+} \rightarrow \frac { 1 } { 2 } ^ { + }$ & $4.25 \times 10 ^ { - 8 }$ \\
+                \hline
+        \end{tabular}
+        \caption{Decadimenti $\beta$ suddivisi nelle diverse transizioni}
+        \label{tab:beta_decays}
+\end{table}
+Si tiene conto di quanto sopra esposto nella costruzione delle correnti e, conseguentemente, nel calcolo di $|\mathcal{M}|^{2}$: come si vede in (\ref{eq:sv_app}) e (\ref{eq:ta_app}), le transizioni di Fermi sono di tipo vettoriale, mentre quelle di Gamow-Teller sono di tipo assiale; per le prime si scrive $| \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { F } \right| ^ { 2 } \propto c _ { V } ^ { 2 }$ mentre per le altre si ha $| \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { G T } \right| ^ { 2 } \propto c _ { A } ^ { 2 }$. Analizzando Tab. \ref{tab:beta_decays} si può vedere la dipendenza del prodotto $G_{F}^{2}|\mathcal{M}|^{2}$ dalla variazione dello spin nella transizione del nucleo.
+Sfruttando i primi due processi riportati in Tab. \ref{tab:beta_decays} è possibile stimare \cite{ref:BGSex} il rapporto tra le costanti $c_{V}$ e $c_{A}$:
+\begin{equation}
+        \lambda = c _ { A } / c _ { V } = - 1.2695 \pm 0.0029
+        \label{eq:ca_cv}
+\end{equation}
 \subsection{Esempi di decadimento: muone, neutrone e pione}
 \label{subsec:decays}
 Si applica ora la teoria $V-A$ presentata nella parte precedente a tre importanti esempi di decadimento: muone, neutrone e pione carico.
@@ -404,34 +446,74 @@ e sostituendo i valori sperimentali per la vita media del muone si ottiene:
 \end{equation}
 Questo valore è lo stesso riportato in \cite{ref:PDG}.
 \paragraph{Decadimento del neutrone}
-Il decadimento beta del neutrone è riportato in Eq. (\ref{eq:beta_neg}).
-Una prima approssimazione si ottiene assumendo neutrone e protone particelle puntiformi che si accoppiano direttamente con il bosone mediatore (Fig.~\ref{fig:neutron_decay_simple}).
+Il decadimento beta del neutrone è riportato in Eq. (\ref{eq:beta_neg}) mentre il diagramma di Feynman, realizzato considerando protone e neutrone in termini di quark costituenti, è rappresentato in Fig. \ref{fig:neutron_decay_quarks}.
 \begin{figure}[!h]
         \centering
-        \feynmandiagram [layered layout, horizontal=a to b] {
-                a [particle=\(n\)] -- [fermion] b -- [fermion] f1 [particle=\(p\)],
-                b -- [boson, edge label'=\(W^{-}\)] c,
-                c -- [anti fermion] f2 [particle=\(\overline \nu_{e}\)],
-                c -- [fermion] f3 [particle=\(e^{-}\)],
-        };
-        \caption{Diagramma di Feynman per il decadimento del neutrone, assumendo protone e neutrone non costituiti da quark.}
-        \label{fig:neutron_decay_simple}
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a) {\(d\)};
+                        \vertex [right=of a] (b);
+                        \vertex [above right=of b] (f1) {\(u\)};
+                        \vertex [above= 0.4 cm of a](d) {\(d\)};
+                        \vertex [right=of d] (e);
+                        \vertex [above right=of e] (g1) {\(d\)};
+                        \vertex [above= 0.4 cm of d](m) {\(u\)};
+                        \vertex [right=of m] (n);
+                        \vertex [above right=of n] (h1) {\(u\)};
+                        \vertex [below right=of b] (c);
+                        \vertex [above right=of c] (f2) {\(\overline \nu_{e}\)};
+                        \vertex [below right=of c] (f3) {\(e^{-}\)};
+                        \diagram* {
+                                (a) -- [fermion] (b) -- [fermion] (f1),
+                                (d) -- [fermion] (e) -- [fermion] (g1),
+                                (m) -- [fermion] (n) -- [fermion] (h1),
+                                (b) -- [boson, edge label'=\(W^{-}\)] (c),
+                                (c) -- [anti fermion] (f2),
+                                (c) -- [fermion] (f3),
+                        };
+                \end{feynman}
+        \end{tikzpicture}
+        \caption{Diagramma di Feynman per il decadimento del neutrone, assumendo protone e neutrone costituiti da quark.}
+        \label{fig:neutron_decay_quarks}
 \end{figure}
-L'elemento di matrice è determinato facilmente sostituendo $u(\nu_{\mu})$ e $u(\mu)$ nella (\ref{eq:amplitude_muon}) con $u(n)$ e $u(p)$. Il termine $|\mathcal{M}|^{2}$ si può scrivere, considerando il neutrone inizialmente a riposo:
+Il fattore al vertice quark-quark si può scrivere:
 \begin{equation}
-        | \mathcal { M } | ^ { 2 } = \left[ \frac { g _ { w } } { M _ { W } } \right] ^ { 4 } M _ { n } E _ { \nu } \left[ \left( M _ { n } ^ { 2 } - M _ { p } ^ { 2 } - m _ { e } ^ { 2 } \right) - 2 M _ { n } E _ { \nu } \right]
+        \mathcal { K } ^ { \mu } \rightarrow - \frac { i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right)
 \end{equation}
-Tralasciando i dettagli del calcolo del tasso di decadimento, che sono tuttavia descritti in \cite{ref:hayes}, si ricava:
+dove le costanti $c_{V}$ e $c_{A}$ sono le stesse introdotte in \ref{subsec:fermi_gt}. Se la parte vettoriale è conservata, allora $c_{V} = 1$; altrimenti il rapporto tra le due costanti assume il valore (\ref{eq:ca_cv}). Si può quindi scrivere:
 \begin{equation}
-        \Gamma = \frac { 2 \rho_{f} } { \pi ^ { 3 } \hbar ^ { 7 } } G _ { F } ^ { 2 } m _ { e } ^ { 5 } c ^ { 4 }
-        \label{eq:neutron_decay_rate}
+        \mathcal { M } = \frac { g _ { w } ^ { 2 } } { 8 M _ { W } ^ { 2 } } \cdot \left[ \overline { u } ( p ) \gamma ^ { \mu } \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right) u ( n ) \right] \cdot \left[ \overline { u } ( e ) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v \left( \nu _ { e } \right) \right]
+        \label{eq:neutron_complex_matrix_element}
 \end{equation}
-Calcolando il valore dello spazio delle fasi $\rho_{f}$ (anche in questo caso si rimanda a \cite{ref:hayes}) e sostituendo a $\Gamma$ l'inverso della vita media del neutrone $\tau_{n}=885.7\; \mathrm{s}$ , si trova un valore di $G_{F}$ pari a:
+Si noti che in questa espressione si possono chiaramente distinguere la corrente leptonica
+\begin{equation}
+        \overline { u } ( e ) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v \left( \nu _ { e } \right)
+        \label{eq:leptonic_current}
+\end{equation}
+e quella barionica
+\begin{equation}
+        \overline { u } ( p ) \gamma ^ { \mu } \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right) u ( n )
+        \label{eq:barionic_current}
+\end{equation}
+Questo risultato è perfettamente in linea col fatto che l'elemento di matrice è proporzionale ad un prodotto di correnti, come riportato in Eq. (\ref{eq:weak_matrix_element}).
+Il calcolo di (\ref{eq:neutron_complex_matrix_element}), i cui dettagli sono riportati in \cite{ref:hayes}, consente di ottenere un tasso di decadimento pari a:
+\begin{equation}
+        \Gamma = \frac { \rho_{f} m _ { e } ^ { 5 } c ^ { 4 } } { 64 \pi ^ { 3 } \hbar } \left[ \frac { g _ { w } } { M _ { W } } \right] ^ { 4 } c _ { V } ^ { 2 } \left( 1 + 3 \lambda ^ { 2 } \right)
+\end{equation}
+che mostra come l'effetto dell'aggiunta dei fattori $c_{V}$ e $c_{A}$ sia quello di introdurre un fattore
+\begin{equation}
+        \frac { 1 } { 4 } c _ { V } ^ { 2 } \left( 1 + 3 \lambda ^ { 2 } \right)
+\end{equation}
+nel valore del tasso di decadimento. Di nuovo, è possibile riscrivere questo valore in termini di $G_{F}$:
+\begin{equation}
+        \Gamma = \frac { \rho_{f} m _ { e } ^ { 5 } } { 2 \pi ^ { 3 } \hbar ^ { 7 } } G _ { F } ^ { 2 } c_{V}^{2} \left( 1 + 3 \lambda ^ { 2 } \right)
+\end{equation}
+Calcolando il valore dello spazio delle fasi $\rho_{f}$ e sostituendo a $\Gamma$ l'inverso della vita media del neutrone $\tau_{n}=885.7\; \mathrm{s}$ , si trova un valore di $G_{F}$ pari a:
 \begin{equation}
         G^{n} _ { F } = 1.140 \times 10 ^ { - 5 } \mathrm { GeV } ^ { - 2 }
         \label{eq:gf_neutron_value}
 \end{equation}
-Questo valore discorda da quello ottenuto in Eq.~(\ref{eq:gf_muon_value}) da un decadimento che coinvolge solo leptoni. Sembrò quindi inizialmente che interazioni coinvolgenti leptoni e quark fossero diverse, facendo così cadere l'ipotesi di universalità dell'interazione debole.
+Questo valore discorda da quello ottenuto in Eq.~(\ref{eq:gf_muon_value}) da un decadimento che coinvolge solo leptoni (in particolare, è leggermente più piccolo). Sembrò quindi inizialmente che interazioni coinvolgenti leptoni e quark fossero diverse, facendo così cadere l'ipotesi di universalità dell'interazione debole.
 
 \paragraph{Decadimento del pione carico}
 \begin{figure}[!h]
@@ -679,119 +761,6 @@ Il valore dell'angolo di Cabibbo può essere ricavato confrontando decadimenti s
         \frac { \Gamma \left( K ^ { - } \rightarrow \mu ^ { - } \overline\nu _ { \mu } \right) } { \Gamma \left( \pi ^ { - } \rightarrow \mu ^ { - } \overline \nu _ { \mu } \right) } = \frac { m _ { K } ^ { 2 } \left[ 1 - \left( m _ { \mu } ^ { 2 } / m _ { K } ^ { 2 } \right) \right] ^ { 2 } } { m _ { \pi } ^ { 2 } \left[ 1 - \left( m _ { \mu } ^ { 2 } / m _ { \pi } ^ { 2 } \right) \right] ^ { 2 } } \tan ^ { 2 } \theta _ { c }
 \end{equation}
 Inserendo il valore misurato delle masse delle particelle coinvolte si determina $\theta_{c} = (0.235 \pm 0.006)$.
-
-\subsection{Tipi di transizione nel decadimento $\beta$ e forma della corrente adronica}
-\label{subsec:fermi_gt}
-L'operatore (\ref{eq:va_operator}), utilizzato nella costruzione di tutte le correnti utilizzate in \ref{subsec:decays}, è in realtà in certi casi un'approssimazione; la sua forma più generale è infatti:
-\begin{equation}
-        \left( 1 - \gamma ^ { 5 } \right) \rightarrow \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right)
-\end{equation}
-dove $c_{V}$ e $c_{A}$ sono costanti introdotte per tenere in considerazione l'effetto che l'attività interna degli adroni può avere sulla conservazione delle correnti vettoriale e assiale. Esse vanno determinate sperimentalmente: mentre nel caso di una corrente leptonica si ha $c_{V}=-c_{A}=1$ ed entrambe le componenti si conservano, per le correnti in cui sono coinvolti adroni la situazione richiede uno studio più approfondito. Per il decadimento beta, in particolare, i contributi vettoriale e assiale sono dati da tipi diversi di transizione.
-\paragraph{Transizioni di Fermi e Gamow-Teller} Dato che nel decadimento beta nucleare si hanno neutrone e protone che si muovono non relativisticamente è facile convincersi (si veda \cite{ref:greiner}) che in questo limite le quantità introdotte in Tab. \ref{tab:bilinear} si comportano nella seguente maniera:
-\begin{equation}
-        S , V \rightarrow u_{A}^{p} ^ { \dagger } u_{A}^ { n  } \quad , \quad T , A \rightarrow u_{A} ^ { p } ^ { \dagger } \sigma^{\mu\nu} u_{A} ^ {n } \quad , \quad P \rightarrow 0
-\end{equation}
-dove $u_{A}^{p}$ e $u_{A}^{n}$ sono gli spinori a due componenti che dominano in limite non-relativistico. I casi rilevanti prendono il nome di transizioni di Fermi:
-\begin{equation}
-        S , V \rightarrow u_{A} ^ {p } ^ { \dagger } u_{A} ^ { n  }
-        \label{eq:sv_app}
-\end{equation}
-e di Gamow-Teller:
-\begin{equation}
-        T , A \rightarrow u _{A}^ { p } ^ { \dagger } \sigma^{\mu\nu} u _{A} ^{ n  }
-        \label{eq:ta_app}
-\end{equation}
-La differenza principale tra le due sta nella variazione di momento angolare totale tra nucleo iniziale e nucleo finale. Tale variazione è connessa con lo spin dei due leptoni $e ^ { - } , \overline { \nu } _ { e }$ (oppure $e^{+}, \nu_{e}$): entrambi hanno spin 1/2, quindi la variazione dello spin nucleare può essere nulla (spin di neutrino ed elettrone antiparalleli), oppure $\pm1$ (spin paralleli). Assumendo che l'elettrone e il neutrino siano emessi in uno stato di momento angolare $l=0$, la variazione dello spin del nucleo è pari alla somma degli spin dei due leptoni. Per l'orientazione degli spin di elettrone e neutrino si ha quindi che nelle transizioni di Fermi ($0 \rightarrow 0$) gli spin sono antiparalleli (stato di singoletto), mentre in quelle di Gamow-Teller ($0 \rightarrow 1$) gli spin sono paralleli (stato di tripletto); esiste inoltre il caso delle transizioni cosiddette miste, in cui si ha $\frac{1}{2} \rightarrow \frac{1}{2}$ e gli spin possono essere antiparalleli (lo spin del nucleo non cambia) o paralleli (lo spin del nucleo cambia direzione).\\
-\begin{table}
-        \centering
-        \begin{tabular}{c  c  c}
-                \hline
-                decadimento & transizione $J^{P}$ & $G _ { F } ^ { 2 } | \mathcal { M } | ^ { 2 }$ ($MeV^{2}fm^{6}$) \\
-                \hline
-                $^ { 14 } \mathrm { O } \rightarrow ^ { 14 } \mathrm { N } ^ { * } + e ^ { + } + \nu _ { e }$ & $0 ^ { + } \rightarrow 0 ^ { + }$ & $1.52 \times 10 ^ { - 8 }$ \\
-                $^{6}H e \rightarrow^ { 6 } L i + e ^ { - } + \overline { \nu }$ & $0^{+} \rightarrow 1^{+}$ & $7.45 \times 10 ^ { - 8 }$ \\
-                $n \rightarrow p e ^ { - } \overline { \nu }$ & $\frac { 1 } { 2 }^{+} \rightarrow \frac { 1 } { 2 } ^ { + }$ & $4.25 \times 10 ^ { - 8 }$ \\
-                \hline
-        \end{tabular}
-        \caption{Decadimenti $\beta$ suddivisi nelle diverse transizioni}
-        \label{tab:beta_decays}
-\end{table}
-Si tiene conto di quanto sopra esposto nella costruzione delle correnti e, conseguentemente, nel calcolo di $|\mathcal{M}|^{2}$: come si vede in (\ref{eq:sv_app}) e (\ref{eq:ta_app}), le transizioni di Fermi sono di tipo vettoriale, mentre quelle di Gamow-Teller sono di tipo assiale; per le prime si scrive $| \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { F } \right| ^ { 2 } \propto c _ { V } ^ { 2 }$ mentre per le altre si ha $| \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { G T } \right| ^ { 2 } \propto c _ { A } ^ { 2 }$. Analizzando Tab. \ref{tab:beta_decays} si può vedere la dipendenza del prodotto $G_{F}^{2}|\mathcal{M}|^{2}$ dalla variazione dello spin nella transizione del nucleo.
-Sfruttando i primi due processi riportati in Tab. \ref{tab:beta_decays} è possibile stimare \cite{ref:BGSex} il rapporto tra le costanti $c_{V}$ e $c_{A}$:
-\begin{equation}
-        \lambda = c _ { A } / c _ { V } = - 1.2695 \pm 0.0029
-        \label{eq:ca_cv}
-\end{equation}
-
-\subsection{Decadimento del neutrone con effetti di \textit{quark mixing}}
-\label{subsec:neutron_decay}
-Grazie all'introduzione del \textit{mixing} è possibile descrivere il decadimento del neutrone in termini di quark costituenti, elaborando così una teoria più sofisticata. Il diagramma di Feynman del decadimento è rappresentato in Fig. \ref{fig:neutron_decay_quarks}.
-\begin{figure}[!h]
-        \centering
-        \begin{tikzpicture}
-                \begin{feynman}
-                        \vertex (a) {\(d\)};
-                        \vertex [right=of a] (b);
-                        \vertex [above right=of b] (f1) {\(u\)};
-                        \vertex [above= 0.4 cm of a](d) {\(d\)};
-                        \vertex [right=of d] (e);
-                        \vertex [above right=of e] (g1) {\(d\)};
-                        \vertex [above= 0.4 cm of d](m) {\(u\)};
-                        \vertex [right=of m] (n);
-                        \vertex [above right=of n] (h1) {\(u\)};
-                        \vertex [below right=of b] (c);
-                        \vertex [above right=of c] (f2) {\(\overline \nu_{e}\)};
-                        \vertex [below right=of c] (f3) {\(e^{-}\)};
-                        \diagram* {
-                                (a) -- [fermion] (b) -- [fermion] (f1),
-                                (d) -- [fermion] (e) -- [fermion] (g1),
-                                (m) -- [fermion] (n) -- [fermion] (h1),
-                                (b) -- [boson, edge label'=\(W^{-}\)] (c),
-                                (c) -- [anti fermion] (f2),
-                                (c) -- [fermion] (f3),
-                        };
-                \end{feynman}
-        \end{tikzpicture}
-        \caption{Diagramma di Feynman per il decadimento del neutrone, assumendo protone e neutrone costituiti da quark.}
-        \label{fig:neutron_decay_quarks}
-\end{figure}
-Il fattore al vertice quark-quark si può scrivere:
-\begin{equation}
-        \mathcal { K } ^ { \mu } \rightarrow - \frac { i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right)
-\end{equation}
-dove le costanti $c_{V}$ e $c_{A}$ sono le stesse introdotte nella sezione precedente. Se la parte vettoriale è conservata, allora $c_{V} = 1$; altrimenti il rapporto tra le due costanti assume il valore (\ref{eq:ca_cv}). Nello scrivere l'elemento di matrice, è inoltre necessario moltiplicare per un fattore $\cos\theta_{c}$, così da includere il \textit{mixing} generazionale presente nel vertice quark-quark. Si può quindi scrivere:
-\begin{equation}
-        \mathcal { M } = \frac { g _ { w } ^ { 2 } } { 8 M _ { W } ^ { 2 } } \cos\theta_{c} \cdot \left[ \overline { u } ( p ) \gamma ^ { \mu } \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right) u ( n ) \right] \cdot \left[ \overline { u } ( e ) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v \left( \nu _ { e } \right) \right]
-        \label{eq:neutron_complex_matrix_element}
-\end{equation}
-Si noti che in questa espressione si possono chiaramente distinguere la corrente leptonica
-\begin{equation}
-        \overline { u } ( e ) \gamma _ { \mu } \left( 1 - \gamma ^ { 5 } \right) v \left( \nu _ { e } \right)
-        \label{eq:leptonic_current}
-\end{equation}
-e quella barionica
-\begin{equation}
-        \overline { u } ( p ) \gamma ^ { \mu } \left( c _ { V } - c _ { A } \gamma ^ { 5 } \right) u ( n )
-        \label{eq:barionic_current}
-\end{equation}
-Questo risultato è perfettamente in linea col fatto che l'elemento di matrice è proporzionale ad un prodotto di correnti, come riportato in Eq. (\ref{eq:weak_matrix_element}).
-Il calcolo di (\ref{eq:neutron_complex_matrix_element}), i cui dettagli sono riportati in \cite{ref:hayes}, consente di ottenere un tasso di decadimento pari a:
-\begin{equation}
-        \Gamma = \frac { \rho_{f} m _ { e } ^ { 5 } c ^ { 4 } } { 64 \pi ^ { 3 } \hbar } \left[ \frac { g _ { w } } { M _ { W } } \right] ^ { 4 } \cos^{2}\theta_{c} c _ { V } ^ { 2 } \left( 1 + 3 \lambda ^ { 2 } \right)
-\end{equation}
-che, una volta confrontato con (\ref{eq:neutron_decay_rate}), mostra chiaramente che l'effetto del \textit{mixing} è quello di introdurre un fattore
-\begin{equation}
-        \frac { 1 } { 4 } \cos^{2}\theta_{c} c _ { V } ^ { 2 } \left( 1 + 3 \lambda ^ { 2 } \right)
-\end{equation}
-nel valore del tasso di decadimento. Di nuovo, è possibile riscrivere questo valore in termini di $G_{F}$:
-\begin{equation}
-        \Gamma = \frac { \rho_{f} m _ { e } ^ { 5 } } { 2 \pi ^ { 3 } \hbar ^ { 7 } } \cos^{2}\theta_{c} G _ { F } ^ { 2 } c_{V}^{2} \left( 1 + 3 \lambda ^ { 2 } \right)
-\end{equation}
-Inserendo i risultati sperimentali si trova questa volta una vita media per il neutrone pari a:
-\begin{equation}
-        \tau = 907.637\; \mathrm{s}
-\end{equation}
-che si discosta dal valore trovato sperimentalmente di meno del $2.5\%$.
 
 \section{L'estensione della teoria: correnti neutre, meccanismo GIM e matrice CKM}
 \label{sec:part_two}
