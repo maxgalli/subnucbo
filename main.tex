@@ -285,7 +285,7 @@ Facendo riferimento ai risultati esposti in Appendice \ref{app:dirac} si ha:
 Dato che $\gamma ^ { 5 } ^ { \dagger } = \gamma ^ { 5 }$ e $\gamma ^ { 5 } \gamma ^ { 0 } = - \gamma ^ { 0 } \gamma ^{ 5 }$, si trova:
 \begin{equation}
         \begin{aligned}
-                \left( \hat { P } _ { L } \psi \right) & = \left( \hat { P } _ { L }  \psi \right) ^ { \dagger } \gamma ^ { 0 } = \psi ^ { \dagger } \hat { P } _ { L } ^ { \dagger } \gamma ^ { 0 } \\ & = \psi ^ { \dagger } \left( \frac { 1 - \gamma ^ { 5 } } { 2 } \right) ^ { \dagger } \gamma ^ { 0 } = \psi ^ { \dagger } \frac { 1 - \gamma ^ { 5 } } { 2 } \gamma ^ { 0 } \\ & = \psi ^ { \dagger } \gamma ^ { 0 } \frac { 1 + \gamma ^ { 5 } } { 2 } = \overline { \psi } \hat { P } _ { R }
+                \overline {\left( \hat { P } _ { L } \psi \right)} & = \left( \hat { P } _ { L }  \psi \right) ^ { \dagger } \gamma ^ { 0 } = \psi ^ { \dagger } \hat { P } _ { L } ^ { \dagger } \gamma ^ { 0 } \\ & = \psi ^ { \dagger } \left( \frac { 1 - \gamma ^ { 5 } } { 2 } \right) ^ { \dagger } \gamma ^ { 0 } = \psi ^ { \dagger } \frac { 1 - \gamma ^ { 5 } } { 2 } \gamma ^ { 0 } \\ & = \psi ^ { \dagger } \gamma ^ { 0 } \frac { 1 + \gamma ^ { 5 } } { 2 } = \overline { \psi } \hat { P } _ { R }
         \end{aligned}
 \end{equation}
 La forma modificata della corrente sarà dunque:
@@ -494,7 +494,7 @@ in ottimo accordo con i dati sperimentali.
 \subsection{Decadimenti deboli di particelle strane}
 \label{subsec:strange}
 Un altro fatto che richiese un ampliamento della teoria formulata da Fermi fu l'osservazione di anomalie nei decadimenti che coinvolgono particelle strane, in particolare nella differenza di comportamento tra processi con e senza variazione di stranezza ($\Delta S = 1$ e $\Delta S = 0$ rispettivamente).
-Si consideri il caso dei decadimenti riportati in Tab.~\ref{tab:leptonic_decays}.
+Si consideri il caso dei decadimenti riportati in Tab.~\ref{tab:leptonic_decays}, i cui diagrammi di Feynmann sono riportati rispettivamente in Fig. \ref{fig:pion_decay} e \ref{fig:kaon_decay}.
 \begin{table}[!h]
         \begin{tabular}{llccc}
                 \hline
@@ -507,13 +507,35 @@ Si consideri il caso dei decadimenti riportati in Tab.~\ref{tab:leptonic_decays}
         \caption{Decadimenti leptonici di pione e kaone.}
         \label{tab:leptonic_decays}
 \end{table}
+\begin{figure}[!h]
+        \centering
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a);
+                        \vertex [above left=of a](i2) {\(\overline u\)};
+                        \vertex [below left=of a] (i1) {\(s\)};
+                        \vertex [right= 3.0 cm of a] (b);
+                        \vertex [above right=of b] (f1) {\(\mu^{-}\)};
+                        \vertex [below right=of b] (f2) {\(\overline \nu_{\mu}\)};
+                        \diagram* {
+                                (i1) -- [fermion] (a) -- [fermion] (i2),
+                                (a) -- [boson, edge label=\(W^{-}\)] (b),
+                                (f1) -- [fermion] (b) -- [fermion] (f2),
+                        };
+                        \draw [decoration={brace}, decorate] (i1.south west) -- (i2.north west)
+                        node [pos=0.5, left] {\(K^{-}\)};
+                \end{feynman}
+        \end{tikzpicture}
+        \caption{Diagramma di Feynman per il decadimento del kaone negativo.}
+        \label{fig:kaon_decay}
+\end{figure}
 Utilizzando la regola d'oro di Fermi e la costante $G_{F}$ per il calcolo della vita media del kaone, si ottiene una vita media circa venti volte più piccola di quella misurata sperimentalmente. Per spiegare questa anomalia si può immaginare che, nel caso dei quark, la costante di accoppiamento dipenda dal sapore: nel caso del $\pi$ il decadimento coinvolge il quark $d$, e si può immaginare di utilizzare una costante di accoppiamento $G _ { d } \simeq G _ { F }$, in quanto la vita media calcolata con $G_{F}$ fornisce risultati adeguati; nel caso del $K$ il decadimento coinvolge il quark $s$, e si può immaginare di utilizzare una costante di accoppiamento $G _ { s } < G _ { d }$ in maniera da ottenere il risultato della vita media corretto. Così facendo, si ottiene:
 \begin{equation}
         \frac { G _ { s } ^ { 2 } } { G _ { d } ^ { 2 } } \simeq 0.05
         \label{eq:frac_lepton_decay}
 \end{equation}
 
-La stessa anomalia si può notare considerando i decadimenti in Tab.~\ref{tab:isemileptonic_decays}. Utilizzando la regola di Sargent
+La stessa anomalia si può notare considerando i decadimenti in Tab.~\ref{tab:isemileptonic_decays}, i cui diagrammi di Feynmann sono riportati in Fig. \ref{fig:sigma_decay}. Utilizzando la regola di Sargent
 \begin{equation}
         \frac { \left( \Gamma _ { i } / \Gamma \right) } { \tau } \simeq G _ { F } ^ { 2 } E _ { 0 } ^ { 5 } \simeq G _ { F } ^ { 2 } \Delta m ^ { 5 }
         \label{eq:sargent}
@@ -536,6 +558,67 @@ per il calcolo della vita media, si può vedere come anche in questo caso i risu
         \label{tab:isemileptonic_decays}
 \end{table}
 Si conferma quindi che il rapporto tra $G _ { s } ^ { 2 }$ e $G _ { d } ^ { 2 }$ vale come indicato in (\ref{eq:frac_lepton_decay}), indipendentemente dal tipo di transizioni tra adroni: ciò deve quindi riflettere una proprietà dei quark costituenti.
+\begin{figure}[!h]
+        \centering
+        \subfloat{
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a1) {\(d\)};
+                        \vertex[right=4.0 cm of a1] (a2) {\(d\)};
+                        \vertex[below=2em of a1] (b1) {\(d\)};
+                        \vertex[below=2em of a2] (b2) {\(d\)};
+                        \vertex[below=2em of b1] (c1) {\(s\)};
+                        \vertex[right=1.5 cm of c1] (w1);
+                        \vertex[below=2em of b2] (c2) {\(u\)};
+                        \vertex[below=1.0 cm of c2] (d1) {\(e^{-}\)};
+                        \vertex[below=2em of d1] (d2) {\(\overline \nu_{e}\)};
+                        \vertex at ($(d1)!0.5!(d2) - (1cm, 0)$) (w2);
+                        \diagram* {
+                                (a1) -- [fermion] (a2),
+                                (b1) -- [fermion] (b2),
+                                (c1) -- [fermion] (c2),
+                                (d2) -- [fermion] (w2) -- [fermion] (d1),
+                                (w1) -- [boson, edge label=\(W^{-}\)] (w2),
+                        };
+                        \draw [decoration={brace}, decorate] (c1.south west) -- (a1.north west)
+                                node [pos=0.5, left] {\(\Sigma^{-}\)};
+                        \draw [decoration={brace}, decorate] (a2.north east) -- (c2.south east)
+                                node [pos=0.5, right] {\(n\)};
+                \end{feynman}
+        \end{tikzpicture}
+        }
+        \qquad
+        \qquad
+        \subfloat{
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a1) {\(s\)};
+                        \vertex[right=4.0 cm of a1] (a2) {\(s\)};
+                        \vertex[below=2em of a1] (b1) {\(d\)};
+                        \vertex[below=2em of a2] (b2) {\(d\)};
+                        \vertex[below=2em of b1] (c1) {\(d\)};
+                        \vertex[right=1.5 cm of c1] (w1);
+                        \vertex[below=2em of b2] (c2) {\(u\)};
+                        \vertex[below=1.0 cm of c2] (d1) {\(e^{-}\)};
+                        \vertex[below=2em of d1] (d2) {\(\overline \nu_{e}\)};
+                        \vertex at ($(d1)!0.5!(d2) - (1cm, 0)$) (w2);
+                        \diagram* {
+                                (a1) -- [fermion] (a2),
+                                (b1) -- [fermion] (b2),
+                                (c1) -- [fermion] (c2),
+                                (d2) -- [fermion] (w2) -- [fermion] (d1),
+                                (w1) -- [boson, edge label=\(W^{-}\)] (w2),
+                        };
+                        \draw [decoration={brace}, decorate] (c1.south west) -- (a1.north west)
+                                node [pos=0.5, left] {\(\Sigma^{-}\)};
+                        \draw [decoration={brace}, decorate] (a2.north east) -- (c2.south east)
+                                node [pos=0.5, right] {\(\Lambda^{0}\)};
+                \end{feynman}
+        \end{tikzpicture}
+        } \\
+        \caption{Decadimenti di $\Sigma^{-}$ con $\Delta S = 1$ (sinistra) e $\Delta S = 0$ (destra).}
+        \label{fig:sigma_decay}
+\end{figure}
 
 \subsection{L'angolo di Cabibbo}
 \label{subsec:cabibbo_angle}
@@ -555,7 +638,7 @@ In ogni vertice di un diagramma di Feynman occorre inserire la costante corrispo
                 \end{equation}
         \item per i processi semi-leptonici con $\Delta S = 0$ si ha
                 \begin{equation}
-                \left\langle f \left| H _ { W } \right| i \right) _ { \Delta S = 0 } \propto g _ { e v } g _ { u d } = G _ { d }
+                \left\langle f \left| H _ { W } \right| i \right\rangle _ { \Delta S = 0 } \propto g _ { e v } g _ { u d } = G _ { d }
                 \label{eq:gd}
         \end{equation}
 \item per i processi semi-leptonici con $\Delta S = 1$ si ha
@@ -568,12 +651,28 @@ L'ipotesi di Cabibbo è che l'interazione debole dipenda da un solo parametro, l
 \begin{equation}
         G _ { F } = g _ { e v } ^ { 2 } = g _ { u d } ^ { 2 } + g _ { u s } ^ { 2 } \longrightarrow g _ { u d } = g _ { e v } \cos \theta _ { C } ; \quad g _ { u s } = g _ { e v } \sin \theta _ { C }
 \end{equation}
-In questo modello, quanto sopra esposto corrisponde al fatto che i quark che partecipano all'interazione debole non sono gli autostati di sapore che caratterizzano l'interazione forte, ma una loro combinazione lineare, che può considerarsi ruotata di un angolo $\theta_{c}$ rispetto ai quark ordinari. Detti i nuovo autostati dell'interazione debole ($u_{c}, d_{c}, s_{c}$) si hanno così i seguenti doppietti deboli:
+In questo modello, quanto sopra esposto corrisponde al fatto che i quark che partecipano all'interazione debole non sono gli autostati di sapore che caratterizzano l'interazione forte, ma una loro combinazione lineare, che può considerarsi ruotata di un angolo $\theta_{c}$ rispetto ai quark ordinari. Detti i nuovi autostati dell'interazione debole ($u_{c}, d_{c}, s_{c}$) si hanno così i seguenti doppietti deboli:
 \begin{equation}
         \left( \begin{array} { c } { v _ { e } } \\ { e ^ { - } } \end{array} \right) , \left( \begin{array} { c } { v _ { \mu } } \\ { \mu ^ { - } } \end{array} \right) , \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right)
         \label{eq:weak_doublets}
 \end{equation}
-dove $\theta_{c}$ è l'angolo di Cabibbo e si trova sperimentalmente essere $\theta _ { c } = 0.235\: \mathrm { rad }$. La scelta di $u$ come autostato non mescolato è semplicemente una convenzione. Per ogni doppietto di leptoni l'accoppiamento debole è specificato da $G_{F}$. L'apparente differenza tra i valori della costante di accoppiamento è dovuta al processo di miscelamento dei quark. Una rappresentazione grafica dell'autostato debole $d_{c}$ che costituisce un doppietto con $u$ è visibile in Fig. \ref{fig:sdmixing}.\\
+dove $\theta_{c}$ è l'angolo di Cabibbo e si trova sperimentalmente essere $\theta _ { c } = 0.235\: \mathrm { rad }$. La scelta di $u$ come autostato non mescolato è semplicemente una convenzione. Per ogni doppietto di leptoni l'accoppiamento debole è specificato da $G_{F}$. L'apparente differenza tra i valori della costante di accoppiamento è dovuta al processo di miscelamento dei quark. Una rappresentazione grafica dell'autostato debole $d_{c}$ che costituisce un doppietto con $u$ è visibile in Fig. \ref{fig:dmixing}.\\
+\begin{figure}[t]
+        \centering
+        \begin{tikzpicture}[>=latex, font=\scriptsize]
+                \draw[->] (0,0) -- (0,4.5);
+                \draw[->] (0,0) -- (4.5,0);
+                \draw[->] (0,0) -- (4.5,0.8);
+                \draw (0,0) ++(0:30mm) arc (0:9.9:30mm);
+                \node at (4.9,0) {$d$};
+                \node at (0,4.9) {$s$};
+                \node at (4.9,0.8) {$d_{c}$};
+                \node at (3.5,0.3) {$\theta_{c}$};
+        \end{tikzpicture}
+        \caption{Autostato dell'interazione debole $d_{c}$.}
+        \label{fig:dmixing}
+\end{figure}
+
 Si possono in questo modo interpretare i fatti sperimentali esposti in precedenza: dato che $\sin\theta_{c}=0.235$ e $\cos\theta_{c}=0.972$, transizioni con $\Delta S = 0$ hanno una costante di accoppiamento effettiva maggiore di transizioni con $\Delta S = 1$. Si spiega inoltre perché $G_{F}^{n}$ (Eq.~(\ref{eq:gf_neutron_value})) è più piccola di $G_{F}^{\mu}$ (Eq.~(\ref{eq:gf_muon_value})): in realtà, quello che si misura nel decadimento del neutrone è $G_{F}\cos \theta_{c}$. \\
 Il valore dell'angolo di Cabibbo può essere ricavato confrontando decadimenti semi-leptonici analoghi con $\Delta S = 1$ e $\Delta S = 0$. Utilizzando, ad esempio, i decadimenti visti in Tab. \ref{tab:leptonic_decays} si ottiene il seguente rapporto tra le frazioni di decadimento:
 \begin{equation}
