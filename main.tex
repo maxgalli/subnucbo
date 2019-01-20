@@ -471,6 +471,10 @@ Il decadimento beta del neutrone è riportato in Eq. (\ref{eq:beta_neg}) mentre 
                                 (c) -- [anti fermion] (f2),
                                 (c) -- [fermion] (f3),
                         };
+                        \draw [decoration={brace}, decorate] (a.south west) -- (m.north west)
+                                node [pos=0.5, left] {\(n\)};
+                        \draw [decoration={brace}, decorate] (h1.north east) -- (f1.south east)
+                                node [pos=0.5, right] {\(p\)};
                 \end{feynman}
         \end{tikzpicture}
         \caption{Diagramma di Feynman per il decadimento del neutrone, assumendo protone e neutrone costituiti da quark.}
@@ -506,7 +510,7 @@ che mostra come l'effetto dell'aggiunta dei fattori $c_{V}$ e $c_{A}$ sia quello
 \end{equation}
 nel valore del tasso di decadimento. Di nuovo, è possibile riscrivere questo valore in termini di $G_{F}$:
 \begin{equation}
-        \Gamma = \frac { \rho_{f} m _ { e } ^ { 5 } } { 2 \pi ^ { 3 } \hbar ^ { 7 } } G _ { F } ^ { 2 } c_{V}^{2} \left( 1 + 3 \lambda ^ { 2 } \right)
+        \Gamma = \frac { \rho_{f} m _ { e } ^ { 5 } c^{4} } { 2 \pi ^ { 3 } \hbar ^ { 7 } } G _ { F } ^ { 2 } c_{V}^{2} \left( 1 + 3 \lambda ^ { 2 } \right)
 \end{equation}
 Calcolando il valore dello spazio delle fasi $\rho_{f}$ e sostituendo a $\Gamma$ l'inverso della vita media del neutrone $\tau_{n}=885.7\; \mathrm{s}$ , si trova un valore di $G_{F}$ pari a:
 \begin{equation}
@@ -819,7 +823,7 @@ Con questa nuova ipotesi, si ha un nuovo doppietto per l'interazione debole:
         \left( \begin{array} { l } { c } \\ { s _ { c } } \end{array} \right) = \left( \begin{array} { c } { c } \\ { s \cos \theta _ { c } - d \sin \theta _ { c } } \end{array} \right)
         \label{eq:c_sc_doublet}
 \end{equation}
-Utilizzando le stessi notazioni usate in (\ref{eq:genu}), (\ref{eq:gd}) e (\ref{eq:gs}) è possibile descrivere i processi semi-leptonici in cui interviene il quark $c$ usando l'ipotesi del meccanismo GIM:
+Utilizzando le stesse notazioni usate in (\ref{eq:genu}), (\ref{eq:gd}) e (\ref{eq:gs}) è possibile descrivere i processi semi-leptonici in cui interviene il quark $c$ usando l'ipotesi del meccanismo GIM:
 \begin{equation}
         \langle ( \nu _ { e } e ^ { + } ) s | H _ { W } | c \rangle \propto g _ { e \nu } g _ { c s } = G _ { F } \operatorname { c o s } \theta _ { c }
         \label{eq:gcs}
@@ -829,7 +833,7 @@ Utilizzando le stessi notazioni usate in (\ref{eq:genu}), (\ref{eq:gd}) e (\ref{
         \label{eq:gcd}
 \end{equation}
 da cui segue che nei decadimenti di mesoni charmati con $\Delta C = 1$ in mesoni non charmati, le transizioni $c \rightarrow s$ (che hanno accoppiamento $\cos^{2}\theta_{c}$) dominano sulle transizioni $c \rightarrow d$ (accoppiamento $\sin^{2}\theta_{c}$). \\
-Riassumendo, gli stati ruotati autostati dell'interazione debole che compaiono nelle due famiglie di quark
+Riassumendo, gli autostati ruotati dell'interazione debole che compaiono nelle due famiglie di quark
 \begin{equation}
         \left( \begin{array} { l } { u } \\ { d_{c} } \end{array} \right)  \quad \left( \begin{array} { l } { c } \\ { s_{c} } \end{array} \right)
 \end{equation}
@@ -876,7 +880,7 @@ Una rappresentazione grafica dei due autostati dell'interazione debole $d_{c}$ e
 \label{subsec:nc_charm}
 Un quarto quark era necessario anche per spiegare alcune anomalie connesse con le correnti neutre: i processi a corrente neutra sperimentalmente osservati sono caratterizzati dalla regola di selezione $\Delta S = 0$, mentre quelli con $\Delta S = 1$ non sono osservati. Più in generale, si dice che sono sfavorite le correnti neutre con violazione di \textit{flavour} (FCNC). Tuttavia, il meccanismo che ruota lo stato dei quark ($d, s$), postulando l'esistenza dei soli tre quark $u, d, s$, produce un termine con $\Delta S = 1$ quando considera NC:
 \begin{equation}
-        \begin{array} { c } J _ { \mu } = \overline { u }  \gamma _ { \mu } \left( 1 + \gamma _ { 5 } \right) d_{c} \approx { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \overline { u } , \overline { d } \cos \theta _ { c } + \overline { s } \sin \theta _ { c } \right) \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + \left( d \overline { d } \cos ^ { 2 } \theta _ { c } + s \overline { s } \sin ^ { 2 } \theta _ { c } \right) } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
+        \begin{array} { c } J _ { \mu } \approx { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \overline { u } , \overline { d } \cos \theta _ { c } + \overline { s } \sin \theta _ { c } \right) \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + \left( d \overline { d } \cos ^ { 2 } \theta _ { c } + s \overline { s } \sin ^ { 2 } \theta _ { c } \right) } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
         \label{eq:gim_before}
 \end{equation}
 \begin{figure}[!h]
@@ -905,7 +909,7 @@ Un quarto quark era necessario anche per spiegare alcune anomalie connesse con l
 Ciascun termine $u \overline { u } , d \overline { d } , s \overline { s }$ rappresenta la densità di probabilità per la transizione di uno stesso sapore di quark da uno stato iniziale a quello finale, con emissione di una $Z^{0}$. Sono inoltre previste le transizioni mai osservate $s\overline{d}$ e $d\overline{s}$. I diagrammi di Feynman delle correnti che compaiono in (\ref{eq:gim_before}) sono rappresentati in Fig. \ref{fig:gim_before}.
 Con il nuovo doppietto (\ref{eq:c_sc_doublet}), la corrente neutra può riscriversi nella forma:
 \begin{equation}
-        \begin{array} { l } J _ { \mu } = \overline { u }  \gamma _ { \mu } \left( 1 + \gamma _ { 5 } \right) d _ { c } + \overline { c } \gamma _ { \mu } \left( 1 + \gamma _ { 5 } \right) s _ { c } \approx { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) + \left( \overline { c } , \overline { s } _ { c } \right) \left( \begin{array} { c } { c } \\ { s _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + c \overline { c } + ( d \overline { d } + s \overline { s } ) \cos ^ { 2 } \theta _ { c } + ( s \overline { s } + d \overline { d } ) \sin ^ { 2 } \theta _ { c } } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d - \overline { s } d - s \overline { d } ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
+        \begin{array} { l } J _ { \mu } \approx { \left( \overline { u } , \overline { d } _ { c } \right) \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) + \left( \overline { c } , \overline { s } _ { c } \right) \left( \begin{array} { c } { c } \\ { s _ { c } } \end{array} \right) = } \\ { = \underbrace { u \overline { u } + c \overline { c } + ( d \overline { d } + s \overline { s } ) \cos ^ { 2 } \theta _ { c } + ( s \overline { s } + d \overline { d } ) \sin ^ { 2 } \theta _ { c } } _ { \Delta S = 0 } + \underbrace { ( s \overline { d } + \overline { s } d - \overline { s } d - s \overline { d } ) \sin \theta _ { c } \cos \theta _ { c } } _ { \Delta S = 1 } } \end{array}
         \label{eq:gim_after}
 \end{equation}
 e i termini che prevedono transizioni con $\Delta S = 1$ sono automaticamente cancellati.
@@ -1018,11 +1022,11 @@ Il decadimento potrebbe tuttavia procedere anche secondo il diagramma mostrato a
 
 \subsection{I sei quark e la matrice CKM}
 \label{subsec:ckm}
-Nel 1973 Kobayashi e Maskawa estesero l'idea di Cabibbo a tre generazioni di quark. Si hanno così i seguenti autostati dell'interazione debole:
+Nel 1973 Kobayashi e Maskawa estesero l'idea di Cabibbo a tre generazioni di quark. Il motivo fu l'esigenza di spiegare la violazione di $CP$ che emergeva dal meccanismo GIM. Per questo proposito era infatti necessario aggiungere un termine complesso alla matrice di rotazione, ma tale termine può sempre essere eliminato, attravererso un'adeguata trasformazione di fase, a meno che la matrice non sia $3 \times 3$; da qui, l'esigenza di avere tre generazioni di quark. Così facendo, si hanno i seguenti autostati dell'interazione debole:
 \begin{equation}
-        \left( \begin{array} { l } { u } \\ { d_{c}  } \end{array} \right)  \quad \left( \begin{array} { l } { c } \\ { s_{c} \end{array} \right) , \quad \left( \begin{array} { l } { t } \\ { b_{c} } \end{array} \right)
+        \left( \begin{array} { l } { u } \\ { d_{c}  } \end{array} \right) , \left( \begin{array} { l } { c } \\ { s_{c} \end{array} \right) , \left( \begin{array} { l } { t } \\ { b_{c} } \end{array} \right)
 \end{equation}
-che sono legati agli stati fisici dalla matrice di Cabibbo-Kobayashi-Maskawa:
+dove quelli ruotati sono legati agli stati fisici dalla matrice di Cabibbo-Kobayashi-Maskawa:
 \begin{equation}
         \left( \begin{array} { l } { d _ { c } } \\ { s _ { c } } \\ { b _ { c } } \end{array} \right) = V _ { C K M } \left( \begin{array} { l } { d } \\ { s } \\ { b } \end{array} \right)
 \end{equation}
@@ -1069,7 +1073,6 @@ L'introduzione della fase in questo modo è possibile solamente se la matrice CK
 \begin{equation}
         \delta_{13}=(1.20\pm0.08)^{\circ}
 \end{equation}
-
 \begin{figure}[t]
         \centering
         \begin{tikzpicture}[>=latex, font=\scriptsize]
@@ -1111,17 +1114,34 @@ L'introduzione della fase in questo modo è possibile solamente se la matrice CK
         \caption{Rotazione dei quark.}
         \label{fig:mixing3D}
 \end{figure}
-
+Un'altra utile parametrizzazione è quella di Wolfenstein. Partendo dalla (\ref{eq:CKMsencos}) e procedendo con le seguenti sostituzioni:
+\begin{equation}
+        s_{12}=\lambda\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,s_{23}=A\lambda^2\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,s_{13}e^{-i\delta_{13}}=A\lambda^3(\rho-i\eta)
+        \label{eq:parametriWolfenstein}
+\end{equation}
+si ottiene, al terzo ordine di approssimazione:
+\begin{equation}
+        V=
+        \begin{pmatrix}
+                1-\frac{\lambda^2}{2} & \lambda & A\lambda^3(\rho-i\eta)\\
+                -\lambda & 1-\frac{\lambda^2}{2} & A\lambda^2\\
+                A\lambda^3(1-\rho-i\eta) & -A\lambda^2 & 1
+        \end{pmatrix}
+        +\mathpzc{O}(\lambda^4)
+        \label{eq:CKMWolfenstein}
+\end{equation}
+Essa risulta particolarmente comoda per costruire i triangoli di unitarietà.
 Gli elementi della matrice CKM, determinati sperimentalmente, sono i seguenti:
 \begin{equation}
         V _ { C K M } = \left( \begin{array} { c c c } { 0.97428 \pm 0.00015 } & { 0.2253 \pm 0.0007 } & { 0.00347 \pm 0.00016 } \\ { 0.2252 \pm 0.0007 } & { 0.97333 \pm 0.00015 } & { 0.041 \pm 0.001 } \\ { 0.0086 \pm 0.0003 } & { 0.040 \pm 0.001 } & { 0.99915 \pm 0.00005 } \end{array} \right)
         \label{eq:ckm_values}
 \end{equation}
-Il fatto che gli elementi non diagonali siano molto piccoli mentre quelli sulla diagonale siano vicini all'unità ha un significato fisico importante, cioè che il modello predice una specifica sequenza di decadimenti:
+In base a questi, si evidenziano due fatti importanti: innanzitutto è verificata con buona precisione la condizione di unitarietà della matrice:
 \begin{equation}
-        t \rightarrow b \rightarrow c \rightarrow s \rightarrow u
+        \sum _ { k } \left| V _ { i k } \right| ^ { 2 } = \sum _ { i } \left| V _ { i k } \right| ^ { 2 } = 1
+        \label{eq:weak_universality_ckm}
 \end{equation}
-Con lo schema di mixing, quark e leptoni hanno lo stesso accoppiamento e si può così parlare di universalità quark-leptoni.
+la quale implica che la somma di tutti i possibili accoppiamenti dei quark \textit{up-type} con tutti quelli \textit{down-type} è la stessa per tutte le generazioni. In secondo luogo, osservando i valori sulla diagonale si può vedere come i quark decadano principalmente nei componenti dei rispettivi doppietti; analizzando i termini non diagonali si vede invece quanto i quark di una generazione fanno mixing con un'altra: più specificamente, il mixing tra prima e seconda generazione è maggiore rispetto a quello tra seconda e terza, il quale a sua volta è maggiore rispetto a quello tra prima e terza.
 
 \appendix
 \section{Equazione e formalismo di Dirac}
