@@ -41,7 +41,7 @@
 \maketitle
 
 \begin{abstract}
-        Uno degli aspetti caratteristici dell'interazione debole è il cosiddetto \textit{quark mixing}: questa teoria giustifica i risultati sperimentali postulando che i quark che compaiono nei processi deboli non siano gli autostati di \textit{flavor} che caratterizzano l'interazione forte, ma una loro combinazione lineare. \\
+        Uno degli aspetti caratteristici dell'interazione debole è il cosiddetto \textit{quark mixing}: questa teoria giustifica i risultati sperimentali postulando che i quark che compaiono nei processi deboli non siano gli autostati di \textit{flavour} che caratterizzano l'interazione forte, ma una loro combinazione lineare. \\
         Questo lavoro è diviso in due parti principali (che seguono una breve introduzione in \ref{sec:intro}): nella prima (\ref{sec:part_one}), dopo una descrizione dei primi modelli teorici ideati per l'interazione debole (\ref{subsec:fermi_theory}, \ref{subsec:v-a} e \ref{subsec:fermi_gt}), si analizzano le evidenze sperimentali che richiesero un'estensione della teoria (\ref{subsec:decays} e \ref{subsec:strange}) e si espone l'idea di Nicola Cabibbo di implementare un angolo di \textit{mixing} (\ref{subsec:cabibbo_angle}).
         Nella seconda parte (\ref{sec:part_two}) si descrive invece come la teoria del \textit{mixing}, opportunamente estesa anche alle correnti neutre (\ref{subsec:nc} e \ref{subsec:nc_charm}), portò alla predizione dei quark \textit{charm} (\ref{subsec:gim}), \textit{bottom} e \textit{top} (\ref{subsec:ckm}), con la definitiva condensazione della teoria nella matrice CKM.
 \end{abstract}
@@ -51,7 +51,7 @@
 \subsection{Caratteristiche generali dell'interazione debole}
 L'interazione debole presenta una serie di proprietà che la rendono peculiare rispetto alle altre interazioni fondamentali:
 \begin{itemize}
-        \item è l'unica interazione capace di cambiare il \textit{flavor} dei quark;
+        \item è l'unica interazione capace di cambiare il \textit{flavour} dei quark;
         \item non conserva alcune quantità che sono invece conservate nelle altre interazioni, quali ad esempio parità, coniugazione di carica e stranezza;
         \item è la sola interazione che coinvolge i neutrini;
         \item è responsabile del decadimento beta dei nuclei.
@@ -177,7 +177,7 @@ Il primo modello che abbia descritto con successo diverse caratteristiche del de
         \caption{Vertice a quattro fermioni della teoria di Fermi raffigurante un decadimento di tipo beta negativo.}
         \label{fig:fermi_decay}
 \end{figure}
-Prendendo come esempio il decadimento del neutrone, l'hamiltoniana predetta dalla teoria di Fermi si può scrivere nella seguente maniera:
+Prendendo come esempio il decadimento del neutrone, il cui diagramma di Feynman è riportato in Fig. \ref{fig:neutron_decay_simple}, l'hamiltoniana predetta dalla teoria di Fermi si può scrivere nella seguente maniera:
 \begin{equation}
         H _ { \mathrm { F } } = H _ { \mathrm { n } } ^ { 0 } + H _ { \mathrm { p } } ^ { 0 } + H _ { \mathrm { e } } ^ { 0 } + H _ { \nu } ^ { 0 } + \underbrace { \sum _ { i } C _ { i } \int \mathrm { d } ^ { 3 } x \left( \overline { \psi } _ { \mathrm { p } } \hat { O } _ { i } \psi _ { \mathrm { n } } \right) \left( \overline { \psi } _ { \mathrm { e } } \hat { O } _ { i } \psi _ { \nu } \right) } _ { \text { interazione } }
         \label{eq:fermi_hamiltonian}
@@ -187,6 +187,18 @@ dove $\psi_{p}$, $\psi_{n}$, $\psi_{e}$ e $\psi_{\nu}$ sono le funzioni d'onda s
         J ^ { \mu } = \overline { \psi } \hat{O} _ { i } \psi
         \label{eq:current}
 \end{equation}
+\begin{figure}[!h]
+        \centering
+        \feynmandiagram [layered layout, horizontal=a to b] {
+                a [particle=\(n\)] -- [fermion] b -- [fermion] f1 [particle=\(p\)],
+                b -- [boson, edge label'=\(W^{-}\)] c,
+                c -- [anti fermion] f2 [particle=\(\overline \nu_{e}\)],
+                c -- [fermion] f3 [particle=\(e^{-}\)],
+        };
+        \caption{Diagramma di Feynman per il decadimento del neutrone.}
+        \label{fig:neutron_decay_simple}
+\end{figure}
+
 Le quantità $\hat{O}_{i}$ sono operatori appropriati che caratterizzano il tipo di interazione, combinazione lineare delle matrici di Dirac $\gamma^{\mu}$.
 Le (\ref{eq:current}) sono forme bilineari che si trasformano sotto trasformazioni di Lorentz in modo analogo ad una quantità scalare (S), pseudo-scalare (P), vettoriale (V), assiale (A) e tensoriale (T); a seconda dell'operatore scelto, l'indice in $\hat{O}_{i}$ può assumere i valori $i = S, P, V, T, A$. Le possibili correnti sono riportate in Tab~\ref{tab:bilinear}.
 \begin{table}
@@ -208,7 +220,7 @@ Le (\ref{eq:current}) sono forme bilineari che si trasformano sotto trasformazio
 Fermi, che sviluppò la teoria in analogia a quella elettromagnetica, ipotizzò inizialmente che queste quantità fossero solo vettoriali, ma alcune osservazioni sperimentali degli anni successivi mostrarono che non era così.
 \subsection{Teoria V-A delle interazioni deboli}
 \label{subsec:v-a}
-La teoria $V-A$ dell'interazione debole venne sviluppata a partire dal 1957 da Feynmann e Gell-Mann come estensione della teoria di Fermi: ciò che rese necessario un aggiornamento della teoria fu la scoperta, avvenuta alcuni anni prima, della violazione della parità da parte dell'interazione debole. Così come la teoria di Fermi, essa si basa sui seguenti fatti:
+La teoria $V-A$ dell'interazione debole venne sviluppata a partire dal 1957 da Feynman e Gell-Mann come estensione della teoria di Fermi: ciò che rese necessario un aggiornamento della teoria fu la scoperta, avvenuta alcuni anni prima, della violazione della parità da parte dell'interazione debole. Così come la teoria di Fermi, essa si basa sui seguenti fatti:
 \begin{itemize}
         \item per particelle con spin 1/2, le funzioni d'onda appropriate sono spinori a quattro componenti che soddisfano l'equazione di Dirac;
         \item l'ampiezza del processo è proporzionale al quadrivettore densità di corrente.
@@ -580,7 +592,7 @@ in ottimo accordo con i dati sperimentali.
 \subsection{Decadimenti deboli di particelle strane}
 \label{subsec:strange}
 Un altro fatto che richiese un ampliamento della teoria formulata da Fermi fu l'osservazione di anomalie nei decadimenti che coinvolgono particelle strane, in particolare nella differenza di comportamento tra processi con e senza variazione di stranezza ($\Delta S = 1$ e $\Delta S = 0$ rispettivamente).
-Si consideri il caso dei decadimenti riportati in Tab.~\ref{tab:leptonic_decays}, i cui diagrammi di Feynmann sono riportati rispettivamente in Fig. \ref{fig:pion_decay} e \ref{fig:kaon_decay}.
+Si consideri il caso dei decadimenti riportati in Tab.~\ref{tab:leptonic_decays}, i cui diagrammi di Feynman sono riportati rispettivamente in Fig. \ref{fig:pion_decay} e \ref{fig:kaon_decay}.
 \begin{table}[!h]
         \begin{tabular}{llccc}
                 \hline
@@ -621,7 +633,7 @@ Utilizzando la regola d'oro di Fermi e la costante $G_{F}$ per il calcolo della 
         \label{eq:frac_lepton_decay}
 \end{equation}
 
-La stessa anomalia si può notare considerando i decadimenti in Tab.~\ref{tab:isemileptonic_decays}, i cui diagrammi di Feynmann sono riportati in Fig. \ref{fig:sigma_decay}. Utilizzando la regola di Sargent
+La stessa anomalia si può notare considerando i decadimenti in Tab.~\ref{tab:isemileptonic_decays}, i cui diagrammi di Feynman sono riportati in Fig. \ref{fig:sigma_decay}. Utilizzando la regola di Sargent
 \begin{equation}
         \frac { \left( \Gamma _ { i } / \Gamma \right) } { \tau } \simeq G _ { F } ^ { 2 } E _ { 0 } ^ { 5 } \simeq G _ { F } ^ { 2 } \Delta m ^ { 5 }
         \label{eq:sargent}
@@ -710,39 +722,69 @@ Si conferma quindi che il rapporto tra $G _ { s } ^ { 2 }$ e $G _ { d } ^ { 2 }$
 \label{subsec:cabibbo_angle}
 I fatti sperimentali sopracitati vennero interpretati da Nicola Cabibbo nel 1964. Egli mostrò che sia i leptoni che i quark sono autostati dell'interazione debole, con le seguenti assunzioni:
 \begin{itemize}
-        \item l'accoppiamento degli elettroni al campo debole è proporzionale ad una carica debole $g_{e\nu}$;
-        \item l'accoppiamento dei muoni è proporzionale a $g_{\mu\nu}$, con quest'ultima identica a $g_{e\nu}$;
-        \item l'accoppiamento dei quark $(u, d)$ genera le transizioni con $\Delta S = 0$ ed è proporzionale a $g_{ud}$;
-        \item l'accoppiamento dei quark $(u, s)$ genera le transizioni con $\Delta S = 1$ ed è proporzionale a $g_{us}$;
+        \item l'accoppiamento dei leptoni al campo debole è proporzionale alla carica debole $g_{w}$;
+        \item l'accoppiamento dei quark $(u, d)$ genera le transizioni con $\Delta S = 0$ ed è proporzionale a $g_{w}\cos\theta_{c}$;
+        \item l'accoppiamento dei quark $(u, s)$ genera le transizioni con $\Delta S = 1$ ed è proporzionale a $g_{w}\sin\theta_{c}$;
 \end{itemize}
-In ogni vertice di un diagramma di Feynman occorre inserire la costante corrispondente, con il calcolo degli elementi di matrice che viene di conseguenza:
+\begin{figure}[!h]
+        \centering
+        \subfloat{
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a)[label=180:\(\frac { - i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right) \cos \theta _ { c }\;\;\)];
+                        \vertex [above left=of a](i2) {\(\overline u\)};
+                        \vertex [below left=of a] (i1) {\(d\)};
+                        \vertex [right= 2.0 cm of a] (b);
+                        \diagram* {
+                                (i1) -- [fermion] (a) -- [fermion] (i2),
+                                (a) -- [boson, edge label=\(W^{-}\)] (b),
+                        };
+                \end{feynman}
+        \end{tikzpicture}
+        }
+        \qquad
+        \qquad
+        \subfloat{
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a)[label=180:\(\frac { - i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right) \sin \theta _ { c }\;\;\)];
+                        \vertex [above left=of a](i2) {\(\overline u\)};
+                        \vertex [below left=of a] (i1) {\(s\)};
+                        \vertex [right= 2.0 cm of a] (b);
+                        \diagram* {
+                                (i1) -- [fermion] (a) -- [fermion] (i2),
+                                (a) -- [boson, edge label=\(W^{-}\)] (b),
+                        };
+                \end{feynman}
+        \end{tikzpicture}
+        } \\
+        \caption{Vertici deboli $(u,d)$ e $(u,s)$ e relative costanti di accoppiamento.}
+        \label{fig:cabibbo_ud_us}
+\end{figure}
+In ogni vertice di un diagramma di Feynman occorre inserire la costante corrispondente, come riportato in Fig. \ref{fig:cabibbo_ud_us}, con il calcolo degli elementi di matrice che viene di conseguenza:
 \begin{itemize}
         \item per i processi puramente leptonici si ha
                 \begin{equation}
-                        \left\langle f \left| H _ { W } \right| i \right\rangle \propto g _ { e v } ^ { 2 } = G _ { F }
+                        \left\langle f \left| H _ { W } \right| i \right\rangle \propto G^{2} _ { F }
                         \label{eq:genu}
                 \end{equation}
         \item per i processi semi-leptonici con $\Delta S = 0$ si ha
                 \begin{equation}
-                \left\langle f \left| H _ { W } \right| i \right\rangle _ { \Delta S = 0 } \propto g _ { e v } g _ { u d } = G _ { d }
+                        \left\langle f \left| H _ { W } \right| i \right\rangle _ { \Delta S = 0 } \propto G^{2} _ { F }\cos^{2}\theta_{c}
                 \label{eq:gd}
         \end{equation}
-\item per i processi semi-leptonici con $\Delta S = 1$ si ha
+        \item per i processi semi-leptonici con $\Delta S = 1$ si ha
         \begin{equation}
-                \left\langle f \left| H _ { W } \right| i \right\rangle _ { \Delta S = 1 } \propto g _ { e v } g _ { u s } = G _ { s }
+                \left\langle f \left| H _ { W } \right| i \right\rangle _ { \Delta S = 1 } \propto  G^{2} _ { s }\sin^{2}\theta_{c}
                 \label{eq:gs}
         \end{equation}
 \end{itemize}
-L'ipotesi di Cabibbo è che l'interazione debole dipenda da un solo parametro, la costante di Fermi $G_{F}$ (come già immaginato da Fermi precedentemente). Questa descrive l'accoppiamento del campo debole sia verso i leptoni che verso i quark tramite la relazione:
-\begin{equation}
-        G _ { F } = g _ { e v } ^ { 2 } = g _ { u d } ^ { 2 } + g _ { u s } ^ { 2 } \longrightarrow g _ { u d } = g _ { e v } \cos \theta _ { C } ; \quad g _ { u s } = g _ { e v } \sin \theta _ { C }
-\end{equation}
 In questo modello, quanto sopra esposto corrisponde al fatto che i quark che partecipano all'interazione debole non sono gli autostati di sapore che caratterizzano l'interazione forte, ma una loro combinazione lineare, che può considerarsi ruotata di un angolo $\theta_{c}$ rispetto ai quark ordinari. Detti i nuovi autostati dell'interazione debole ($u_{c}, d_{c}, s_{c}$) si hanno così i seguenti doppietti deboli:
 \begin{equation}
         \left( \begin{array} { c } { v _ { e } } \\ { e ^ { - } } \end{array} \right) , \left( \begin{array} { c } { v _ { \mu } } \\ { \mu ^ { - } } \end{array} \right) , \left( \begin{array} { c } { u } \\ { d _ { c } } \end{array} \right) = \left( \begin{array} { c } { u } \\ { d \cos \theta _ { c } + s \sin \theta _ { c } } \end{array} \right)
         \label{eq:weak_doublets}
 \end{equation}
-dove $\theta_{c}$ è l'angolo di Cabibbo e si trova sperimentalmente essere $\theta _ { c } = 0.235\: \mathrm { rad }$. La scelta di $u$ come autostato non mescolato è semplicemente una convenzione. Per ogni doppietto di leptoni l'accoppiamento debole è specificato da $G_{F}$. L'apparente differenza tra i valori della costante di accoppiamento è dovuta al processo di miscelamento dei quark. Una rappresentazione grafica dell'autostato debole $d_{c}$ che costituisce un doppietto con $u$ è visibile in Fig. \ref{fig:dmixing}.\\
+dove $\theta_{c}$ è l'angolo di Cabibbo e si trova sperimentalmente essere $\theta _ { c } = 0.235\: \mathrm { rad }$. La scelta di $u$ come autostato non mescolato è semplicemente una convenzione. Per ogni doppietto di leptoni l'accoppiamento debole è specificato da $G_{F}$. L'apparente differenza tra i valori della costante di accoppiamento è dovuta al processo di miscelamento dei quark. Una rappresentazione grafica dell'autostato debole $d_{c}$ che costituisce un doppietto con $u$ è visibile in Fig. \ref{fig:dmixing}.
 \begin{figure}[t]
         \centering
         \begin{tikzpicture}[>=latex, font=\scriptsize]
@@ -758,7 +800,6 @@ dove $\theta_{c}$ è l'angolo di Cabibbo e si trova sperimentalmente essere $\th
         \caption{Autostato dell'interazione debole $d_{c}$.}
         \label{fig:dmixing}
 \end{figure}
-
 Si possono in questo modo interpretare i fatti sperimentali esposti in precedenza: dato che $\sin\theta_{c}=0.235$ e $\cos\theta_{c}=0.972$, transizioni con $\Delta S = 0$ hanno una costante di accoppiamento effettiva maggiore di transizioni con $\Delta S = 1$. Si spiega inoltre perché $G_{F}^{n}$ (Eq.~(\ref{eq:gf_neutron_value})) è più piccola di $G_{F}^{\mu}$ (Eq.~(\ref{eq:gf_muon_value})): in realtà, quello che si misura nel decadimento del neutrone è $G_{F}\cos \theta_{c}$. \\
 Il valore dell'angolo di Cabibbo può essere ricavato confrontando decadimenti semi-leptonici analoghi con $\Delta S = 1$ e $\Delta S = 0$. Utilizzando, ad esempio, i decadimenti visti in Tab. \ref{tab:leptonic_decays} si ottiene il seguente rapporto tra le frazioni di decadimento:
 \begin{equation}
@@ -803,7 +844,7 @@ Si noti che le interazioni a corrente neutra non erano previste dalla teoria di 
 \end{figure}
 \subsection{Quark \textit{charm} e meccanismo GIM}
 \label{subsec:gim}
-Nel 1955 Gell-Mann e Pais osservarono che è possibile formare due combinazioni lineari dei mesoni $K$ neutri che sono autostati della simmetria CP, e quindi dell'interazione debole, e che questi corrispondono alle particelle che decadono nei due diversi stati di CP. Scegliendo le seguenti combinazioni lineari:
+Nel 1955 Gell-Mann e Pais osservarono che è possibile formare due combinazioni lineari dei mesoni $K$ neutri che sono autostati della simmetria \textit{CP}, e quindi dell'interazione debole, e che questi corrispondono alle particelle che decadono nei due diversi stati di \textit{CP}. Scegliendo le seguenti combinazioni lineari:
 \begin{equation}
         | K _ { 1 } ^ { 0 } \rangle = 1 / \sqrt { 2 } ( | K ^ { 0 } \rangle + | \overline { K } ^ { 0 } \rangle ) \quad ; \quad | K _ { 2 } ^ { 0 } \rangle = 1 / \sqrt { 2 } ( | K ^ { 0 } \rangle - | \overline { K } ^ { 0 } \rangle )
 \end{equation}
@@ -818,18 +859,53 @@ Questo fatto fu messo in luce nel 1970 da Glashow, Iliopulos e Maiani, i quali p
         \item un nuovo numero quantico $C$ che, analogamente alla stranezza, si conserva nell'interazione forte ma non in quella debole;
         \item è autostato dell'interazione debole e forma un secondo doppietto di quark con il secondo stato ruotato della teoria di Cabibbo $s_{ c } = s \operatorname { c o s } \theta _ { c } - d \operatorname { s i n } \theta _ { c }$.
 \end{enumerate}
+\begin{figure}[!h]
+        \centering
+        \subfloat{
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a)[label=180:\(\frac { - i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right) (-\sin \theta _ { c })\;\;\)];
+                        \vertex [above left=of a](i2) {\(\overline c\)};
+                        \vertex [below left=of a] (i1) {\(d\)};
+                        \vertex [right= 2.0 cm of a] (b);
+                        \diagram* {
+                                (i1) -- [fermion] (a) -- [fermion] (i2),
+                                (a) -- [boson, edge label=\(W^{-}\)] (b),
+                        };
+                \end{feynman}
+        \end{tikzpicture}
+        }
+        \qquad
+        \qquad
+        \subfloat{
+        \begin{tikzpicture}
+                \begin{feynman}
+                        \vertex (a)[label=180:\(\frac { - i g _ { w } } { 2 \sqrt { 2 } } \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right) \cos \theta _ { c }\;\;\)];
+                        \vertex [above left=of a](i2) {\(\overline c\)};
+                        \vertex [below left=of a] (i1) {\(s\)};
+                        \vertex [right= 2.0 cm of a] (b);
+                        \diagram* {
+                                (i1) -- [fermion] (a) -- [fermion] (i2),
+                                (a) -- [boson, edge label=\(W^{-}\)] (b),
+                        };
+                \end{feynman}
+        \end{tikzpicture}
+        } \\
+        \caption{Vertici deboli $(c,d)$ e $(c,s)$ e relative costanti di accoppiamento.}
+        \label{fig:cabibbo_cd_cs}
+\end{figure}
 Con questa nuova ipotesi, si ha un nuovo doppietto per l'interazione debole:
 \begin{equation}
         \left( \begin{array} { l } { c } \\ { s _ { c } } \end{array} \right) = \left( \begin{array} { c } { c } \\ { s \cos \theta _ { c } - d \sin \theta _ { c } } \end{array} \right)
         \label{eq:c_sc_doublet}
 \end{equation}
-Utilizzando le stesse notazioni usate in (\ref{eq:genu}), (\ref{eq:gd}) e (\ref{eq:gs}) è possibile descrivere i processi semi-leptonici in cui interviene il quark $c$ usando l'ipotesi del meccanismo GIM:
+Nei diagrammi di Feynman in cui compare il quark $c$ risulta quindi necessario introdurre dei nuovi fattori al vertice, come indicato in Fig. \ref{fig:cabibbo_cd_cs}. Utilizzando le stesse notazioni usate in (\ref{eq:genu}), (\ref{eq:gd}) e (\ref{eq:gs}) è possibile descrivere i processi semi-leptonici in cui interviene il quark $c$ usando l'ipotesi del meccanismo GIM:
 \begin{equation}
-        \langle ( \nu _ { e } e ^ { + } ) s | H _ { W } | c \rangle \propto g _ { e \nu } g _ { c s } = G _ { F } \operatorname { c o s } \theta _ { c }
+        \langle ( \nu _ { e } e ^ { + } ) s | H _ { W } | c \rangle \propto  G^{2} _ { F } \cos^{2}\theta _ { c }
         \label{eq:gcs}
 \end{equation}
 \begin{equation}
-        \left\langle \left( \nu _ { e } e ^ { + } \right) d \left| H _ { W } \right| c \right\rangle \propto g _ { e \nu } g _ { c d } = G _ { F } \sin \theta _ { c }
+        \left\langle \left( \nu _ { e } e ^ { + } \right) d \left| H _ { W } \right| c \right\rangle \propto G^{2} _ { F } \sin^{2} \theta _ { c }
         \label{eq:gcd}
 \end{equation}
 da cui segue che nei decadimenti di mesoni charmati con $\Delta C = 1$ in mesoni non charmati, le transizioni $c \rightarrow s$ (che hanno accoppiamento $\cos^{2}\theta_{c}$) dominano sulle transizioni $c \rightarrow d$ (accoppiamento $\sin^{2}\theta_{c}$). \\
@@ -865,17 +941,6 @@ Una rappresentazione grafica dei due autostati dell'interazione debole $d_{c}$ e
         ( \overline { u } , \overline { c } ) \left( \begin{array} { c } { d _ { c } } \\ { s _ { c } } \end{array} \right) = ( \overline { u } , \overline { c } ) \left( \begin{array} { c } { \operatorname { c o s } \theta _ { c } \operatorname { s i n } \theta _ { c } } \\ { - \operatorname { s i n } \theta _ { c } \operatorname { c o s } \theta _ { c } } \end{array} \right) \left( \begin{array} { l } { d } \\ { s } \end{array} \right) = ( \overline { u } , \overline { c } ) V _ { c } \left( \begin{array} { l } { d } \\ { s } \end{array} \right)
 \end{equation}
 
-\begin{figure}[!h]
-        \centering
-        \feynmandiagram [layered layout, horizontal=a to b] {
-                a [particle=\(c\)] -- [fermion] b [label=0:\(\;\;g_{cd} (g_{cs})\)]-- [fermion] f1 [particle=\(d (s)\)],
-                b -- [boson, edge label'=\(W^{+}\)] c,
-                c [label=0:\(\;\;g_{e\nu}\)] -- [anti fermion] f2 [particle=\(\nu_{e}\)],
-                c -- [fermion] f3 [particle=\(e^{+}\)],
-        };
-        \caption{Interazione debole con un quark $c$ che si trasforma in $d$ o $s$.}
-        \label{fig:gim_decay}
-\end{figure}
 \subsection{Indizi sul quarto quark dalle correnti neutre}
 \label{subsec:nc_charm}
 Un quarto quark era necessario anche per spiegare alcune anomalie connesse con le correnti neutre: i processi a corrente neutra sperimentalmente osservati sono caratterizzati dalla regola di selezione $\Delta S = 0$, mentre quelli con $\Delta S = 1$ non sono osservati. Più in generale, si dice che sono sfavorite le correnti neutre con violazione di \textit{flavour} (FCNC). Tuttavia, il meccanismo che ruota lo stato dei quark ($d, s$), postulando l'esistenza dei soli tre quark $u, d, s$, produce un termine con $\Delta S = 1$ quando considera NC:
@@ -978,48 +1043,61 @@ Il diagramma di Feynman del processo è visibile in Fig. \ref{fig:k0_z_decay}.
         \label{fig:k0_z_decay}
 \end{figure}
 Il decadimento potrebbe tuttavia procedere anche secondo il diagramma mostrato a sinistra in Fig. \ref{fig:k0_boxes}, il quale porterebbe ad una stima di (\ref{eq:k0_br}) molto maggiore del risultato osservato; adottando il meccanismo GIM si ha che anche il secondo diagramma di Fig. \ref{fig:k0_boxes} contribuisce al calcolo, fornendo un contributo che si cancella quasi esattamente con l'altro e giustificando così il valore molto piccolo di (\ref{eq:k0_br}).
-
 \begin{figure}[!h]
         \centering
         \subfloat{
-                \feynmandiagram [layered layout, horizontal=a to b] {
-                % Draw the top and bottom lines
-                i1 [particle=\(d\)]
-                        -- [fermion] a
-                        -- [photon, edge label=\(W^{-}\)] b
-                        -- [fermion] f1 [particle=\(\mu^{-}\)],
-                i2 [particle=\(\overline s\)]
-                        -- [anti fermion] c
-                        -- [photon, edge label'=\(W^{+}\)] d
-                        -- [anti fermion] f2 [particle=\(\mu^{+}\)],
-                % Draw the two internal fermion lines
-                { [same layer] a -- [fermion, edge label'=\(u\)] c },
-                { [same layer] b -- [anti fermion, edge label=\(\nu_{\mu}\)] d},
-                };
+                \begin{tikzpicture}
+                        \begin{feynman}
+                                \vertex (a1) {\(d\)};
+                                \vertex[right=1.2cm of a1] (a2);
+                                \vertex[right=1.2cm of a2] (a3);
+                                \vertex[right=1.2cm of a3] (a4) {\(\mu^{-}\)};
+                                \vertex[below=2.0cm of a1] (b1) {\(\overline s\)};
+                                \vertex[right=1.2cm of b1] (b2);
+                                \vertex[right=1.2cm of b2] (b3);
+                                \vertex[right=1.2cm of b3] (b4) {\(\mu^{+}\)};
+                                \diagram* {
+                                        {[edges=fermion]
+                                                (a1) -- (a2) -- [fermion, edge label'=\(u\)] (b2) -- (b1),
+                                                (b4) -- (b3) -- [fermion, edge label=\(\nu_{\mu}\)] (a3) -- (a4),
+                                        },
+                                        (a2) -- [boson, edge label=\(W^{-}\)] (a3),
+                                        (b2) -- [boson, edge label'=\(W^{+}\)] (b3),
+                                        };
+                                        \draw [decoration={brace}, decorate] (b1.south west) -- (a1.north west)
+                                                node [pos=0.5, left] {\(K^{0}\)};
+                        \end{feynman}
+                \end{tikzpicture}
         }
         \qquad
         \qquad
         \subfloat{
-                \feynmandiagram [layered layout, horizontal=a to b] {
-                % Draw the top and bottom lines
-                i1 [particle=\(d\)]
-                        -- [fermion] a
-                        -- [photon, edge label=\(W^{-}\)] b
-                        -- [fermion] f1 [particle=\(\mu^{-}\)],
-                i2 [particle=\(\overline s\)]
-                        -- [anti fermion] c
-                        -- [photon, edge label'=\(W^{+}\)] d
-                        -- [anti fermion] f2 [particle=\(\mu^{+}\)],
-                % Draw the two internal fermion lines
-                { [same layer] a -- [fermion, edge label'=\(c\)] c },
-                { [same layer] b -- [anti fermion, edge label=\(\nu_{\mu}\)] d},
-                };
-
+                \begin{tikzpicture}
+                        \begin{feynman}
+                                \vertex (a1) {\(d\)};
+                                \vertex[right=1.2cm of a1] (a2);
+                                \vertex[right=1.2cm of a2] (a3);
+                                \vertex[right=1.2cm of a3] (a4) {\(\mu^{-}\)};
+                                \vertex[below=2.0cm of a1] (b1) {\(\overline s\)};
+                                \vertex[right=1.2cm of b1] (b2);
+                                \vertex[right=1.2cm of b2] (b3);
+                                \vertex[right=1.2cm of b3] (b4) {\(\mu^{+}\)};
+                                \diagram* {
+                                        {[edges=fermion]
+                                                (a1) -- (a2) -- [fermion, edge label'=\(c\)] (b2) -- (b1),
+                                                (b4) -- (b3) -- [fermion, edge label=\(\nu_{\mu}\)] (a3) -- (a4),
+                                        },
+                                        (a2) -- [boson, edge label=\(W^{-}\)] (a3),
+                                        (b2) -- [boson, edge label'=\(W^{+}\)] (b3),
+                                        };
+                                        \draw [decoration={brace}, decorate] (b1.south west) -- (a1.north west)
+                                                node [pos=0.5, left] {\(K^{0}\)};
+                        \end{feynman}
+                \end{tikzpicture}
         } \\
         \caption{Diagrammi di Feynman al secondo ordine del decadimento $K ^ { 0 } \rightarrow \mu ^ { + }  \mu ^ { - }$; i due contributi si annullano in manera quasi esatta, essendo il primo proporzionale a $\sin\theta_{c}\cos\theta_{c}$ e il secondo a $-\sin\theta_{c}\cos\theta_{c}$.}
         \label{fig:k0_boxes}
 \end{figure}
-
 \subsection{I sei quark e la matrice CKM}
 \label{subsec:ckm}
 Nel 1973 Kobayashi e Maskawa estesero l'idea di Cabibbo a tre generazioni di quark. Il motivo fu l'esigenza di spiegare la violazione di $CP$ che emergeva dal meccanismo GIM. Per questo proposito era infatti necessario aggiungere un termine complesso alla matrice di rotazione, ma tale termine può sempre essere eliminato, attravererso un'adeguata trasformazione di fase, a meno che la matrice non sia $3 \times 3$; da qui, l'esigenza di avere tre generazioni di quark. Così facendo, si hanno i seguenti autostati dell'interazione debole:
@@ -1141,7 +1219,7 @@ In base a questi, si evidenziano due fatti importanti: innanzitutto è verificat
         \sum _ { k } \left| V _ { i k } \right| ^ { 2 } = \sum _ { i } \left| V _ { i k } \right| ^ { 2 } = 1
         \label{eq:weak_universality_ckm}
 \end{equation}
-la quale implica che la somma di tutti i possibili accoppiamenti dei quark \textit{up-type} con tutti quelli \textit{down-type} è la stessa per tutte le generazioni. In secondo luogo, osservando i valori sulla diagonale si può vedere come i quark decadano principalmente nei componenti dei rispettivi doppietti; analizzando i termini non diagonali si vede invece quanto i quark di una generazione fanno mixing con un'altra: più specificamente, il mixing tra prima e seconda generazione è maggiore rispetto a quello tra seconda e terza, il quale a sua volta è maggiore rispetto a quello tra prima e terza.
+la quale implica che la somma di tutti i possibili accoppiamenti dei quark \textit{up-type} con tutti quelli \textit{down-type} è la stessa per tutte le generazioni, costituendo un'ulteriore verifica dell'universlità debole. In secondo luogo, osservando i valori sulla diagonale si può vedere come i quark decadano principalmente nei componenti dei rispettivi doppietti; analizzando i termini non diagonali si vede invece quanto i quark di una generazione fanno mixing con un'altra: più specificamente, il mixing tra prima e seconda generazione è maggiore rispetto a quello tra seconda e terza, il quale a sua volta è maggiore rispetto a quello tra prima e terza.
 
 \appendix
 \section{Equazione e formalismo di Dirac}
