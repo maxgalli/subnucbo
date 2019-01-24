@@ -42,13 +42,13 @@
 
 \begin{abstract}
         Uno degli aspetti caratteristici dell'interazione debole è il cosiddetto \textit{quark mixing}: questa teoria giustifica i risultati sperimentali postulando che i quark che compaiono nei processi deboli non siano gli autostati di \textit{flavour} che caratterizzano l'interazione forte, ma una loro combinazione lineare. \\
-        Questo lavoro è diviso in due parti principali (che seguono una breve introduzione in \ref{sec:intro}): nella prima (\ref{sec:part_one}), dopo una descrizione dei primi modelli teorici ideati per l'interazione debole (\ref{subsec:fermi_theory}, \ref{subsec:v-a} e \ref{subsec:fermi_gt}), si analizzano le evidenze sperimentali che richiesero un'estensione della teoria (\ref{subsec:decays} e \ref{subsec:strange}) e si espone l'idea di Nicola Cabibbo di implementare un angolo di \textit{mixing} (\ref{subsec:cabibbo_angle}).
-        Nella seconda parte (\ref{sec:part_two}) si descrive invece come la teoria del \textit{mixing}, opportunamente estesa anche alle correnti neutre (\ref{subsec:nc} e \ref{subsec:nc_charm}), portò alla predizione dei quark \textit{charm} (\ref{subsec:gim}), \textit{bottom} e \textit{top} (\ref{subsec:ckm}), con la definitiva condensazione della teoria nella matrice CKM.
+        Questo lavoro è diviso in tre parti: nella prima (\ref{sec:intro}), dopo una breve introduzione (\ref{subsec:generali} e \ref{subsec:nozioni}), si ripercorrono i principali modelli teorici ideati per l'interazione debole (\ref{subsec:fermi_theory}, \ref{subsec:v-a}, \ref{subsec:fermi_gt} e \ref{subsec:div}), indispensabili per i calcoli sviluppati nelle parti successive; nella seconda (\ref{sec:part_one}) si analizzano le evidenze sperimentali che richiesero un'estensione della teoria (\ref{subsec:decays} e \ref{subsec:strange}) e si espone l'idea di Nicola Cabibbo di implementare un angolo di \textit{mixing} (\ref{subsec:cabibbo_angle}); nell'ultima (\ref{sec:part_two}) si descrive invece come la teoria del \textit{mixing}, opportunamente estesa anche alle correnti neutre (\ref{subsec:nc} e \ref{subsec:nc_charm}), portò alla predizione dei quark \textit{charm} (\ref{subsec:gim}), \textit{bottom} e \textit{top} (\ref{subsec:ckm}), con la definitiva condensazione della teoria nella matrice CKM.
 \end{abstract}
 
-\section{Introduzione}
+\section{Introduzione: modelli teorici per l'interazione debole}
 \label{sec:intro}
 \subsection{Caratteristiche generali dell'interazione debole}
+\label{subsec:generali}
 L'interazione debole presenta una serie di proprietà che la rendono peculiare rispetto alle altre interazioni fondamentali:
 \begin{itemize}
         \item è l'unica interazione capace di cambiare il \textit{flavour} dei quark;
@@ -112,6 +112,7 @@ La comprensione della struttura dell'interazione debole si è sviluppata ed evol
 \end{figure}
 
 \subsection{Nozioni fondamentali}
+\label{subsec:nozioni}
 In questa parte si introducono nozioni alle quali si farà riferimento in seguito.\\
 Attraverso la teoria perturbativa è possibile ricavare la probabilità di transizione da uno stato iniziale \textit{i} ad uno stato finale \textit{f}:
 \begin{equation}
@@ -130,8 +131,6 @@ dove $\Gamma$ corrisponde in realtà alla sommatoria su tutti gli $n$ modi di de
         \label{eq:gamma_sum}
 \end{equation}
 
-\section{Verso l'universalità dell'interazione debole: la necessità del \textit{mixing} e l'intuizione di Cabibbo}
-\label{sec:part_one}
 \subsection{Teoria di Fermi del decadimento $\beta$}
 \label{subsec:fermi_theory}
 Il decadimento beta è la forma più comune di processo debole osservato nella materia ordinaria, ed ha costituito per molto tempo l'unico banco di prova utilizzabile per confrontare teoria ed esperimenti. Le transizioni beta che coinvolgono i nucleoni sono essenzialmente tre:
@@ -177,7 +176,7 @@ Il primo modello che abbia descritto con successo diverse caratteristiche del de
         \caption{Vertice a quattro fermioni della teoria di Fermi raffigurante un decadimento di tipo beta negativo.}
         \label{fig:fermi_decay}
 \end{figure}
-Prendendo come esempio il decadimento del neutrone, il cui diagramma di Feynman è riportato in Fig. \ref{fig:neutron_decay_simple}, l'hamiltoniana predetta dalla teoria di Fermi si può scrivere nella seguente maniera:
+Prendendo come esempio il decadimento del neutrone, l'hamiltoniana predetta dalla teoria di Fermi si può scrivere nella seguente maniera:
 \begin{equation}
         H _ { \mathrm { F } } = H _ { \mathrm { n } } ^ { 0 } + H _ { \mathrm { p } } ^ { 0 } + H _ { \mathrm { e } } ^ { 0 } + H _ { \nu } ^ { 0 } + \underbrace { \sum _ { i } C _ { i } \int \mathrm { d } ^ { 3 } x \left( \overline { \psi } _ { \mathrm { p } } \hat { O } _ { i } \psi _ { \mathrm { n } } \right) \left( \overline { \psi } _ { \mathrm { e } } \hat { O } _ { i } \psi _ { \nu } \right) } _ { \text { interazione } }
         \label{eq:fermi_hamiltonian}
@@ -187,18 +186,6 @@ dove $\psi_{p}$, $\psi_{n}$, $\psi_{e}$ e $\psi_{\nu}$ sono le funzioni d'onda s
         J ^ { \mu } = \overline { \psi } \hat{O} _ { i } \psi
         \label{eq:current}
 \end{equation}
-\begin{figure}[!h]
-        \centering
-        \feynmandiagram [layered layout, horizontal=a to b] {
-                a [particle=\(n\)] -- [fermion] b -- [fermion] f1 [particle=\(p\)],
-                b -- [boson, edge label'=\(W^{-}\)] c,
-                c -- [anti fermion] f2 [particle=\(\overline \nu_{e}\)],
-                c -- [fermion] f3 [particle=\(e^{-}\)],
-        };
-        \caption{Diagramma di Feynman per il decadimento del neutrone.}
-        \label{fig:neutron_decay_simple}
-\end{figure}
-
 Le quantità $\hat{O}_{i}$ sono operatori appropriati che caratterizzano il tipo di interazione, combinazione lineare delle matrici di Dirac $\gamma^{\mu}$.
 Le (\ref{eq:current}) sono forme bilineari che si trasformano sotto trasformazioni di Lorentz in modo analogo ad una quantità scalare (S), pseudo-scalare (P), vettoriale (V), assiale (A) e tensoriale (T); a seconda dell'operatore scelto, l'indice in $\hat{O}_{i}$ può assumere i valori $i = S, P, V, T, A$. Le possibili correnti sono riportate in Tab~\ref{tab:bilinear}.
 \begin{table}
@@ -385,7 +372,7 @@ La differenza principale tra le due sta nella variazione di momento angolare tot
                 $n \rightarrow p e ^ { - } \overline { \nu }$ & $\frac { 1 } { 2 }^{+} \rightarrow \frac { 1 } { 2 } ^ { + }$ & $4.25 \times 10 ^ { - 8 }$ \\
                 \hline
         \end{tabular}
-        \caption{Decadimenti $\beta$ suddivisi nelle diverse transizioni}
+        \caption{Decadimenti $\beta$ suddivisi nelle diverse transizioni.}
         \label{tab:beta_decays}
 \end{table}
 Si tiene conto di quanto sopra esposto nella costruzione delle correnti e, conseguentemente, nel calcolo di $|\mathcal{M}|^{2}$: come si vede in (\ref{eq:sv_app}) e (\ref{eq:ta_app}), le transizioni di Fermi sono di tipo vettoriale, mentre quelle di Gamow-Teller sono di tipo assiale; per le prime si scrive $| \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { F } \right| ^ { 2 } \propto c _ { V } ^ { 2 }$ mentre per le altre si ha $| \mathcal { M } | ^ { 2 } \equiv \left| \mathcal { M } _ { G T } \right| ^ { 2 } \propto c _ { A } ^ { 2 }$. Analizzando Tab. \ref{tab:beta_decays} si può vedere la dipendenza del prodotto $G_{F}^{2}|\mathcal{M}|^{2}$ dalla variazione dello spin nella transizione del nucleo.
@@ -394,9 +381,84 @@ Sfruttando i primi due processi riportati in Tab. \ref{tab:beta_decays} è possi
         \lambda = c _ { A } / c _ { V } = - 1.2695 \pm 0.0029
         \label{eq:ca_cv}
 \end{equation}
+\subsection{Divergenze nelle interazioni deboli e unitarietà}
+\label{subsec:div}
+La teoria dell'interazione debole descritta finora funziona bene a basse energie e al prim'ordine, ma agli ordini successivi presenta divergenze che possono essere cancellate solo introducendo un numero indefinitamente grande di costanti arbitrarie. Si dice quindi che la teoria $V-A$ è divergente. Si consideri come esempio il processo $\nu _ { e }  e ^ { - } \longrightarrow \nu _ { e }  e ^ { - }$. L'elemento di matrice per la sola interazione debole, considerata come puntiforme, si scrive:
+\begin{equation}
+        \mathcal{M}  = \frac { G _ { F } } { \sqrt { 2 } } \left[ \overline { \psi } _ { \nu } \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right) \psi _ { e } \right] \left[ \overline { \psi } _ { e } \gamma ^ { \mu } \left( 1 - \gamma ^ { 5 } \right) \psi _ { \nu } \right]
+        \label{eq:m_div_puntiforme}
+\end{equation}
+ed è rappresentata a sinistra in Fig. \ref{fig:gw_GF}.
+La sezione d'urto per questa reazione è data da:
+\begin{equation}
+        \sigma \left( \nu _ { e } e ^ { - } \rightarrow \nu _ { e } e ^ { - } \right) \simeq  \frac { 4 G _ { F } ^ { 2 } p ^ { * 2 } } { \pi }
+        \label{eq:sez_div}
+\end{equation}
+dove $p^{*}$ è la quantità di moto del neutrino o dell'elettrone nel centro di massa. Dal formalismo delle onde parziali si ottiene tuttavia un limite superiore per le sezioni d'urto di scattering elastico, oltre il quale la teoria viola la conservazione della probabilità. Per particelle con spin semintero, il limite è:
+\begin{equation}
+        \sigma _ { \ell = 0 } = \frac { \pi \lambda ^ { 2 } } { 2 } = \frac { \pi } { 2 p ^ { * 2 } }
+        \label{eq:sez_limit}
+\end{equation}
+Si vede quindi che la (\ref{eq:sez_div}) supera la (\ref{eq:sez_limit}) se si verifica:
+\begin{equation}
+        p ^ { * } > \left( \frac { \pi ^ { 2 } } { 8 G _ { F } ^ { 2 } } \right) ^ { 1 / 4 } = \left( \frac { \pi } { \sqrt { 8 } G _ { F } } \right) ^ { 1 / 2 } = \left( \frac { \pi } { \sqrt { 8 } \cdot 1.17 \cdot 10 ^ { - 5 } } \right) ^ { 1 / 2 } \simeq 300 \mathrm { GeV } / \mathrm { c }
+        \label{eq:p_limit}
+\end{equation}
+Questo problema si può curare introducendo i bosoni mediatori massivi, che portano alla presenza di un propagatore del tipo $\frac { 1 } { q ^ { 2 } + M _ { W } ^ { 2 } }$. Con l'introduzione del propagatore, l'elemento di matrice si scrive:
+\begin{equation}
+        \mathcal{M}  = \left[ \frac { g_{w} } { \sqrt { 2 } } \left( \overline { \psi } _ { \nu } \gamma ^ { \mu } \frac { \left( 1 - \gamma ^ { 5 } \right) } { 2 } \psi _ { e } \right) \right] \frac { 1 } { q ^ { 2 } + M _ { W } ^ { 2 } } \left[ \frac { g_{w} } { \sqrt { 2 } } \left( \overline { \psi } _ { e } \gamma ^ { \mu } \frac { \left( 1 - \gamma ^ { 5 } \right) } { 2 } \psi _ { \nu } \right) \right]
+        \label{eq:m_div_propagator}
+\end{equation}
+e la (\ref{eq:sez_div}) diventa:
+\begin{equation}
+        \sigma \left( \nu _ { e } e ^ { - } \rightarrow \nu _ { e } e ^ { - } \right) = \frac { 4 G _ { F } ^ { 2 } M_ { W } ^ { 4 } p ^ { * 2 } } { \pi \left( q ^ { 2 } + M _ { W } ^ { 2 } \right) ^ { 2 } }
+        \label{eq:sez_after}
+\end{equation}
+con il diagramma di Feynman rappresentato a destra in Fig. \ref{fig:gw_GF}.
+Nel limite di bassi $q^{2}$ l'interazione con scambio di un bosone si può identificare con l'interazione locale di Fermi. Paragonando gli elementi di matrice (\ref{eq:m_div_puntiforme}) e (\ref{eq:m_div_propagator}) si trova:
+\begin{equation}
+        \lim _ { q ^ { 2 } \rightarrow 0 } \frac { g_{w} ^ { 2 } } { 8 } \frac { 1 } { \left( q ^ { 2 } + M _ { W } ^ { 2 } \right) } \simeq \frac { g_{w} ^ { 2 } } { 8 M _ { W } ^ { 2 } } = \frac { G _ { F } } { \sqrt { 2 } }
+        \label{eq:gwGF}
+\end{equation}
+\begin{figure}[!h]
+        \centering
+        \subfloat{
+                \begin{tikzpicture}
+                        \begin{feynman}
+                                \vertex (a) {\(e^{-}\)};
+                                \vertex [right=3cm of a] (b) {\(\nu_{e}\)};
+                                \vertex [below=3cm of a] (c) {\(\nu_{e}\)};
+                                \vertex [right=3cm of c] (d) {\(e^{-}\)};
+                                \vertex at ($(a)!0.5!(c) + (1.5cm, 0)$) (m)[label=0:\(\;\;G_{F}\)];
+                                \diagram* {
+                                        (a) -- [fermion] (m) -- [fermion] (b),
+                                        (c) -- [fermion] (m) -- [fermion] (d),
+                                };
+                        \end{feynman}
+                \end{tikzpicture}
+        }
+        \qquad
+        \qquad
+        \subfloat{
+                \feynmandiagram [vertical'=a to b] {
+                        i1 [particle=\(\nu_{e}\)]
+                                -- [anti fermion] a[label=0:\(\;\;g_{w}\)]
+                                -- [anti fermion] f1 [particle=\(e^{-}\)],
+                                a -- [photon, edge label=\(W^{-}\)] b,
+                        i2 [particle=\(\nu_{e}\)]
+                                -- [fermion] b[label=0:\(\;\;g_{w}\)]
+                                -- [fermion] f2 [particle=\(e^{-}\)],
+                };
+        } \\
+        \caption{Diagrammi di Feynman per la reazione $\nu _ { e }  e ^ { - } \longrightarrow \nu _ { e } e ^ { - }$ rispettivamente senza (a sinistra) e con (a destra) scambio di bosone mediatore.}
+        \label{fig:gw_GF}
+\end{figure}
+
+\section{Verso l'universalità dell'interazione debole: la necessità del \textit{mixing} e l'intuizione di Cabibbo}
+\label{sec:part_one}
 \subsection{Esempi di decadimento: muone, neutrone e pione}
 \label{subsec:decays}
-Si applica ora la teoria $V-A$ presentata nella parte precedente a tre importanti esempi di decadimento: muone, neutrone e pione carico.
+Si applica ora la teoria presentata nella parte precedente a tre importanti esempi di decadimento: muone, neutrone e pione carico.
 \paragraph{Decadimento del muone} Il muone decade secondo:
 \begin{equation}
         \mu^{-} \rightarrow e^{-} \overline{\nu_{e}} \nu_{\mu}
